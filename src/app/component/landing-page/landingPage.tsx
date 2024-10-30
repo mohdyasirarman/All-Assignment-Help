@@ -1,5 +1,5 @@
 import AcademicStress from "@/app/component/landing-page/academicStress";
-import AssignmentHelp from "@/app/component/landing-page/assignmentHelp";
+import AssignmentHelp from "@/app/component/landing-page/assignmentHelpHero";
 import BestAssignmentHelper from "@/app/component/landing-page/bestAssignmentHelper";
 import CompletedProjects from "@/app/component/landing-page/completedProjects";
 import LandingPageFeatures from "@/app/component/landing-page/landingPageFeatures";
