@@ -19,14 +19,14 @@ export default function LandingPageNavbar() {
               priority
             />
             <span className="ml-2 text-[18px] font-bold text-gray-700">
-              AllAssignmentHelp
+              <i>AllAssignmentHelp</i>
             </span>
           </Link>
 
           {/* Navigation Links */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center mr-40">
             <div className="relative group">
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600">
+              <button className="flex items-center space-x-1 text-black font-semibold px-5 py-[22px] pb-5 bg-transparent">
                 <FaCog />
                 <span>Services</span>
                 <svg
@@ -46,7 +46,7 @@ export default function LandingPageNavbar() {
             </div>
 
             <div className="relative group">
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600">
+              <button className="flex items-center space-x-1 text-black font-semibold px-5 py-[22px] pb-5 bg-transparent">
                 <FaTh />
                 <span>Resources</span>
                 <svg
@@ -66,7 +66,7 @@ export default function LandingPageNavbar() {
             </div>
 
             <div className="relative group">
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600">
+              <button className="flex items-center space-x-1 text-black font-semibold px-5 py-[22px] pb-5 bg-transparent">
                 <FaUser />
                 <span>Experts</span>
               </button>
@@ -77,7 +77,7 @@ export default function LandingPageNavbar() {
           <div className="flex items-center space-x-4">
             <Link
               href="/earn"
-              className="hidden lg:flex items-center text-gray-700 hover:text-blue-600"
+              className="hidden lg:flex items-center font-semibold text-[14px] leading-[20px] text-gray-700 hover:text-blue-600"
             >
               <FaHandshake className="mr-2" />
               <span>Earn $1500</span>
