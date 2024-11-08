@@ -1,109 +1,134 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Services() {
-  const services = [
+  const stats = [
     {
-      title: "Assignment Writing",
-      description: "Get help with any type of assignment across all subjects",
-      icon: "/static/images/services/assignment.svg",
-      subjects: ["Management", "Engineering", "Programming", "Nursing", "Law"],
+      number: "3 Hours",
+      description: "We can do your assignment in 3 hours as well",
     },
     {
-      title: "Dissertation Help",
-      description: "Expert PhD writers for complete dissertation support",
-      icon: "/static/images/services/dissertation.svg",
-      subjects: [
-        "PhD Thesis",
-        "Research Proposal",
-        "Literature Review",
-        "Methodology",
-      ],
+      number: "90%",
+      description: "Our recurring clients asking us to do assignments",
     },
     {
-      title: "Essay Writing",
-      description: "Professional essay writing and editing services",
-      icon: "/static/images/services/essay.svg",
-      subjects: ["Academic Essays", "Admission Essays", "Research Essays"],
+      number: "400",
+      description: "Number of custom assignments we write daily",
     },
     {
-      title: "Programming Help",
-      description: "Expert coding help in all programming languages",
-      icon: "/static/images/services/programming.svg",
-      subjects: ["Python", "Java", "C++", "JavaScript", "PHP"],
+      number: "4.9",
+      description: "Rating for our assignment help service",
     },
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Our Premium Assignment Writing Services
-          </h2>
-          <p className="text-lg text-gray-600">
-            Choose from our wide range of academic writing services tailored to
-            your needs
-          </p>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          Assignment Help Services
+        </h2>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h3 className="text-xl font-bold mb-4">Online Assignment Help</h3>
+            <p className="text-gray-600 mb-8">
+              Allassignmenthelp.com helps you to stay at the top of the class
+              with online assignment help. The reason we have been the go to
+              place for urgent assignment help is our pool of finest assignment
+              writing experts from Australia for all academic assignments. Our
+              assignment helpers have great writing skills and run a
+              comprehensive assignment check to provide you with a custom online
+              assignment help. Our assignment writers are best academic experts.
+            </p>
+
+            <h3 className="text-xl font-bold mb-4">
+              Custom Essay Writing Help
+            </h3>
+            <p className="text-gray-600 mb-8">
+              Writing an essay in college is more like a daily job.
+              Allassignmenthelp.com not only help you achieve a desired grade on
+              an essay, but also help you understand how to write a custom
+              essay. You acquire the right knowledge and skill to keep producing
+              great essays during your college stay. Our assignment helpers
+              ensures that your essay is free from plagiarism meeting the
+              university top grade criteria. We never miss the deadlines making
+              us fast essay writing service provider.
+            </p>
+
+            <h3 className="text-xl font-bold mb-4">
+              Programming Assignment Help
+            </h3>
+            <p className="text-gray-600">
+              Programming assignments can be a nightmare due to the complexity,
+              algorithms and lack of hands on experience. Our programming
+              experts provide a detailed working{" "}
+              <Link
+                href="/programming-assignment-help"
+                className="text-blue-600"
+              >
+                programming assignment help
+              </Link>
+              . You get the working snapshots of the code, code comments and
+              much to understand how to write a program and achieving the
+              programming knowledge. Programming help from allassignmenthelp.com
+              is most sought out service in the US and Australia.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold mb-4">
+              Dissertation and Thesis Writing Help
+            </h3>
+            <p className="text-gray-600 mb-8">
+              Dissertation and thesis decides on your degree grade and a lot
+              more about your professional life. Hence, keeping the importance
+              in mind, allassignmenthelp.com provides you with the best
+              dissertation writing service. We incorporate both primary and
+              secondary data required to produce a first class dissertation. Our
+              dissertation writing expert utilized the right quantitative
+              analysis tool to analyse the dissertation methodology and
+              important sections.
+            </p>
+
+            <h3 className="text-xl font-bold mb-4">
+              Other Online Writing Services
+            </h3>
+            <p className="text-gray-600 mb-8">
+              Apart from being the best online assignment help and essay writing
+              website, allassignmenthelp.com can help you with a myriad of
+              assignments from various disciplines. If you have an online exam
+              due, allassignmenthelp.com can help. You can ask us to assist you
+              with homework, coursework, case studies, research paper writing,
+              proofreading and editing services. Your assignment and our
+              expertise can help you go a long way in your academics.
+            </p>
+
+            <h3 className="text-xl font-bold mb-4">
+              Accounting and Finance Homework Help
+            </h3>
+            <p className="text-gray-600">
+              You can ask us to do your accounting and finance homework. Our{" "}
+              <Link
+                href="/accounting-assignment-help"
+                className="text-blue-600"
+              >
+                accounting assignment help
+              </Link>{" "}
+              covers all niche topics related to accounting, advanced accounting
+              and much more. If you are bothered about your understanding
+              towards number crunching to do a finance assignment, you just say
+              "do my accounting homework" and we are online to help you.
+            </p>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="p-8">
-                <div className="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mb-6">
-                  <Image
-                    src={service.icon}
-                    alt={service.title}
-                    width={32}
-                    height={32}
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.subjects.map((subject, idx) => (
-                    <li
-                      key={idx}
-                      className="text-sm text-gray-500 flex items-center"
-                    >
-                      <svg
-                        className="w-4 h-4 text-blue-500 mr-2"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      {subject}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="border-t px-8 py-4">
-                <button className="text-blue-600 font-medium hover:text-blue-800 transition-colors flex items-center">
-                  Learn More
-                  <svg
-                    className="w-4 h-4 ml-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
-              </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <h3 className="text-4xl font-bold text-[#1e88e5] mb-2">
+                {stat.number}
+              </h3>
+              <p className="text-gray-600">{stat.description}</p>
             </div>
           ))}
         </div>

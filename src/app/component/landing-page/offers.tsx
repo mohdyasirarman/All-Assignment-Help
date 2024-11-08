@@ -1,82 +1,63 @@
-import Image from "next/image";
-
 export default function Offers() {
-  const offers = [
-    {
-      title: "First Order Special",
-      discount: "50% OFF",
-      code: "FIRST50",
-      validUntil: "Limited Time Offer",
-      description: "Get 50% off on your first assignment",
-      icon: "/static/images/offers/new-user.svg",
-    },
-    {
-      title: "Bulk Orders",
-      discount: "40% OFF",
-      code: "BULK40",
-      validUntil: "On 3+ Assignments",
-      description: "Save more when you order multiple assignments",
-      icon: "/static/images/offers/bulk.svg",
-    },
-  ];
-
   return (
-    <section className="py-20 bg-gradient-to-b from-orange-50 to-white">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-orange-600 font-semibold text-sm uppercase tracking-wider">
-            Limited Time
-          </span>
-          <h2 className="text-4xl font-bold text-gray-900 mt-2 mb-4">
-            Exclusive Offers
-          </h2>
-          <p className="text-lg text-gray-600">
-            Take advantage of our special discounts and save big on your
-            assignments
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {offers.map((offer, index) => (
-            <div
-              key={index}
-              className="relative bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
-            >
-              <div className="absolute top-0 right-0 bg-orange-500 text-white px-4 py-2 rounded-bl-lg">
-                {offer.discount}
-              </div>
-              <div className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
-                    <Image
-                      src={offer.icon}
-                      alt={offer.title}
-                      width={32}
-                      height={32}
-                    />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">
-                    {offer.title}
-                  </h3>
-                </div>
-                <p className="text-gray-600 mb-6">{offer.description}</p>
-                <div className="bg-gray-50 p-4 rounded-xl mb-6">
-                  <p className="text-sm text-gray-500 mb-2">Use Code:</p>
-                  <div className="font-mono text-lg font-bold text-orange-600">
-                    {offer.code}
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">
-                    {offer.validUntil}
-                  </span>
-                  <button className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors">
-                    Claim Now
-                  </button>
-                </div>
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Claim Your Offer
+            </h2>
+            <p className="text-gray-600 mb-8">
+              Hello, We have a special ongoing offer for our new customers to
+              avail 30% OFF & 150% Cashback on their first assignment with us.
+              We are committed to delivering the premium service despite an
+              affordable price. Enter your phone number below to get the coupon
+              code. (We do not spam)
+            </p>
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold text-gray-900">
+                Susan White
+              </h3>
+              <p className="text-blue-600">Head of Sales Department</p>
             </div>
-          ))}
+          </div>
+
+          {/* Right Column */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <h3 className="text-4xl font-bold mb-2">
+              <span className="text-blue-600">30% OFF & 150% Cashback</span>
+            </h3>
+            <p className="text-gray-700 mb-2">on your First order !</p>
+            <p className="text-gray-600 mb-6">
+              Type your whatsapp number to get an exclusive code.
+            </p>
+
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <select className="h-12 px-3 bg-gray-50 border border-gray-200 rounded-l focus:outline-none">
+                  <option>+1</option>
+                  <option>+44</option>
+                  <option>+91</option>
+                </select>
+              </div>
+              <input
+                type="text"
+                placeholder="Enter Your Whats App No."
+                className="flex-1 h-12 px-4 border border-l-0 border-gray-200 focus:outline-none"
+              />
+              <button className="h-12 px-6 bg-[#25D366] text-white rounded-r hover:bg-[#128C7E] transition-colors flex items-center">
+                <svg
+                  className="w-5 h-5 mr-2"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                </svg>
+                Get Offer on whatsApp
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

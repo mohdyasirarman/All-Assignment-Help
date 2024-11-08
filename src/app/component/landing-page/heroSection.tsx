@@ -1,72 +1,117 @@
 import Image from "next/image";
 
 export default function HeroSection() {
+  const reviews = [
+    {
+      platform: "Client Reviews",
+      rating: "4.9",
+      logo: "/static/images/reviews/client-reviews.svg",
+    },
+    {
+      platform: "Trustpilot",
+      rating: "4.5",
+      logo: "/static/images/reviews/trustpilot.svg",
+    },
+    {
+      platform: "Sitejabber",
+      rating: "4.2",
+      logo: "/static/images/reviews/sitejabber.svg",
+    },
+  ];
+
   return (
-    <div className="bg-[#1a4f7e] relative overflow-hidden">
-      <div className="absolute inset-0">
-        <Image
-          src="/static/images/hero-bg-pattern.png"
-          alt="Background Pattern"
-          fill
-          className="opacity-10 object-cover"
-        />
-      </div>
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div className="bg-[#f5f9ff] relative overflow-hidden">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left Column */}
           <div>
-            <span className="bg-blue-500/20 text-white px-6 py-2 rounded-full text-sm">
-              30% Discount on All Orders
-            </span>
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mt-8 leading-tight">
-              Assignment Help by PhD Experts
+            <h1 className="text-[#0047AB] text-4xl lg:text-5xl font-bold mb-4">
+              ASSIGNMENT HELP - ALLASSIGNMENTHELP.COM
             </h1>
-            <p className="text-xl text-white/80 mt-6">
-              Get assignment help from world's most trusted assignment help
-              website
+            <p className="text-gray-700 text-xl mb-12">
+              Get Online Assignment Help From Best Assignment Help Website
+              Instantly!!
             </p>
-            <div className="bg-white/10 rounded-xl p-6 mt-8">
-              <ul className="space-y-4">
-                {[
-                  "4.9/5 Client Rating",
-                  "100% Plagiarism Free",
-                  "24/7 Live Support",
-                  "On-Time Delivery",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center text-white">
-                    <svg
-                      className="w-5 h-5 text-green-400 mr-3"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+
+            <div className="grid grid-cols-2 gap-8 mb-12">
+              <div>
+                <h2 className="text-4xl font-bold text-gray-800">98.2%</h2>
+                <p className="text-gray-600">Orders Arrive Timely</p>
+              </div>
+              <div>
+                <h2 className="text-4xl font-bold text-gray-800">9/10</h2>
+                <p className="text-gray-600">Report Better Grades</p>
+              </div>
             </div>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <button className="bg-[#ff6b6b] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#ff5252] transition-colors">
-                Order Now
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-colors">
-                Live Chat
-              </button>
+
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="flex items-center space-x-6">
+                {reviews.map((review, index) => (
+                  <div key={index} className="flex items-center">
+                    <Image
+                      src={review.logo}
+                      alt={review.platform}
+                      width={100}
+                      height={24}
+                      className="mr-2"
+                    />
+                    <span className="font-bold text-xl">{review.rating}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="hidden lg:block">
-            <Image
-              src="/static/images/hero-student.png"
-              alt="Student with laptop"
-              width={600}
-              height={500}
-              className="rounded-2xl"
-              priority
-            />
+
+          {/* Right Column - Form */}
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+              Get Assignment Instantly
+            </h2>
+            <form className="space-y-6">
+              <div>
+                <label className="block text-gray-700 mb-2">Email</label>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="w-full p-3 rounded-lg bg-[#f5f9ff] border border-gray-200"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 mb-2">Subject</label>
+                <input
+                  type="text"
+                  placeholder="Enter Subject"
+                  className="w-full p-3 rounded-lg bg-[#f5f9ff] border border-gray-200"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 mb-2">Deadline</label>
+                <select className="w-full p-3 rounded-lg bg-[#f5f9ff] border border-gray-200">
+                  <option>Select Deadline</option>
+                </select>
+              </div>
+              <button className="w-full bg-[#e17055] text-white py-3 rounded-lg font-bold hover:bg-[#d65d43] transition-colors">
+                GET FREE PRICE QUOTE →
+              </button>
+            </form>
+
+            <div className="mt-6">
+              <p className="text-gray-600 mb-4">Covered By :</p>
+              <div className="flex items-center space-x-4">
+                <Image
+                  src="/static/images/universities/yale.png"
+                  alt="Yale"
+                  width={100}
+                  height={40}
+                />
+                <Image
+                  src="/static/images/universities/unsw.png"
+                  alt="UNSW"
+                  width={100}
+                  height={40}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

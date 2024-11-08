@@ -1,93 +1,59 @@
-import Image from "next/image";
-
 export default function AcademicStress() {
-  const benefits = [
-    {
-      title: "24/7 Expert Support",
-      description: "Get instant help anytime",
-      icon: "/static/images/benefits/support.svg",
-    },
-    {
-      title: "Plagiarism-Free",
-      description: "100% original content",
-      icon: "/static/images/benefits/plagiarism.svg",
-    },
-    {
-      title: "On-Time Delivery",
-      description: "Never miss a deadline",
-      icon: "/static/images/benefits/delivery.svg",
-    },
-    {
-      title: "Affordable Prices",
-      description: "Best rates in industry",
-      icon: "/static/images/benefits/price.svg",
-    },
-  ];
-
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-800 to-blue-900 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <Image
-          src="/static/images/stress-pattern.png"
-          alt="Pattern"
-          fill
-          className="object-cover"
-        />
-      </div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span className="inline-block bg-blue-500/20 text-white px-4 py-1 rounded-full text-sm mb-6">
-              Student Success
-            </span>
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Say Goodbye to Academic Stress
-            </h2>
-            <p className="text-xl text-white/80 mb-12">
-              Let our experts handle your assignments while you focus on what
-              matters most
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Image
-                      src={benefit.icon}
-                      alt={benefit.title}
-                      width={24}
-                      height={24}
-                      className="text-white"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-white/70 text-sm">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                Get Started Now
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-          <div className="hidden lg:block">
-            <Image
-              src="/static/images/student-success.png"
-              alt="Student Success"
-              width={600}
-              height={500}
-              className="rounded-2xl"
-            />
-          </div>
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          Beat academic stress with our top online
+          <br />
+          assignment help service , Best Writers
+          <br />
+          and Great Results
+        </h2>
+
+        <div className="max-w-5xl mx-auto">
+          <p className="text-gray-600 mb-8">
+            One question that most of the students ask themselves is the reason
+            for failure at assignment writing. Why scoring a top grade in your
+            assignment is challenging? As per our online assignment writers poor
+            time management skills lead to time crunch, hence putting stress on
+            your mind. Moreover, lack of understanding towards academic research
+            is one of the fundamental reasons for the low assignment scores.
+            Allassignmenthelp.com understands what college professors expect you
+            to write in your assignment for a first class score, but meeting
+            those criterias can be a nightmare. Endless research, writing and
+            analysis of the assignment can lead to exhaustion. Hence,
+            allassignmenthelp.com has been offering custom assignment writing
+            writing service to get the best grades in your academic coursework.
+            You can join your class toppers with our top online assignment help
+            service. We have an equitable service with flawless results for all
+            our assignment help seekers. See below a few of our sample
+            assignments to find out how we write, what we write and the results
+            it can produce for you.
+          </p>
+
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
+            Why availing help from online
+            <br />
+            assignment help website is a wise
+            <br />
+            decision to make
+          </h3>
+
+          <p className="text-gray-600">
+            Online assignment writing websites have mushroomed in the last few
+            years, do you understand why? The reason is simple, it is beneficial
+            for the students struggling with assignments, dissertations,
+            coursework and much more at the college. Hence, online assignment
+            help websites come to your rescue. There are multiple reasons to
+            choose online assignment help service, but the fundamental reason is
+            the grade you receive with the online assignment writing help.
+            Allassignmenthelp.com is a pioneer in assignment writing services
+            and more than 1000 students ask us to do assignment and we have
+            never let them down. Moreover, our assignment support has been great
+            answering student queries at odd times without any bottleneck. You
+            can achieve academic excellence with our assignment help online
+            service and work on other priorities that comes with college life.
+          </p>
         </div>
       </div>
     </section>

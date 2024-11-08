@@ -2,100 +2,96 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function LandingPageNavbar() {
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
-  const services = [
-    {
-      title: "Assignment Help",
-      subItems: ["Management", "Engineering", "Programming", "Law", "Finance"],
-    },
-    {
-      title: "Essay Writing",
-      subItems: [
-        "Essay Help",
-        "Essay Editing",
-        "Essay Topics",
-        "Essay Examples",
-      ],
-    },
-    {
-      title: "Dissertation Help",
-      subItems: [
-        "PhD Dissertation",
-        "Masters Dissertation",
-        "Research Proposal",
-      ],
-    },
-  ];
-
   return (
-    <nav className="bg-white border-b">
-      <div className="container mx-auto">
-        <div className="flex justify-between items-center h-24">
-          <Link href="/" className="pl-4">
+    <nav className="bg-white shadow-sm sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
             <Image
-              src="/static/images/logo1.png"
-              alt="Assignment Help Logo"
-              width={220}
-              height={60}
+              src="/static/images/logo.png"
+              alt="AllAssignmentHelp"
+              width={180}
+              height={40}
               priority
             />
           </Link>
 
-          <div className="hidden lg:flex flex-1 justify-center space-x-1">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="relative group"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-              >
-                <button className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium">
-                  {service.title}
-                  <span className="ml-1">▼</span>
-                </button>
-                <div className="absolute left-0 mt-0 w-64 bg-white shadow-lg hidden group-hover:block z-50">
-                  {service.subItems.map((item, idx) => (
-                    <Link
-                      key={idx}
-                      href={`/${item.toLowerCase().replace(" ", "-")}`}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
-                    >
-                      {item}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
-            <Link
-              href="/samples"
-              className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium"
-            >
-              Samples
-            </Link>
-            <Link
-              href="/reviews"
-              className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium"
-            >
-              Reviews
+          {/* Navigation Links */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <div className="relative group">
+              <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600">
+                <span>Services</span>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div className="relative group">
+              <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600">
+                <span>Resources</span>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <Link href="/experts" className="text-gray-700 hover:text-blue-600">
+              Experts
             </Link>
           </div>
 
-          <div className="flex items-center space-x-4 pr-4">
+          {/* Right Side Buttons */}
+          <div className="flex items-center space-x-4">
             <Link
-              href="/login"
-              className="hidden md:block text-gray-700 hover:text-blue-600"
+              href="/earn"
+              className="hidden lg:flex items-center text-gray-700 hover:text-blue-600"
             >
-              Login
+              <Image
+                src="/static/images/icons/earn.svg"
+                alt="Earn"
+                width={16}
+                height={16}
+                className="mr-2"
+              />
+              <span>Earn $1500</span>
             </Link>
+
+            <Link
+              href="/reviews"
+              className="hidden lg:block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              REVIEWS 4.92/5
+            </Link>
+
             <Link
               href="/order"
-              className="bg-orange-500 text-white px-6 py-2.5 rounded-md hover:bg-orange-600 transition font-medium"
+              className="border-2 border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition-colors"
             >
-              Order Now
+              ORDER NOW
             </Link>
           </div>
         </div>

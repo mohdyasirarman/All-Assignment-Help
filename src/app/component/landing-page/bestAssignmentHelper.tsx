@@ -1,69 +1,104 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BestAssignmentHelper() {
-  const benefits = [
+  const stats = [
     {
-      title: "Expert Writers",
-      description: "All our writers are PhD holders with years of experience",
-      icon: "/static/images/benefits/expert.svg",
+      number: "4 min",
+      description: "Our average response time is 4 minutes",
     },
     {
-      title: "Plagiarism Free",
-      description: "100% original content with free Turnitin report",
-      icon: "/static/images/benefits/plagiarism.svg",
+      number: "98.3%",
+      description: "Our support services got thumbs up 98.3%",
+    },
+  ];
+
+  const security = [
+    {
+      title: "We are Mcafee safe. Your data is protected.",
+      icon: "/static/images/security/mcafee.svg",
     },
     {
-      title: "On-Time Delivery",
-      description: "Never miss a deadline with our timely delivery",
-      icon: "/static/images/benefits/delivery.svg",
+      title: "Security, confidentiality, and money back guaranteed!",
+      icon: "/static/images/security/security.svg",
     },
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Why We Are The Best Assignment Helper?
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              We take pride in delivering high-quality academic assistance that
-              helps students achieve their goals.
-            </p>
-            <div className="space-y-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
-                    <Image
-                      src={benefit.icon}
-                      alt={benefit.title}
-                      width={24}
-                      height={24}
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-600">{benefit.description}</p>
-                  </div>
-                </div>
-              ))}
+        <h2 className="text-4xl font-bold text-center mb-8">
+          Assignment Help - Best Assignment
+          <br />
+          Helpers Are Online
+        </h2>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <p className="text-gray-600">
+            Whenever it becomes tough to manage the assignments in college,
+            availing assignment help is a wise choice. Students often miss
+            assignment submission deadlines and score low grades. That's exactly
+            where assignment help online is useful. Allassignmenthelp.com has
+            best assignment experts, who are capable of providing quality
+            assignment help and writing services at low prices. First, you have
+            to understand what is assignment help online assistance? Is it
+            equivalent to assignment writing for you? Here is the answer. We do
+            not write an assignment for you. You avail assistance from the
+            chosen assignment experts to hone your research skills. You can use
+            the custom written assignment solution as a reference material for
+            your final writing. Moreover, you can also buy previously solved
+            assignment solutions for your reference. We make an individual
+            realize one&apos;s potential by mentoring and guiding through the
+            process of online assignment help.
+          </p>
+
+          <p className="text-gray-600">
+            Does not matter how much time you have, assignments are always due
+            on short deadlines. Hence, completing assignment within the given
+            time is possible with the assistance of an expert. Our assignment
+            helpers work 24/7 to ensure timely delivery. Our assignment experts
+            works hard to live up to the expectations and provide total peace of
+            mind. Our{" "}
+            <Link href="/australian-assignment-help" className="text-blue-600">
+              australian assignment help
+            </Link>{" "}
+            assistance has minimum turnaround time. If you are running out of
+            time to turn in your assignment, hire an online assignment writer on
+            allassignmenthelp.com.
+            <br />
+            <br />
+            Our fundamental of working is{" "}
+            <span className="font-bold">ASAP</span>, which means Affordability,
+            Plagiarism free solution, Availability, and Professionalism. Our
+            proclivity for this concept of ASAP makes us different from the rest
+            of the assignment help service providers. Our custom assignment help
+            works on the model of understanding the concepts and applying to
+            prepare a better assignment solution.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <h3 className="text-4xl font-bold text-[#1e88e5] mb-2">
+                {stat.number}
+              </h3>
+              <p className="text-gray-600">{stat.description}</p>
             </div>
-            <button className="mt-10 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Get Assignment Help
-            </button>
-          </div>
-          <div className="hidden lg:block">
-            <Image
-              src="/static/images/best-helper.png"
-              alt="Best Assignment Helper"
-              width={600}
-              height={500}
-              className="rounded-2xl"
-            />
-          </div>
+          ))}
+
+          {security.map((item, index) => (
+            <div key={index} className="flex items-center justify-center">
+              <Image
+                src={item.icon}
+                alt={item.title}
+                width={48}
+                height={48}
+                className="mr-3"
+              />
+              <p className="text-sm text-gray-700">{item.title}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
