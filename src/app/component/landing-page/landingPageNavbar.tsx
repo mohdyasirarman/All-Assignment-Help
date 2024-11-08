@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { FaCog, FaTh, FaUser, FaHandshake } from "react-icons/fa";
 
 export default function LandingPageNavbar() {
   return (
@@ -11,18 +12,22 @@ export default function LandingPageNavbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/static/images/logo.png"
+              src="/static/images/logo1.png"
               alt="AllAssignmentHelp"
-              width={180}
-              height={40}
+              width={42}
+              height={35}
               priority
             />
+            <span className="ml-2 text-[18px] font-bold text-gray-700">
+              AllAssignmentHelp
+            </span>
           </Link>
 
           {/* Navigation Links */}
           <div className="hidden lg:flex items-center space-x-8">
             <div className="relative group">
               <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600">
+                <FaCog />
                 <span>Services</span>
                 <svg
                   className="w-4 h-4"
@@ -42,6 +47,7 @@ export default function LandingPageNavbar() {
 
             <div className="relative group">
               <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600">
+                <FaTh />
                 <span>Resources</span>
                 <svg
                   className="w-4 h-4"
@@ -59,9 +65,12 @@ export default function LandingPageNavbar() {
               </button>
             </div>
 
-            <Link href="/experts" className="text-gray-700 hover:text-blue-600">
-              Experts
-            </Link>
+            <div className="relative group">
+              <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600">
+                <FaUser />
+                <span>Experts</span>
+              </button>
+            </div>
           </div>
 
           {/* Right Side Buttons */}
@@ -70,26 +79,20 @@ export default function LandingPageNavbar() {
               href="/earn"
               className="hidden lg:flex items-center text-gray-700 hover:text-blue-600"
             >
-              <Image
-                src="/static/images/icons/earn.svg"
-                alt="Earn"
-                width={16}
-                height={16}
-                className="mr-2"
-              />
+              <FaHandshake className="mr-2" />
               <span>Earn $1500</span>
             </Link>
 
             <Link
               href="/reviews"
-              className="hidden lg:block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              className="hidden lg:block px-[8px] py-[11px] font-bold rounded-[6px] bg-[#1653c4] border border-[#1653c4] text-white uppercase shadow-[2px_2px_8px_rgba(111,142,179,0.8)] hover:bg-blue-700"
             >
               REVIEWS 4.92/5
             </Link>
 
             <Link
               href="/order"
-              className="border-2 border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition-colors"
+              className="bg-transparent text-[#232e45] uppercase font-bold px-[8px] py-[10px] rounded-[6px] shadow-[inset_0_0_8px_rgba(186,206,230,0.8),2px_2px_8px_rgba(186,206,230,0.8)] [text-shadow:0_0_8px_rgba(186,206,230,0.8)] border-2 border-[#232e45]"
             >
               ORDER NOW
             </Link>
