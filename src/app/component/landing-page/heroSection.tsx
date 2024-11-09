@@ -1,118 +1,98 @@
 import Image from "next/image";
+import { FaStar } from "react-icons/fa";
 
 export default function HeroSection() {
   const reviews = [
     {
+      id: 1,
       platform: "Client Reviews",
       rating: "4.9",
-      logo: "/static/images/reviews/client-reviews.svg",
+      logo: "/static/images/logo1.png",
+      reviews: 1000,
     },
     {
+      id: 2,
       platform: "Trustpilot",
       rating: "4.5",
-      logo: "/static/images/reviews/trustpilot.svg",
+      logo: "/static/images/trustpilot.png",
+      reviews: 1000,
     },
     {
+      id: 3,
       platform: "Sitejabber",
       rating: "4.2",
-      logo: "/static/images/reviews/sitejabber.svg",
+      logo: "/static/images/sitejabber.png",
+      reviews: 1000,
     },
   ];
 
   return (
-    <div className="bg-[#f5f9ff] relative overflow-hidden">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column */}
-          <div>
-            <h1 className="text-[#0047AB] text-4xl lg:text-5xl font-bold mb-4">
-              ASSIGNMENT HELP - ALLASSIGNMENTHELP.COM
+    <div className=" bg-gradient-to-r from-white to-[#CADAFB] w-full">
+      <div className="container pt-20 pb-20 lg:w-[1100px] mx-auto flex flex-col lg:flex-row gap-5 lg:gap-0">
+        {/* Left Section */}
+        <div className="flex flex-col gap-5 px-4">
+          {/* Headings */}
+          <div className="flex flex-col gap-5 ">
+            <h1 className="text-[40px] text-[#1754c4] leading-[130%] font-bold mb-0">
+              ASSIGNMENT HELP - ASSIGNMENTHELP.COM
             </h1>
-            <p className="text-gray-700 text-xl mb-12">
+            <h3 className="-mt-3 mb-8 text-black text-[22px] leading-8">
               Get Online Assignment Help From Best Assignment Help Website
               Instantly!!
-            </p>
-
-            <div className="grid grid-cols-2 gap-8 mb-12">
-              <div>
-                <h2 className="text-4xl font-bold text-gray-800">98.2%</h2>
-                <p className="text-gray-600">Orders Arrive Timely</p>
-              </div>
-              <div>
-                <h2 className="text-4xl font-bold text-gray-800">9/10</h2>
-                <p className="text-gray-600">Report Better Grades</p>
-              </div>
+            </h3>
+          </div>
+          {/* Stats */}
+          <div className="flex flex-col lg:flex-row gap-5 w-[74%] mx-auto mt-20 mb-7">
+            <div className="flex flex-col gap-2">
+              <span className="block text-5xl text-[#232e44] font-bold">
+                98.2%
+              </span>
+              <span className="text-base font-normal ">
+                Orders Arrive Timely
+              </span>
             </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex items-center space-x-6">
-                {reviews.map((review, index) => (
-                  <div key={index} className="flex items-center">
-                    <Image
-                      src={review.logo}
-                      alt={review.platform}
-                      width={100}
-                      height={24}
-                      className="mr-2"
-                    />
-                    <span className="font-bold text-xl">{review.rating}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="flex flex-col gap-2">
+              <span className="block text-5xl text-[#232e44] font-bold">
+                9/10
+              </span>
+              <span className="text-base font-normal ">
+                Report Better Grades
+              </span>
             </div>
           </div>
-
-          {/* Right Column - Form */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Get Assignment Instantly
-            </h2>
-            <form className="space-y-6">
-              <div>
-                <label className="block text-gray-700 mb-2">Email</label>
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full p-3 rounded-lg bg-[#f5f9ff] border border-gray-200"
-                />
+          {/* Reviews */}
+          <div className="bg-[#fff] box-shadow-lg rounded-lg grid grid-cols-1 lg:grid-cols-3 gap-5 w-[85%] float-left mx-auto py-3 px-4 relative">
+            {reviews.map((review) => (
+              <div key={review.platform} className="flex items-center gap-2">
+                <div className="w-[50px] h-[50px] flex flex-row items-center justify-center">
+                  <Image
+                    src={review.logo}
+                    alt={review.platform}
+                    width={20}
+                    height={20}
+                  />
+                  <span className="text-xs font-normal">{review.platform}</span>
+                </div>
+                <div>
+                  <span className="text-base font-bold ">{review.rating}</span>
+                  {review.id === 3 ? null : (
+                    <div className="border-r-[1px] border-r-[#eaeaea] h-full w-[1px]"></div>
+                  )}
+                </div>
               </div>
-              <div>
-                <label className="block text-gray-700 mb-2">Subject</label>
-                <input
-                  type="text"
-                  placeholder="Enter Subject"
-                  className="w-full p-3 rounded-lg bg-[#f5f9ff] border border-gray-200"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700 mb-2">Deadline</label>
-                <select className="w-full p-3 rounded-lg bg-[#f5f9ff] border border-gray-200">
-                  <option>Select Deadline</option>
-                </select>
-              </div>
-              <button className="w-full bg-[#e17055] text-white py-3 rounded-lg font-bold hover:bg-[#d65d43] transition-colors">
-                GET FREE PRICE QUOTE →
-              </button>
-            </form>
-
-            <div className="mt-6">
-              <p className="text-gray-600 mb-4">Covered By :</p>
-              <div className="flex items-center space-x-4">
-                <Image
-                  src="/static/images/universities/yale.png"
-                  alt="Yale"
-                  width={100}
-                  height={40}
-                />
-                <Image
-                  src="/static/images/universities/unsw.png"
-                  alt="UNSW"
-                  width={100}
-                  height={40}
-                />
-              </div>
-            </div>
+            ))}
           </div>
+        </div>
+        {/* Right Section */}
+        <div className="flex flex-col gap-5">
+          {/* Heading */}
+          <h1 className="text-4xl font-bold">Get Assignment Instantly</h1>
+          {/* Form */}
+          <div className="flex flex-col gap-5">
+            <input type="text" placeholder="Enter your email" />
+            <button>Get Started</button>
+          </div>
+          {/* Cover Images */}
         </div>
       </div>
     </div>

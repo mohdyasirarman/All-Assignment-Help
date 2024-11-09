@@ -12,7 +12,7 @@ import Services from "@/app/component/landing-page/services";
 
 export default function LandingPage() {
   return (
-    <>
+    <div className="w-full ">
       <AssignmentHelp />
       <LandingPageFeatures />
       <ReviewAndTrust />
@@ -24,6 +24,6 @@ export default function LandingPage() {
       <SecurityPartner />
       <AcademicStress />
       <Rated />
-    </>
+    </div>
   );
 }
