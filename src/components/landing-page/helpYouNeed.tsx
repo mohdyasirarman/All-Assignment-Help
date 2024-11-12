@@ -48,11 +48,11 @@ const HelpYouNeed = () => {
             </div>
           </div>
           {/* Needed Help */}
-          <div className="flex justify-evenly mt-10 text-center">
+          <div className="flex justify-evenly text-center">
             {helpNeeded.map((help) => (
               <div
                 key={help.id}
-                className="flex flex-col  lg:flex-col items-center p-3 mx-auto gap-3 lg:gap-5"
+                className="flex flex-col  lg:flex-col items-center p-3 mx-auto gap-3 lg:gap-0"
               >
                 <div className="w-64 h-64 lg:w-48 lg:h-48 flex justify-center items-center">
                   <Image
@@ -85,7 +85,11 @@ const HelpYouNeed = () => {
             ))}
           </div>
           {/* Recieve Button  */}
-          <div></div>
+          <div className="w-full flex justify-center font-poppins font-normal text-lg leading-7 -mt-10">
+            <button className="bg-[#09B14F] text-white w-[270px] h-[50px] rounded-md">
+              Receive My Assignment
+            </button>
+          </div>
         </div>
       </div>
     </>
