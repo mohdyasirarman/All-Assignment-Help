@@ -10,12 +10,14 @@ import ReviewAndTrust from "@/components/landing-page/reviewAndTrust";
 import SecurityPartner from "@/components/landing-page/securityPartner";
 import Services from "@/components/landing-page/services";
 import TrustedByThousand from "@/components/landing-page/trustedByThousand";
+import HelpYouNeed from "@/components/landing-page/helpYouNeed";
 
 export default function LandingPage() {
   return (
     <div className="w-full ">
       <AssignmentHelp />
       <TrustedByThousand />
+      <HelpYouNeed />
       <LandingPageFeatures />
       <ReviewAndTrust />
       <Offers />
