@@ -55,8 +55,8 @@ export default function HeroSection() {
               </div>
             </div>
             {/* Right Section */}
-            <div className="bg-[#09B14F]/3 p-4 mb-4 rounded-lg flex flex-col gap-5 w-2/5">
-              <div className="bg-white px-3 pt-5 pb-3 rounded-lg shadow">
+            <div className="bg-white bg-opacity-0 border-[4px] border-white p-1 mb-4 rounded-lg flex flex-col gap-5 w-2/5">
+              <div className="bg-white bg-opacity-10 px-3 pt-5 pb-3 rounded-lg shadow">
                 {/* Heading */}
                 <div className="text-lg text-[#2c2c2c] text-center font-bold mb-3 ">
                   Get Assignment Instantly

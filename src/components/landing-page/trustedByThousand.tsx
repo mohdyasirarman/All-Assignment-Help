@@ -27,7 +27,7 @@ const TrustedByThousand = () => {
           <div className="font-inter font-bold text-6xl text-[#2E2F35] leading-[73px] text-center">
             <div>Trusted by thousands of top DTC</div>
             <div className="font-coveredByYourGrace text-[#09B14F]">
-              brands.
+              Brands.
             </div>
           </div>
         </div>
