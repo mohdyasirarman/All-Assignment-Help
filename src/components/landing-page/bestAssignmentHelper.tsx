@@ -37,19 +37,19 @@ export default function BestAssignmentHelper() {
           <p className="text-gray-600">
             Whenever it becomes tough to manage the assignments in college,
             availing assignment help is a wise choice. Students often miss
-            assignment submission deadlines and score low grades. That's exactly
-            where assignment help online is useful. Allassignmenthelp.com has
-            best assignment experts, who are capable of providing quality
-            assignment help and writing services at low prices. First, you have
-            to understand what is assignment help online assistance? Is it
-            equivalent to assignment writing for you? Here is the answer. We do
-            not write an assignment for you. You avail assistance from the
-            chosen assignment experts to hone your research skills. You can use
-            the custom written assignment solution as a reference material for
-            your final writing. Moreover, you can also buy previously solved
-            assignment solutions for your reference. We make an individual
-            realize one&apos;s potential by mentoring and guiding through the
-            process of online assignment help.
+            assignment submission deadlines and score low grades. That&apos;s
+            exactly where assignment help online is useful.
+            Allassignmenthelp.com has best assignment experts, who are capable
+            of providing quality assignment help and writing services at low
+            prices. First, you have to understand what is assignment help online
+            assistance? Is it equivalent to assignment writing for you? Here is
+            the answer. We do not write an assignment for you. You avail
+            assistance from the chosen assignment experts to hone your research
+            skills. You can use the custom written assignment solution as a
+            reference material for your final writing. Moreover, you can also
+            buy previously solved assignment solutions for your reference. We
+            make an individual realize one&apos;s potential by mentoring and
+            guiding through the process of online assignment help.
           </p>
 
           <p className="text-gray-600">

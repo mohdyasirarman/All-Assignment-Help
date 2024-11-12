@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 export default function Services() {
@@ -117,7 +117,8 @@ export default function Services() {
               covers all niche topics related to accounting, advanced accounting
               and much more. If you are bothered about your understanding
               towards number crunching to do a finance assignment, you just say
-              "do my accounting homework" and we are online to help you.
+              &quot;do my accounting homework&quot; and we are online to help
+              you.
             </p>
           </div>
         </div>
