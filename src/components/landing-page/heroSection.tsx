@@ -19,7 +19,7 @@ export default function HeroSection() {
         <div className="container px-4 lg:w-[1400px] mx-auto flex flex-col lg:flex-row gap-5 lg:gap-0">
           <div className="w-full flex justify-between pt-4 pb-4 relative">
             {/* Left Section */}
-            <div className="flex flex-col gap-5 pl-12 pr-4 w-2/4">
+            <div className="flex flex-col gap-5 pt-5 pl-12 pr-4 w-2/4">
               {/* Headings */}
               <div className="flex flex-col gap-5 ">
                 <div className="text-[54px] leading-[70px] font-poppins font-bold mb-0">
@@ -55,11 +55,15 @@ export default function HeroSection() {
               </div>
             </div>
             {/* Right Section */}
-            <div className="bg-white bg-opacity-0 border-[4px] border-white p-1 mb-4 rounded-lg flex flex-col gap-5 w-2/5">
-              <div className="bg-white bg-opacity-10 px-3 pt-5 pb-3 rounded-lg shadow">
+            <div className="border-white p-1 mb-4 rounded-xl flex flex-col gap-5 w-2/5">
+              <div className="bg-white border-white border-[4px] bg-opacity-10 px-3 pt-5 pb-3 rounded-xl shadow">
                 {/* Heading */}
-                <div className="text-lg text-[#2c2c2c] text-center font-bold mb-3 ">
-                  Get Assignment Instantly
+                <div className="text-lg px-12 text-[#2c2c2c] text-center font-poppins font-bold mb-3 ">
+                  Fill in your details and get started with a
+                  <div className="text-orange-500 inline-block">
+                    20% discount
+                  </div>{" "}
+                  on your first order!
                 </div>
                 {/* Tabs */}
                 <div className="flex justify-center mb-4">
@@ -104,28 +108,28 @@ export default function HeroSection() {
                   <div className="pl-1 pr-1 w-2/4">
                     <div className="w-full px-2 mb-5 block relative ">
                       <Input
-                        className="bg-[#f6f6fa] rounded px-1.5 py-3 w-full"
+                        className="bg-[#f6f6fa] border-[#C8C8C8] rounded-md px-1.5 py-3 w-full"
                         type="email"
                         placeholder="Email"
                       />
                     </div>
                     <div className="w-full px-2 mb-5 block relative ">
                       <Input
-                        className="bg-[#f6f6fa] rounded px-1.5 py-3 w-full"
+                        className="bg-[#f6f6fa] border-[#C8C8C8] rounded-md px-1.5 py-3 w-full"
                         type="text"
                         placeholder="Subject/Course Code"
                       />
                     </div>
                     <div className="w-full px-2 mb-5 block relative ">
                       <Input
-                        className="bg-[#f6f6fa] rounded px-1.5 py-3 w-full"
+                        className="bg-[#f6f6fa] border-[#C8C8C8] rounded-md px-1.5 py-3 w-full"
                         type="date"
                         placeholder="Deadline"
                       />
                     </div>
                     <div className="w-full px-2 mb-5 block relative ">
                       <Input
-                        className="bg-[#f6f6fa] rounded px-1.5 py-3 w-full"
+                        className="bg-[#f6f6fa] border-[#C8C8C8] rounded-md px-1.5 py-3 w-full"
                         type="number"
                         placeholder="No of Pages"
                       />
@@ -134,7 +138,7 @@ export default function HeroSection() {
                   <div className="pl-1 pr-1 w-2/4">
                     <div className="w-full px-2 mb-5 block relative ">
                       <Input
-                        className="bg-[#f6f6fa] rounded px-1.5 py-3 w-full"
+                        className="bg-[#f6f6fa] border-[#C8C8C8] rounded-md px-1.5 py-3 w-full"
                         type="number"
                         placeholder="Mobile Number"
                       />
@@ -142,13 +146,13 @@ export default function HeroSection() {
                     {/* <FileUpload /> */}
                     <div className="w-full px-2 mb-5 block relative ">
                       <textarea
-                        className="bg-[#f6f6fa] border rounded px-1.5 py-3 w-full min-h-[100px] max-h-[100px]"
+                        className="bg-[#f6f6fa] border border-[#C8C8C8] rounded-md px-1.5 py-3 w-full min-h-[100px] max-h-[100px]"
                         placeholder="Description"
                       />
                     </div>
                     <div className="w-full px-2 mb-5 block relative ">
                       <Input
-                        className="bg-[#f6f6fa] rounded px-1.5 py-3 w-full"
+                        className="bg-[#f6f6fa] border-[#C8C8C8] rounded-md px-1.5 py-3 w-full"
                         type="file"
                         placeholder="Attach file"
                       />
@@ -158,7 +162,7 @@ export default function HeroSection() {
                 <div>
                   <div className="w-full flex justify-start items-center pr-5 pt-0 px-2 mb-5 relative ">
                     <input
-                      className="bg-[#f6f6fa] rounded px-1.5 py-3 w-[14px] h-[14px]"
+                      className="bg-[#f6f6fa] border-[#C8C8C8] rounded-md px-1.5 py-3 w-[14px] h-[14px]"
                       type="checkbox"
                     />
                     <label
