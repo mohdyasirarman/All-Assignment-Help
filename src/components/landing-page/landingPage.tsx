@@ -13,6 +13,7 @@ import TrustedByThousand from "@/components/landing-page/trustedByThousand";
 import HelpYouNeed from "@/components/landing-page/helpYouNeed";
 import BestAssignmentWiter from "@/components/landing-page/bestAssignmentWriter";
 import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
+import UnmatchedAcademicSuccess from "@/components/landing-page/unmatchedAcademicSuccess";
 
 export default function LandingPage() {
   return (
@@ -22,6 +23,7 @@ export default function LandingPage() {
       <TrustedByThousand />
       <HelpYouNeed />
       <BestAssignmentWiter />
+      <UnmatchedAcademicSuccess />
       <LandingPageFeatures />
       <ReviewAndTrust />
       <Offers />

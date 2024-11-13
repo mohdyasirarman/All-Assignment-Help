@@ -5,7 +5,7 @@ const BestAssignmentWiter = () => {
   return (
     <>
       <div className="w-full h-[548px] my-10 bg-slider-wave bg-cover bg-center bg-no-repeat absolute "></div>
-      <div className="w-full bg-[#F3F3F7] my-10 bg-opacity-100">
+      <div className="w-full bg-[#F3F3F7] pb-10 my-10 bg-opacity-100">
         <div className="container px-4 lg:w-[1400px] mx-auto flex flex-row lg:flex-col gap-5 lg:gap-0">
           {/* Headings */}
           <div className="font-poppins text-center my-5">
