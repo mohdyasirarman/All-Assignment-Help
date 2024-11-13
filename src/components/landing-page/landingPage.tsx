@@ -14,6 +14,7 @@ import BestAssignmentWiter from "@/components/landing-page/bestAssignmentWriter"
 import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 import UnmatchedAcademicSuccess from "@/components/landing-page/unmatchedAcademicSuccess";
 import WhatStudentSayAboutUs from "@/components/landing-page/whatStudentSayAboutUs";
+import StuckOnAssignment from "@/components/landing-page/stuckOnAssignment";
 
 export default function LandingPage() {
   return (
@@ -24,6 +25,7 @@ export default function LandingPage() {
       <BestAssignmentWiter />
       <UnmatchedAcademicSuccess />
       <WhatStudentSayAboutUs />
+      <StuckOnAssignment />
       <LandingPageFeatures />
       <ReviewAndTrust />
       <Offers />
