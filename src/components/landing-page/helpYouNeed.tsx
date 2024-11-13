@@ -35,7 +35,7 @@ const HelpYouNeed = () => {
   ];
   return (
     <>
-      <div className="w-full mt-36">
+      <div className="bg-[#F3FAFA] w-full mt-36 pb-10">
         <div className="container px-4 lg:w-[1400px] mx-auto flex flex-col lg:flex-col gap-5 lg:gap-0">
           {/* Heading */}
           <div className="font-poppins text-center my-5">

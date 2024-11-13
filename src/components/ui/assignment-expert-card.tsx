@@ -55,54 +55,43 @@ export function AssignmentExpertCard({}) {
   );
 }
 
-export function AcademicSuccessCard({ color }: { color: string }) {
+interface AcademicSuccessCardProps {
+  title: string;
+  image: string;
+  description: string;
+  color: string;
+}
+
+export function AcademicSuccessCard({
+  title,
+  image,
+  description,
+  color,
+}: AcademicSuccessCardProps) {
   return (
     <>
       <div className="max-w-xs w-full group/card">
         <div
           className={cn(
-            "overflow-hidden relative card h-[382px]  rounded-[20px]  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
+            "overflow-hidden relative card h-[390px] rounded-[13px] max-w-sm mx-auto backgroundImage flex flex-col p-4",
             color === "blue" ? "bg-[#E6F2FF] bg-cover" : "bg-[#CCF3E5] bg-cover"
           )}
         >
-          {/* <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-[#09B14F] opacity-60"></div> */}
-          <div className="flex flex-row items-center space-x-4 z-10">
+          <div className="p-10 h-52 w-full flex justify-center items-center">
             <Image
-              height="100"
-              width="100"
+              height={170}
+              width={170}
               alt="Avatar"
-              src="/static/images/Profile_avatar_placeholder_large.png"
-              className="h-16 w-16 rounded-full object-cover"
+              src={image}
+              className="rounded-full object-cover"
             />
-            <div className="flex flex-col font-poppins">
-              <p className="font-bold text-base text-[#2C2C2C] leading-4 relative z-10">
-                Name
-              </p>
-              <p className="text-sm text-[#8A8A8A]">Qualifications</p>
-              <div className="flex gap-1">
-                <FaStar className="text-[#09B14F] text-base" />
-                <FaStar className="text-[#09B14F] text-base" />
-                <FaStar className="text-[#09B14F] text-base" />
-                <FaStar className="text-[#09B14F] text-base" />
-                <FaStar className="text-[#09B14F] text-base" />
-              </div>
-            </div>
           </div>
-          <div className="text content -mt-10">
-            {/* <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-            Author Card
-          </h1> */}
-            <p className="font-poppins font-normal text-sm text-[#2C2C2C] relative  z-10 my-4">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
-              sed et facere nemo animi praesentium harum placeat, suscipit sint
-              totam nam? Iusto alias aut obcaecati aperiam est cupiditate quod
+          <div className="flex flex-col font-poppins text-center p-1">
+            <p className="w-full font-bold text-xl leading-8">{title}</p>
+            <p className="w-full font-normal text-base text-[#58595D] relative p-2">
+              {description}
               rem.
             </p>
-          </div>
-          <div className="mb-5 w-full flex justify-center text-white font-normal font-poppins">
-            <button className="bg-[#09B14F] w-2/6 h-12 rounded cursor-pointer transition duration-300 hover:bg-[#09B14F]/70">
-              Hire Me
-            </button>
           </div>
         </div>
       </div>
