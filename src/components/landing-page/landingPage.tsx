@@ -12,11 +12,13 @@ import Services from "@/components/landing-page/services";
 import TrustedByThousand from "@/components/landing-page/trustedByThousand";
 import HelpYouNeed from "@/components/landing-page/helpYouNeed";
 import BestAssignmentWiter from "@/components/landing-page/bestAssignmentWriter";
+import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 
 export default function LandingPage() {
   return (
     <div className="w-full ">
       <AssignmentHelp />
+      <WhyStudentTrustUs />
       <TrustedByThousand />
       <HelpYouNeed />
       <BestAssignmentWiter />
