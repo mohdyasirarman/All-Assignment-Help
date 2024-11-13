@@ -1,3 +1,5 @@
+import { AcademicSuccessCard } from "@/components/ui/assignment-expert-card";
+
 const UnmatchedAcademicSuccess = () => {
   return (
     <>
@@ -11,6 +13,18 @@ const UnmatchedAcademicSuccess = () => {
             <span className="text-[#09B14F]">Academic Success</span>
           </div>
           {/* Something */}
+          <div className="flex flex-col space-y-[30px] justify-center items-center mx-20">
+            <div className="w-full flex justify-center space-x-[30px]">
+              <AcademicSuccessCard color="blue" />
+              <AcademicSuccessCard color="green" />
+              <AcademicSuccessCard color="blue" />
+            </div>
+            <div className="w-full flex justify-center space-x-[30px]">
+              <AcademicSuccessCard color="green" />
+              <AcademicSuccessCard color="blue" />
+              <AcademicSuccessCard color="green" />
+            </div>
+          </div>
         </div>
       </div>
     </>

@@ -55,14 +55,14 @@ export function AssignmentExpertCard({}) {
   );
 }
 
-export function AcademicSuccessCard() {
+export function AcademicSuccessCard({ color }: { color: string }) {
   return (
     <>
       <div className="max-w-xs w-full group/card">
         <div
           className={cn(
-            "overflow-hidden relative card h-[350px] rounded-[20px] shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-            "bg-white bg-cover"
+            "overflow-hidden relative card h-[382px]  rounded-[20px]  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
+            color === "blue" ? "bg-[#E6F2FF] bg-cover" : "bg-[#CCF3E5] bg-cover"
           )}
         >
           {/* <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-[#09B14F] opacity-60"></div> */}
