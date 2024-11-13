@@ -77,7 +77,7 @@ const UnmatchedAcademicSuccess = () => {
             </span>
             <span className="text-[#09B14F]">Academic Success</span>
           </div>
-          {/* Something */}
+          {/* Cards */}
           <div className="flex flex-col space-y-[30px] justify-center items-center mx-20">
             <div className="w-full flex justify-center space-x-[30px]">
               <AcademicSuccessCard
@@ -119,6 +119,11 @@ const UnmatchedAcademicSuccess = () => {
                 color={AcademicSuccessData[5].color}
               />
             </div>
+          </div>
+          <div className="w-full mt-20 flex justify-center font-poppins">
+            <button className="bg-[#09B14F] text-white font-normal text-lg px-8 py-2 rounded-md">
+              Hire Real Writers
+            </button>
           </div>
         </div>
       </div>
