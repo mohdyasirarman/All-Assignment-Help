@@ -11,6 +11,7 @@ import SecurityPartner from "@/components/landing-page/securityPartner";
 import Services from "@/components/landing-page/services";
 import TrustedByThousand from "@/components/landing-page/trustedByThousand";
 import HelpYouNeed from "@/components/landing-page/helpYouNeed";
+import BestAssignmentWiter from "@/components/landing-page/bestAssignmentWriter";
 
 export default function LandingPage() {
   return (
@@ -18,6 +19,7 @@ export default function LandingPage() {
       <AssignmentHelp />
       <TrustedByThousand />
       <HelpYouNeed />
+      <BestAssignmentWiter />
       <LandingPageFeatures />
       <ReviewAndTrust />
       <Offers />

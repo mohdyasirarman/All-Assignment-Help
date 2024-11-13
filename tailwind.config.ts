@@ -26,6 +26,7 @@ const config = {
       },
       backgroundImage: {
         "hero-pattern": "url('/static/images/gradient-bg.png')",
+        "slider-wave": "url('/static/images/slider-wave.svg')",
       },
       colors: {
         border: "hsl(var(--border))",
