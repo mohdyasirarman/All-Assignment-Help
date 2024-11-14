@@ -6,10 +6,10 @@ const StuckOnAssignment = () => {
       <div className="container px-4 py-10 lg:w-[1400px] mx-auto flex justify-between gap-5 lg:gap-0">
         {/* Left Section */}
         <div className="font-poppins pl-10 w-2/4">
-          <span className=" font-bold font-inter text-[#0A090F] text-6xl block">
+          <span className=" font-bold font-inter text-[#0A090F] text-6xl  block">
             Stuck on Your Assignment! <br /> Need Expert Help?
           </span>
-          <span className="mt-8 font-normal text-lg text-[#5F5F5F] leading-7 block">
+          <span className="mt-8 font-normal text-lg text-[#5F5F5F]  block">
             Enjoy all kinds of assignment writing help from reputed academic
             <br />
             scholars.
