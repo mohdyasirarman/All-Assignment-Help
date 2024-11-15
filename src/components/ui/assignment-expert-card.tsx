@@ -138,3 +138,92 @@ export function ComprehensiveHelpCard({
     </>
   );
 }
+
+type PricingCardProps = {
+  title: string;
+  price: string;
+};
+
+export function PricingCard() {
+  const pricingData = [
+    {
+      id: 1,
+      title: "Referencing",
+      price: "$20.99",
+    },
+    {
+      id: 2,
+      title: "Revision",
+      price: "$19.99",
+    },
+    {
+      id: 3,
+      title: "Plagiarism Checks",
+      price: "$14.99",
+    },
+    {
+      id: 4,
+      title: "Formatting",
+      price: "$12.99",
+    },
+    {
+      id: 5,
+      title: "Proofreading & Editing",
+      price: "$10.99",
+    },
+    {
+      id: 6,
+      title: "Unlimited Edits",
+      price: "$06.99",
+    },
+  ];
+
+  const pricingStrip = (pricingData: PricingCardProps) => {
+    return (
+      <div className="w-full flex justify-between items-center font-poppins">
+        <div className="flex gap-3">
+          <Image
+            height={24}
+            width={24}
+            src="/static/images/pricing/green-tick.svg"
+            alt="tick"
+          />
+          <div className="font-normal text-[#5F5F5F] text-base leading-6">
+            {pricingData.title}
+          </div>
+        </div>
+        <div className="flex justify-between font-normal text-base leading-6 gap-3">
+          <div className="text-[#5F5F5F] line-through">{pricingData.price}</div>
+          <div className="text-[#09B14F]">FREE</div>
+        </div>
+      </div>
+    );
+  };
+  return (
+    <div className="border-2 border-[#2E2F35] h-[450px] w-[490px] rounded-xl font-poppins">
+      {/* Heading */}
+      <div className="font-bold text-xl leading-8 text-center my-5 ">
+        FREE Features
+      </div>
+      {/* Pricing */}
+      <div className="flex flex-col gap-2">
+        {pricingData.map((data) => (
+          <div key={data.id} className="flex justify-between px-5 py-1">
+            {pricingStrip(data)}
+          </div>
+        ))}
+      </div>
+      {/* Button */}
+      <div className="mt-8 font-normal text-center w-full">
+        <div className="text-[#5F5F5F] text-md">
+          Get These Premium Features Today
+        </div>
+        <div className="w-full my-4">
+          <button className="bg-[#09B14F] h-12 w-2/5 rounded text-white text-lg">
+            Unlock More
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}

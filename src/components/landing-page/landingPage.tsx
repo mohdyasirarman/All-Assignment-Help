@@ -6,6 +6,7 @@ import UnmatchedAcademicSuccess from "@/components/landing-page/unmatchedAcademi
 import WhatStudentSayAboutUs from "@/components/landing-page/whatStudentSayAboutUs";
 import StuckOnAssignment from "@/components/landing-page/stuckOnAssignment";
 import ComprehensiveHelp from "@/components/landing-page/comprehensiveHelp";
+import AffordablePricing from "@/components/landing-page/affordablePricing";
 
 export default function LandingPage() {
   return (
@@ -18,6 +19,7 @@ export default function LandingPage() {
       <WhatStudentSayAboutUs />
       <StuckOnAssignment />
       <ComprehensiveHelp />
+      <AffordablePricing />
     </div>
   );
 }
