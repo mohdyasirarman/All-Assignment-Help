@@ -1,20 +1,11 @@
-import AcademicStress from "@/components/landing-page/academicStress";
 import AssignmentHelp from "@/components/landing-page/assignmentHelpHero";
-import BestAssignmentHelper from "@/components/landing-page/bestAssignmentHelper";
-import CompletedProjects from "@/components/landing-page/completedProjects";
-import LandingPageFeatures from "@/components/landing-page/landingPageFeatures";
-import Offers from "@/components/landing-page/offers";
-import Prices from "@/components/landing-page/prices";
-import Rated from "@/components/landing-page/rated";
-import ReviewAndTrust from "@/components/landing-page/reviewAndTrust";
-import SecurityPartner from "@/components/landing-page/securityPartner";
-import Services from "@/components/landing-page/services";
 import HelpYouNeed from "@/components/landing-page/helpYouNeed";
 import BestAssignmentWiter from "@/components/landing-page/bestAssignmentWriter";
 import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 import UnmatchedAcademicSuccess from "@/components/landing-page/unmatchedAcademicSuccess";
 import WhatStudentSayAboutUs from "@/components/landing-page/whatStudentSayAboutUs";
 import StuckOnAssignment from "@/components/landing-page/stuckOnAssignment";
+import ComprehensiveHelp from "@/components/landing-page/comprehensiveHelp";
 
 export default function LandingPage() {
   return (
@@ -26,16 +17,7 @@ export default function LandingPage() {
       <UnmatchedAcademicSuccess />
       <WhatStudentSayAboutUs />
       <StuckOnAssignment />
-      <LandingPageFeatures />
-      <ReviewAndTrust />
-      <Offers />
-      <CompletedProjects />
-      <BestAssignmentHelper />
-      <Services />
-      <Prices />
-      <SecurityPartner />
-      <AcademicStress />
-      <Rated />
+      <ComprehensiveHelp />
     </div>
   );
 }

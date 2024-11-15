@@ -98,3 +98,43 @@ export function AcademicSuccessCard({
     </>
   );
 }
+
+interface ComprehensiveHelpCardProps {
+  image: string;
+  title: string;
+  description: string;
+}
+
+export function ComprehensiveHelpCard({
+  image,
+  title,
+  description,
+}: ComprehensiveHelpCardProps) {
+  return (
+    <>
+      <div className="w-full group/cards">
+        <div
+          className={cn(
+            "overflow-hidden relative drop-shadow-xl card h-[200px] w-[380px] rounded-[13px] backgroundImage flex flex-col p-4 bg-white "
+          )}
+        >
+          <div className="pt-5 pb-1 pl-3 w-full flex justify-start items-center">
+            <Image
+              height={48}
+              width={48}
+              alt="Avatar"
+              src={image}
+              className="rounded-full object-cover"
+            />
+          </div>
+          <div className="flex flex-col font-poppins text-start pl-3 pt-2">
+            <p className="w-full font-semibold text-xl">{title}</p>
+            <p className="w-full font-montserrat font-normal text-base text-[#8A8A8A] pt-3">
+              {description}
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
