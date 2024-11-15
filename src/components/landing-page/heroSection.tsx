@@ -14,7 +14,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <div className="w-full h-[568px] bg-hero-pattern bg-cover bg-center bg-no-repeat absolute top-24 left-0"></div>
+      <div className="w-full h-[585px] bg-hero-pattern bg-cover bg-center bg-no-repeat absolute top-18 left-0"></div>
       <div className="w-full">
         <div className="container px-4 lg:w-[1400px] mx-auto flex flex-col lg:flex-row gap-5 lg:gap-0">
           <div className="w-full flex justify-between pt-4 pb-4 relative">
@@ -104,7 +104,7 @@ export default function HeroSection() {
                   </div>
                 </div>
                 {/* Input */}
-                <div className="flex flex-col lg:flex-row gap-5">
+                <div className="flex  lg:flex-row gap-5">
                   <div className="pl-1 pr-1 w-2/4">
                     <div className="w-full px-2 mb-5 block relative ">
                       <Input
