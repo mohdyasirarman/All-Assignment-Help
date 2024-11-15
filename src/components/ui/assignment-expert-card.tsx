@@ -227,3 +227,30 @@ export function PricingCard() {
     </div>
   );
 }
+
+type WritingToolCardProps = {
+  title: string;
+  description: string;
+};
+
+export function WritingToolCard({ title, description }: WritingToolCardProps) {
+  return (
+    <div className="w-full group/cards">
+      <div
+        className={cn(
+          "overflow-hidden relative drop-shadow-xl card lg:h-[250px] lg:w-[275px] rounded-[13px] backgroundImage flex flex-col p-4 bg-[#ECF9F1] "
+        )}
+      >
+        <div className="flex flex-col font-poppins text-start pl-3 pt-2">
+          <p className="w-full font-bold text-xl leading-6">{title}</p>
+          <p className="w-full font-normal text-base text-[#8A8A8A] pt-3">
+            {description}
+          </p>
+        </div>
+        <div className="mt-8 text-center flex font-poppins">
+          <div className="w-full font-semibold text-[#09B14F]">Check Now</div>
+        </div>
+      </div>
+    </div>
+  );
+}

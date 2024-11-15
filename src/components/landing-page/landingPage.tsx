@@ -7,6 +7,7 @@ import WhatStudentSayAboutUs from "@/components/landing-page/whatStudentSayAbout
 import StuckOnAssignment from "@/components/landing-page/stuckOnAssignment";
 import ComprehensiveHelp from "@/components/landing-page/comprehensiveHelp";
 import AffordablePricing from "@/components/landing-page/affordablePricing";
+import WritingTool from "@/components/landing-page/writingTool";
 
 export default function LandingPage() {
   return (
@@ -20,6 +21,7 @@ export default function LandingPage() {
       <StuckOnAssignment />
       <ComprehensiveHelp />
       <AffordablePricing />
+      <WritingTool />
     </div>
   );
 }
