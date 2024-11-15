@@ -1,5 +1,4 @@
 import { ComprehensiveHelpCard } from "@/components/ui/assignment-expert-card";
-import { data } from "framer-motion/client";
 
 const ComprehensiveHelp = () => {
   const comprehensiveHelpData = [
