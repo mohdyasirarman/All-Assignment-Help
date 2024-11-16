@@ -28,8 +28,8 @@ const config = {
         montserrat: ["Montserrat", "sans-serif"],
       },
       backgroundImage: {
-        "hero-pattern": "url('/static/images/gradient-bg.png')",
-        "slider-wave": "url('/static/images/slider-wave.svg')",
+        "hero-pattern": "url(/static/images/gradient-bg.png)",
+        "slider-wave": "url(/static/images/slider-wave.svg)",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -78,12 +78,20 @@ const config = {
           },
         },
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
       },
       animation: {
@@ -101,16 +109,18 @@ function addVariablesForColors({
   addBase,
   theme,
 }: {
-  addBase: (base: any) => void;
-  theme: (key: string) => any;
+  addBase: (base: Record<string, string>) => void;
+  theme: (key: string) => Record<string, string>;
 }) {
   const allColors = flattenColorPalette(theme("colors"));
-  const newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  const newVars: Record<string, string> = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val as string])
   );
 
   addBase({
-    ":root": newVars,
+    ":root": Object.entries(newVars)
+      .map(([key, val]) => `${key}: ${val};`)
+      .join("\n"),
   });
 }
 

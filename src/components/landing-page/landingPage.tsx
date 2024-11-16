@@ -8,6 +8,7 @@ import StuckOnAssignment from "@/components/landing-page/stuckOnAssignment";
 import ComprehensiveHelp from "@/components/landing-page/comprehensiveHelp";
 import AffordablePricing from "@/components/landing-page/affordablePricing";
 import WritingTool from "@/components/landing-page/writingTool";
+import FAQS from "@/components/landing-page/faq";
 
 export default function LandingPage() {
   return (
@@ -22,6 +23,7 @@ export default function LandingPage() {
       <ComprehensiveHelp />
       <AffordablePricing />
       <WritingTool />
+      <FAQS />
     </div>
   );
 }
