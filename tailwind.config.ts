@@ -26,6 +26,7 @@ const config = {
         inter: ["Inter", "sans-serif"],
         coveredByYourGrace: ["Covered By Your Grace", "cursive"],
         montserrat: ["Montserrat", "sans-serif"],
+        dmSans: ["DM Sans", "sans-serif"],
       },
       backgroundImage: {
         "hero-pattern": "url(/static/images/gradient-bg.png)",
