@@ -22,8 +22,7 @@ const unlockExpertHelp = () => {
               </p>
             </div>
 
-            {/* Right Section: Links and QR Code */}
-            <div className="flex flex-col rounded-lg space-y-4 ml-[0px]">
+            <div className="flex flex-col rounded-lg space-y-4 mt-[-10px] mr-[50px]">
               <div className="space-y-4 ">
                 <Image
                   src="/static/images/apple-bar.svg"
@@ -42,21 +41,20 @@ const unlockExpertHelp = () => {
               </div>
 
               <div className="w-[259.11px] h-[15px]">
-                <p className="font-poppins font-[400px] text-[10px] text-center text-[#FFFFFF] leading-[10px]">
+                <p className="font-poppins font-[400px] text-[10px] text-center mt-[10px] text-[#FFFFFF] leading-[10px]">
                   *Offer eligible for first 3 orders ordered through app!
                 </p>
               </div>
             </div>
-            <div className="mt-[-30px]">
-              <Image
-                src="/static/images/qr.svg" // Replace with the actual path to your QR code image
-                alt="QR Code"
-                width={100}
-                height={100}
-                className="flex"
-              />
-              {/* {IMage for qr code} */}
-            </div>
+          </div>
+          <div className="mt-[57.5px] ml-[-170px] ">
+            <Image
+              src="/static/images/qr.svg"
+              alt="QR Code"
+              width={100}
+              height={100}
+              className="flex"
+            />
           </div>
         </div>
       </div>
