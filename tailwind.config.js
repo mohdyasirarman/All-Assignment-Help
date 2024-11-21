@@ -1,15 +1,14 @@
 import tailwindcssAnimate from "tailwindcss-animate";
-import type { Config } from "tailwindcss";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 /** @type {import('tailwindcss').Config} */
 const config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./pages/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -26,7 +25,6 @@ const config = {
         inter: ["Inter", "sans-serif"],
         coveredByYourGrace: ["Covered By Your Grace", "cursive"],
         montserrat: ["Montserrat", "sans-serif"],
-        dmSans: ["DM Sans", "sans-serif"],
       },
       backgroundImage: {
         "hero-pattern": "url(/static/images/gradient-bg.png)",
@@ -79,20 +77,12 @@ const config = {
           },
         },
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
@@ -104,24 +94,18 @@ const config = {
     },
   },
   plugins: [tailwindcssAnimate, addVariablesForColors],
-} satisfies Config;
+};
 
-function addVariablesForColors({
-  addBase,
-  theme,
-}: {
-  addBase: (base: Record<string, string>) => void;
-  theme: (key: string) => Record<string, string>;
-}) {
+// Custom plugin to add each Tailwind color as a CSS variable
+
+function addVariablesForColors({ addBase, theme }) {
   const allColors = flattenColorPalette(theme("colors"));
-  const newVars: Record<string, string> = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val as string])
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
 
   addBase({
-    ":root": Object.entries(newVars)
-      .map(([key, val]) => `${key}: ${val};`)
-      .join("\n"),
+    ":root": newVars,
   });
 }
 

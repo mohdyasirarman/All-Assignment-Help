@@ -46,7 +46,7 @@ const FAQS = () => {
 
   return (
     <div className="w-full my-20">
-      <div className="flex justify-between px-28 gap-10 text-[#303A42] text-lg font-dmSans font-bold">
+      <div className="flex justify-between px-28 gap-10 text-[#303A42] text-lg font-bold">
         <div className="w-1/2">
           <Accordion type="single" collapsible className="w-full">
             {leftFAQs.map((faq, index) => (
