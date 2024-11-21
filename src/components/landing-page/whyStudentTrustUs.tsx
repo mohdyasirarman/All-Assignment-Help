@@ -44,7 +44,6 @@ const WhyStudentTrustUs = () => {
                 </div>
               </div>
             ))}
-            ;
           </div>
         </div>
       </div>

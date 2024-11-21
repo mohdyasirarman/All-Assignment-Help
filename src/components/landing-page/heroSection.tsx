@@ -15,9 +15,9 @@ export default function HeroSection() {
   return (
     <>
       <div className="w-full h-[585px] bg-hero-pattern bg-cover bg-center bg-no-repeat absolute top-18 left-0"></div>
-      <div className="w-full">
-        <div className="container px-4 lg:w-[1400px] mx-auto flex flex-col lg:flex-row gap-5 lg:gap-0">
-          <div className="w-full flex justify-between pt-4 pb-4 relative">
+      <div className="w-full h-[585px]">
+        <div className="container h-full px-4 lg:w-[1400px] mx-auto flex flex-col lg:flex-row gap-5 lg:gap-0">
+          <div className="w-full flex items-center justify-between pt-4 pb-4 relative">
             {/* Left Section */}
             <div className="flex flex-col gap-5 pt-5 pl-12 pr-4 w-2/4">
               {/* Headings */}

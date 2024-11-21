@@ -10,6 +10,7 @@ import AffordablePricing from "@/components/landing-page/affordablePricing";
 import WritingTool from "@/components/landing-page/writingTool";
 import FAQS from "@/components/landing-page/faq";
 import UnlockExpertHelp from "@/components/landing-page/unlockExpertHelp";
+import Footer from "@/components/common/footer";
 
 export default function LandingPage() {
   return (
@@ -26,6 +27,7 @@ export default function LandingPage() {
       <WritingTool />
       <FAQS />
       <UnlockExpertHelp />
+      <Footer />
     </div>
   );
 }

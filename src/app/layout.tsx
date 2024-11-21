@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "@/components/common/footer";
+
 
 export const metadata: Metadata = {
   title: "Assignment Help Online| Get Assignment Help @30% Discount",
@@ -35,7 +35,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased`}>
         {children}
-        <Footer />
       </body>
     </html>
   );
