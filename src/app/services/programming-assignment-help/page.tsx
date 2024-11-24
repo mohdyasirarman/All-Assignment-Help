@@ -4,7 +4,7 @@ import ServiceCommonCom from '../../../components/ui/ServiceCommonCom';
 const page = () => {
   return (
     <>
-      <ServiceCommonCom serviceName="Write My Essay Page" />
+      <ServiceCommonCom serviceName="programming-assignment-help" />
     </>
   );
 };
