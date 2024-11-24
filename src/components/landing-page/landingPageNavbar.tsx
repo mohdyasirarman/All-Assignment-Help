@@ -43,6 +43,21 @@ export default function LandingPageNavbar() {
                   />
                 </svg>
               </button>
+              {/* Dropdown Menu for Services */}
+              <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg">
+                <Link
+                  href="/services/write-my-essay-for-me"
+                  className="block px-4 py-2 text-black hover:bg-gray-200"
+                >
+                  Write My Essay for Me
+                </Link>
+                <Link
+                  href="/services/easy-editing-services"
+                  className="block px-4 py-2 text-black hover:bg-gray-200"
+                >
+                  Easy Editing Services
+                </Link>
+              </div>
             </div>
 
             <div className="relative group">
