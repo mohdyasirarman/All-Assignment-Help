@@ -328,7 +328,7 @@ export default function LandingPageNavbar() {
 
             <Link
               href="/reviews"
-              className="hidden lg:block px-[8px] py-[11px] font-bold rounded-[6px] bg-[#1653c4] border border-[#1653c4] text-white uppercase shadow-[2px_2px_8px_rgba(111,142,179,0.8)] hover:bg-blue-700"
+              className="hidden lg:block px-[8px] py-[11px] font-bold rounded-[6px] bg-[#09b14f] border border-[] text-white uppercase shadow-[2px_2px_8px_rgba(111,142,179,0.8)] hover:bg-blue-500"
             >
               REVIEWS 4.92/5
             </Link>

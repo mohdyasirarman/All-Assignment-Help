@@ -15,19 +15,19 @@ import Footer from "@/components/common/footer";
 export default function LandingPage() {
   return (
     <div className="w-full ">
-      <AssignmentHelp />
-      <WhyStudentTrustUs />
-      <HelpYouNeed />
-      <BestAssignmentWiter />
-      <UnmatchedAcademicSuccess />
-      <WhatStudentSayAboutUs />
-      <StuckOnAssignment />
-      <ComprehensiveHelp />
-      <AffordablePricing />
-      <WritingTool />
-      <FAQS />
-      <UnlockExpertHelp />
-      <Footer />
+          <AssignmentHelp changeInForm="" changeInH="" changeInP="" />
+          <WhyStudentTrustUs />
+          <HelpYouNeed  changeInYouNeedTitle="" changeInYouNeedbtn=""/>
+          <BestAssignmentWiter changeInExpertWriteP="" changeInExpertWriteTilte=""/>
+          <UnmatchedAcademicSuccess changeInUnmatedTite="" changeInUnmatedp="" />
+          <WhatStudentSayAboutUs changeInP="" changeTitle=""/>
+          <StuckOnAssignment changeInP="" changeTitle=""/>
+          <ComprehensiveHelp /> 
+          <AffordablePricing changeInP={""} changeTitle={""} /> 
+          <WritingTool />
+          <FAQS  />
+          <UnlockExpertHelp changeInP={""} changeTitle={""}/>  
+          <Footer />
     </div>
   );
 }

@@ -68,7 +68,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#F1F1F1] text-gray-700 py-10">
+    <footer className="bg-[#F1F1F1] text-gray-700 py-12">
       <div className="w-full my-10">
         <div className="flex justify-between px-28 gap-10 text-[#303A42] text-lg font-dmSans font-bold">
           {/* Main Footer Container */}

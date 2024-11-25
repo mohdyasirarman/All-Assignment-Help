@@ -1,5 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
+import { interpolate } from "framer-motion";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 
@@ -77,10 +78,10 @@ export function AcademicSuccessCard({
             color === "blue" ? "bg-[#E6F2FF] bg-cover" : "bg-[#CCF3E5] bg-cover"
           )}
         >
-          <div className="p-10 h-52 w-full flex justify-center items-center">
+          <div className="p-[5px] h-52 w-full flex justify-center items-center">
             <Image
-              height={170}
-              width={170}
+              height={150}
+              width={150}
               alt="Avatar"
               src={image}
               className="rounded-full object-cover"
@@ -90,7 +91,7 @@ export function AcademicSuccessCard({
             <p className="w-full font-bold text-xl leading-8">{title}</p>
             <p className="w-full font-normal text-base text-[#58595D] relative p-2">
               {description}
-              rem.
+              
             </p>
           </div>
         </div>
@@ -139,13 +140,13 @@ export function ComprehensiveHelpCard({
   );
 }
 
-type PricingCardProps = {
+type  PricingCardProps = {
   title: string;
   price: string;
 };
 
 export function PricingCard() {
-  const pricingData = [
+  const pricingData =  [
     {
       id: 1,
       title: "Referencing",
@@ -176,7 +177,7 @@ export function PricingCard() {
       title: "Unlimited Edits",
       price: "$06.99",
     },
-  ];
+  ] ;
 
   const pricingStrip = (pricingData: PricingCardProps) => {
     return (
@@ -200,7 +201,7 @@ export function PricingCard() {
     );
   };
   return (
-    <div className="border-2 border-[#2E2F35] h-[450px] w-[490px] rounded-xl font-poppins">
+    <div className="border-2 border-[#2E2F35] h-[450px] w-[490px] rounded-xl font-poppins ">
       {/* Heading */}
       <div className="font-bold text-xl leading-8 text-center my-5 ">
         FREE Features

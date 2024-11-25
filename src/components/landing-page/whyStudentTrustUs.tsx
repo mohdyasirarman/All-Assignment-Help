@@ -18,7 +18,7 @@ const WhyStudentTrustUs = () => {
   ];
   return (
     <>
-      <div className="w-full mt-32 mb-16">
+      <div className="w-full mt-[15px] mb-22">
         <div className="container px-4 lg:w-[1400px] mx-auto flex flex-col lg:flex-col gap-5 lg:gap-0">
           {/* Heading */}
           <div className="w-full text-center space-y-4 mb-5">

@@ -4,7 +4,13 @@ import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { FaStar } from "react-icons/fa";
 
-export default function HeroSection() {
+interface heroHelpProps {
+  changeInForm: string;
+  changeInH: string;
+  changeInP: string;
+}
+
+export default function HeroSection({changeInForm,changeInH,changeInP} : heroHelpProps) {
   const tabs = ["Writing", "Rewriting", "Editing"];
   const [selectedTab, setSelectedTab] = useState(2); // Initially select "Editing"
 
@@ -23,12 +29,12 @@ export default function HeroSection() {
               {/* Headings */}
               <div className="flex flex-col gap-5 ">
                 <div className="text-[54px] leading-[70px] font-poppins font-bold mb-0">
-                  <div>Ace Your Assignments with Expert Help</div>
+                  {changeInH ? <div>{changeInH}</div> :  <div>Ace Your Assignments with Expert Help</div>} 
                   <div className="text-[#09B14F]">Anytime, Anywhere!</div>
                 </div>
                 <div className="mb-8 font-poppins font-normal text-[#5F5F5F] text-lg leading-8">
-                  Top-rated assignment experts are ready to boost your grades.
-                  Get personalized, plagiarism-free assistance now! Instantly!!
+                 { changeInP ? <p>{changeInP}</p> :<p> Top-rated assignment experts are ready to boost your grades.
+                  Get personalized, plagiarism-free assistance now! Instantly!! </p>}
                 </div>
               </div>
               {/* Reviews */}
@@ -58,13 +64,13 @@ export default function HeroSection() {
             <div className="border-white p-1 mb-4 rounded-xl flex flex-col gap-5 w-2/5">
               <div className="bg-white border-white border-[4px] bg-opacity-10 px-3 pt-5 pb-3 rounded-xl shadow">
                 {/* Heading */}
-                <div className="text-lg px-12 text-[#2c2c2c] text-center font-poppins font-bold mb-3 ">
+                {changeInForm?<div className="text-lg px-12 text-[#2c2c2c] text-center font-poppins font-bold mb-3 ">{changeInForm}</div>:<div className="text-lg px-12 text-[#2c2c2c] text-center font-poppins font-bold mb-3 ">
                   Fill in your details and get started with a
                   <div className="text-orange-500 inline-block">
                     20% discount
                   </div>{" "}
                   on your first order!
-                </div>
+                </div>}
                 {/* Tabs */}
                 <div className="flex justify-center mb-4">
                   <div className="sm:hidden relative inline-flex">
