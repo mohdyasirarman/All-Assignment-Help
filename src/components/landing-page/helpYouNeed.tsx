@@ -68,7 +68,7 @@ const HelpYouNeed = ({ changeInYouNeedTitle, changeInYouNeedbtn }: helpYouNeedPr
   ]
   return (
     <>
-      <div className="bg-[#F3FAFA] w-full mt-36 pb-10 rounded-[20px]">
+      <div className="bg-[#F3FAFA] w-full mt-0 pb-10 rounded-[40px_40px_0px_0px]">
         <div className="container px-4 lg:w-[1400px] mx-auto flex flex-col lg:flex-col gap-5 lg:gap-0">
           {/* Heading */}
           <div className="font-poppins text-center my-5">

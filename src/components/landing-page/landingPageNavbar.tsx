@@ -49,11 +49,13 @@ export default function LandingPageNavbar() {
                   <div className="grid grid-cols-3 gap-8">
                     {/* Writing Column */}
                     <div>
-                      <h3 className="font-bold text-md text-gray-900 mb-4">Writing</h3>
+                      <h3 className="font-bold text-md text-gray-900 mb-4">
+                        Writing
+                      </h3>
                       <ul className="space-y-1">
                         <li>
                           <Link
-                            href="/services/write-my-essay-for-me"
+                            href="/services/writing/write-my-essay-for-me"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             Write My Essay for Me
@@ -61,7 +63,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/essay-editing-service"
+                            href="/services/writing/essay-editing-service"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             Essay Editing Service
@@ -69,7 +71,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/cheap-essay-writing-services"
+                            href="/services/writing/cheap-essay-writing-services"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             Cheap Essay Writing Services
@@ -77,7 +79,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/mba-essay-writing-service"
+                            href="/services/writing/mba-essay-writing-service"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             MBA Essay Writing Service
@@ -85,7 +87,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/essay-help"
+                            href="/services/writing/essay-help"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             Essay Help
@@ -93,7 +95,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/research-proposal-writing-service"
+                            href="/services/writing/research-proposal-writing-service"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             Research Proposal Writing Service
@@ -101,7 +103,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/research-paper-writing"
+                            href="/services/writing/research-paper-writing"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             Research Paper Writing
@@ -109,7 +111,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/write-my-paper"
+                            href="/services/writing/write-my-paper"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             Write My Paper
@@ -117,7 +119,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/ghost-writer"
+                            href="/services/writing/ghost-writer"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             Ghost Writer
@@ -125,7 +127,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/academic-writing"
+                            href="/services/writing/academic-writing"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             Academic Writing
@@ -136,11 +138,13 @@ export default function LandingPageNavbar() {
 
                     {/* Problem Solving Column */}
                     <div>
-                      <h3 className="font-bold text-md text-gray-900 mb-4">Problem Solving</h3>
+                      <h3 className="font-bold text-md text-gray-900 mb-4">
+                        Problem Solving
+                      </h3>
                       <ul className="space-y-2">
                         <li>
                           <Link
-                            href="/services/programming-assignment-help"
+                            href="/services/problem-solving/programming-assignment-help"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             Programming Assignment Help
@@ -148,7 +152,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/assessment-help"
+                            href="/services/problem-solving/assessment-help"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             Assessment Help
@@ -156,7 +160,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/do-my-assignment"
+                            href="/services/problem-solving/do-my-assignment"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             Do My Assignment
@@ -164,7 +168,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/college-homework-help"
+                            href="/services/problem-solving/college-homework-help"
                             className="block text-gray-700 hover:text-[#09b14f]"
                           >
                             College Homework Help
@@ -172,7 +176,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/urgent-assignment-help"
+                            href="/services/problem-solving/urgent-assignment-help"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             Urgent Assignment Help
@@ -180,7 +184,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/pay-someone-to-do-my-homework"
+                            href="/services/problem-solving/pay-someone-to-do-my-homework"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             Pay Someone To Do My Homework
@@ -188,7 +192,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/do-my-coursework"
+                            href="/services/problem-solving/do-my-coursework"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             Do My Coursework
@@ -196,7 +200,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/do-my-homework"
+                            href="/services/problem-solving/do-my-homework"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             Do My Homework
@@ -204,7 +208,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/take-my-online-class"
+                            href="/services/problem-solving/take-my-online-class"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             Take My Online Class
@@ -215,11 +219,13 @@ export default function LandingPageNavbar() {
 
                     {/* More Services Column */}
                     <div>
-                      <h3 className="font-bold text-md text-gray-900 mb-4">More Services</h3>
+                      <h3 className="font-bold text-md text-gray-900 mb-4">
+                        More Services
+                      </h3>
                       <ul className="space-y-2">
                         <li>
                           <Link
-                            href="/services/take-my-online-exam"
+                            href="/services/more-services/take-my-online-exam"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             Take My Online Exam
@@ -227,7 +233,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/dissertation-help"
+                            href="/services/more-services/dissertation-help"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             Dissertation Help
@@ -235,7 +241,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/term-paper-help"
+                            href="/services/more-services/term-paper-help"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             Term Paper Help
@@ -243,7 +249,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/homework-help"
+                            href="/services/more-services/homework-help"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             Homework Help
@@ -251,7 +257,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/case-study-help"
+                            href="/services/more-services/case-study-help"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             Case Study Help
@@ -259,7 +265,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/coursework-help"
+                            href="/services/more-services/coursework-help"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             Coursework Help
@@ -267,7 +273,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/thesis-help"
+                            href="/services/more-services/thesis-help"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             Thesis Help
@@ -275,7 +281,7 @@ export default function LandingPageNavbar() {
                         </li>
                         <li>
                           <Link
-                            href="/services/powerpoint-presentation-services"
+                            href="/services/more-services/powerpoint-presentation-services"
                             className="block text-gray-700  hover:text-[#09b14f]"
                           >
                             PowerPoint Presentation Services
