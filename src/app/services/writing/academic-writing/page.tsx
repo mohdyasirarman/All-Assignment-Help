@@ -4,8 +4,6 @@ import UnmatchedAcademicSuccess from "@/components/landing-page/unmatchedAcademi
 import WhatStudentSayAboutUs from "@/components/landing-page/whatStudentSayAboutUs";
 import StuckOnAssignment from "@/components/landing-page/stuckOnAssignment";
 import AffordablePricing from "@/components/landing-page/affordablePricing";
-import WritingTool from "@/components/landing-page/writingTool";
-import FAQS from "@/components/landing-page/faq";
 import UnlockExpertHelp from "@/components/landing-page/unlockExpertHelp";
 import Footer from "@/components/common/footer";
 
@@ -39,8 +37,6 @@ const page = () => {
         }
         changeTitle={"High-Quality Academic Writing Services at the Best Price"}
       />
-      <FAQS />
-      <WritingTool />
       <UnlockExpertHelp
         changeInP={"On APP - grab it while it lasts!"}
         changeTitle={"5% Cashback"}
