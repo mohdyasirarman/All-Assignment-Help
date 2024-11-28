@@ -5,28 +5,22 @@ import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 import UnmatchedAcademicSuccess from "@/components/landing-page/unmatchedAcademicSuccess";
 import WhatStudentSayAboutUs from "@/components/landing-page/whatStudentSayAboutUs";
 import StuckOnAssignment from "@/components/landing-page/stuckOnAssignment";
-import ComprehensiveHelp from "@/components/landing-page/comprehensiveHelp";
 import AffordablePricing from "@/components/landing-page/affordablePricing";
-import WritingTool from "@/components/landing-page/writingTool";
-import FAQS from "@/components/landing-page/faq";
 import UnlockExpertHelp from "@/components/landing-page/unlockExpertHelp";
 import Footer from "@/components/common/footer";
 
 export default function LandingPage() {
   return (
     <div className="w-full ">
-          <AssignmentHelp changeInForm="" changeInH="" changeInP="" />
+          <AssignmentHelp changeInForm="" changeInH="Take My Online Class for Me" changeInP="Seek online class help to build a strong foundation for lifelong learning." />
           <WhyStudentTrustUs />
-          <HelpYouNeed  changeInYouNeedTitle="" changeInYouNeedbtn=""/>
+          <HelpYouNeed  changeInYouNeedTitle="Why Choose You to Do My Online Class?" changeInYouNeedbtn="Learn More"/>
           <BestAssignmentWiter changeInExpertWriteP="" changeInExpertWriteTilte=""/>
           <UnmatchedAcademicSuccess changeInUnmatedTite="" changeInUnmatedp="" />
-          <WhatStudentSayAboutUs changeInP="" changeTitle=""/>
-          <StuckOnAssignment changeInP="" changeTitle=""/>
-          <ComprehensiveHelp /> 
-          <AffordablePricing changeInP={""} changeTitle={""} /> 
-          <WritingTool />
-          <FAQS  />
-          <UnlockExpertHelp changeInP={""} changeTitle={""}/>  
+          <WhatStudentSayAboutUs changeInP="Read Why So Many Students Rely on Our Online Class Help " changeTitle="Review of Students Who Told Us Take My Class for Me"/>
+          <StuckOnAssignment changeInP="Join the Bandwagon Today by Sending a “Do My Online Class” Request " changeTitle="Reliable Online Class Help with High Service Ratings"/>
+          <AffordablePricing changeInP={""} changeTitle={`Our Experts Work on All Learning Management Systems`} /> 
+          <UnlockExpertHelp />  
           <Footer />
     </div>
   );

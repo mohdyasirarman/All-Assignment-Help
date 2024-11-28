@@ -5,28 +5,22 @@ import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 import UnmatchedAcademicSuccess from "@/components/landing-page/unmatchedAcademicSuccess";
 import WhatStudentSayAboutUs from "@/components/landing-page/whatStudentSayAboutUs";
 import StuckOnAssignment from "@/components/landing-page/stuckOnAssignment";
-import ComprehensiveHelp from "@/components/landing-page/comprehensiveHelp";
 import AffordablePricing from "@/components/landing-page/affordablePricing";
-import WritingTool from "@/components/landing-page/writingTool";
-import FAQS from "@/components/landing-page/faq";
 import UnlockExpertHelp from "@/components/landing-page/unlockExpertHelp";
 import Footer from "@/components/common/footer";
 
 export default function LandingPage() {
   return (
     <div className="w-full ">
-          <AssignmentHelp changeInForm="" changeInH="" changeInP="" />
+          <AssignmentHelp changeInForm="" changeInH="Do My Coursework Online For Me" changeInP="Can Someone Write My Coursework for Me? Our Experts Certainly Can!" />
           <WhyStudentTrustUs />
-          <HelpYouNeed  changeInYouNeedTitle="" changeInYouNeedbtn=""/>
-          <BestAssignmentWiter changeInExpertWriteP="" changeInExpertWriteTilte=""/>
-          <UnmatchedAcademicSuccess changeInUnmatedTite="" changeInUnmatedp="" />
-          <WhatStudentSayAboutUs changeInP="" changeTitle=""/>
-          <StuckOnAssignment changeInP="" changeTitle=""/>
-          <ComprehensiveHelp /> 
-          <AffordablePricing changeInP={""} changeTitle={""} /> 
-          <WritingTool />
-          <FAQS  />
-          <UnlockExpertHelp changeInP={""} changeTitle={""}/>  
+          <HelpYouNeed  changeInYouNeedTitle="How Does Our Coursework Services Work?" changeInYouNeedbtn="Place Order"/>
+          <BestAssignmentWiter changeInExpertWriteP="Find the Best Experts Who Can Provide Outstanding Coursework Help" changeInExpertWriteTilte="Our Top Writers are Ready to Help You"/>
+          <UnmatchedAcademicSuccess changeInUnmatedTite="Advantages of Opting for Our Do My Coursework Service" changeInUnmatedp="Discover Why Students Love to Rely On Our Writing Service" />
+          <WhatStudentSayAboutUs changeInP="Take a Peek into the Experiences of Our Verified Clients." changeTitle="Happy Customer Feedback About Our Services"/>
+          <StuckOnAssignment changeInP="Enjoy the Best Academic Help at an Affordable Price" changeTitle="Do My Coursework Online, Please"/>
+          <AffordablePricing changeInP={"Enjoy a Wide Variety of Services & Free Add-Ons"} changeTitle={"We Offer Coursework Writing Services For All Subjects"} /> 
+          <UnlockExpertHelp />  
           <Footer />
     </div>
   );

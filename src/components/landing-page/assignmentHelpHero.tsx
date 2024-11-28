@@ -10,9 +10,9 @@ interface AssignmentHelpProps {
 
 export default function AssignmentHelp({ changeInForm, changeInH, changeInP }: AssignmentHelpProps) {
   return (
-    <>
+    <div >
       <LandingPageNavbar />
       <HeroSection changeInForm={changeInForm} changeInH={changeInH} changeInP={changeInP} />
-    </>
+    </div>
   );
 }

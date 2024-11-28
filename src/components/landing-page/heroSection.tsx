@@ -20,7 +20,7 @@ export default function HeroSection({changeInForm,changeInH,changeInP} : heroHel
 
   return (
     <>
-      <div className="w-full h-[585px] bg-hero-pattern bg-cover bg-center bg-no-repeat absolute top-18 left-0"></div>
+      <div className="w-full h-[650px] bg-hero-pattern bg-cover bg-center bg-no-repeat absolute top-0 left-0"></div>
       <div className="w-full h-[585px]">
         <div className="container h-full px-4 lg:w-[1400px] mx-auto flex flex-col lg:flex-row gap-5 lg:gap-0">
           <div className="w-full flex items-center justify-between pt-4 pb-4 relative">
@@ -62,7 +62,7 @@ export default function HeroSection({changeInForm,changeInH,changeInP} : heroHel
             </div>
             {/* Right Section */}
             <div className="border-white p-1 mb-4 rounded-xl flex flex-col gap-5 w-2/5">
-              <div className="bg-white border-white border-[4px] bg-opacity-10 px-3 pt-5 pb-3 rounded-xl shadow">
+              <div className="bg-white border-slate-100 border-[3px] bg-opacity-10 px-3 pt-5 pb-3 rounded-xl shadow">
                 {/* Heading */}
                 {changeInForm?<div className="text-lg px-12 text-[#2c2c2c] text-center font-poppins font-bold mb-3 ">{changeInForm}</div>:<div className="text-lg px-12 text-[#2c2c2c] text-center font-poppins font-bold mb-3 ">
                   Fill in your details and get started with a

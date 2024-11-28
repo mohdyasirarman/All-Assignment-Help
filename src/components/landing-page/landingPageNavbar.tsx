@@ -6,9 +6,9 @@ import { FaCog, FaTh, FaUser, FaHandshake } from "react-icons/fa";
 
 export default function LandingPageNavbar() {
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
+    <nav className=" shadow-md sticky top-3 mx-[10%] rounded-lg  px-2 z-50   backdrop-filter backdrop-blur-lg border border-gray-200 ">
+      <div className="container mx-auto px-4  ">
+        <div className="flex justify-between items-center h-16 ">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -24,8 +24,8 @@ export default function LandingPageNavbar() {
           </Link>
 
           {/* Navigation Links */}
-          <div className="hidden lg:flex items-center mr-40">
-            <div className="relative group">
+          <div className="hidden lg:flex items-center mr-40 ">
+            <div className="relative group ">
               <button className="flex items-center space-x-1 text-black font-semibold px-5 py-[22px] pb-5 bg-transparent">
                 <FaCog />
                 <span>Services</span>
@@ -44,14 +44,12 @@ export default function LandingPageNavbar() {
                 </svg>
               </button>
               {/* Dropdown Menu for Services */}
-              <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg">
+              <div className="absolute  hidden group-hover:block  ">
                 <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg p-4 w-[800px] rounded-xl">
-                  <div className="grid grid-cols-3 gap-8">
+                  <div className="grid grid-cols-3 gap-8 ">
                     {/* Writing Column */}
                     <div>
-                      <h3 className="font-bold text-md text-gray-900 mb-4">
-                        Writing
-                      </h3>
+                      <h3 className="font-bold text-md text-gray-900 mb-4">Writing</h3>
                       <ul className="space-y-1">
                         <li>
                           <Link
@@ -138,9 +136,7 @@ export default function LandingPageNavbar() {
 
                     {/* Problem Solving Column */}
                     <div>
-                      <h3 className="font-bold text-md text-gray-900 mb-4">
-                        Problem Solving
-                      </h3>
+                      <h3 className="font-bold text-md text-gray-900 mb-4">Problem Solving</h3>
                       <ul className="space-y-2">
                         <li>
                           <Link
@@ -219,9 +215,7 @@ export default function LandingPageNavbar() {
 
                     {/* More Services Column */}
                     <div>
-                      <h3 className="font-bold text-md text-gray-900 mb-4">
-                        More Services
-                      </h3>
+                      <h3 className="font-bold text-md text-gray-900 mb-4">More Services</h3>
                       <ul className="space-y-2">
                         <li>
                           <Link

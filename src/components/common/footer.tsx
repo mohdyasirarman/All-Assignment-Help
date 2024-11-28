@@ -214,7 +214,7 @@ export default function Footer() {
                         height={5}
                       />
                     </div>
-
+                     <div className="ml-20 flex   items-center gap-1">
                     <Image
                       src="/static/images/Twittericon.svg.png"
                       alt="Twitter"
@@ -363,8 +363,10 @@ export default function Footer() {
                             transform="translate(0.910156 6.04883)"
                           />
                         </clipPath>
+                        
                       </defs>
                     </svg>
+                    </div>
                   </div>
                 </div>
                 <div className=" flex items-center justify-center">
@@ -442,7 +444,7 @@ export default function Footer() {
                   Fair use policy
                 </Link>
               </div>
-              <div className=" absolute bottom-[0px] right-[10px]">
+              <div className=" absolute -bottom-[20px] right-[10px]">
                 <img src="/static/images/Container.png" alt="Container" />
               </div>
             </div>

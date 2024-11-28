@@ -1,9 +1,8 @@
 import { PricingCard } from "@/components/ui/assignment-expert-card";
-import { strict } from "assert";
 
 interface PricingProps {
-  changeTitle: String,
-  changeInP: String
+  changeTitle: string,
+  changeInP: string
 }
 
 const AffordablePricing = ({ changeTitle, changeInP }: PricingProps) => {

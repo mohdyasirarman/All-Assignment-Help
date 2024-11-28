@@ -22,11 +22,11 @@ export default function LandingPage() {
           <UnmatchedAcademicSuccess changeInUnmatedTite="" changeInUnmatedp="" />
           <WhatStudentSayAboutUs changeInP="" changeTitle=""/>
           <StuckOnAssignment changeInP="" changeTitle=""/>
-          <ComprehensiveHelp /> 
+          <ComprehensiveHelp />   
           <AffordablePricing changeInP={""} changeTitle={""} /> 
           <WritingTool />
           <FAQS  />
-          <UnlockExpertHelp changeInP={""} changeTitle={""}/>  
+          <UnlockExpertHelp />  
           <Footer />
     </div>
   );

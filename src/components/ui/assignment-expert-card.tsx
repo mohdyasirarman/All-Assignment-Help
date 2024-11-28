@@ -1,6 +1,5 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { interpolate } from "framer-motion";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 
@@ -47,7 +46,7 @@ export function AssignmentExpertCard({}) {
           </p>
         </div>
         <div className="mb-5 w-full flex justify-center text-white font-normal font-poppins">
-          <button className="bg-[#09B14F] w-2/6 h-12 rounded cursor-pointer transition duration-300 hover:bg-[#09B14F]/70">
+          <button className="bg-[#09B14F] w-2/6 h-10 rounded cursor-pointer transition duration-300 hover:bg-[#09B14F]/70">
             Hire Me
           </button>
         </div>

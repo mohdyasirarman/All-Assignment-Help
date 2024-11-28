@@ -22,7 +22,7 @@ const BestAssignmentWiter = ({changeInExpertWriteTilte,changeInExpertWriteP}: be
           </div>
           {/* Cards */}
           <div className="w-full">
-            <div className="w-full flex justify-center gap-3 py-8">
+            <div className="w-full flex justify-center gap-4  py-8">
               <AssignmentExpertCard />
               <AssignmentExpertCard />
               <AssignmentExpertCard />
