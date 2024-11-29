@@ -14,7 +14,7 @@ import Footer from "@/components/common/footer";
 
 export default function LandingPage() {
   return (
-    <div className="w-full ">
+    <>
           <AssignmentHelp changeInForm="" changeInH="" changeInP="" />
           <WhyStudentTrustUs />
           <HelpYouNeed  changeInYouNeedTitle="" changeInYouNeedbtn=""/>
@@ -28,6 +28,6 @@ export default function LandingPage() {
           <FAQS  />
           <UnlockExpertHelp />  
           <Footer />
-    </div>
+    </>
   );
 }

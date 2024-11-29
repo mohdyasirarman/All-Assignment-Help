@@ -6,9 +6,8 @@ import { FaCog, FaTh, FaUser, FaHandshake } from "react-icons/fa";
 
 export default function LandingPageNavbar() {
   return (
-    <nav className=" shadow-md sticky top-3 mx-[10%] rounded-lg  px-2 z-50   backdrop-filter backdrop-blur-lg border border-gray-200 ">
-      <div className="container mx-auto px-4  ">
-        <div className="flex justify-between items-center h-16 ">
+    <nav className="sticky shadow-md  top-1 mx-[10%] rounded-lg  px-2 z-50   backdrop-filter backdrop-blur-lg border border-gray-200 ">
+       <div className="flex justify-between items-center h-16 max-w-7xl mx-auto">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -341,7 +340,6 @@ export default function LandingPageNavbar() {
             </Link>
           </div>
         </div>
-      </div>
     </nav>
   );
 }

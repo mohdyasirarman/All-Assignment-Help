@@ -1,6 +1,6 @@
 import React from 'react';
-import LandingPageNavbar from './landingPageNavbar';
 import HeroSection from './heroSection';
+
 
 interface AssignmentHelpProps {
   changeInForm: string;
@@ -10,8 +10,7 @@ interface AssignmentHelpProps {
 
 export default function AssignmentHelp({ changeInForm, changeInH, changeInP }: AssignmentHelpProps) {
   return (
-    <div >
-      <LandingPageNavbar />
+    <div>
       <HeroSection changeInForm={changeInForm} changeInH={changeInH} changeInP={changeInP} />
     </div>
   );

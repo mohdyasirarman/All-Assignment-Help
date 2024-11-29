@@ -1,3 +1,4 @@
+const {nextui} = require('@nextui-org/theme');
 import tailwindcssAnimate from "tailwindcss-animate";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
@@ -9,6 +10,7 @@ const config = {
     "./components/**/*.{js,jsx,ts,tsx}",
     "./app/**/*.{js,jsx,ts,tsx}",
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/@nextui-org/theme/dist/components/skeleton.js"
   ],
   prefix: "",
   theme: {
@@ -93,7 +95,7 @@ const config = {
       },
     },
   },
-  plugins: [tailwindcssAnimate, addVariablesForColors],
+  plugins: [tailwindcssAnimate,addVariablesForColors,nextui()],
 };
 
 // Custom plugin to add each Tailwind color as a CSS variable

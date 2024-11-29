@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import LandingPageNavbar from "@/components/landing-page/landingPageNavbar";
 
 export const metadata: Metadata = {
   title: "Assignment Help Online| Get Assignment Help @30% Discount",
@@ -29,7 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+       <LandingPageNavbar /> 
+        {children}
+        </body>
     </html>
   );
 }
