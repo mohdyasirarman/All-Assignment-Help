@@ -2,12 +2,12 @@ import Image from "next/image";
 
 
 
-interface stuckprops{
-  changeTitle:string,
-  changeInP:string
+interface StuckProps {
+  changeTitle: string;
+  changeInP: string;
 }
 
-const StuckOnAssignment = ({changeTitle,changeInP}:stuckprops) => {
+const StuckOnAssignment = ({changeTitle,changeInP}:StuckProps) => {
   return (
     <div className="bg-[#DEEDFD] w-full py-16 my-16">
       <div className="container px-4 py-10 lg:w-[1400px] mx-auto flex justify-between gap-5 lg:gap-0">

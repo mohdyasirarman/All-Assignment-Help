@@ -23,7 +23,7 @@ const page = () => {
       <WhatStudentSayAboutUs changeInP="Explore Why Millions of Students Rely on Us for Guidance. " changeTitle="Check What Students Have to Say"/>
       <StuckOnAssignment changeInP="Buy Essay Cheap and Get Amazing Grades Guaranteed." changeTitle="Get A-Rated Essays from Top-Rated Scholars"/>
       <AffordablePricing changeInP="Get Paper Writing Services in the Form of Step-by-Step Guidance" changeTitle="All-Encompassing Help from Our Online Paper Writers" /> 
-      <UnlockExpertHelp changeInP={"On APP - grab it while it lasts!"}  changeTitle={"5% Cashback"}/>  
+      <UnlockExpertHelp />  
       <Footer /> 
     </>
   );

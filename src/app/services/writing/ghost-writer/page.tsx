@@ -23,7 +23,7 @@ const page = () => {
         <WhatStudentSayAboutUs changeInP="33,845 Genuine reviews with a rating of 4.9/5" changeTitle="Top scholars reviews & ratings"/>
         <StuckOnAssignment changeInP="Hire a College Essay Ghost Writer from Our Trusted Brand" changeTitle="Hire a Ghostwriter Online Today"/>
         <AffordablePricing changeInP={"Here’s a Sneak Peek into the Prices of Booking Our Professional Ghostwriters"} changeTitle={"Hire a Ghost Writer Online with Transparent Pricing"} /> 
-        <UnlockExpertHelp changeInP={""} changeTitle={""}/>  
+        <UnlockExpertHelp />  
         <Footer />
     </>
   );

@@ -55,8 +55,6 @@ const page = () => {
 Well, MyAssignmentHelp has handpicked eminent professional writers who can precisely craft essays on different subjects.`}
       />
       <UnlockExpertHelp
-        changeTitle={"5% Cashback"}
-        changeInP={"On APP - grab it while it lasts!"}
       />
       <Footer />
     </>

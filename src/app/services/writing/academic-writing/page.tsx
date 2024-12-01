@@ -38,8 +38,6 @@ const page = () => {
         changeTitle={"High-Quality Academic Writing Services at the Best Price"}
       />
       <UnlockExpertHelp
-        changeInP={"On APP - grab it while it lasts!"}
-        changeTitle={"5% Cashback"}
       />
       <Footer />
     </>

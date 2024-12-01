@@ -21,7 +21,7 @@ const page = () => {
       <WhatStudentSayAboutUs changeInP="Reviews that set us apart from other websites" changeTitle="What Other Customers Say"/>
       <StuckOnAssignment changeInP="Avail the best research proposal writing services for perfect grades." changeTitle="Buy a Dissertation Proposal from PhD Writers"/>
       <AffordablePricing changeInP="Take a look at the subjects our research proposal experts cover:" changeTitle="Research Proposal Writing Service Prices & Free Features" /> 
-      <UnlockExpertHelp changeInP={"On APP - grab it while it lasts!"}  changeTitle={"5% Cashback"}/>  
+      <UnlockExpertHelp />  
       <Footer /> 
     </>
   );

@@ -25,7 +25,7 @@ const page = () => {
        <WhatStudentSayAboutUs changeInP="Unlock the Full Benefits of Our Essay Edit Assistance" changeTitle="Benefits of Our Essay Proofreading Services"/>
        <StuckOnAssignment changeInP="Getting flawless essays is now a breeze." changeTitle="The Best Online Essay Editing Services at Your Service"/>
        <AffordablePricing changeInP="Take a Quick Glance at Our Competitive Pricing" changeTitle="Hire Essay Editor at the Most Affordable Prices" /> 
-       <UnlockExpertHelp changeInP={"On APP - grab it while it lasts!"}  changeTitle={"5% Cashback"}/>  
+       <UnlockExpertHelp />  
        <Footer/> 
     </>
   );
