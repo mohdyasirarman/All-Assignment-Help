@@ -445,7 +445,7 @@ export default function Footer() {
                 </Link>
               </div>
               <div className=" absolute -bottom-[20px] right-[10px]">
-                <img src="/static/images/Container.png" alt="Container" />
+                <Image width={100} height={100} src="/static/images/Container.png" alt="Container" />
               </div>
             </div>
           </div>

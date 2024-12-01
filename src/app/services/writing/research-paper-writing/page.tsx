@@ -5,10 +5,8 @@ import UnmatchedAcademicSuccess from "@/components/landing-page/unmatchedAcademi
 import WhatStudentSayAboutUs from "@/components/landing-page/whatStudentSayAboutUs";
 import StuckOnAssignment from "@/components/landing-page/stuckOnAssignment";
 import AffordablePricing from "@/components/landing-page/affordablePricing";
-import FAQS from "@/components/landing-page/faq";
 import UnlockExpertHelp from "@/components/landing-page/unlockExpertHelp";
 import Footer from "@/components/common/footer";
-import WritingTool from "@/components/landing-page/writingTool";
 import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 
 
@@ -24,7 +22,7 @@ const page = () => {
       <WhatStudentSayAboutUs changeInP="Skeptical about our writers? Check our service reviews to decide." changeTitle="'Students' Reviews of Our Research Paper Help Service"/>
       <StuckOnAssignment changeInP="Consult us to get hand-held support with your term paper." changeTitle="We Promise the Highest Grades"/>
       <AffordablePricing changeInP="Pay less and gain more with our online research paper writing help." changeTitle="Research Paper Help for All Subjects " /> 
-      <UnlockExpertHelp changeInP={"On APP - grab it while it lasts!"}  changeTitle={"5% Cashback"}/>  
+      <UnlockExpertHelp />  
       <Footer /> 
     </>
   );

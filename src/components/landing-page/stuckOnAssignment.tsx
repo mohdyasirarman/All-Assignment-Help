@@ -3,8 +3,8 @@ import Image from "next/image";
 
 
 interface stuckprops{
-  changeTitle:String,
-  changeInP:String
+  changeTitle:string,
+  changeInP:string
 }
 
 const StuckOnAssignment = ({changeTitle,changeInP}:stuckprops) => {
