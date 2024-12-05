@@ -1,4 +1,3 @@
-import AssignmentHelp from "@/components/landing-page/assignmentHelpHero";
 import HelpYouNeed from "@/components/landing-page/helpYouNeed";
 import BestAssignmentWiter from "@/components/landing-page/bestAssignmentWriter";
 import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
@@ -11,23 +10,24 @@ import WritingTool from "@/components/landing-page/writingTool";
 import FAQS from "@/components/landing-page/faq";
 import UnlockExpertHelp from "@/components/landing-page/unlockExpertHelp";
 import Footer from "@/components/common/footer";
+import HeroSectionNew from '@/components/landing-page/HeroSectionNew'
 
 export default function LandingPage() {
   return (
-    <div className="w-full ">
-      <AssignmentHelp />
-      <WhyStudentTrustUs />
-      <HelpYouNeed />
-      <BestAssignmentWiter />
-      <UnmatchedAcademicSuccess />
-      <WhatStudentSayAboutUs />
-      <StuckOnAssignment />
-      <ComprehensiveHelp />
-      <AffordablePricing />
-      <WritingTool />
-      <FAQS />
-      <UnlockExpertHelp />
-      <Footer />
-    </div>
+    <>
+          <HeroSectionNew/>
+          <WhyStudentTrustUs />
+          <HelpYouNeed  changeInYouNeedTitle="" changeInYouNeedbtn=""/>
+          <BestAssignmentWiter changeInExpertWriteP="" changeInExpertWriteTilte=""/>
+          <UnmatchedAcademicSuccess changeInUnmatedTite="" changeInUnmatedp="" />
+          <WhatStudentSayAboutUs changeInP="" changeTitle=""/>
+          <StuckOnAssignment changeInP="" changeTitle=""/>
+          <ComprehensiveHelp />   
+          <AffordablePricing changeInP={""} changeTitle={""} /> 
+          <WritingTool />
+          <FAQS  />
+          <UnlockExpertHelp />  
+          <Footer />
+    </>
   );
 }

@@ -3,22 +3,22 @@ import Image from "next/image";
 const unlockExpertHelp = () => {
   return (
     <div>
-      <div className="w-full my-20">
+      <div className="  w-full -my-10">
         <div className="flex justify-center px-28 text-lg font-dmSans font-bold">
           <div className="flex justify-between items-center bg-[#2C2C2C] p-6 rounded-[16px] w-[936px] h-[241px]">
-            {/* Left Section: Text */}
             <div className="font-poppins  font-bold leading-[60px] text-left decoration-none">
-              <h1 className="text-[50px] font-bold ml-[67px] font-poppins  w-[489.42px] h-[91px] ">
+            <h1 className="text-[50px] font-bold ml-[67px] font-poppins  w-[489.42px] h-[91px] ">
                 <span className="text-[#0DCC5C] ">Unlock</span>{" "}
                 <span className="text-[#FFFFFF]">Expert Help</span> <br />
                 <span className="text-[#FFFFFF]">and Save Big!</span>
               </h1>
               <p className="leading-[27px] ml-[67px] mt-[36.6px] font-poppins w-[387px] h-[30px]">
-                <span className="text-[18px] text-[#FFFFFF]">Enjoy</span>{" "}
+              <><span className="text-[18px] text-[#FFFFFF]">Enjoy</span>{" "}
                 <span className="text-[#0DCC5C] text-[20px]">20% cashback</span>{" "}
                 <span className="text-[20px] text-[#FFFFFF]">
                   on your first order.
                 </span>
+                </>
               </p>
             </div>
 

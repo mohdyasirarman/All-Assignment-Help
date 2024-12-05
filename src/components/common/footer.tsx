@@ -68,7 +68,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#F1F1F1] text-gray-700 py-10">
+    <footer className="bg-[#F1F1F1] text-gray-700 py-12">
       <div className="w-full my-10">
         <div className="flex justify-between px-28 gap-10 text-[#303A42] text-lg font-dmSans font-bold">
           {/* Main Footer Container */}
@@ -214,7 +214,7 @@ export default function Footer() {
                         height={5}
                       />
                     </div>
-
+                     <div className="ml-20 flex   items-center gap-1">
                     <Image
                       src="/static/images/Twittericon.svg.png"
                       alt="Twitter"
@@ -363,8 +363,10 @@ export default function Footer() {
                             transform="translate(0.910156 6.04883)"
                           />
                         </clipPath>
+                        
                       </defs>
                     </svg>
+                    </div>
                   </div>
                 </div>
                 <div className=" flex items-center justify-center">
@@ -442,8 +444,8 @@ export default function Footer() {
                   Fair use policy
                 </Link>
               </div>
-              <div className=" absolute bottom-[0px] right-[10px]">
-                <img src="/static/images/Container.png" alt="Container" />
+              <div className=" absolute -bottom-[20px] right-[10px]">
+                <Image width={100} height={100} src="/static/images/Container.png" alt="Container" />
               </div>
             </div>
           </div>

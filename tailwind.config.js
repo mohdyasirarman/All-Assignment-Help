@@ -93,7 +93,7 @@ const config = {
       },
     },
   },
-  plugins: [tailwindcssAnimate, addVariablesForColors],
+  plugins: [tailwindcssAnimate,addVariablesForColors],
 };
 
 // Custom plugin to add each Tailwind color as a CSS variable

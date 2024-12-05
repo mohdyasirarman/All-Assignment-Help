@@ -1,11 +1,17 @@
-import HeroSection from "@/components/landing-page/heroSection";
-import LandingPageNavbar from "@/components/landing-page/landingPageNavbar";
+import React from 'react';
+import HeroSection from './heroSection';
 
-export default function AssignmentHelp() {
+
+interface AssignmentHelpProps {
+  changeInForm: string;
+  changeInH: string;
+  changeInP: string;
+}
+
+export default function AssignmentHelp({ changeInForm, changeInH, changeInP }: AssignmentHelpProps) {
   return (
-    <>
-      <LandingPageNavbar />
-      <HeroSection />
-    </>
+    <div>
+      <HeroSection changeInForm={changeInForm} changeInH={changeInH} changeInP={changeInP} />
+    </div>
   );
 }
