@@ -16,7 +16,7 @@ const page = () => {
 
   return (
     <>
-       <AssignmentHelp changeInForm="Get instant help from 5000+ experts for" changeInH="Essay Editing & Proofreading Service" changeInP="Get Top-Notch Paper Editors at Unbeatable Prices at MyAssignmenthelp!" />
+       <AssignmentHelp  changeInH="Essay Editing & Proofreading Service" changeInP="Get Top-Notch Paper Editors at Unbeatable Prices at MyAssignmenthelp!" />
        <WhyStudentTrustUs />
        <BestAssignmentWiter changeInExpertWriteP="Know the Top Minds in the Industry and Hire Them" changeInExpertWriteTilte="Top Essay Editors to Polish Your Papers"/>
        <HelpYouNeed  changeInYouNeedTitle="Expert Paper Editing Service in 3 Easy Steps" changeInYouNeedbtn="Order Now "/>

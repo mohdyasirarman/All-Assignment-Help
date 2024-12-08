@@ -14,7 +14,7 @@ import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 const page = () => {
   return (
     <>
-        <AssignmentHelp changeInForm="" changeInH="Ghost Writer Online" changeInP="Hire our Ghostwriters and get solutions from qualified Ph.D Experts." />
+        <AssignmentHelp  changeInH="Ghost Writer Online" changeInP="Hire our Ghostwriters and get solutions from qualified Ph.D Experts." />
         <WhyStudentTrustUs />
         <BestAssignmentWiter changeInExpertWriteP="Hire our professional ghostwriters for top-notch academic papers." changeInExpertWriteTilte="Our Experienced Ghost Essay Writers"/> 
         <HelpYouNeed  changeInYouNeedTitle="How Our Ghostwriter Online Operates" changeInYouNeedbtn="Register Now"/> 

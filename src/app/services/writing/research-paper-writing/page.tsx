@@ -13,7 +13,7 @@ import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 const page = () => {
   return (
     <>
-      <AssignmentHelp changeInForm="Get instant help from 5000+ experts for" changeInH="Research Paper Writing Service" changeInP="Get research paper help from writers with discipline-specific expertise." />
+      <AssignmentHelp  changeInH="Research Paper Writing Service" changeInP="Get research paper help from writers with discipline-specific expertise." />
       <WhyStudentTrustUs />
       <BestAssignmentWiter changeInExpertWriteP={`Know our writers before requesting, "Please write my research paper.”`} changeInExpertWriteTilte="Our Team of Research Paper Writers"/>
       <HelpYouNeed  changeInYouNeedTitle="Get Professional Research Paper Writing Service In 3 Easy Steps" changeInYouNeedbtn="Place an Order"/>

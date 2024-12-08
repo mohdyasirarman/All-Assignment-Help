@@ -12,7 +12,7 @@ import Footer from "@/components/common/footer";
 export default function LandingPage() {
   return (
     <div className="w-full ">
-          <AssignmentHelp changeInForm="" changeInH="Online Assessment Help for Students" changeInP="Meet Top Professionals To Get Help For Assessment Solutions & More" />
+          <AssignmentHelp changeInH="Online Assessment Help for Students" changeInP="Meet Top Professionals To Get Help For Assessment Solutions & More" />
           <WhyStudentTrustUs />
           <HelpYouNeed  changeInYouNeedTitle="Place An Order For Assessment Help In 3 Simple Steps" changeInYouNeedbtn=""/>
           <BestAssignmentWiter changeInExpertWriteP="Zero AI Assessment Help by the Best Minds" changeInExpertWriteTilte="Meet Our Online Assessment Helpers"/>

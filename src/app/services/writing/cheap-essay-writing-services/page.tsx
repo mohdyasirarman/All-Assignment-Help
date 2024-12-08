@@ -13,7 +13,7 @@ import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 const page = () => {
   return (
     <>
-      <AssignmentHelp changeInForm="Get instant help from 5000+ experts for" changeInH="Cheap Essay Writing Service" changeInP="Try Our Cheap Writing Services to Ace All Your Essays" />
+      <AssignmentHelp  changeInH="Cheap Essay Writing Service" changeInP="Try Our Cheap Writing Services to Ace All Your Essays" />
       <WhyStudentTrustUs />
       <BestAssignmentWiter changeInExpertWriteP="Discover the Best Professional Writers to Guarantee You an A+." changeInExpertWriteTilte="Hire Affordable Writers for A+ Content"/>
       <HelpYouNeed  changeInYouNeedTitle="3 Simple Steps to Order Cheap Essay Online" changeInYouNeedbtn="Place Order"/>

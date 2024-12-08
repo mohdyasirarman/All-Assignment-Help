@@ -12,7 +12,7 @@ import Footer from "@/components/common/footer";
 export default function LandingPage() {
   return (
     <div className="w-full ">
-          <AssignmentHelp changeInForm="" changeInH="PowerPoint Presentation Writing Services" changeInP="Hire Our PowerPoint Presentation Writers for Visually Appealing PPTs" />
+          <AssignmentHelp  changeInH="PowerPoint Presentation Writing Services" changeInP="Hire Our PowerPoint Presentation Writers for Visually Appealing PPTs" />
           <WhyStudentTrustUs />
           <HelpYouNeed  changeInYouNeedTitle="How to Pay for PowerPoint Presentations" changeInYouNeedbtn="Sign Up"/>
           <BestAssignmentWiter changeInExpertWriteP="Here’s Why Our Professional Writers Are Your Best Choice" changeInExpertWriteTilte="Our Team of PowerPoint Presentation Writers"/>

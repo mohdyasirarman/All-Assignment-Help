@@ -12,7 +12,7 @@ import Footer from "@/components/common/footer";
 export default function LandingPage() {
   return (
     <div className="w-full ">
-          <AssignmentHelp changeInForm="" changeInH="Coursework Help Services: Boost Your Academic Success" changeInP="Get A-Rated Professional Coursework Services Without Breaking the Bank" />
+          <AssignmentHelp  changeInH="Coursework Help Services: Boost Your Academic Success" changeInP="Get A-Rated Professional Coursework Services Without Breaking the Bank" />
           <WhyStudentTrustUs />
           <HelpYouNeed  changeInYouNeedTitle="How Does Our Coursework Help Services Work?" changeInYouNeedbtn="Place an Order"/>
           <BestAssignmentWiter changeInExpertWriteP="Choose Our Expert Coursework Writers for Coursework Writing Service" changeInExpertWriteTilte="Our Top Coursework Writers Ready to Help You"/>

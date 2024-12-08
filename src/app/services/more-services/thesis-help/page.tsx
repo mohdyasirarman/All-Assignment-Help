@@ -12,7 +12,7 @@ import Footer from "@/components/common/footer";
 export default function LandingPage() {
   return (
     <div className="w-full ">
-          <AssignmentHelp changeInForm="" changeInH="Thesis Help By PhD Experts" changeInP="The Best Thesis Writing Service in the UK from Professionals in a Click" />
+          <AssignmentHelp  changeInH="Thesis Help By PhD Experts" changeInP="The Best Thesis Writing Service in the UK from Professionals in a Click" />
           <WhyStudentTrustUs />
           <HelpYouNeed  changeInYouNeedTitle="Get Professional Thesis Writing Service in 3 Easy Steps" changeInYouNeedbtn="Order Now"/>
           <BestAssignmentWiter changeInExpertWriteP="Here are our Top-Rated Writers of This Month" changeInExpertWriteTilte="Meet Our Team of Thesis Writers"/>

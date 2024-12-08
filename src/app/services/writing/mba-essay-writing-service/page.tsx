@@ -12,7 +12,7 @@ import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 const page = () => {
   return (
     <>
-      <AssignmentHelp changeInForm="Get instant help from 5000+ experts for" changeInH="MBA Essay Writing Service " changeInP="Buy an Essay for Business School that Unleashes Potential" />
+      <AssignmentHelp changeInH="MBA Essay Writing Service " changeInP="Buy an Essay for Business School that Unleashes Potential" />
       <WhyStudentTrustUs />
       <BestAssignmentWiter changeInExpertWriteP="Get your essays perfected by top MBA writers" changeInExpertWriteTilte="Wide Range of Professional MBA Essay Writers"/>
       <HelpYouNeed  changeInYouNeedTitle="Steps to Get an MBA Essay Writing Service" changeInYouNeedbtn="Click To Connect"/>

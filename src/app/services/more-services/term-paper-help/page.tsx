@@ -12,7 +12,7 @@ import Footer from "@/components/common/footer";
 export default function LandingPage() {
   return (
     <div className="w-full ">
-          <AssignmentHelp changeInForm="" changeInH="Write My Term Paper, Please" changeInP="Avail of our term paper help and unlock your academic success" />
+          <AssignmentHelp changeInH="Write My Term Paper, Please" changeInP="Avail of our term paper help and unlock your academic success" />
           <WhyStudentTrustUs />
           <HelpYouNeed  changeInYouNeedTitle="Effortless Write My Term Paper Process" changeInYouNeedbtn="Order Now"/>
           <BestAssignmentWiter changeInExpertWriteP="Know our expert writers Before hiring them" changeInExpertWriteTilte="Choose an Expert for Your Term Paper"/>

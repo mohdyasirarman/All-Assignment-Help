@@ -12,7 +12,7 @@ import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 const page = () => {
   return (
     <>
-      <AssignmentHelp changeInForm="Get instant help from 5000+ experts for" changeInH="Research Proposal Writing Service" changeInP="Get the perfect research proposal written by PhD experts." />
+      <AssignmentHelp  changeInH="Research Proposal Writing Service" changeInP="Get the perfect research proposal written by PhD experts." />
       <WhyStudentTrustUs />
       <BestAssignmentWiter changeInExpertWriteP="A team of elite writers are here to take your worries away " changeInExpertWriteTilte="Top PhD Research Proposal Writers  "/>
       <HelpYouNeed  changeInYouNeedTitle="How to Place an Order for PhD Proposal Help? " changeInYouNeedbtn="Share your requirements"/>

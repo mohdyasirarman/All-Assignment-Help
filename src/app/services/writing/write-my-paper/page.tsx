@@ -12,7 +12,7 @@ import Footer from "@/components/common/footer";
 export default function Page() {
   return (
     <div className="w-full ">
-          <AssignmentHelp changeInForm="" changeInH="Write My Paper for Me" changeInP="Wondering “Can someone write paper for me?” Yes, we can!" />
+          <AssignmentHelp  changeInH="Write My Paper for Me" changeInP="Wondering “Can someone write paper for me?” Yes, we can!" />
           <WhyStudentTrustUs />
           <BestAssignmentWiter changeInExpertWriteP="Book qualified writers to guarantee an A+ in academic papers." changeInExpertWriteTilte="Meet Our Professional Paper Writers"/>
           <HelpYouNeed  changeInYouNeedTitle="How To Get My Paper Written?" changeInYouNeedbtn="Book a solution "/>

@@ -19,7 +19,7 @@ const page = () => {
           "Say ‘Write My Essay for Me’ to Bridge the Gap between Potential and Achievement"
         }
         changeInH={"Professional Write My Essay Service"}
-        changeInForm={"Get instant help from 5000+ experts for"}
+       
       />
         <WhyStudentTrustUs />
       <BestAssignmentWiter

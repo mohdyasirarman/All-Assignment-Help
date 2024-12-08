@@ -14,7 +14,7 @@ import StuckOnAssignment from "@/components/landing-page/stuckOnAssignment";
 const page = () => {
   return (
     <>
-      <AssignmentHelp changeInForm="Get instant help from 5000+ experts for" changeInH="Essay Writing Help - Essays Help Online" changeInP="Polish Your Penmanship Skills with an Essay Writing Helper Online" />
+      <AssignmentHelp  changeInH="Essay Writing Help - Essays Help Online" changeInP="Polish Your Penmanship Skills with an Essay Writing Helper Online" />
       <WhyStudentTrustUs />
       <BestAssignmentWiter changeInExpertWriteP="Get Custom Writing Guidance from the Best Essay Expert" changeInExpertWriteTilte="Essay Writing Service Powered by Top Essay Tutors"/>
       <HelpYouNeed  changeInYouNeedTitle="Get Help with Writing an Essay in Simple Steps" changeInYouNeedbtn="Hire Tutor"/>
