@@ -12,7 +12,7 @@ import Footer from "@/components/common/footer";
 export default function LandingPage() {
   return (
     <div className="w-full ">
-          <AssignmentHelp changeInForm="" changeInH="Case Study Help For Your Academic Success" changeInP="Sign up for quick and affordable case study assignment help from the best minds today!" />
+          <AssignmentHelp changeInH="Case Study Help For Your Academic Success" changeInP="Sign up for quick and affordable case study assignment help from the best minds today!" />
           <WhyStudentTrustUs />
           <HelpYouNeed  changeInYouNeedTitle="Access Online Case Study Help Efficiently" changeInYouNeedbtn="Order Now"/>
           <BestAssignmentWiter changeInExpertWriteP="A look at the team of case study writing experts who will help boost your grades:" changeInExpertWriteTilte="Our Team of Expert Case Study Writers at MyAssignmentHelp"/>

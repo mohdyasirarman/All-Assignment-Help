@@ -10,12 +10,12 @@ import WritingTool from "@/components/landing-page/writingTool";
 import FAQS from "@/components/landing-page/faq";
 import UnlockExpertHelp from "@/components/landing-page/unlockExpertHelp";
 import Footer from "@/components/common/footer";
-import HeroSectionNew from '@/components/landing-page/HeroSectionNew'
+import HeroSectionNew from "./HeroSectionNew";
 
 export default function LandingPage() {
   return (
     <>
-          <HeroSectionNew/>
+          <HeroSectionNew changeInH={""} changeInP={""}/>
           <WhyStudentTrustUs />
           <HelpYouNeed  changeInYouNeedTitle="" changeInYouNeedbtn=""/>
           <BestAssignmentWiter changeInExpertWriteP="" changeInExpertWriteTilte=""/>
