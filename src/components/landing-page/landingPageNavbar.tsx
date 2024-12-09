@@ -112,63 +112,66 @@ export default function LandingPageNavbar() {
           </Link>
 
           <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={handleDropdownToggle}
-              className={`flex items-center space-x-1 px-4 py-[22px]  font-semibold ${
-                pathname.startsWith("/services")
-                  ? "text-blue-500 font-bold"
-                  : "text-gray-500"
-              }`}
-              aria-expanded={isDropdownVisible}
-              aria-controls="services-dropdown"
-            >
-              <FaCog />
-              <span>Services</span>
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            {isDropdownVisible && (
-              <div
-                id="services-dropdown"
-                className="absolute left-0 mt-2 bg-white shadow-lg rounded-xl p-4 w-[300px] lg:w-[800px]"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <ServiceColumn
-                    title="Writing"
-                    services={writingServices}
-                    currentPath={pathname}
-                    activeService={activeService}
-                    onClick={handleLinkClick}
-                  />
-                  <ServiceColumn
-                    title="Problem Solving"
-                    services={problemSolvingServices}
-                    currentPath={pathname}
-                    activeService={activeService}
-                    onClick={handleLinkClick}
-                  />
-                  <ServiceColumn
-                    title="More Services"
-                    services={moreServices}
-                    currentPath={pathname}
-                    activeService={activeService}
-                    onClick={handleLinkClick}
-                  />
-                </div>
-              </div>
-            )}
-          </div>
+  <button
+    onClick={handleDropdownToggle}
+    className={`flex items-center space-x-1 px-4 py-[22px] font-semibold ${
+      pathname.startsWith("/services")
+        ? "text-blue-500 font-bold"
+        : "text-gray-500"
+    }`}
+    aria-expanded={isDropdownVisible}
+    aria-controls="services-dropdown"
+  >
+    <FaCog />
+    <span>Services</span>
+    <svg
+      className="w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  </button>
+  <div
+    id="services-dropdown"
+    className={`absolute left-0 mt-2 bg-white shadow-lg rounded-xl p-4 w-[300px] lg:w-[800px] transition-all duration-300 ease-in-out transform ${
+      isDropdownVisible
+        ? "opacity-100 scale-100 translate-y-0"
+        : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+    }`}
+  >
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <ServiceColumn
+        title="Writing"
+        services={writingServices}
+        currentPath={pathname}
+        activeService={activeService}
+        onClick={handleLinkClick}
+      />
+      <ServiceColumn
+        title="Problem Solving"
+        services={problemSolvingServices}
+        currentPath={pathname}
+        activeService={activeService}
+        onClick={handleLinkClick}
+      />
+      <ServiceColumn
+        title="More Services"
+        services={moreServices}
+        currentPath={pathname}
+        activeService={activeService}
+        onClick={handleLinkClick}
+      />
+    </div>
+  </div>
+</div>
+
 
           <Link
             href="/courses"
