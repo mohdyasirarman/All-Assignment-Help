@@ -1,59 +1,48 @@
+import React from "react";
 import Image from "next/image";
 
-const unlockExpertHelp = () => {
+const UnlockExpertHelp: React.FC = () => {
   return (
-    <div>
-      <div className="  w-full -my-10">
-        <div className="flex justify-center px-28 text-lg font-dmSans font-bold">
-          <div className="flex justify-between items-center bg-[#2C2C2C] p-6 rounded-[16px] w-[936px] h-[241px]">
-            <div className="font-poppins  font-bold leading-[60px] text-left decoration-none">
-            <h1 className="text-[50px] font-bold ml-[67px] font-poppins  w-[489.42px] h-[91px] ">
-                <span className="text-[#0DCC5C] ">Unlock</span>{" "}
-                <span className="text-[#FFFFFF]">Expert Help</span> <br />
-                <span className="text-[#FFFFFF]">and Save Big!</span>
-              </h1>
-              <p className="leading-[27px] ml-[67px] mt-[36.6px] font-poppins w-[387px] h-[30px]">
-              <><span className="text-[18px] text-[#FFFFFF]">Enjoy</span>{" "}
-                <span className="text-[#0DCC5C] text-[20px]">20% cashback</span>{" "}
-                <span className="text-[20px] text-[#FFFFFF]">
-                  on your first order.
-                </span>
-                </>
-              </p>
-            </div>
+    <div className="relative w-full h-auto">
+     
+      <div className="absolute top-[-190px] left-[50%] -translate-x-[50%] w-[936px] bg-gradient-to-r from-green-500 to-blue-400 p-10 px-12 rounded-xl text-white flex flex-wrap justify-between items-center mx-auto shadow-xl z-10">
+        {/* Text Section */}
+        <div className="flex-1">
+          <h1 className="text-5xl font-bold leading-tight">
+            <span className="text-[#2C2C2C]">Unlock</span> Expert Help <br />
+            and Save Big!
+          </h1>
+          <p className="mt-4 text-lg">
+            Enjoy <span className="text-[#2C2C2C] font-bold">20% cashback</span> on your first order.
+          </p>
+        </div>
 
-            <div className="flex flex-col rounded-lg space-y-4 mt-[-10px] mr-[50px]">
-              <div className="space-y-4 ">
-                <Image
-                  src="/static/images/apple-bar.svg"
-                  alt="App Store"
-                  width={123}
-                  height={36}
-                  className="mt-[7.5px] "
-                />
-                <Image
-                  src="/static/images/google-bar.svg"
-                  alt="Google play Store"
-                  width={123}
-                  height={36}
-                  className="mt-[111.5.5px] "
-                />
-              </div>
-
-              <div className="w-[259.11px] h-[15px]">
-                <p className="font-poppins font-[400px] text-[10px] text-center mt-[10px] text-[#FFFFFF] leading-[10px]">
-                  *Offer eligible for first 3 orders ordered through app!
-                </p>
-              </div>
-            </div>
+      
+        <div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
+          
+          <div className="flex flex-col items-start space-y-2">
+            <Image
+              src="/static/images/apple-bar.svg"
+              alt="Download on App Store"
+              width={150}
+              height={45}
+            />
+            <Image
+              src="/static/images/google-bar.svg"
+              alt="Get it on Google Play"
+              width={150}
+              height={45}
+            />
           </div>
-          <div className="mt-[57.5px] ml-[-170px] ">
+
+        
+          <div className="flex items-center justify-center">
             <Image
               src="/static/images/qr.svg"
               alt="QR Code"
-              width={100}
-              height={100}
-              className="flex"
+              width={120}
+              height={120}
+              className="rounded-md"
             />
           </div>
         </div>
@@ -62,4 +51,4 @@ const unlockExpertHelp = () => {
   );
 };
 
-export default unlockExpertHelp;
+export default UnlockExpertHelp;

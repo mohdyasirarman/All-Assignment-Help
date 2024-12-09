@@ -16,7 +16,7 @@ export default function LandingPage() {
   return (
     <>
           <HeroSectionNew changeInH={""} changeInP={""}/>
-          <WhyStudentTrustUs />
+          <WhyStudentTrustUs/>
           <HelpYouNeed  changeInYouNeedTitle="" changeInYouNeedbtn=""/>
           <BestAssignmentWiter changeInExpertWriteP="" changeInExpertWriteTilte=""/>
           <UnmatchedAcademicSuccess changeInUnmatedTite="" changeInUnmatedp="" />

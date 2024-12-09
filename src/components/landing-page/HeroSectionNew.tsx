@@ -76,7 +76,7 @@ export default function HeroSectionNew({
               height={30}
               alt="pencil"
             />
-            <h2 className="font-poppins text-[#55C360] text-md font-semibold">
+            <h2 className="font-poppins text-[#55C360] text-md font-[550] tracking-wide">
               {changeInP || "Grow Your Future With Us"}
             </h2>
           </div>
@@ -92,16 +92,16 @@ export default function HeroSectionNew({
                   return acc;
                 }, [] as string[][])
                 .map((chunk, index) => (
-                  <><span
-                    className="drop-shadow-[0_45px_55px_rgba(0,0,0,.1)]"
-                    key={index}
-                  >
-                    {chunk.join(" ")}
-                    <br />
-                  </span>
+                  <>
+                    <span
+                      className="drop-shadow-[0_45px_55px_rgba(0,0,0,.1)]"
+                      key={index}
+                    >
+                      {chunk.join(" ")}
+                      <br />
+                    </span>
                   </>
                 ))
-
             ) : (
               <>
                 <div className="drop-shadow-[0_45px_55px_rgba(0,0,0,.1)]">
@@ -204,6 +204,9 @@ export default function HeroSectionNew({
                       </div>
                     </div>
                   ))}
+                  <div className="bg-blue-400 h-10 w-10 rounded-full overflow-hidden shadow-md z-50 flex justify-center items-center font-poppins font-semibold text-white">
+                    4+
+                  </div>
                 </div>
               </div>
             </form>
