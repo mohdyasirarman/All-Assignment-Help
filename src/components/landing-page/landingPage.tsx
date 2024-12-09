@@ -25,7 +25,7 @@ export default function LandingPage() {
           <ComprehensiveHelp />   
           <AffordablePricing changeInP={""} changeTitle={""} /> 
           <WritingTool />
-          <FAQS  />
+          <FAQS />
           <UnlockExpertHelp />  
           <Footer />
     </>

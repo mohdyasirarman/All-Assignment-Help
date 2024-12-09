@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const UnlockExpertHelp: React.FC = () => {
   return (
-    <div className="relative w-full h-auto">
+    <div className="mt-[200px] relative w-full h-auto">
      
-      <div className="absolute top-[-190px] left-[50%] -translate-x-[50%] w-[936px] bg-gradient-to-r from-green-500 to-blue-400 p-10 px-12 rounded-xl text-white flex flex-wrap justify-between items-center mx-auto shadow-xl z-10">
+      <div className="absolute top-[-190px] left-[50%]  -translate-x-[50%] w-[936px] bg-gradient-to-r from-green-500 to-blue-400 p-10 px-12 rounded-xl text-white flex flex-wrap justify-between items-center mx-auto shadow-xl z-10">
         {/* Text Section */}
         <div className="flex-1">
           <h1 className="text-5xl font-bold leading-tight">
