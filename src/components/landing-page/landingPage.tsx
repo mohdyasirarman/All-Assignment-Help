@@ -11,6 +11,10 @@ import FAQS from "@/components/landing-page/faq";
 import UnlockExpertHelp from "@/components/landing-page/unlockExpertHelp";
 import Footer from "@/components/common/footer";
 import HeroSectionNew from "./HeroSectionNew";
+import AcademicNeeds from "@/components/landing-page/academicneeds";
+import HowItWorks from "@/components/landing-page/howitworks";
+import AffordablePrice from '@/components/landing-page/affordableprice';
+import ThingAboutUs from "@/components/landing-page/thingaboutus";
 
 export default function LandingPage() {
   return (
@@ -28,6 +32,10 @@ export default function LandingPage() {
           <FAQS />
           <UnlockExpertHelp />  
           <Footer />
+          <AcademicNeeds/>
+          <HowItWorks/>
+          <AffordablePrice />
+          <ThingAboutUs />
     </>
   );
 }
