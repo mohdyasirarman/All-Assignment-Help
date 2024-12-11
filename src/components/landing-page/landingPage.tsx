@@ -15,6 +15,8 @@ import AcademicNeeds from "@/components/landing-page/academicneeds";
 import HowItWorks from "@/components/landing-page/howitworks";
 import AffordablePrice from '@/components/landing-page/affordableprice';
 import ThingAboutUs from "@/components/landing-page/thingaboutus";
+import Features from "@/components/landing-page/features";
+import Experts from "@/components/landing-page/experts";
 
 export default function LandingPage() {
   return (
@@ -36,6 +38,8 @@ export default function LandingPage() {
           <HowItWorks/>
           <AffordablePrice />
           <ThingAboutUs />
+          <Features />
+          <Experts />
     </>
   );
 }
