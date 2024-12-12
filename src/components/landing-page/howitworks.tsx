@@ -3,14 +3,14 @@ import Image from "next/image";
 
 const HowItWorks: React.FC = () => {
   return (
-    <div className="bg-[#2BAFFC66] h-[780px] bg-cover md:px-10 flex flex-col md:flex-row items-center gap-[100px] mt-[50px] mb-[50px]">
+    <div className="bg-[#2BAFFC66] h-[820px] bg-cover md:px-10 flex flex-col md:flex-row items-center gap-[100px] mt-[50px] mb-[50px]">
       <div>
         <Image
           src="/static/images/woman.svg"
           alt="Student holding books"
           width={600}
-          height={864}
-          className="mb-[20px]"
+          height={854}
+          className="mb-[42px]"
         />
       </div>
 
@@ -40,7 +40,7 @@ const HowItWorks: React.FC = () => {
             <h3 className="text-[22px] font-bold font-poppins leading-[28px] ml-[45px] text-[#010101]">
               Share Your Requirements
             </h3>
-            <button className="bg-[#55C360] text-white text-[16px] px-6 py-[1px] mt-[30px] ml-[-40px] rounded-[40px] font-poppins font-semibold">
+            <button className="bg-[#55C360] text-white text-[16px] px-4  mt-[30px] ml-[-40px] rounded-[40px] font-poppins font-semibold">
               Talk to Expert
             </button>
           </div>

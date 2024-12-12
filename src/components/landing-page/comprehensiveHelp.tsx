@@ -47,25 +47,24 @@ const ComprehensiveHelp = () => {
   ];
   return (
     <div className="w-full">
-      <div className="container px-4 py-10 lg:w-[1400px] mx-auto flex flex-col justify-between gap-5 lg:gap-0">
+      <div className="container px-0 py-10 lg:w-[1400px] mx-auto flex flex-col justify-between gap-5">
         {/* Heading */}
-        <div className="w-full text-center font-poppins space-y-5 px-44 mb-10">
-          <div className="font-bold text-5xl text-[#2C2C2C] leading-[56px]">
-            Comprehensive Help for Every{" "}
-            <span className="text-[#09B14F]">Assignment</span> Type
+        <div className="w-full text-center font-poppins space-y-5 px-4 md:px-10 lg:px-20 mb-10">
+          <div className="font-bold text-4xl md:text-5xl lg:text-6xl text-[#2C2C2C] leading-tight">
+            Comprehensive Help for Every <br />
+            Assignment Type
           </div>
-          <div className="font-normal text-lg text-[#5F5F5F] ">
+          <div className="font-normal text-base md:text-lg text-[#5F5F5F]">
             Get tailored expert help for essays, case studies, research papers,
             and more
           </div>
         </div>
         {/* Cards */}
-        <div className="flex justify-center items-center">
-          <div className="w-full grid grid-cols-3 grid-rows-2 justify-items-center">
+        <div className="flex justify-center items-center px-2">
+          <div className="w-full flex flex-wrap justify-center items-stretch gap-10 gap-x-0">
             {comprehensiveHelpData.map((data) => (
-              <div key={data.id} className="mb-[30px]">
+              <div key={data.id} className="flex-grow-0 flex-shrink-0 basis-[calc(29.333%-0.25rem)]">
                 <ComprehensiveHelpCard
-                  key={data.id}
                   title={data.title}
                   image={data.image}
                   description={data.description}

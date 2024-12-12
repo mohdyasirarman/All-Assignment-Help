@@ -1,11 +1,43 @@
 import React from "react";
 
-const WhyStudentsTrustUs: React.FC = () => {
+// Define an interface for the section data
+interface SectionData {
+  title: string;
+  description: string;
+  number: string;
+}
+
+interface WhyStudentsTrustUsProps {
+  sections?: SectionData[]; 
+}
+
+const WhyStudentsTrustUs: React.FC<WhyStudentsTrustUsProps> = ({
+  sections = [
+    {
+      title: "No AI",
+      description:
+        "100% human-written essays, no bots involved. Every essay is crafted by skilled writers, ensuring originality and human expertise.",
+      number: "No AI",
+    },
+    {
+      title: "24/7",
+      description:
+        "Help is always just a message away. Our support team is always available to assist you, no matter the time or question.",
+      number: "24/7",
+    },
+    {
+      title: "98%",
+      description:
+        "Assignments delivered on time, every time. We consistently deliver essays on time, maintaining reliability and trust.",
+      number: "98%",
+    },
+  ], 
+}) => {
   return (
-    <div className="bg-white  py-28">
+    <div className="bg-white font-poppins py-28 px-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex justify-center">
-          <div className=" absolute right-[26%]  rotate-[30deg] bg-[#F8AC3B] text-black px-6 py-1 rounded-full text-sm font-semibold shadow-md">
+          <div className="absolute right-[27%] font-poppins rotate-[25deg] bg-[#F8AC3B] text-black text-[18p] px-6 py-1 rounded-xl text-sm shadow-md">
             NO AI CONTENT
           </div>
         </div>
@@ -17,30 +49,14 @@ const WhyStudentsTrustUs: React.FC = () => {
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-12 sm:grid-cols-3 font-poppins">
-          <div className="text-center">
-            <h3 className="text-[#55C360] text-[45px] font-bold">No AI</h3>
-            <p className="mt-1 text-base text-gray-500">
-              100% human-written essays, no bots involved. Every essay is
-              crafted by skilled writers, ensuring originality and human
-              expertise.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <h3 className="text-[#55C360] text-[45px] font-bold">24/7</h3>
-            <p className="mt-1 text-base text-gray-500">
-              Help is always just a message away. Our support team is always
-              available to assist you, no matter the time or question.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <h3 className="text-[#55C360] text-[45px] font-bold">98%</h3>
-            <p className="mt-1 text-base text-gray-500">
-              Assignments delivered on time, every time. We consistently deliver
-              essays on time, maintaining reliability and trust.
-            </p>
-          </div>
+          {sections.map((section, index) => (
+            <div key={index} className="text-center">
+              <h3 className="text-[#55C360] text-[45px] font-bold">
+                {section.number}
+              </h3>
+              <p className="mt-1 text-left text-gray-500 ">{section.description}</p>
+            </div>
+          ))}
         </div>
 
         <div className="mt-16 flex justify-center">

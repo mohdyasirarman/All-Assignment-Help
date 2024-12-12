@@ -115,7 +115,7 @@ export function ComprehensiveHelpCard({
       <div className="w-full group/cards">
         <div
           className={cn(
-            "overflow-hidden relative drop-shadow-xl card h-[200px] w-[380px] rounded-[13px] backgroundImage flex flex-col p-4 bg-white "
+            "overflow-hidden relative drop-shadow-lg card h-[200px] w-[380px] rounded-[13px] backgroundImage flex flex-col p-3 bg-white "
           )}
         >
           <div className="pt-5 pb-1 pl-3 w-full flex justify-start items-center">
@@ -128,7 +128,7 @@ export function ComprehensiveHelpCard({
             />
           </div>
           <div className="flex flex-col font-poppins text-start pl-3 pt-2">
-            <p className="w-full font-semibold text-xl">{title}</p>
+            <p className="w-full  font-semibold text-xl">{title}</p>
             <p className="w-full font-montserrat font-normal text-base text-[#8A8A8A] pt-3">
               {description}
             </p>
@@ -233,22 +233,33 @@ type WritingToolCardProps = {
   description: string;
 };
 
+import { useState } from 'react';
+
 export function WritingToolCard({ title, description }: WritingToolCardProps) {
+  const [isExpanded, setIsExpanded] = useState(false); // State to track expanded state
+  const text = 75;
+  const truncatedDescription = description.length > text ? description.slice(0, text) + '...' : description;
+
+  const handleClick = () => {
+    setIsExpanded(!isExpanded); // Toggle the expanded state
+  };
+
   return (
-    <div className="w-full group/cards">
+    <div className="w-full group/cards" onClick={handleClick}>
       <div
         className={cn(
-          "overflow-hidden relative drop-shadow-xl card lg:h-[250px] lg:w-[275px] rounded-[13px] backgroundImage flex flex-col p-4 bg-[#ECF9F1] "
+          "overflow-hidden relative drop-shadow-lg card lg:w-[265px] rounded-[13px] backgroundImage flex flex-col p-5 bg-[#e2f4ff] transition-all duration-300 ease-in-out", // Add transition
+          isExpanded ? "lg:h-[300px]" : "lg:h-[230px]" // Adjust height when expanded
         )}
       >
-        <div className="flex flex-col font-poppins text-start pl-3 pt-2">
-          <p className="w-full font-bold text-xl leading-6">{title}</p>
-          <p className="w-full font-normal text-base text-[#8A8A8A] pt-3">
-            {description}
+        <div className="flex flex-col font-poppins text-start pl-3 pt-2 flex-grow">
+          <p className="w-full font-bold text-[22px] font-poppins leading-6 text-[#2C2C2C]">{title}</p>
+          <p className="w-full font-montserrat text-base text-[#8A8A8A] pt-3">
+            {isExpanded ? description : truncatedDescription} {/* Conditionally render full or truncated description */}
           </p>
         </div>
-        <div className="mt-8 text-center flex font-poppins">
-          <div className="w-full font-semibold text-[#09B14F]">Check Now</div>
+        <div className="text-center flex font-poppins mt-auto">
+          <div className="w-full font-semibold text-[#55C360]">Check Now</div>
         </div>
       </div>
     </div>

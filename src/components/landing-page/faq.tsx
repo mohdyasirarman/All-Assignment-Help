@@ -37,14 +37,24 @@ const FAQS: React.FC<FAQSProps> = ({ questions }) => {
         "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
     },
     {
-      question: "Is Lorem Ipsum safe to use?",
+      question: "Where can I get some?",
       answer:
-        "Yes, Lorem Ipsum is safe to use as placeholder text for design and layout purposes.",
+        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
     },
     {
-      question: "How do I customize it?",
+      question: "Where can I get some?",
       answer:
-        "You can generate Lorem Ipsum text online using various generators that let you specify the length and type of text.",
+        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    },
+    {
+      question: "Where can I get some?",
+      answer:
+        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    },
+    {
+      question: "Where can I get some?",
+      answer:
+        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
     },
   ];
 
@@ -56,9 +66,9 @@ const FAQS: React.FC<FAQSProps> = ({ questions }) => {
   const rightFAQs = faqsToRender.slice(midIndex);
 
   return (
-    <div className="mb-[250px] w-full my-20">
+    <div className="mb-[300px] w-full my-20">
       <div className="flex justify-center items-center ">
-      <svg
+        <svg
           width="205"
           height="189"
           viewBox="0 0 205 189"
@@ -72,7 +82,7 @@ const FAQS: React.FC<FAQSProps> = ({ questions }) => {
               rx="43.5"
               ry="35"
               fill="url(#paint0_linear_422_839)"
-              fill-opacity="0.8"
+              fillOpacity="0.8"
             />
           </g>
           <defs>
@@ -83,9 +93,9 @@ const FAQS: React.FC<FAQSProps> = ({ questions }) => {
               width="205"
               height="188"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feBlend
                 mode="normal"
                 in="SourceGraphic"
@@ -105,25 +115,25 @@ const FAQS: React.FC<FAQSProps> = ({ questions }) => {
               y2="129.32"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0.36" stop-color="#55C360" />
-              <stop offset="1" stop-color="#2BAFFC" />
+              <stop offset="0.36" stopColor="#55C360" />
+              <stop offset="1" stopColor="#2BAFFC" />
             </linearGradient>
           </defs>
         </svg>
-        <div className="text-center font-poppins font-bold -ml-24 text-[43.6px]  ">
+        <div className="text-center font-poppins font-bold -ml-24 text-[43.6px]">
           FAQs
         </div>
       </div>
 
-      <div className=" flex justify-between px-28  gap-10 text-[#303A42] text-lg font-bold">
+      <div className="flex justify-between px-28 gap-24 text-[#303A42] text-lg font-bold">
         <div className="w-1/2">
           <Accordion type="single" collapsible className="w-full">
             {leftFAQs.map((faq, index) => (
               <AccordionItem value={`left-${index}`} key={`left-${index}`}>
-                <AccordionTrigger className="flex justify-between items-center pt-6 pb-3 border-gray-200 focus:text-[#09B14F]">
+                <AccordionTrigger className="flex justify-between items-center pt-6 hover:no-underline pb-3 font-sans border-gray-200 focus:text-[#2BAFFC] focus:outline-none focus:no-underline">
                   <h3 className="text-lg font-semibold">{faq.question}</h3>
                 </AccordionTrigger>
-                <AccordionContent className="pb-6 font-normal text-sm border-b-[#3F3F3F] border-gray-200 transition-all duration-300 ease-in-out">
+                <AccordionContent className="pb-6 text-[#303A42] font-normal text-sm border-b-[#3F3F3F] font-sans border-gray-200 transition-all duration-300 ease-in-out">
                   <p>{faq.answer}</p>
                 </AccordionContent>
               </AccordionItem>
@@ -134,10 +144,10 @@ const FAQS: React.FC<FAQSProps> = ({ questions }) => {
           <Accordion type="single" collapsible className="w-full">
             {rightFAQs.map((faq, index) => (
               <AccordionItem value={`right-${index}`} key={`right-${index}`}>
-                <AccordionTrigger className="flex justify-between items-center pt-6 pb-3 border-gray-200 focus:text-[#09B14F]">
+                <AccordionTrigger className="flex justify-between items-center hover:no-underline pt-6 pb-3 font-sans border-gray-200 focus:text-[#2BAFFC] focus:outline-none focus:no-underline">
                   <h3 className="text-lg font-semibold">{faq.question}</h3>
                 </AccordionTrigger>
-                <AccordionContent className="pb-6 font-normal text-sm border-b-[#3F3F3F] border-gray-200 transition-all duration-300 ease-in-out">
+                <AccordionContent className="pb-6 text-[#303A42] font-normal text-sm border-b-[#3F3F3F] font-sans border-gray-200 transition-all duration-300 ease-in-out">
                   <p>{faq.answer}</p>
                 </AccordionContent>
               </AccordionItem>

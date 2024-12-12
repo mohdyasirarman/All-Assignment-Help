@@ -1,31 +1,198 @@
-import AssignmentHelp from "@/components/landing-page/assignmentHelpHero";
-import HelpYouNeed from "@/components/landing-page/helpYouNeed";
-import BestAssignmentWiter from "@/components/landing-page/bestAssignmentWriter";
-import UnmatchedAcademicSuccess from "@/components/landing-page/unmatchedAcademicSuccess";
-import WhatStudentSayAboutUs from "@/components/landing-page/whatStudentSayAboutUs";
-import StuckOnAssignment from "@/components/landing-page/stuckOnAssignment";
-import AffordablePricing from "@/components/landing-page/affordablePricing";
+import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 import UnlockExpertHelp from "@/components/landing-page/unlockExpertHelp";
 import Footer from "@/components/common/footer";
-import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
+import AcademicNeeds from "@/components/landing-page/academicneeds";
+import ThingAboutUs from "@/components/landing-page/thingaboutus";
+import HowItWorks from "@/components/landing-page/howitworks";
+import WritingTool from "@/components/landing-page/writingTool";
+import FAQS from "@/components/landing-page/faq";
+import AffordablePrice from "@/components/landing-page/affordableprice";
+import HeroSectionNew from "@/components/landing-page/HeroSectionNew";
 
+export default function Page() {
+  const question = [
+    {
+      question: "What is the 'Cheap Essay Writing Service'?",
+      answer:
+        "Our 'Cheap Essay Writing Service' connects you with affordable, professional writers who help you get your essays done quickly and with decent quality, all without breaking the bank.",
+    },
+    {
+      question: "Why should I choose this service?",
+      answer:
+        "If you need help with your essays but are on a tight budget, our service is the perfect option for getting quality help at a low price. We make sure you don't miss any deadlines.",
+    },
+    {
+      question: "What types of essays can I get help with?",
+      answer:
+        "We offer cheap help with all sorts of essays, including research papers, argumentative essays, and reports. We cover all major subjects, including English, Business, Science, and more.",
+    },
+    {
+      question: "How does it work?",
+      answer:
+        "Just let us know what you need help with, provide your deadline, and one of our writers will take care of the rest. We promise affordable prices and timely delivery.",
+    },
+    {
+      question: "Who uses this service?",
+      answer:
+        "Students, professionals, and anyone looking for affordable, quality writing help use our service to get essays done fast without spending too much.",
+    },
+    {
+      question: "What are the benefits of using this service?",
+      answer:
+        "The main benefits are low-cost help, quick turnaround, and solid work that will meet your deadlines without costing you a fortune.",
+    },
+  ];
 
-const page = () => {
+  const section1 = {
+    imageSrc: "/static/images/thing1.svg",
+    imageAlt: "Affordable Essay Help",
+    title: "Cheap Essay Writing: Affordable Help When You Need It",
+    description:
+      "Don’t stress about expensive writing services. We offer cheap, reliable essay help that gets the job done on time.",
+    items: [
+      "Affordable essay writing help for all types of assignments.",
+      "Get your work done quickly, without the high price tag.",
+    ],
+    buttonText: "Get Cheap Essay Help Now",
+  };
+
+  const section2 = {
+    imageSrc: "/static/images/thing2.svg",
+    imageAlt: "Professional Essay Writers",
+    title: "Get Your Essays Done: Fast, Affordable, and Professional",
+    description:
+      "Work with experienced writers who deliver decent essays at a price that won’t break your budget.",
+    items: [
+      "Affordable, quality writing support for your essays and papers.",
+      "On-time delivery of your work, every time.",
+    ],
+    buttonText: "Get Help Now",
+    isReversed: true,
+  };
+
+  const pricingFeatures = [
+    {
+      name: "Cheap Full Essay Help",
+      originalPrice: "99.99",
+      discountedPrice: "FREE",
+    },
+    { name: "Basic Essay Help", originalPrice: "79.99", discountedPrice: "FREE" },
+    {
+      name: "Research Paper Help",
+      originalPrice: "109.99",
+      discountedPrice: "FREE",
+    },
+    {
+      name: "Report Writing Assistance",
+      originalPrice: "89.99",
+      discountedPrice: "FREE",
+    },
+    {
+      name: "Affordable Exam Essay Help",
+      originalPrice: "69.99",
+      discountedPrice: "FREE",
+    },
+    { name: "Unlimited Essay Assistance", originalPrice: "129.99", discountedPrice: "FREE" },
+  ];
+
+  const writingToolData = [
+    {
+      id: 1,
+      title: "Easy Essay Tracker",
+      description:
+        "Keep track of your essay progress and deadlines without the stress of forgetting key dates.",
+    },
+    {
+      id: 2,
+      title: "Simple Time Management",
+      description:
+        "Learn how to manage your time better so you can get your essays done fast without compromising quality.",
+    },
+    {
+      id: 3,
+      title: "Quick Essay Planner",
+      description:
+        "Easily organize your essay ideas and approach for a smooth and speedy writing process.",
+    },
+    {
+      id: 4,
+      title: "Basic Citation Guide",
+      description:
+        "Get quick guidance on how to cite your sources properly, even for last-minute papers.",
+    },
+    {
+      id: 5,
+      title: "Deadline Reminders",
+      description:
+        "Set up reminders so you never miss an essay deadline again, even with a busy schedule.",
+    },
+    {
+      id: 6,
+      title: "Quick Feedback Tool",
+      description:
+        "Receive fast feedback on your essays to make last-minute improvements before submission.",
+    },
+    {
+      id: 7,
+      title: "Easy Grade Tracker",
+      description:
+        "Keep track of your academic progress to ensure you're meeting your goals, even with tight deadlines.",
+    },
+    {
+      id: 8,
+      title: "More Tools for Fast Essays",
+      description:
+        "Explore additional tools to help you finish essays faster and more effectively, without paying more.",
+    },
+  ];
+
   return (
-    <>
-      <AssignmentHelp  changeInH="Cheap Essay Writing Service" changeInP="Try Our Cheap Writing Services to Ace All Your Essays" />
-      <WhyStudentTrustUs />
-      <BestAssignmentWiter changeInExpertWriteP="Discover the Best Professional Writers to Guarantee You an A+." changeInExpertWriteTilte="Hire Affordable Writers for A+ Content"/>
-      <HelpYouNeed  changeInYouNeedTitle="3 Simple Steps to Order Cheap Essay Online" changeInYouNeedbtn="Place Order"/>
-      <UnmatchedAcademicSuccess changeInUnmatedTite="What Makes Our Cheap Essay Writing Services Stand Out?" changeInUnmatedp="Discover Why We are the Best Essay Writing Service" />
-      <BestAssignmentWiter changeInExpertWriteP="" changeInExpertWriteTilte="What Makes Our Cheap Essay Writing Services Stand Out?"/> 
-      <WhatStudentSayAboutUs changeInP="Explore Why Millions of Students Rely on Us for Guidance. " changeTitle="Check What Students Have to Say"/>
-      <StuckOnAssignment changeInP="Buy Essay Cheap and Get Amazing Grades Guaranteed." changeTitle="Get A-Rated Essays from Top-Rated Scholars"/>
-      <AffordablePricing changeInP="Hire Top Scholars to Write Essays at an Affordable Price." changeTitle="Enjoy the Cheapest Essay Writing Services" /> 
-      <UnlockExpertHelp />  
-      <Footer />  
-    </>
+    <div className="w-full">
+      <HeroSectionNew
+        changeInH={"Cheap Essay Writing: Fast & Affordable Help"}
+        changeInP={"Get your essays done fast and affordably, no matter the deadline."}
+        isboy={false}
+      />
+      <AcademicNeeds
+        title="Affordable Help for All Your Essay Writing Needs"
+        buttons={[
+          "Request Cheap Essay Help Now",
+          "Submit Your Essay for Help",
+          "Get Research Paper Assistance",
+          "Report Writing Help",
+          "Exam Essay Writing Support",
+          "Manage Your Writing Deadlines",
+        ]}
+      />
+      <WhyStudentTrustUs
+        sections={[
+          {
+            title: "Affordable and Fast Help",
+            description:
+              "We provide quick, budget-friendly help with essays and other assignments without sacrificing quality.",
+            number: "100%",
+          },
+          {
+            title: "Available Anytime",
+            description:
+              "Our writing experts are available 24/7 to help you with your essays, whenever you need assistance.",
+            number: "24/7",
+          },
+          {
+            title: "No Missed Deadlines",
+            description:
+              "We guarantee that your essays will be delivered on time, even if you're in a rush.",
+            number: "98%",
+          },
+        ]}
+      />
+      <ThingAboutUs section1={section1} section2={section2} />
+      <HowItWorks />
+      <AffordablePrice pricingFeatures={pricingFeatures} />
+      <WritingTool writingToolData={writingToolData} />
+      <FAQS questions={question} />
+      <UnlockExpertHelp />
+      <Footer />
+    </div>
   );
-};
-
-export default page;
+}

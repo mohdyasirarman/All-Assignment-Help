@@ -2,9 +2,6 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaCog, FaBook, FaHome } from "react-icons/fa";
-import { IoIosPricetags } from "react-icons/io";
-import { MdRoundaboutLeft, MdMenu, MdClose } from "react-icons/md";
 import { usePathname } from "next/navigation";
 
 export default function LandingPageNavbar() {
@@ -18,9 +15,7 @@ export default function LandingPageNavbar() {
     setDropdownVisible((prev) => !prev);
   };
 
-  const handleMobileMenuToggle = () => {
-    setMobileMenuVisible((prev) => !prev);
-  };
+ 
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
@@ -72,10 +67,15 @@ export default function LandingPageNavbar() {
     "Dissertation Help",
     "Term Paper Help",
     "Homework Help",
+    "Case Study Help",
+    "Coursework Help",
+    "Thesis Help",
+    "PowerPoint Presentation Services"
   ];
 
   return (
-    <nav className="sticky shadow-sm mx-5 rounded-3xl top-5 z-50 backdrop-filter backdrop-blur-xl">
+    <>
+    <nav className="sticky shadow-sm mx-12 rounded-lg top-5 z-50 backdrop-blur-3xl bg-white/30   ">
       <div className="flex justify-between items-center h-16 max-w-7xl mx-auto">
         <Link href="/" className="flex items-center">
           <Image
@@ -90,9 +90,7 @@ export default function LandingPageNavbar() {
           </span>
         </Link>
 
-        <button onClick={handleMobileMenuToggle} className="lg:hidden">
-          {isMobileMenuVisible ? <MdClose size={24} /> : <MdMenu size={24} />}
-        </button>
+       
 
         <div
           className={`lg:flex items-center space-x-8 ${
@@ -101,13 +99,13 @@ export default function LandingPageNavbar() {
         >
           <Link
             href="/"
-            className={`flex items-center space-x-1 px-4 py-[22px] ${
+            className={`flex items-center space-x-1 px-2 py-[22px] ${
               pathname === "/"
-                ? "text-blue-500 font-bold"
+                ? "text-black font-bold"
                 : "text-gray-500 font-semibold"
             }`}
           >
-            <FaHome />
+            
             <span>Home</span>
           </Link>
 
@@ -116,27 +114,15 @@ export default function LandingPageNavbar() {
     onClick={handleDropdownToggle}
     className={`flex items-center space-x-1 px-4 py-[22px] font-semibold ${
       pathname.startsWith("/services")
-        ? "text-blue-500 font-bold"
+        ? "text-black font-semibold"
         : "text-gray-500"
     }`}
     aria-expanded={isDropdownVisible}
     aria-controls="services-dropdown"
   >
-    <FaCog />
+    
     <span>Services</span>
-    <svg
-      className="w-4 h-4"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M19 9l-7 7-7-7"
-      />
-    </svg>
+    
   </button>
   <div
     id="services-dropdown"
@@ -177,34 +163,34 @@ export default function LandingPageNavbar() {
             href="/courses"
             className={`flex items-center space-x-1 px-4 py-[22px] text-black font-semibold ${
               pathname === "/courses"
-                ? "text-blue-500 font-bold"
+                ? "text-black font-semibold"
                 : "text-gray-500 font-semibold"
             }`}
           >
-            <FaBook />
+        
             <span>Courses</span>
           </Link>
           <Link
             href="/pricing"
             className={`flex items-center space-x-1 px-4 py-[22px] text-black font-semibold ${
               pathname === "/pricing"
-                ? "text-blue-500 font-bold"
+                ? "text-black font-semibold"
                 : "text-gray-500 font-semibold"
             }`}
           >
-            <IoIosPricetags />
+           
             <span>Pricing</span>
           </Link>
           <Link
             href="/about"
             className={`flex items-center space-x-1 px-4 py-[22px] text-black font-semibold ${
               pathname === "/about"
-                ? "text-blue-500 font-bold"
+                ? "text-black font-semibold"
                 : "text-gray-500 font-semibold"
             }`}
           >
-            <MdRoundaboutLeft />
-            <span>About</span>
+           
+            <span>About Us</span>
           </Link>
         </div>
 
@@ -253,6 +239,7 @@ export default function LandingPageNavbar() {
         </div>
       </div>
     </nav>
+    </>
   );
 }
 
@@ -282,7 +269,7 @@ const ServiceColumn: React.FC<ServiceColumnProps> = ({
             <Link
               href={servicePath}
               className={`block text-gray-700 hover:text-[#09b14f] ${
-                activeService === servicePath ? "text-blue-500 font-bold" : ""
+                activeService === servicePath ? "text-black font-semibold" : ""
               }`}
               onClick={() => onClick(servicePath)}
             >

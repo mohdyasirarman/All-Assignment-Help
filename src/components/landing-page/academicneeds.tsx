@@ -1,15 +1,31 @@
 import React from "react";
 import Image from "next/image";
 
-const AcademicNeeds: React.FC = () => {
+interface AcademicNeedsProps {
+  title?: string;
+  buttons?: string[];
+}
+
+const AcademicNeeds: React.FC<AcademicNeedsProps> = ({
+  title = "We cover all Academic Needs,",
+  buttons = [
+    "Finish My Course for Me",
+    "Get Homework Done",
+    "Ace My Online Test",
+    "Craft My Essay",
+    "Guide Me Through My Exam",
+    "Get Help on My Project",
+    "Find Help for Other Needs",
+  ],
+}) => {
   return (
     <div
-      className="py-10 bg-cover bg-center mt-[20px]"
+      className="py-12 bg-cover bg-center -mt-16 "
       style={{ backgroundImage: "url('/static/images/academicneeds.svg')" }}
     >
       <div className="ml-[280px]">
         <h1 className="text-[38px] leading-[41px] font-[500] font-poppins text-[#010101] mb-6">
-          We cover all Academic Needs,{" "}
+          {title}
           <div className="inline-flex flex-col items-center">
             <span>Select</span>
             <Image
@@ -23,30 +39,15 @@ const AcademicNeeds: React.FC = () => {
           </div>
         </h1>
       </div>
-      <div className="flex flex-wrap justify-center gap-8">
-        <button className="bg-[#55C360] text-white font-poppins font-[500px] text-[18px] leading-[35px] py-2 px-6 rounded-[40px] shadow-md hover:bg-green-600 transition-all">
-          Finish My Course for Me
-        </button>
-        <button className="bg-[#55C360] text-white py-2 px-6 font-poppins font-[500px] text-[18px] leading-[35px] rounded-[40px] shadow-md hover:bg-green-600 transition-all">
-          Get Homework Done
-        </button>
-        <button className="bg-[#55C360] text-white py-2 px-6 font-poppins font-[500px] text-[18px] leading-[35px] rounded-[40px] shadow-md hover:bg-green-600 transition-all">
-          Ace My Online Test
-        </button>
-        <button className="bg-[#55C360] text-white font-poppins font-[500px] text-[18px] leading-[35px] py-2 px-6 rounded-[40px] shadow-md hover:bg-green-600 transition-all">
-          Craft My Essay
-        </button>
-        <div className="flex flex-wrap justify-center gap-8">
-          <button className="bg-[#55C360] text-white font-poppins font-[500px] text-[18px] leading-[35px] py-2 px-6 rounded-[40px] shadow-md hover:bg-green-600 transition-all">
-            Guide Me Through My Exam
+      <div className="flex flex-wrap justify-center gap-6 mx-56 mt-12">
+        {buttons.map((buttonText, index) => (
+          <button
+            key={index}
+            className="bg-[#55C360] text-white font-poppins mb-2 font-[500] text-[18px] leading-[35px] py-2 px-6 rounded-[40px] shadow-md hover:bg-green-600 transition-all"
+          >
+            {buttonText}
           </button>
-          <button className="bg-[#55C360] text-white font-poppins font-[500px] text-[18px] leading-[35px] py-2 px-6 rounded-[40px] shadow-md hover:bg-green-600 transition-all">
-            Get Help on My Project
-          </button>
-          <button className="bg-[#55C360] text-white font-poppins font-[500px] text-[18px] leading-[35px] py-2 px-6 rounded-[40px] shadow-md hover:bg-green-600 transition-all">
-            Find Help for Other Needs
-          </button>
-        </div>
+        ))}
       </div>
     </div>
   );

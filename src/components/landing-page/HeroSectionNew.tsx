@@ -14,11 +14,13 @@ import { useState } from "react";
 interface AssignmentHelpProps {
   changeInH: string;
   changeInP: string;
+  isboy: boolean;
 }
 
 export default function HeroSectionNew({
   changeInH,
   changeInP,
+  isboy,
 }: AssignmentHelpProps) {
   const [inputTypeCalen, setInputTypeCalen] = useState("text");
 
@@ -26,9 +28,9 @@ export default function HeroSectionNew({
   const handleBlurCalen = () => setInputTypeCalen("text");
 
   const statsData = [
-    { number: "200+", label: "Experts", color: "text-blue-500" },
-    { number: "⭐ 4.6", label: "1k+ Reviews", color: "text-yellow-500" },
-    { number: "2k+", label: "Students", color: "text-blue-500" },
+    { number: "200+", label: "Experts", color: "text-[#2BAFFC]" },
+    { number: "⭐4.6", label: "1k+ Reviews", color: "text-[#2BAFFC]" },
+    { number: "2k+", label: "Students", color: "text-[#2BAFFC]" },
   ];
   const photoList = [
     "img_front_page_review_1.jpeg",
@@ -41,28 +43,41 @@ export default function HeroSectionNew({
     <>
       <div className="w-full h-screen bg-hero-pattern_new bg-no-repeat bg-cover rotate-180 bg-[-500px_100px] absolute top-0 left-0"></div>
       <div className="w-full h-screen backdrop-blur-[100px] absolute top-0 left-0"></div>
-
       <div className="relative w-full h-screen flex justify-center items-center">
-        <div className="right absolute bottom-16 left-[53%]">
-          <Image
-            src="/static/images/girl.png"
-            alt="girl"
-            width={600}
-            height={600}
-            quality={100}
-            priority
-          />
-
-          <div className="absolute top-[15%] left-[73%] bg-white rounded-xl shadow-xl px-4 py-8">
+        <div className="right absolute bottom-16 left-[50%] ">
+          <div>
+            {isboy ? (
+              <Image
+                src="/static/images/girl.png"
+                alt="girl"
+                width={600}
+                height={600}
+                quality={100}
+                priority
+              />
+            ) : (
+              <Image
+                src="/static/images/boy.png"
+                alt="girl"
+                width={1500}
+                height={1500}
+                quality={100}
+                priority
+              />
+            )}
+          </div>
+          <div className="absolute top-[15%] left-[73%] font-poppins bg-white rounded-xl shadow-xl px-4 py-8">
             {statsData.map((stat, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center text-black font-semibold justify-center mb-12 last:mb-0"
+                className="flex flex-col items-center text-[#313131] justify-center mb-12 last:mb-0"
               >
-                <div className={`text-4xl font-bold ${stat.color}`}>
+                <div className={`text-4xl font-extrabold ${stat.color}`}>
                   {stat.number}
                 </div>
-                <div className="text-gray-600 text-sm mt-2">{stat.label}</div>
+                <div className="text-[#313131] text-md font-semibold mt-2">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -94,7 +109,7 @@ export default function HeroSectionNew({
                 .map((chunk, index) => (
                   <>
                     <span
-                      className="drop-shadow-[0_45px_55px_rgba(0,0,0,.1)]"
+                      className=" font-inter drop-shadow-[0_45px_55px_rgba(0,0,0,.1)] leading-[62px]"
                       key={index}
                     >
                       {chunk.join(" ")}
@@ -104,7 +119,7 @@ export default function HeroSectionNew({
                 ))
             ) : (
               <>
-                <div className="drop-shadow-[0_45px_55px_rgba(0,0,0,.1)]">
+                <div className=" font-inter drop-shadow-[0_45px_55px_rgba(0,0,0,.1)] leading-[62px]">
                   Ace Your
                   <br />
                   Assignments with
@@ -112,7 +127,7 @@ export default function HeroSectionNew({
                   Expert Help
                 </div>
                 <svg
-                  className="absolute top-[41%]"
+                  className="absolute top-[39%]"
                   width="392"
                   height="23"
                   viewBox="0 0 362 13"
@@ -135,13 +150,13 @@ export default function HeroSectionNew({
                 <input
                   type="email"
                   placeholder="Email"
-                  className="rounded-3xl px-10 flex-1 py-[14px] focus:outline-none border-black border-2 focus:ring focus:ring-blue-300"
+                  className="rounded-3xl px-10 font-poppins flex-1 py-[14px] placeholder:text-[#333333] focus:outline-none border-black border-2 focus:ring focus:ring-blue-300"
                   required
                 />
                 <input
                   type="text"
                   placeholder="Assignment (Any Type)"
-                  className="border-black border-2 rounded-3xl px-10 py-[14px] focus:outline-none flex-1 focus:ring focus:ring-blue-300"
+                  className="border-black border-2 font-poppins rounded-3xl px-10 py-[14px] placeholder:text-[#333333] focus:outline-none flex-1 focus:ring focus:ring-blue-300"
                   required
                 />
               </div>
@@ -151,7 +166,7 @@ export default function HeroSectionNew({
                   <DropdownMenuTrigger asChild>
                     <Button
                       variant="outline"
-                      className="flex-1 rounded-3xl px-10 text-gray-700 border-black border-2 py-[25px]"
+                      className="flex-1 rounded-3xl px-10 text-[#333333] border-black border-2 py-[25px]"
                     >
                       Subject
                     </Button>
@@ -168,7 +183,7 @@ export default function HeroSectionNew({
 
                 <input
                   placeholder="Deadline"
-                  className="border-black border-2 flex-1 rounded-3xl px-10 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+                  className="border-black border-2 font-poppins placeholder:text-[#333333] flex-1 rounded-3xl px-10 py-2 focus:outline-none focus:ring focus:ring-blue-300"
                   type={inputTypeCalen}
                   onFocus={handleFocusCalen}
                   onBlur={handleBlurCalen}
@@ -179,7 +194,7 @@ export default function HeroSectionNew({
               <div className="flex-col">
                 <button
                   type="submit"
-                  className=" bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none"
+                  className=" bg-[#55C360] hover:bg-green-700 text-white font-bold py-3 px-8 rounded-[50px] focus:outline-none"
                 >
                   Get a Free Quote
                 </button>
@@ -204,7 +219,7 @@ export default function HeroSectionNew({
                       </div>
                     </div>
                   ))}
-                  <div className="bg-blue-400 h-10 w-10 rounded-full overflow-hidden shadow-md z-50 flex justify-center items-center font-poppins font-semibold text-white">
+                  <div className="bg-blue-600 h-10 w-10 rounded-full overflow-hidden shadow-md z-50 flex justify-center items-center font-poppins font-semibold text-white">
                     4+
                   </div>
                 </div>
