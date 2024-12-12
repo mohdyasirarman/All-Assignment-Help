@@ -8,8 +8,6 @@ import AcademicNeeds from "@/components/landing-page/academicneeds";
 import HowItWorks from "@/components/landing-page/howitworks";
 import AffordablePrice from '@/components/landing-page/affordableprice';
 import ThingAboutUs from "@/components/landing-page/thingaboutus";
-import ComprehensiveHelp from "./comprehensiveHelp";
-
 
 export default function LandingPage() {
   return (
@@ -25,7 +23,11 @@ export default function LandingPage() {
           <AffordablePrice />
           <FAQS />
           <UnlockExpertHelp />  
-          <Footer />          
+          <Footer />
+          <AcademicNeeds/>
+          <HowItWorks/>
+          <AffordablePrice />
+          <ThingAboutUs />
     </>
   );
 }
