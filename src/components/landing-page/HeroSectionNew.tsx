@@ -15,7 +15,7 @@ interface AssignmentHelpProps {
   changeInH: string;
   changeInP: string;
   isboy: boolean;
-  isReviewPage: boolean;
+  isReviewPage?: boolean; 
 }
 
 export default function HeroSectionNew({
