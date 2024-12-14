@@ -46,7 +46,7 @@ export default function HeroSectionNew({
       <div className="w-full h-screen bg-hero-pattern_new bg-no-repeat bg-cover rotate-180 bg-[-500px_100px] absolute top-0 left-0"></div>
       <div className="w-full h-screen backdrop-blur-[100px] absolute top-0 left-0"></div>
       <div className="relative w-full h-screen flex justify-center items-center">
-        <div className="right absolute bottom-16 left-[50%] ">
+        <div className="right absolute bottom-16 left-[50%]  drop-shadow-xl hover:drop-shadow-2xl transition-all">
           <div>
             {isReviewPage ? (
               <Image
@@ -206,7 +206,7 @@ export default function HeroSectionNew({
               <div className="flex-col">
                 <button
                   type="submit"
-                  className=" bg-[#55C360] hover:bg-green-700 text-white font-bold py-3 px-8 rounded-[50px] focus:outline-none"
+                  className=" bg-[#55C360] hover:bg-green-600 text-white font-bold py-3 px-8 rounded-[50px] focus:outline-none"
                 >
                   Get a Free Quote
                 </button>

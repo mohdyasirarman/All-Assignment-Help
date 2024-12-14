@@ -126,7 +126,7 @@ export const ExpertCard: React.FC<{
             <p className="text-[#343434] mb-4 font-poppins font-[500] text-[16px] leading-[24px]">
               {expertData.description || "No detailed description available."}
             </p>
-            <button className="bg-[#55C360] text-white px-3 py-2 rounded-[30px] w-[120px] mt-[10px]">
+            <button className="bg-[#55C360] text-white px-3 py-2 rounded-[30px] hover:bg-[#45a350] w-[120px] mt-[10px]">
               Hire Now
             </button>
           </div>
@@ -167,7 +167,7 @@ export const ExpertCard: React.FC<{
                 <p className="text-[#343434] mb-4 font-poppins font-[500] text-[16px] leading-[24px]">
                   {expertData.description || "No detailed description available."}
                 </p>
-                <button className="bg-[#55C360] text-white px-3 py-2 rounded-[30px] w-[120px] mt-[10px]">
+                <button className="bg-[#55C360] text-white px-3 py-2 rounded-[30px] hover:bg-green-600 w-[120px] mt-[10px]">
                   Hire Now
                 </button>
               </div>
@@ -263,7 +263,7 @@ const Experts: React.FC = () => {
               width={56}
               height={56}
               onClick={scrollLeft}
-              className={`cursor-pointer ${!canScrollLeft ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`cursor-pointer hover:grayscale  ${!canScrollLeft ? '' : ''}`}
             />
             <Image 
               src="/static/images/arrow2.svg"
@@ -271,7 +271,7 @@ const Experts: React.FC = () => {
               width={56}
               height={56}
               onClick={scrollRight}
-              className={`cursor-pointer ${!canScrollRight ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`cursor-pointer hover:grayscale ${!canScrollRight ? '' : ''}`}
             />
           </div>
         </div>

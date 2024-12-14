@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface AcademicNeedsProps {
   title?: string;
@@ -41,12 +42,13 @@ const AcademicNeeds: React.FC<AcademicNeedsProps> = ({
       </div>
       <div className="flex flex-wrap justify-center gap-6 mx-56 mt-12">
         {buttons.map((buttonText, index) => (
-          <button
+          <Link
             key={index}
+            href="/order"
             className="bg-[#55C360] text-white font-poppins mb-2 font-[500] text-[18px] leading-[35px] py-2 px-6 rounded-[40px] shadow-md hover:bg-green-600 transition-all"
           >
             {buttonText}
-          </button>
+          </Link>
         ))}
       </div>
     </div>

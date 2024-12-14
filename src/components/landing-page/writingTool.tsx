@@ -85,7 +85,6 @@ const WritingTool: React.FC<WritingToolProps> = ({ writingToolData = [] }) => {
   return (
     <div className="w-full my-20">
       <div className="w-full flex flex-col px-28 gap-10 font-poppins">
-        {/* Heading */}
         <div className="w-full text-center">
           <div className="font-bold text-[#2C2C2C] font-poppins text-6xl leading-[56px]">
             Assignment Help & Writing Tools
@@ -94,7 +93,6 @@ const WritingTool: React.FC<WritingToolProps> = ({ writingToolData = [] }) => {
             Assignment Help & Writing Tools
           </div>
         </div>
-        {/* Cards */}
         <div className="my-10 "> 
           <div className="grid grid-cols-4 gap-y-8 gap-x-[0px] basis-[54.2857143%] " >
             {toolsToDisplay.map((data) => (

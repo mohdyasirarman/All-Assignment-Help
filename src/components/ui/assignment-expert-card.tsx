@@ -115,7 +115,7 @@ export function ComprehensiveHelpCard({
       <div className="w-full group/cards">
         <div
           className={cn(
-            "overflow-hidden relative drop-shadow-lg card h-[200px] w-[380px] rounded-[13px] backgroundImage flex flex-col p-3 bg-white "
+            "overflow-hidden relative shadow-lg hover:shadow-2xl transition-all ease-in drop-shadow-lg card h-[200px] w-[380px] rounded-[13px] backgroundImage flex flex-col p-3 bg-white "
           )}
         >
           <div className="pt-5 pb-1 pl-3 w-full flex justify-start items-center">
@@ -124,7 +124,7 @@ export function ComprehensiveHelpCard({
               width={48}
               alt="Avatar"
               src={image}
-              className="rounded-full object-cover"
+              className="rounded-full object-cover hover:saturate-50 transition-all ease-in"
             />
           </div>
           <div className="flex flex-col font-poppins text-start pl-3 pt-2">
@@ -201,11 +201,11 @@ export function PricingCard() {
   };
   return (
     <div className="border-2 border-[#2E2F35] h-[450px] w-[490px] rounded-xl font-poppins ">
-      {/* Heading */}
+    
       <div className="font-bold text-xl leading-8 text-center my-5 ">
         FREE Features
       </div>
-      {/* Pricing */}
+   
       <div className="flex flex-col gap-2">
         {pricingData.map((data) => (
           <div key={data.id} className="flex justify-between px-5 py-1">
@@ -213,9 +213,9 @@ export function PricingCard() {
           </div>
         ))}
       </div>
-      {/* Button */}
+     
       <div className="mt-8 font-normal text-center w-full">
-        <div className="text-[#5F5F5F] text-md">
+        <div className="text-[#5F5F5F] text-md hover:saturate-200">
           Get These Premium Features Today
         </div>
         <div className="w-full my-4">
@@ -236,30 +236,30 @@ type WritingToolCardProps = {
 import { useState } from 'react';
 
 export function WritingToolCard({ title, description }: WritingToolCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false); // State to track expanded state
+  const [isExpanded, setIsExpanded] = useState(false);
   const text = 75;
   const truncatedDescription = description.length > text ? description.slice(0, text) + '...' : description;
 
   const handleClick = () => {
-    setIsExpanded(!isExpanded); // Toggle the expanded state
+    setIsExpanded(!isExpanded); 
   };
 
   return (
     <div className="w-full group/cards" onClick={handleClick}>
       <div
         className={cn(
-          "overflow-hidden relative drop-shadow-lg card  lg:w-[265px] rounded-[13px] backgroundImage flex flex-col p-5 bg-[#e2f4ff] transition-all duration-300 ease-in-out", // Add transition
-          isExpanded ? "lg:h-[300px]" : "lg:h-[230px]" // Adjust height when expanded
+          "overflow-hidden relative drop-shadow-lg card  shadow-lg hover:shadow-2xl lg:w-[265px] rounded-[13px] backgroundImage flex flex-col p-5 bg-[#e2f4ff] transition-all duration-300 ease-in-out", 
+          isExpanded ? "lg:h-[300px]" : "lg:h-[230px]" 
         )}
       >
         <div className="flex flex-col font-poppins text-start pl-3 pt-2 flex-grow">
           <p className="w-full font-bold text-[22px] font-poppins leading-6 text-[#2C2C2C]">{title}</p>
           <p className="w-full font-montserrat text-base text-[#8A8A8A] pt-3">
-            {isExpanded ? description : truncatedDescription} {/* Conditionally render full or truncated description */}
+            {isExpanded ? description : truncatedDescription} 
           </p>
         </div>
         <div className="text-center flex font-poppins mt-auto">
-          <div className="w-full font-semibold text-[#55C360]">Check Now</div>
+          <div className="w-full font-semibold text-[#55C360] hover:text-[#45a350] ">Check Now</div>
         </div>
       </div>
     </div>

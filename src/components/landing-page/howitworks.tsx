@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const HowItWorks: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const HowItWorks: React.FC = () => {
           alt="Student holding books"
           width={600}
           height={854}
-          className="mb-[42px]"
+          className="mb-[42px] drop-shadow-lg hover:drop-shadow-2xl transition-all ease-in"
         />
       </div>
 
@@ -19,7 +20,7 @@ const HowItWorks: React.FC = () => {
         alt="Arrow"
         width={54}
         height={129}
-        className="mr-[-95px] mt-[330px]"
+        className="mr-[-95px] mt-[330px] "
       />
       <div className="mb-[80px] leading-[50px] mr-[-200px]">
         <h2 className="text-[48px] leading-[56px] font-bold font-poppins text-[#1C1C1C] mb-[30px]">
@@ -30,19 +31,20 @@ const HowItWorks: React.FC = () => {
         </p>
 
         <div className="flex items-start bg-white w-[565px] h-[161px] rounded-lg mt-[20px] p-5">
-          {/* Step Number */}
           <div className="text-[#010101] text-[36px] font-bold font-poppins leading-[54px]">
             01
           </div>
 
-          {/* Content Section */}
           <div className="mt-[10px]">
-            <h3 className="text-[22px] font-bold font-poppins leading-[28px] ml-[45px] text-[#010101]">
+            <h3 className="text-[22px] font-bold font-poppins leading-[28px] mb-[20px] ml-[45px] text-[#010101]">
               Share Your Requirements
             </h3>
-            <button className="bg-[#55C360] text-white text-[16px] px-4  mt-[30px] ml-[-40px] rounded-[40px] font-poppins font-semibold">
+            <Link
+              href="/order"
+              className="bg-[#55C360]  text-white text-[16px] px-4  py-4 mt-[10px] ml-[-40px] rounded-[40px] font-poppins hover:bg-green-600 font-semibold"
+            >
               Talk to Expert
-            </button>
+            </Link>
           </div>
         </div>
 

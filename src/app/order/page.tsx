@@ -8,7 +8,7 @@ const AssignmentForm = () => {
   const decreaseWordCount = () => setWordCount(wordCount - 100);
 
   return (
-    <div className="max-w-4xl mx-auto p-8 py-14">
+    <div className="max-w-4xl mx-auto p-2 py-10 ">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-2 mb-10">
           <div className="flex items-center">
@@ -192,7 +192,7 @@ const AssignmentForm = () => {
               <label className="block font-poppins font-semibold  tracking-[1px] text-[#0A0D13] mb-2">
                 Attach File
               </label>
-              <button className="w-full text-xl bg-[#55C360] text-[#FFFFFF] font-poppins tracking-[1px] font-semibold  rounded-xl p-2 flex items-center justify-center">
+              <button className="w-full text-xl bg-[#55C360] hover:bg-[#45a350] text-[#FFFFFF] font-poppins tracking-[1px] font-semibold  rounded-xl p-2 flex items-center justify-center">
                 Add {"  "}
                 <svg
                   width="25"
@@ -344,7 +344,7 @@ const AssignmentForm = () => {
             </div>
           </div>
 
-          <button className="w-[100%] rounded-xl bg-[#55C360]  font-bold font-poppins text-[#F3F3F3]  p-2">
+          <button className="w-[100%] rounded-xl bg-[#55C360]  font-bold font-poppins text-[#F3F3F3]  p-2 hover:bg-[#45a350]">
             Submit
           </button>
           <p className="text-xs font-poppins  text-[#ACACAC] mt-2">
@@ -353,9 +353,9 @@ const AssignmentForm = () => {
             in our privacy policy.
           </p>
         </div>
-        <div className="bg-gradient-to-r from-white to-[#d4eefd] ml-10 h-[350px] shadow-lg -mt-10 rounded-xl flex items-center justify-center">
+        <div className="bg-gradient-to-r from-white to-[#d4eefd] ml-10 h-[500px] w-[500px] shadow-xl hover:shadow-2xl   -mt-10 rounded-xl flex items-center justify-center  transition-all ease-in duration-200">
           <div className="text-center">
-            <h2 className="text-4xl font-extrabold font-poppins text-[#55C360]">
+            <h2 className="text-5xl font-extrabold font-poppins text-[#55C360]">
               GET <br /> 20% OFF USE <br /> CODE - HELP 20
             </h2>
             <p className="mt-6 text-[#00000094] font-poppins ">

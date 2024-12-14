@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 
 interface PricingFeature {
@@ -28,7 +29,7 @@ const AffordablePricing: React.FC<AffordablePricingProps> = ({ pricingFeatures =
   const featuresToDisplay = pricingFeatures.length > 0 ? pricingFeatures : defaultPricingFeatures;
 
   return (
-    <div className="bg-white py-8 px-5 flex flex-col items-center">
+    <div id="AffordablePricing" className="bg-white py-8 px-5 flex flex-col items-center">
       <h2 className="text-[48px] w-[671px] font-bold font-poppins leading-[57px] text-[#010101] text-center mb-4">
         Top-Rated Assignment
       </h2>
@@ -59,7 +60,7 @@ const AffordablePricing: React.FC<AffordablePricingProps> = ({ pricingFeatures =
                 <p className="text-[20px] font-poppins font-[400] leading-[24px] line-through text-[#5F5F5F]">
                   {feature.originalPrice}
                 </p>
-                <p className="text-[white] bg-[#55C360] ml-[20px] w-[80px] flex justify-center p-2 text-[15px] font-[400] font-poppins leading-[24px] rounded-[40px]">
+                <p className="text-[white] bg-[#55C360] ml-[20px] w-[80px] flex justify-center p-2 text-[15px] font-[400] font-poppins leading-[24px] hover:bg-[#45a350] rounded-[40px]">
                   {feature.discountedPrice}
                 </p>
               </div>
@@ -68,9 +69,11 @@ const AffordablePricing: React.FC<AffordablePricingProps> = ({ pricingFeatures =
         ))}
       </div>
 
-      <button className="bg-[#55C360] mt-[70px] text-white mr-[25px] text-[16px] font-semibold py-3 px-6 rounded-[40px]">
+      <Link
+       href="/order"
+      className="bg-[#55C360] mt-[70px] text-white mr-[25px] text-[16px] font-semibold py-3 px-6 rounded-[40px] hover:bg-green-600">
         Unlock Now
-      </button>
+      </Link>
     </div>
   );
 };

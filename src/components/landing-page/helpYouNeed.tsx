@@ -151,7 +151,7 @@ const HelpYouNeed = ({ changeInYouNeedTitle, changeInYouNeedbtn }: helpYouNeedPr
 
           {/* Recieve Button  */}
           <div className="w-full flex justify-center font-poppins font-normal text-lg leading-7 -mt-10">
-            <button className="bg-[#09B14F] text-white w-[270px] h-[50px] rounded-md">
+            <button className="bg-[#09B14F] text-white w-[270px] h-[50px] rounded-md hover:bg-green-600">
               {changeInYouNeedbtn ? <p>{changeInYouNeedbtn}</p> : <p>Receive My Assignment</p>}
             </button>
           </div>

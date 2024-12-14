@@ -24,7 +24,7 @@ const StuckOnAssignment = ({changeTitle,changeInP}:StuckProps) => {
           </span>
           </>}
           <div className="w-full mt-5"> 
-            <button className="px-5 py-3 rounded-3xl text-white bg-[#55C360] ">
+            <button className="px-5 py-3 rounded-3xl text-white bg-[#55C360] hover:bg-[#45a350]">
              Let us Know
             </button>
           </div>

@@ -72,7 +72,7 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="outline"
-                    className="flex-1 rounded-3xl  px-28 text-[#0000008a] border-[#55C360] border-2 py-[25px]"
+                    className="flex-1 rounded-3xl  px-28 text-[#0000008a] border-[#55C360] border-2 py-[25px] "
                   >
                     All Subjects
                   </Button>
@@ -90,7 +90,7 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="outline"
-                    className="flex-1 rounded-3xl px-28 text-[#00000089] border-[#55C360] border-2 py-[25px]"
+                    className="flex-1 rounded-3xl px-28 text-[#00000089] border-[#55C360] border-2 py-[25px] "
                   >
                     Orders Completed
                   </Button>
@@ -125,7 +125,7 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
             </div>
             <button
               type="submit"
-              className=" bg-[#55C360] hover:bg-green-700 text-white font-bold py-3 px-12 rounded-[50px] focus:outline-none"
+              className=" bg-[#55C360] hover:bg-green-600 text-white font-bold py-3 px-12 rounded-[50px] focus:outline-none"
             >
               search
             </button>

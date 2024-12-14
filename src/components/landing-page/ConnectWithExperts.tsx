@@ -15,7 +15,7 @@ const ExpertCard: React.FC<{ expert?: Expert }> = ({ expert }) => {
     name: "Default Expert",
     qualification: "No Qualification Provided",
     description: "No description available.",
-    image: "/static/images/default-image.svg",
+    image: "/static/images/headphoneGirl.png",
   };
 
   const expertData = expert || defaultExpert;
@@ -55,7 +55,7 @@ const ExpertGrid: React.FC<{ experts?: Expert[] }> = ({ experts }) => {
     name: `Default Expert ${i + 1}`,
     qualification: "No Qualification Provided",
     description: "No description available.",
-    image: "/static/images/default-image.svg",
+    image: "/static/images/headphoneGirl.png",
   }));
 
   const expertList = experts && experts.length > 0 ? experts : defaultExperts;
