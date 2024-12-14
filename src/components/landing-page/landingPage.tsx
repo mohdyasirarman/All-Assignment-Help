@@ -2,6 +2,7 @@ import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
 import WhatStudentSayAboutUs from "@/components/landing-page/whatStudentSayAboutUs";
 import FAQS from "@/components/landing-page/faq";
 import UnlockExpertHelp from "@/components/landing-page/unlockExpertHelp";
+import ComprehensiveHelp from "@/components/landing-page/comprehensiveHelp";
 import Footer from "@/components/common/footer";
 import HeroSectionNew from "./HeroSectionNew";
 import AcademicNeeds from "@/components/landing-page/academicneeds";
@@ -14,8 +15,7 @@ export default function LandingPage() {
     <>
           <HeroSectionNew changeInH={""} changeInP={""} isboy={true}/>
           <AcademicNeeds/>
-          <WhyStudentTrustUs/>  
-           
+          <WhyStudentTrustUs/>         
           <ThingAboutUs />
           <HowItWorks/>
           <WhatStudentSayAboutUs changeInP="" changeTitle=""/>
