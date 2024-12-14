@@ -1,199 +1,113 @@
 import WhyStudentTrustUs from "@/components/landing-page/whyStudentTrustUs";
+import WhatStudentSayAboutUs from "@/components/landing-page/whatStudentSayAboutUs";
+import FAQS from "@/components/landing-page/faq";
 import UnlockExpertHelp from "@/components/landing-page/unlockExpertHelp";
 import Footer from "@/components/common/footer";
 import AcademicNeeds from "@/components/landing-page/academicneeds";
-import ThingAboutUs from "@/components/landing-page/thingaboutus";
 import HowItWorks from "@/components/landing-page/howitworks";
-import WritingTool from "@/components/landing-page/writingTool";
-import FAQS from "@/components/landing-page/faq";
-import AffordablePrice from "@/components/landing-page/affordableprice";
+import AffordablePrice from '@/components/landing-page/affordableprice';
+import ThingAboutUs from "@/components/landing-page/thingaboutus";
 import HeroSectionNew from "@/components/landing-page/HeroSectionNew";
+import Experts from "@/components/landing-page/experts";
+import Features from "@/components/landing-page/features";
 
 export default function Page() {
-  const question = [
-    {
-      question: "What is the 'Assessment Help' service?",
-      answer:
-        "'Assessment Help' offers expert assistance in preparing for and completing your academic assessments, including exams, assignments, quizzes, and projects.",
-    },
-    {
-      question: "Why should I use the 'Assessment Help' service?",
-      answer:
-        "This service ensures that you can achieve the best results on your assessments, with the help of professionals who can guide you in studying, answering questions, and completing tasks effectively.",
-    },
-    {
-      question: "What types of assessments can I get help with?",
-      answer:
-        "We provide assistance with a wide range of assessments, including exams, coursework, quizzes, projects, and even group assignments across different academic fields.",
-    },
-    {
-      question: "How does the 'Assessment Help' service work?",
-      answer:
-        "Simply share your assessment details, choose the type of assistance you need, and let our experts guide you in completing your task or preparing for your assessment.",
-    },
-    {
-      question: "Who uses the 'Assessment Help' service?",
-      answer:
-        "Students, working professionals, and anyone who needs help preparing for or completing academic assessments use this service to ensure high performance.",
-    },
-    {
-      question: "What are the benefits of using the 'Assessment Help' service?",
-      answer:
-        "Using this service helps you manage your time effectively, boosts your performance, reduces stress, and ensures that your assessments are completed to the highest standard.",
-    },
+
+  const title = "Need Help with Your Assessments?";
+  const buttons = [
+    "Write My Assessment",
+    "Edit My Assessment",
+    "Help with Assessment Formatting",
+    "Proofread My Assessment",
+    "Provide Assessment Guidance",
+    "Assist with Exam Preparation",
   ];
 
-  const section1 = {
-    imageSrc: "/static/images/thing1.svg",
-    imageAlt: "Expert Assessment Assistance",
-    title: "Assessment Help: Professional Support for Academic Success",
-    description:
-      "'Assessment Help' ensures you get expert guidance in preparing for and completing your academic assessments, helping you achieve your academic goals with ease.",
-    items: [
-      "Get expert help in preparing for exams, completing assignments, and tackling quizzes.",
-      "Receive personalized assistance for your coursework, projects, and group assessments.",
-    ],
-    buttonText: "Get Assessment Help Now",
-  };
-
-  const section2 = {
-    imageSrc: "/static/images/thing2.svg",
-    imageAlt: "Verified Assessment Experts",
-    title: "Expert Assessment Help: Master Your Academic Challenges",
-    description:
-      "Work with verified professionals who specialize in guiding students through various types of academic assessments, ensuring top performance.",
-    items: [
-      "Benefit from expert strategies for exam preparation and assignment completion.",
-      "Receive tailored advice to help you meet deadlines and achieve excellent results.",
-    ],
-    buttonText: "Talk to an Assessment Expert",
-    isReversed: true,
-  };
-
-  const pricingFeatures = [
+  const sections = [
     {
-      name: "Full Assessment Assistance",
-      originalPrice: "149.99",
-      discountedPrice: "FREE",
-    },
-    { name: "Exam Preparation", originalPrice: "99.99", discountedPrice: "FREE" },
-    {
-      name: "Assignment Assistance",
-      originalPrice: "89.99",
-      discountedPrice: "FREE",
+      title: "Tailored Assessments",
+      description: 
+        "We provide customized assessment help that aligns with your academic and subject requirements.",
+      number: "100%",
     },
     {
-      name: "Quiz Help",
-      originalPrice: "49.99",
-      discountedPrice: "FREE",
+      title: "Professional Experts",
+      description: 
+        "Our team comprises experienced professionals with expertise in various academic disciplines, ready to assist with assessments.",
+      number: "250+",
     },
     {
-      name: "Project Support",
-      originalPrice: "129.99",
-      discountedPrice: "FREE",
-    },
-    { name: "Unlimited Assessment Help", originalPrice: "199.99", discountedPrice: "FREE" },
+      title: "Deadline-Oriented",
+      description: 
+        "We understand the importance of deadlines and ensure timely delivery of your assessments, so you can stay stress-free.",
+      number: "98%",
+    }
   ];
 
-  const writingToolData = [
+  const questions = [
     {
-      id: 1,
-      title: "Assessment Analyzer",
-      description:
-        "Submit your past assessments for detailed feedback on how to improve your performance in future tasks.",
+      question: "What does your assessment help service include?",
+      answer:
+        "Our service includes writing original assessments, accurate formatting, and thorough editing tailored to your academic standards.",
     },
     {
-      id: 2,
-      title: "Time Management Tool",
-      description:
-        "Use our tool to manage your time effectively during assessments, ensuring you complete all tasks within deadlines.",
+      question: "Who helps with the assessments?",
+      answer:
+        "Our team consists of experts with advanced degrees and extensive experience in writing and assisting with assessments.",
     },
     {
-      id: 3,
-      title: "Practice Quizzer",
-      description:
-        "Test your knowledge with practice quizzes tailored to your assessment topics.",
+      question: "Can I request revisions for my assessment?",
+      answer:
+        "Yes, we provide free revisions to ensure your assessment meets your expectations.",
     },
     {
-      id: 4,
-      title: "Assignment Proofreader",
-      description:
-        "Ensure your assignments are error-free and meet academic standards with our proofreading tool.",
+      question: "What is the typical delivery time for an assessment?",
+      answer:
+        "We offer flexible deadlines, from urgent requests to standard timelines, to accommodate your needs.",
     },
     {
-      id: 5,
-      title: "Exam Strategy Guide",
-      description:
-        "Learn expert strategies for tackling exams, managing stress, and improving your performance.",
+      question: "How do you ensure my information is kept confidential?",
+      answer:
+        "We take privacy seriously, implementing robust measures to safeguard your personal and academic information.",
     },
     {
-      id: 6,
-      title: "Assessment Practice Sessions",
-      description:
-        "Get personalized practice sessions for upcoming exams or assignments to prepare effectively.",
+      question: "Can I communicate with the expert?",
+      answer:
+        "Yes, you can directly collaborate with the expert to ensure your assessment meets your specific requirements.",
     },
     {
-      id: 7,
-      title: "Project Assistance",
-      description:
-        "Receive guidance and expert help on your academic projects, from concept to final submission.",
+      question: "Do you handle urgent assessment requests?",
+      answer:
+        "Yes, we can handle urgent assessment requests without compromising on quality.",
     },
     {
-      id: 8,
-      title: "Other Tools",
-      description:
-        "Explore additional tools like citation generators, writing tips, and formatting aids to help with your assessments.",
-    },
+      question: "How do I get started?",
+      answer:
+        "Getting started is easy. Simply share your requirements and deadlines through our platform, and we'll handle the rest.",
+    }
   ];
 
   return (
-    <div className="w-full">
-      <HeroSectionNew
-        changeInH={"Expert Assessment Help for Success"}
-        changeInP={"Get  assistance to prepare for and complete your  assessments with ease."}
-        isboy={false}
+    <>
+      <HeroSectionNew 
+        changeInH={"Ace Your Assessments with Expert Help"} 
+        changeInP={"Get professional assistance to ensure high-quality assessments."} 
+        isboy={false} 
       />
-      <AcademicNeeds
-        title="We Cover All Your Assessment Needs"
-        buttons={[
-          "Get Assessment Help Now",
-          "Request Exam Preparation",
-          "Assignment Assistance",
-          "Project Support",
-          "Quiz Help",
-          "Time Management for Assessments",
-          "Other Assessment Help",
-        ]}
-      />
-      <WhyStudentTrustUs
-        sections={[
-          {
-            title: "No AI",
-            description:
-              "All assessment assistance is provided by verified experts, ensuring genuine, human-driven support.",
-            number: "100% ",
-          },
-          {
-            title: "24/7 Support",
-            description:
-              "Our team is available 24/7 to assist with your assessments, no matter the time or stage of the process.",
-            number: "24/7",
-          },
-          {
-            title: "On Time",
-            description:
-              "We guarantee timely assessment help and assistance, ensuring you meet all deadlines.",
-            number: "98% ",
-          },
-        ]}
-      />
-      <ThingAboutUs section1={section1} section2={section2} />
+      <AcademicNeeds title={title} buttons={buttons} />
+      <WhyStudentTrustUs sections={sections} />
+      <Experts />
+      <ThingAboutUs />
+      <Features />
       <HowItWorks />
-      <AffordablePrice pricingFeatures={pricingFeatures} />
-      <WritingTool writingToolData={writingToolData} />
-      <FAQS questions={question} />
+      <WhatStudentSayAboutUs 
+        changeInP={"Hear from students who improved their grades with our assessment help."} 
+        changeTitle={"What Our Clients Say About Us"} 
+      />
+      <AffordablePrice />
+      <FAQS questions={questions} />
       <UnlockExpertHelp />
-      <Footer />
-    </div>
+      <Footer />          
+    </>
   );
 }

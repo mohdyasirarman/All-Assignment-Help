@@ -4,10 +4,11 @@ import Footer from "@/components/common/footer";
 import AcademicNeeds from "@/components/landing-page/academicneeds";
 import ThingAboutUs from "@/components/landing-page/thingaboutus";
 import HowItWorks from "@/components/landing-page/howitworks";
-import WritingTool from "@/components/landing-page/writingTool";
 import FAQS from "@/components/landing-page/faq";
 import AffordablePrice from "@/components/landing-page/affordableprice";
 import HeroSectionNew from "@/components/landing-page/HeroSectionNew";
+import Experts from "@/components/landing-page/experts";
+import Features from "@/components/landing-page/features";
 
 export default function Page() {
   const question = [
@@ -95,56 +96,7 @@ export default function Page() {
     { name: "Unlimited Academic Writing Help", originalPrice: "249.99", discountedPrice: "FREE" },
   ];
 
-  const writingToolData = [
-    {
-      id: 1,
-      title: "Research Paper Tracker",
-      description:
-        "Organize and manage your research progress, stay on top of deadlines, and ensure you meet academic writing expectations.",
-    },
-    {
-      id: 2,
-      title: "Time Management for Writing",
-      description:
-        "Master time management skills that help balance multiple assignments and ensure that your work is delivered on time.",
-    },
-    {
-      id: 3,
-      title: "Quick Assignment Planner",
-      description:
-        "Develop a structured approach to academic tasks, optimizing your writing process and improving productivity.",
-    },
-    {
-      id: 4,
-      title: "Academic Writing Structure Guide",
-      description:
-        "Learn the best practices for structuring academic papers, essays, and reports to ensure clarity and coherence.",
-    },
-    {
-      id: 5,
-      title: "Citation and Referencing Assistant",
-      description:
-        "Get expert guidance on properly citing sources and adhering to different citation styles, including APA, MLA, and Chicago.",
-    },
-    {
-      id: 6,
-      title: "Academic Feedback Tracker",
-      description:
-        "Receive detailed feedback on your work, allowing you to make necessary improvements before final submission.",
-    },
-    {
-      id: 7,
-      title: "Grade Monitoring System",
-      description:
-        "Track your academic performance and ensure you are on the right path to achieving top grades in your assignments and exams.",
-    },
-    {
-      id: 8,
-      title: "Other Academic Writing Tools",
-      description:
-        "Explore additional tools and resources to assist with writing, research, and formatting to enhance your academic output.",
-    },
-  ];
+ 
 
   return (
     <div className="w-full">
@@ -186,10 +138,11 @@ export default function Page() {
           },
         ]}
       />
+        <Experts/>
       <ThingAboutUs section1={section1} section2={section2} />
+      <Features/>
       <HowItWorks />
       <AffordablePrice pricingFeatures={pricingFeatures} />
-      <WritingTool writingToolData={writingToolData} />
       <FAQS questions={question} />
       <UnlockExpertHelp />
       <Footer />

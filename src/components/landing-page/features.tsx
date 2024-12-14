@@ -49,11 +49,11 @@ const features: Feature[] = [
 
 const Features: React.FC = () => {
   return (
-    <div className="bg-gray-50 min-h-screen flex items-center mt-[20px] mb-[10px]">
-      <div className="max-w-7xl mx-auto px-4 lg:flex lg:items-start lg:space-x-10 justify-center">
+    <div className="bg-white min-h-screen flex items-center px-[10px]">
+      <div className="max-w-7xl mx-auto  lg:flex lg:items-start lg:space-x-10 justify-center">
         {/* Header Section */}
-        <div className="w-[324px] mb-10 lg:mb-0">
-          <h1 className="text-[48px] font-poppins leading-[57px] font-bold text-[#2C2C2C] mb-4">
+        <div className="w-[324px] mb-10 lg:mb-0 mr-6">
+          <h1 className="text-[48px] font-poppins leading-[57px] font-bold text-[#2C2C2C] ml-2 mb-4">
             Top Features for Your Need
           </h1>
           <p className="font-inter font-[400] text-[18px] leading-[28px] text-[#575858]">

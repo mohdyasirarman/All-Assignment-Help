@@ -8,7 +8,11 @@ import AcademicNeeds from "@/components/landing-page/academicneeds";
 import HowItWorks from "@/components/landing-page/howitworks";
 import AffordablePrice from '@/components/landing-page/affordableprice';
 import ThingAboutUs from "@/components/landing-page/thingaboutus";
-import ComprehensiveHelp from "@/components/landing-page/comprehensiveHelp";
+import Experts from "./experts";
+import Features from "./features";
+import WritingTool from "./writingTool";
+import ComprehensiveHelp from "./comprehensiveHelp";
+
 
 
 export default function LandingPage() {
@@ -17,18 +21,17 @@ export default function LandingPage() {
           <HeroSectionNew changeInH={""} changeInP={""} isboy={true}/>
           <AcademicNeeds/>
           <WhyStudentTrustUs/>  
+          <Experts/>
           <ThingAboutUs />
+          <Features/>
           <HowItWorks/>
           <WhatStudentSayAboutUs changeInP="" changeTitle=""/>
-          <ComprehensiveHelp />
+          <ComprehensiveHelp/>
           <AffordablePrice />
+          <WritingTool/>
           <FAQS />
           <UnlockExpertHelp />  
           <Footer />
-          <AcademicNeeds/>
-          <HowItWorks/>
-          <AffordablePrice />
-          <ThingAboutUs />
     </>
   );
 }

@@ -96,7 +96,7 @@ const WritingTool: React.FC<WritingToolProps> = ({ writingToolData = [] }) => {
         </div>
         {/* Cards */}
         <div className="my-10 "> 
-          <div className="grid grid-cols-4 gap-10">
+          <div className="grid grid-cols-4 gap-y-8 gap-x-[0px] basis-[54.2857143%] " >
             {toolsToDisplay.map((data) => (
               <div key={data.id}>
                 <WritingToolCard
