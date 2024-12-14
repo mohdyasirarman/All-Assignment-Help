@@ -9,7 +9,7 @@ import HowItWorks from "@/components/landing-page/howitworks";
 import AffordablePrice from '@/components/landing-page/affordableprice';
 import ThingAboutUs from "@/components/landing-page/thingaboutus";
 import ComprehensiveHelp from "@/components/landing-page/comprehensiveHelp";
-import SlidingReviews from "@/components/landing-page/slidingreviews";
+
 
 export default function LandingPage() {
   return (
@@ -29,7 +29,6 @@ export default function LandingPage() {
           <HowItWorks/>
           <AffordablePrice />
           <ThingAboutUs />
-          <SlidingReviews />
     </>
   );
 }

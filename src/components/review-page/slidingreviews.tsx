@@ -81,10 +81,7 @@ const SlidingReviews: React.FC = () => {
         </p>
       </div>
       {/* Grid Container */}
-      <div
-        className="flex flex-row ml-[20px] overflow-hidden relative"
-        ref={scrollRef}
-      >
+      <div className="flex flex-row ml-[20px] overflow-hidden relative">
         {reviews.map((review, index) => (
           <div
             key={index}
