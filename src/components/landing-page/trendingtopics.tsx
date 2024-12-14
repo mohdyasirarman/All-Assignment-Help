@@ -54,7 +54,7 @@ const topics = [
 
 const TrendingTopics: React.FC = () => {
   return (
-    <div className="mx-auto p-6">
+    <div className="mx-auto mt-[20px] p-16">
       <div className="mb-[70px]">
         <h2 className="text-center text-[48px] font-poppins leading-[52px] text-[#1C1C1C] font-bold mb-[16px] mt-[20px]">
           Search by Trending Topics
@@ -63,14 +63,11 @@ const TrendingTopics: React.FC = () => {
           Stay ahead with the hottest topics in academics.
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-[20px]">
+      <div className="grid grid-cols-4 gap-y-[70px]">
         {topics.map((topic, index) => (
           <div
             key={index}
-            className=" w-[328px] h-[126px] flex items-center bg-white rounded-lg  p-4 gap-4"
-            style={{
-              boxShadow: "0px 4.21px 21.03px 0px #FFEFE0",
-            }}
+            className="w-[328px] h-[126px] flex items-center bg-white rounded-lg p-4 gap-4 drop-shadow-[0px_6px_10px_rgba(255,239,224,0.8)] transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
           >
             <div className="flex-shrink-0">
               <Image

@@ -248,7 +248,7 @@ export function WritingToolCard({ title, description }: WritingToolCardProps) {
     <div className="w-full group/cards" onClick={handleClick}>
       <div
         className={cn(
-          "overflow-hidden relative drop-shadow-lg card lg:w-[265px] rounded-[13px] backgroundImage flex flex-col p-5 bg-[#e2f4ff] transition-all duration-300 ease-in-out", // Add transition
+          "overflow-hidden relative drop-shadow-lg card  lg:w-[265px] rounded-[13px] backgroundImage flex flex-col p-5 bg-[#e2f4ff] transition-all duration-300 ease-in-out", // Add transition
           isExpanded ? "lg:h-[300px]" : "lg:h-[230px]" // Adjust height when expanded
         )}
       >

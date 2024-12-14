@@ -20,13 +20,13 @@ const AcademicNeeds: React.FC<AcademicNeedsProps> = ({
 }) => {
   return (
     <div
-      className="py-12 bg-cover bg-center -mt-16 "
+      className="py-12 bg-cover bg-center -mt-16"
       style={{ backgroundImage: "url('/static/images/academicneeds.svg')" }}
     >
-      <div className="ml-[280px]">
-        <h1 className="text-[38px] leading-[41px] font-[500] font-poppins text-[#010101] mb-6">
+      <div className="flex flex-col items-center">
+        <h1 className="text-[38px] text-center leading-[41px] font-[500] font-poppins text-[#010101] mb-2">
           {title}
-          <div className="inline-flex flex-col items-center">
+          <div className="mr-[100px] inline-flex flex-col items-center">
             <span>Select</span>
             <Image
               src="/static/images/cursor1.svg"

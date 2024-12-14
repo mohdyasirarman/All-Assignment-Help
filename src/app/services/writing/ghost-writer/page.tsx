@@ -4,10 +4,11 @@ import Footer from "@/components/common/footer";
 import AcademicNeeds from "@/components/landing-page/academicneeds";
 import ThingAboutUs from "@/components/landing-page/thingaboutus";
 import HowItWorks from "@/components/landing-page/howitworks";
-import WritingTool from "@/components/landing-page/writingTool";
 import FAQS from "@/components/landing-page/faq";
 import AffordablePrice from "@/components/landing-page/affordableprice";
 import HeroSectionNew from "@/components/landing-page/HeroSectionNew";
+import Experts from "@/components/landing-page/experts";
+import Features from "@/components/landing-page/features";
 
 export default function Page() {
   const question = [
@@ -95,57 +96,7 @@ export default function Page() {
     { name: "Unlimited Ghostwriting Assistance", originalPrice: "999.99", discountedPrice: "FREE" },
   ];
 
-  const writingToolData = [
-    {
-      id: 1,
-      title: "Content Planning Tool",
-      description:
-        "Keep track of your content ideas and deadlines, ensuring everything is ready for the ghostwriters to start.",
-    },
-    {
-      id: 2,
-      title: "Writer Collaboration Hub",
-      description:
-        "Collaborate with our ghostwriters, providing feedback and additional guidance to ensure the content meets your needs.",
-    },
-    {
-      id: 3,
-      title: "Content Quality Tracker",
-      description:
-        "Monitor the quality of your ghostwritten content with tools that ensure your writing is on point and professional.",
-    },
-    {
-      id: 4,
-      title: "Citation and Source Guide",
-      description:
-        "Easily manage your sources and references to ensure your ghostwritten content is properly cited and credible.",
-    },
-    {
-      id: 5,
-      title: "Instant Feedback Tool",
-      description:
-        "Get immediate feedback on your ghostwritten drafts, allowing for quick adjustments and improvements.",
-    },
-    {
-      id: 6,
-      title: "Content Delivery Reminders",
-      description:
-        "Set reminders for ghostwriters to ensure timely delivery of your content, no matter how tight the deadline.",
-    },
-    {
-      id: 7,
-      title: "Ghostwriting Progress Tracker",
-      description:
-        "Track the progress of your ghostwriting projects and ensure everything stays on schedule.",
-    },
-    {
-      id: 8,
-      title: "More Tools for Efficient Ghostwriting",
-      description:
-        "Explore additional tools that will help you manage your ghostwriting projects more effectively and efficiently.",
-    },
-  ];
-
+  
   return (
     <div className="w-full">
       <HeroSectionNew
@@ -186,10 +137,11 @@ export default function Page() {
           },
         ]}
       />
+      <Experts/>
       <ThingAboutUs section1={section1} section2={section2} />
+      <Features/>
       <HowItWorks />
       <AffordablePrice pricingFeatures={pricingFeatures} />
-      <WritingTool writingToolData={writingToolData} />
       <FAQS questions={question} />
       <UnlockExpertHelp />
       <Footer />
