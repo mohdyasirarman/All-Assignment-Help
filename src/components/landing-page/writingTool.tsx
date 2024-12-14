@@ -1,7 +1,18 @@
 import { WritingToolCard } from "@/components/ui/assignment-expert-card";
 
-const WritingTool = () => {
-  const writingToolData = [
+interface WritingToolData {
+  id: number;
+  title: string;
+  description: string;
+}
+
+interface WritingToolProps {
+  writingToolData?: WritingToolData[];
+}
+
+const WritingTool: React.FC<WritingToolProps> = ({ writingToolData = [] }) => {
+  
+  const defaultWritingToolData: WritingToolData[] = [
     {
       id: 1,
       title: "Plagiarism Checker",
@@ -67,23 +78,26 @@ const WritingTool = () => {
         and more.`,
     },
   ];
+
+  
+  const toolsToDisplay = writingToolData.length > 0 ? writingToolData : defaultWritingToolData;
+
   return (
     <div className="w-full my-20">
       <div className="w-full flex flex-col px-28 gap-10 font-poppins">
         {/* Heading */}
         <div className="w-full text-center">
-          <div className="font-bold text-[#2C2C2C] text-5xl leading-[56px]">
-            Assignment Help & Writing{" "}
-            <span className="text-[#09B14F]">Tools</span>
+          <div className="font-bold text-[#2C2C2C] font-poppins text-6xl leading-[56px]">
+            Assignment Help & Writing Tools
           </div>
           <div className="font-normal text-[#5F5F5F] text-base leading-6 mt-5">
             Assignment Help & Writing Tools
           </div>
         </div>
         {/* Cards */}
-        <div className="my-10">
+        <div className="my-10 "> 
           <div className="grid grid-cols-4 gap-10">
-            {writingToolData.map((data) => (
+            {toolsToDisplay.map((data) => (
               <div key={data.id}>
                 <WritingToolCard
                   key={data.id}
