@@ -70,7 +70,7 @@ const SlidingReviews: React.FC = () => {
   };
 
   return (
-    <div className="mx-auto py-8 ">
+    <div className="mx-auto py-8  ">
       <div className="text-center w-[862px] flex flex-col items-center ml-[280px]">
         <h2 className="font-poppins text-[48px] leading-[52px] text-[#1C1C1C] font-bold mb-4">
           Student Reviews from Social Media
