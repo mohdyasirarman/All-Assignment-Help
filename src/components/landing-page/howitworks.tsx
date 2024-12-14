@@ -11,6 +11,7 @@ const HowItWorks: React.FC = () => {
           alt="Student holding books"
           width={600}
           height={854}
+          priority
           className="mb-[42px] drop-shadow-lg hover:drop-shadow-2xl transition-all ease-in"
         />
       </div>
@@ -20,6 +21,7 @@ const HowItWorks: React.FC = () => {
         alt="Arrow"
         width={54}
         height={129}
+        priority
         className="mr-[-95px] mt-[330px] "
       />
       <div className="mb-[80px] leading-[50px] mr-[-200px]">
@@ -87,12 +89,14 @@ const HowItWorks: React.FC = () => {
           alt="Arrow"
           width={55}
           height={166}
+          priority
           className="ml-[90px] mt-[-50px]"
         />
         <Image
           src="/static/images/vector2.svg"
           alt="Arrow"
           width={55}
+          priority
           height={113}
           className="ml-[90px] mt-[10px]"
         />
