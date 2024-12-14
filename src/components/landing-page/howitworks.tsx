@@ -17,7 +17,7 @@ const HowItWorks: React.FC = () => {
       </div>
 
       <Image
-        src="/static/images/vector3.svg"
+        src="/static/images/vectorThree.svg"
         alt="Arrow"
         width={54}
         height={129}
@@ -85,7 +85,7 @@ const HowItWorks: React.FC = () => {
       </div>
       <div className="flex flex-col">
         <Image
-          src="/static/images/vector1.svg"
+          src="/static/images/vectorOne.svg"
           alt="Arrow"
           width={55}
           height={166}
@@ -93,7 +93,7 @@ const HowItWorks: React.FC = () => {
           className="ml-[90px] mt-[-50px]"
         />
         <Image
-          src="/static/images/vector2.svg"
+          src="/static/images/vectorTwo.svg"
           alt="Arrow"
           width={55}
           priority
