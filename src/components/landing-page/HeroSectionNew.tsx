@@ -41,7 +41,7 @@ export default function HeroSectionNew({
 
   return (
     <>
-      {/* <div className="w-full h-screen bg-hero-pattern_new bg-no-repeat bg-cover rotate-180 bg-[-500px_100px] absolute top-0 left-0"></div> */}
+      <div className="w-full h-full bg-hero-pattern_new bg-no-repeat bg-cover absolute rotate-[40] -top-[550px] -right-[900px]"></div>
       <div className="absolute left-[491px] -top-10 h-[466px] w-[466px] blur-3xl bg-gradient-to-t from-transparent to-[#2BAFFC] opacity-55" />
       <div className="w-full h-screen backdrop-blur-[100px] absolute top-0 left-0"></div>
       <div className="relative w-full h-screen flex justify-center items-center">
