@@ -59,6 +59,11 @@
   }
 }
 
+html,
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 @layer base {
   * {
     @apply border-border;
