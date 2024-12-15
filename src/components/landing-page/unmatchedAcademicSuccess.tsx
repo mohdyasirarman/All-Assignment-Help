@@ -230,9 +230,9 @@ const UnmatchedAcademicSuccess = ({changeInUnmatedTite,changeInUnmatedp}: unmatc
             </div></>}
           </div>
           <div className="w-full mt-20 flex justify-center font-poppins">
-            {changeInUnmatedTite?<button className="bg-[#09B14F] text-white font-normal text-lg px-8 py-2 rounded-md">
+            {changeInUnmatedTite?<button className="bg-[#09B14F] text-white hover:bg-[#45a350] font-normal text-lg px-8 py-2 rounded-md">
               Get Price Quote
-            </button>:<button className="bg-[#09B14F] text-white font-normal text-lg px-8 py-2 rounded-md">
+            </button>:<button className="bg-[#09B14F] text-white hover:bg-[#45a350] font-normal text-lg px-8 py-2 rounded-md">
               Hire Real Writers
             </button>}
           </div>

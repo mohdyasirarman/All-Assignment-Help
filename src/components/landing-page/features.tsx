@@ -1,4 +1,4 @@
-// features.tsx
+
 import React from "react";
 import Image from "next/image";
 
@@ -49,11 +49,11 @@ const features: Feature[] = [
 
 const Features: React.FC = () => {
   return (
-    <div className="bg-gray-50 min-h-screen flex items-center mt-[20px] mb-[10px]">
-      <div className="max-w-7xl mx-auto px-4 lg:flex lg:items-start lg:space-x-10 justify-center">
-        {/* Header Section */}
-        <div className="w-[324px] mb-10 lg:mb-0">
-          <h1 className="text-[48px] font-poppins leading-[57px] font-bold text-[#2C2C2C] mb-4">
+    <div className="bg-white min-h-screen flex items-center px-[10px]">
+      <div className="max-w-7xl mx-auto  lg:flex lg:items-start lg:space-x-10 justify-center">
+     
+        <div className="w-[324px] mb-10 lg:mb-0 mr-6 ">
+          <h1 className="text-[48px] font-poppins leading-[57px] font-bold text-[#2C2C2C] ml-2 mb-4">
             Top Features for Your Need
           </h1>
           <p className="font-inter font-[400] text-[18px] leading-[28px] text-[#575858]">
@@ -62,12 +62,12 @@ const Features: React.FC = () => {
           </p>
         </div>
 
-        {/* Features Section */}
-        <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6 ">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#2BAFFC1A] w-[384px] h-[270px] rounded-lg p-6 flex flex-col items-start text-start"
+              className="bg-[#2BAFFC1A] shadow-lg hover:shadow-2xl transition-all ease-in w-[384px] h-[270px] rounded-lg p-6 flex flex-col items-start text-start"
             >
               <div className="mb-4">
                 <Image

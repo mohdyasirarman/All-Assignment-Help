@@ -75,7 +75,7 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
         {items.map((item, index) => (
           <li
             key={index}
-            className="w-[250px] h-[240px] max-w-full bg-white rounded-xl border-2 border-[#2E2F35] px-8 py-6 md:w-[350px] relative flex-shrink-0"
+            className="w-[250px] h-[240px] max-w-full bg-white rounded-xl border-2 drop-shadow-lg hover:drop-shadow-2xl border-[#2E2F35] px-8 py-6 md:w-[350px] relative flex-shrink-0"
           >
             <blockquote>
               <div className="flex items-center relative z-20">

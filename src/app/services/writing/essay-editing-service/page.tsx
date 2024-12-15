@@ -4,10 +4,12 @@ import Footer from "@/components/common/footer";
 import AcademicNeeds from "@/components/landing-page/academicneeds";
 import ThingAboutUs from "@/components/landing-page/thingaboutus";
 import HowItWorks from "@/components/landing-page/howitworks";
-import WritingTool from "@/components/landing-page/writingTool";
 import FAQS from "@/components/landing-page/faq";
 import AffordablePrice from "@/components/landing-page/affordableprice";
 import HeroSectionNew from "@/components/landing-page/HeroSectionNew";
+import WhatStudentSayAboutUs from "@/components/landing-page/whatStudentSayAboutUs";
+import Features from "@/components/landing-page/features";
+import Experts from "@/components/landing-page/experts";
 
 export default function Page() {
   const question = [
@@ -76,7 +78,11 @@ export default function Page() {
       originalPrice: "99.99",
       discountedPrice: "FREE",
     },
-    { name: "Basic Essay Edit", originalPrice: "79.99", discountedPrice: "FREE" },
+    {
+      name: "Basic Essay Edit",
+      originalPrice: "79.99",
+      discountedPrice: "FREE",
+    },
     {
       name: "Research Paper Edit",
       originalPrice: "109.99",
@@ -92,57 +98,10 @@ export default function Page() {
       originalPrice: "69.99",
       discountedPrice: "FREE",
     },
-    { name: "Unlimited Essay Editing", originalPrice: "129.99", discountedPrice: "FREE" },
-  ];
-
-  const writingToolData = [
     {
-      id: 1,
-      title: "Essay Feedback Tracker",
-      description:
-        "Track the feedback provided on your essay edits and improvements over time.",
-    },
-    {
-      id: 2,
-      title: "Grammar & Style Guide",
-      description:
-        "Follow a simple guide to improve your grammar and style for perfect essay writing.",
-    },
-    {
-      id: 3,
-      title: "Quick Editing Checklist",
-      description:
-        "Use this checklist to ensure your essay meets all editing requirements before submission.",
-    },
-    {
-      id: 4,
-      title: "Citation Review Tool",
-      description:
-        "Get help with reviewing and correcting your citations to match academic standards.",
-    },
-    {
-      id: 5,
-      title: "Time-Saving Editing Tips",
-      description:
-        "Learn how to edit your essay faster with tips that help streamline the editing process.",
-    },
-    {
-      id: 6,
-      title: "Instant Grammar Checker",
-      description:
-        "Use an instant grammar tool to spot errors and fix them quickly for a polished essay.",
-    },
-    {
-      id: 7,
-      title: "Final Submission Check",
-      description:
-        "Before submitting, use this tool to check if your essay is ready for submission.",
-    },
-    {
-      id: 8,
-      title: "More Editing Tools",
-      description:
-        "Explore additional tools designed to help you with all aspects of essay editing.",
+      name: "Unlimited Essay Editing",
+      originalPrice: "129.99",
+      discountedPrice: "FREE",
     },
   ];
 
@@ -154,7 +113,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="Get Professional Help with Your Essay Editing"
+        title="Get Professional Help with Your Essay Editing "
         buttons={[
           "Request Essay Editing Now",
           "Submit Your Essay for Editing",
@@ -186,10 +145,12 @@ export default function Page() {
           },
         ]}
       />
+       <Experts/>
       <ThingAboutUs section1={section1} section2={section2} />
+      <Features/>
       <HowItWorks />
+      <WhatStudentSayAboutUs changeInP="" changeTitle="" />
       <AffordablePrice pricingFeatures={pricingFeatures} />
-      <WritingTool writingToolData={writingToolData} />
       <FAQS questions={question} />
       <UnlockExpertHelp />
       <Footer />

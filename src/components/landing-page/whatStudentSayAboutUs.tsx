@@ -51,7 +51,7 @@ const WhatStudentSayAboutUs = ({ changeTitle, changeInP }: StudentProps) => {
   return (
     <div className="w-full mt-32 mb-32">
       <div className="container px-4 lg:w-[1400px] mx-auto flex flex-col lg:flex-col gap-5 lg:gap-0">
-        {/* Heading */}
+
         <div className="mb-20 w-full text-center">
           {changeTitle ? (
             <>
@@ -77,7 +77,6 @@ const WhatStudentSayAboutUs = ({ changeTitle, changeInP }: StudentProps) => {
             </>
           )}
         </div>
-        {/* Testimonial Cards */}
         <InfiniteMovingCards
           pauseOnHover
           direction="left"

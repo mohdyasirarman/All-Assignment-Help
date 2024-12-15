@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface AcademicNeedsProps {
   title?: string;
@@ -20,13 +21,13 @@ const AcademicNeeds: React.FC<AcademicNeedsProps> = ({
 }) => {
   return (
     <div
-      className="py-12 bg-cover bg-center -mt-16 "
+      className="py-12 bg-cover bg-center -mt-16"
       style={{ backgroundImage: "url('/static/images/academicneeds.svg')" }}
     >
-      <div className="ml-[280px]">
-        <h1 className="text-[38px] leading-[41px] font-[500] font-poppins text-[#010101] mb-6">
+      <div className="flex flex-col items-center">
+        <h1 className="text-[38px] text-center leading-[41px] font-[500] font-poppins text-[#010101] mb-2">
           {title}
-          <div className="inline-flex flex-col items-center">
+          <div className="mr-[100px] inline-flex flex-col items-center">
             <span>Select</span>
             <Image
               src="/static/images/cursor1.svg"
@@ -41,12 +42,13 @@ const AcademicNeeds: React.FC<AcademicNeedsProps> = ({
       </div>
       <div className="flex flex-wrap justify-center gap-6 mx-56 mt-12">
         {buttons.map((buttonText, index) => (
-          <button
+          <Link
             key={index}
+            href="/order"
             className="bg-[#55C360] text-white font-poppins mb-2 font-[500] text-[18px] leading-[35px] py-2 px-6 rounded-[40px] shadow-md hover:bg-green-600 transition-all"
           >
             {buttonText}
-          </button>
+          </Link>
         ))}
       </div>
     </div>

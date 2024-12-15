@@ -114,13 +114,14 @@ const FAQS: React.FC<FAQSProps> = ({ questions }) => {
               x2="102.5"
               y2="129.32"
               gradientUnits="userSpaceOnUse"
+              className="hover:saturate-200"
             >
               <stop offset="0.36" stopColor="#55C360" />
               <stop offset="1" stopColor="#2BAFFC" />
             </linearGradient>
           </defs>
         </svg>
-        <div className="text-center font-poppins font-bold -ml-24 text-[43.6px]">
+        <div className="text-center font-poppins font-bold -ml-24 text-[43.6px] ">
           FAQs
         </div>
       </div>

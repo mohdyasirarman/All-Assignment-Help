@@ -15,12 +15,14 @@ interface AssignmentHelpProps {
   changeInH: string;
   changeInP: string;
   isboy: boolean;
+  isReviewPage?: boolean; 
 }
 
 export default function HeroSectionNew({
   changeInH,
   changeInP,
   isboy,
+  isReviewPage,
 }: AssignmentHelpProps) {
   const [inputTypeCalen, setInputTypeCalen] = useState("text");
 
@@ -45,9 +47,18 @@ export default function HeroSectionNew({
       <div className="absolute left-[491px] -top-10 h-[466px] w-[466px] blur-3xl bg-gradient-to-t from-transparent to-[#2BAFFC] opacity-55" />
       <div className="w-full h-screen backdrop-blur-[100px] absolute top-0 left-0"></div>
       <div className="relative w-full h-screen flex justify-center items-center">
-        <div className="right absolute bottom-16 left-[50%] ">
+        <div className="right absolute bottom-16 left-[50%]  drop-shadow-xl hover:drop-shadow-2xl transition-all">
           <div>
-            {isboy ? (
+            {isReviewPage ? (
+              <Image
+                src="/static/images/review.png"
+                alt="review"
+                width={600}
+                height={600}
+                quality={100}
+                priority
+              />
+            ) : isboy ? (
               <Image
                 src="/static/images/girl.png"
                 alt="girl"
@@ -59,7 +70,7 @@ export default function HeroSectionNew({
             ) : (
               <Image
                 src="/static/images/boy.png"
-                alt="girl"
+                alt="boy"
                 width={1500}
                 height={1500}
                 quality={100}
@@ -67,6 +78,7 @@ export default function HeroSectionNew({
               />
             )}
           </div>
+
           <div className="absolute top-[15%] left-[73%] font-poppins bg-white rounded-xl shadow-xl px-4 py-8">
             {statsData.map((stat, index) => (
               <div
@@ -195,7 +207,7 @@ export default function HeroSectionNew({
               <div className="flex-col">
                 <button
                   type="submit"
-                  className=" bg-[#55C360] hover:bg-green-700 text-white font-bold py-3 px-8 rounded-[50px] focus:outline-none"
+                  className=" bg-[#55C360] hover:bg-green-600 text-white font-bold py-3 px-8 rounded-[50px] focus:outline-none"
                 >
                   Get a Free Quote
                 </button>

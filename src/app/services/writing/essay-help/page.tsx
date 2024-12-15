@@ -4,10 +4,11 @@ import Footer from "@/components/common/footer";
 import AcademicNeeds from "@/components/landing-page/academicneeds";
 import ThingAboutUs from "@/components/landing-page/thingaboutus";
 import HowItWorks from "@/components/landing-page/howitworks";
-import WritingTool from "@/components/landing-page/writingTool";
 import FAQS from "@/components/landing-page/faq";
 import AffordablePrice from "@/components/landing-page/affordableprice";
 import HeroSectionNew from "@/components/landing-page/HeroSectionNew";
+import Experts from "@/components/landing-page/experts";
+import Features from "@/components/landing-page/features";
 
 export default function Page() {
   const question = [
@@ -95,57 +96,7 @@ export default function Page() {
     { name: "Unlimited Essay Assistance", originalPrice: "129.99", discountedPrice: "FREE" },
   ];
 
-  const writingToolData = [
-    {
-      id: 1,
-      title: "Essay Progress Tracker",
-      description:
-        "Keep track of your essay progress and deadlines, ensuring you never forget crucial dates.",
-    },
-    {
-      id: 2,
-      title: "Time Management Tips",
-      description:
-        "Learn time-saving strategies so you can finish essays quickly without compromising on quality.",
-    },
-    {
-      id: 3,
-      title: "Quick Essay Planner",
-      description:
-        "Easily organize your essay ideas and outline, making the writing process smoother and faster.",
-    },
-    {
-      id: 4,
-      title: "Basic Citation Guide",
-      description:
-        "Get quick help with citing your sources properly, even for last-minute essays.",
-    },
-    {
-      id: 5,
-      title: "Deadline Reminders",
-      description:
-        "Set up automatic reminders to ensure you never miss an essay deadline, even during busy periods.",
-    },
-    {
-      id: 6,
-      title: "Instant Feedback Tool",
-      description:
-        "Get immediate feedback on your essays so you can make improvements before submission.",
-    },
-    {
-      id: 7,
-      title: "Grade Tracker",
-      description:
-        "Monitor your academic progress to ensure you're meeting all your essay and grade goals.",
-    },
-    {
-      id: 8,
-      title: "More Tools for Faster Essays",
-      description:
-        "Explore more tools that will help you finish essays quicker and more effectively, all without additional costs.",
-    },
-  ];
-
+  
   return (
     <div className="w-full">
       <HeroSectionNew
@@ -187,9 +138,10 @@ export default function Page() {
         ]}
       />
       <ThingAboutUs section1={section1} section2={section2} />
+      <Experts/>
       <HowItWorks />
+      <Features/>
       <AffordablePrice pricingFeatures={pricingFeatures} />
-      <WritingTool writingToolData={writingToolData} />
       <FAQS questions={question} />
       <UnlockExpertHelp />
       <Footer />

@@ -1,6 +1,8 @@
 import React from "react";
+import Link from "next/link";
 
-// Define an interface for the section data
+
+
 interface SectionData {
   title: string;
   description: string;
@@ -8,7 +10,7 @@ interface SectionData {
 }
 
 interface WhyStudentsTrustUsProps {
-  sections?: SectionData[]; 
+  sections?: SectionData[];
 }
 
 const WhyStudentsTrustUs: React.FC<WhyStudentsTrustUsProps> = ({
@@ -31,7 +33,7 @@ const WhyStudentsTrustUs: React.FC<WhyStudentsTrustUsProps> = ({
         "Assignments delivered on time, every time. We consistently deliver essays on time, maintaining reliability and trust.",
       number: "98%",
     },
-  ], 
+  ],
 }) => {
   return (
     <div className="bg-white font-poppins py-28 px-32">
@@ -60,12 +62,12 @@ const WhyStudentsTrustUs: React.FC<WhyStudentsTrustUsProps> = ({
         </div>
 
         <div className="mt-16 flex justify-center">
-          <a
-            href="#"
+          <Link
+            href="/experts"  
             className="inline-flex items-center rounded-full bg-[#55C360] px-6 py-3 text-lg font-medium text-white shadow-sm hover:bg-green-700 transition"
           >
             Talk to Expert
-          </a>
+          </Link>
         </div>
       </div>
     </div>

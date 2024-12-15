@@ -1,6 +1,7 @@
-
+"use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 
 interface SectionProps {
@@ -62,15 +63,17 @@ const Section: React.FC<SectionProps> = ({
             <p>{item}</p>
           </div>
         ))}
-        <button className="bg-[#55C360] text-white text-[14px] font-semibold py-3 px-6 rounded-[40px]">
+       
+        <Link
+          href="/order"
+          className="bg-[#55C360] text-white text-[14px] font-semibold hover:bg-[#45a350] py-3 px-6 rounded-[40px]"
+        >
           {buttonText}
-        </button>
+        </Link>
       </div>
     </div>
   );
 };
-
-  
 
 interface ThingAboutUsProps {
   section1?: {
