@@ -6,7 +6,7 @@ import Footer from "@/components/common/footer";
 import HeroSectionNew from "./HeroSectionNew";
 import AcademicNeeds from "@/components/landing-page/academicneeds";
 import HowItWorks from "@/components/landing-page/howitworks";
-import AffordablePrice from '@/components/landing-page/affordableprice';
+import AffordablePrice from "@/components/landing-page/affordableprice";
 import ThingAboutUs from "@/components/landing-page/thingaboutus";
 import Experts from "./experts";
 import Features from "./features";
