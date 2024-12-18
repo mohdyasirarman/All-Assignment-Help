@@ -92,7 +92,7 @@ const FeedbackGrid: React.FC = () => {
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
-            className="border-[2px] rounded-[15px] border-[#2E2F35] p-6 flex flex-col justify-between w-[410px] h-[238px]"
+            className="border-[2px] shadow-md hover:shadow-xl hover:scale-105 duration-500 rounded-[15px] border-[#2E2F35] p-6 flex flex-col justify-between w-[410px] h-[238px]"
           >
             <div className="flex items-center mb-4">
               <Image

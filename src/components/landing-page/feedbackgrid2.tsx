@@ -105,12 +105,12 @@ const FeedbackGrid: React.FC<{
   return (
     <div
       ref={gridRef}
-      className="flex gap-6  pb-8 overflow-hidden"
+      className="flex gap-6 pb-6 overflow-hidden"
     >
       {testimonials.map((testimonial) => (
         <div
           key={testimonial.id}
-          className="border-[2px] rounded-[15px] border-[#2E2F35] p-6 flex flex-col justify-between w-[410px] h-[238px]"
+          className=" border-[2px]  rounded-[15px] border-[#2E2F35] p-6 flex flex-col justify-between w-[410px] h-[238px]"
         >
           <div className="flex items-center mb-4">
             <Image
@@ -176,7 +176,7 @@ const FeedbackGrid2: React.FC = () => {
               alt="left"
               width={38}
               height={42}
-              className="cursor-pointer"
+              className="cursor-pointer hover:saturate-150"
             />
           </button>
           <button onClick={() => handleScroll("right")}>
@@ -185,7 +185,7 @@ const FeedbackGrid2: React.FC = () => {
               alt="right"
               width={38}
               height={42}
-              className="cursor-pointer"
+              className="cursor-pointer hover:saturate-50"
             />
           </button>
         </div>

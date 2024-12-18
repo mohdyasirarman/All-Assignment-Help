@@ -81,7 +81,7 @@ export default function Footer() {
                     <li key={index}>
                       <Link
                         href="#"
-                        className="text-xs leading-[21px] font-poppins text-[#8A8A8A] font-normal"
+                        className="text-xs leading-[21px] hover:text-[#09b14f] duration-400 transition-all  font-poppins text-[#8A8A8A] font-normal"
                       >
                         {item}
                       </Link>
@@ -100,7 +100,7 @@ export default function Footer() {
                     <li key={index}>
                       <Link
                         href="#"
-                        className="text-xs leading-[21px] font-poppins text-[#8A8A8A] font-normal"
+                        className="text-xs leading-[21px] hover:text-[#09b14f] duration-400 transition-all  font-poppins text-[#8A8A8A] font-normal"
                       >
                         {subject}
                       </Link>
@@ -109,14 +109,13 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* More Subjects Section */}
               <div>
                 <ul className="space-y-0 mt-8">
                   {subjects.slice(8).map((subject, index) => (
                     <li key={index}>
                       <Link
                         href="#"
-                        className="text-xs leading-[21px] font-poppins text-[#8A8A8A] font-normal"
+                        className="text-xs leading-[21px] hover:text-[#09b14f] duration-400 transition-all font-poppins text-[#8A8A8A] font-normal"
                       >
                         {subject}
                       </Link>
@@ -125,7 +124,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* Essay Section */}
+          
               <div>
                 <h3 className="font-semibold font-poppins text-[#2C2C2C] text-[16px] leading-[24px] mb-4">
                   Essay
@@ -135,7 +134,7 @@ export default function Footer() {
                     <li key={index}>
                       <Link
                         href="#"
-                        className="text-xs leading-[21px] font-poppins text-[#8A8A8A] font-normal"
+                        className="text-xs leading-[21px] hover:text-[#09b14f] duration-400 transition-all  font-poppins text-[#8A8A8A] font-normal"
                       >
                         {essay}
                       </Link>
@@ -144,7 +143,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* Citation Tools Section */}
+             
               <div>
                 <h3 className="font-semibold font-poppins text-[#2C2C2C] text-[16px] leading-[24px] mb-4">
                   Citation Tools
@@ -154,7 +153,7 @@ export default function Footer() {
                     <li key={index}>
                       <Link
                         href="#"
-                        className="text-xs leading-[21px] font-poppins text-[#8A8A8A] font-normal"
+                        className="text-xs leading-[21px] hover:text-[#09b14f] duration-400 transition-all  font-poppins text-[#8A8A8A] font-normal"
                       >
                         {tool}
                       </Link>
@@ -163,7 +162,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* Best in Countries Section */}
+         
               <div>
                 <h3 className="font-semibold font-poppins text-[#2C2C2C] text-[16px] leading-[24px] mb-4">
                   Best in Countries
@@ -176,7 +175,7 @@ export default function Footer() {
                     >
                       <Link
                         href="#"
-                        className="text-xs leading-[21px] font-poppins text-[#8A8A8A] font-normal"
+                        className="text-xs leading-[21px] hover:text-[#09b14f] duration-400 transition-all  font-poppins text-[#8A8A8A] font-normal"
                       >
                         {country}
                       </Link>
@@ -186,10 +185,10 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Divider */}
+        
             <div className="mt-10 border-t border-[#8A8A8A] relative pt-6">
               <div className="flex justify-between items-center mb-8">
-                {/* Contact Us Section */}
+        
                 <div className="flex flex-col">
                   <p className="text-sm mb-2 font-semibold">Contact us</p>
                   <div className="flex items-center gap-2">
@@ -468,7 +467,7 @@ export default function Footer() {
                   </div>
                 </div>
 
-                {/* Order on the go Section */}
+           
                 <div className="flex flex-col items-center">
                   <p className="text-sm mb-2 font-semibold font-poppins">Order on the go!</p>
                   <p className="text-xs text-[#8A8A8A] mb-2">
@@ -1003,7 +1002,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Copyright Section */}
+          
               <div className="text-center font-poppins">
                 <p className="text-[10px] leading-[15px] font-normal text-[#2C2C2C]">
                   Copyright © 2024 MyAssignmenthelp.com. All rights reserved
@@ -1016,7 +1015,7 @@ export default function Footer() {
                 </p>
               </div>
 
-              {/* Footer Links */}
+              
               <div className="flex justify-center my-3 font-poppins items-center gap-2">
                 <a
                   href="#"

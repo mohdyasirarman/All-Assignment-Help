@@ -232,7 +232,7 @@ export default function HeroSectionNew({
                       </div>
                     </div>
                   ))}
-                  <div className="bg-blue-600 h-10 w-10 rounded-full overflow-hidden shadow-md z-50 flex justify-center items-center font-poppins font-semibold text-white">
+                  <div className="bg-blue-600 h-10 w-10 rounded-full overflow-hidden shadow-md z-40 flex justify-center items-center font-poppins font-semibold text-white">
                     4+
                   </div>
                 </div>

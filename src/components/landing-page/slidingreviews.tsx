@@ -164,7 +164,7 @@ const SlidingReviews: React.FC = () => {
   return (
     <div className="mx-auto py-8">
       <div className="text-center flex flex-col items-center mx-auto w-full">
-        <h2 className="font-poppins text-[36px] leading-[40px] text-[#1C1C1C] font-bold mb-4 text-center">
+        <h2 className="font-poppins text-[45px] leading-[40px] text-[#1C1C1C] font-bold mb-4 text-center">
           Student Reviews from Social Media
         </h2>
         <p className="font-poppins font-[400] text-[16px] leading-[18px] text-[#000000] text-opacity-[60%] max-w-[500px] mb-8 text-center">
@@ -180,7 +180,7 @@ const SlidingReviews: React.FC = () => {
         {reviews.map((review, index) => (
           <div
             key={index}
-            className={`p-[30px] rounded-[20px] mx-w-4xl min-w-[700px] h-[276px] ${review.bgColor} flex flex-col items-start transition-transform duration-300`}
+            className={`p-[30px] rounded-[20px] mx-w-4xl min-w-[700px] h-[276px] ${review.bgColor} flex  hover:saturate-150 duration-500 flex-col items-start transition-transform `}
           >
             <Image
               src={review.imageSrc}
@@ -214,7 +214,7 @@ const SlidingReviews: React.FC = () => {
         {reviews1.map((review1, index) => (
           <div
             key={index}
-            className={`p-[30px] rounded-[20px] mx-w-4xl min-w-[700px] h-[276px] ${review1.bgColor} flex flex-col items-start transition-transform duration-300`}
+            className={`p-[30px] rounded-[20px] mx-w-4xl  hover:saturate-150 min-w-[700px] h-[276px] ${review1.bgColor} flex flex-col items-start transition-transform duration-300`}
           >
             <Image
               src={review1.imageSrc}
@@ -248,7 +248,7 @@ const SlidingReviews: React.FC = () => {
           width={45}
           height={45}
           onClick={scrollLeft}
-          className="cursor-pointer"
+          className="cursor-pointer hover:saturate-150"
         />
         <Image
           src="/static/images/arrow2.svg"
@@ -256,7 +256,7 @@ const SlidingReviews: React.FC = () => {
           width={45}
           height={45}
           onClick={scrollRight}
-          className="cursor-pointer"
+          className="cursor-pointer hover:saturate-50"
         />
       </div>
     </div>

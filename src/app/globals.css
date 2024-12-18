@@ -58,3 +58,19 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+
+button:active{
+  transform: scale(0.88);
+  transform: translateY(4px);
+  transition: all;
+}
+
+Link:active{
+  transform: scale(0.88);
+  transform: translateY(4px);
+  transition: all;
+}
+
+
+

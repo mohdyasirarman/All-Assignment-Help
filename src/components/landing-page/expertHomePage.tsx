@@ -21,7 +21,9 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
   return (
     <>
       <div className="w-full h-screen bg-hero-pattern_new bg-no-repeat bg-cover rotate-180 bg-[-500px_100px] absolute top-0 left-0"></div>
-      <div className="w-full h-[590px]">
+      <div className="w-full h-[590px]  ">
+        <div className="w-full h-screen backdrop-blur-[100px] absolute top-0 left-0 "></div>
+
         <div className="right absolute bottom-[80px] left-[60%] ">
           <Image
             src="/static/images/groupofpeople.png"
@@ -32,7 +34,7 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
             priority
           />
         </div>
-        <div className="search_img  absolute left-[65%] top-1/2 -translate-x-[50%] -translate-y-[50%]">
+        <div className="search_img  absolute left-[65%] top-1/2 -translate-x-[50%] -translate-y-[50%] hover:saturate-150 transition-all">
           <button>
             <svg
               width="55"
