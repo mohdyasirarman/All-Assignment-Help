@@ -13,12 +13,12 @@ import Features from "@/components/landing-page/features";
 
 export default function Page() {
 
-  const title = "Need Help with Your College Homework?";
+  const title = "Need Help with Your College Homework? ";
   const buttons = [
-    "Complete My Homework",
-    "Edit My Homework",
+    "Complete Homework",
+    "Edit Homework",
     "Help with Homework Formatting",
-    "Proofread My Homework",
+    "Proofread Homework",
     "Provide Homework Guidance",
     "Assist with Problem Solving",
     "Support for Other Homework Needs",
@@ -91,8 +91,8 @@ export default function Page() {
   return (
     <>
       <HeroSectionNew 
-        changeInH={"Get Expert Help with Your College Homework"} 
-        changeInP={"Receive professional assistance to complete your college homework successfully."} 
+        changeInH={"Get Expert Help with College Homework"} 
+        changeInP={"Receive professional assistance to complete college homework successfully."} 
         isboy={false} 
       />
       <AcademicNeeds title={title} buttons={buttons} />

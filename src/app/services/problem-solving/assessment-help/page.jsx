@@ -13,10 +13,11 @@ import Features from "@/components/landing-page/features";
 
 export default function Page() {
 
-  const title = "Need Help with Your Assessments?";
+  const title = "Need Help with Your Assessments? ";
   const buttons = [
     "Write My Assessment",
     "Edit My Assessment",
+    "Customized assessment",
     "Help with Assessment Formatting",
     "Proofread My Assessment",
     "Provide Assessment Guidance",
@@ -90,7 +91,7 @@ export default function Page() {
   return (
     <>
       <HeroSectionNew 
-        changeInH={"Ace Your Assessments with Expert Help"} 
+        changeInH={"Get Your Assessments with Expert Help"} 
         changeInP={"Get professional assistance to ensure high-quality assessments."} 
         isboy={false} 
       />

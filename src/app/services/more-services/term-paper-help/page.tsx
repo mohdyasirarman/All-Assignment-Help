@@ -154,7 +154,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="We Cover All Your Online Exam Needs"
+        title="We Cover All Your Online Exam Needs, "
         buttons={[
           "Take My Online Exam",
           "Get Exam Preparation Help",

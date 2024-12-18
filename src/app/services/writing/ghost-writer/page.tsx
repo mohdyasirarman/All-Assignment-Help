@@ -107,12 +107,14 @@ export default function Page() {
       <AcademicNeeds
         title="Ghostwriting Services for Your Content Needs "
         buttons={[
-          "Request Ghostwriting Help Now",
-          "Submit Your Ghostwriting Project",
-          "Get Book Ghostwriting Assistance",
+          "Request Ghostwriting Help",
+          "Submit Ghostwriting Project",
+          "Get  Ghostwriting Assistance",
+          "Article Help",
           "Article Ghostwriting Help",
           "Speech Writing Support",
           "Manage Your Ghostwriting Deadlines",
+        
         ]}
       />
       <WhyStudentTrustUs

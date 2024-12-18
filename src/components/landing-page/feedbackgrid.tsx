@@ -87,8 +87,8 @@ const testimonials = [
 
 const FeedbackGrid: React.FC = () => {
   return (
-    <section className="p-10">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section className=" px-24 py-16 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}

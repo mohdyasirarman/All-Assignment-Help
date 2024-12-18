@@ -47,14 +47,14 @@ export default function Page() {
   const section1 = {
     imageSrc: "/static/images/thing1.svg",
     imageAlt: "Expert Academic Writing Assistance",
-    title: "Academic Writing Assistance: Expert Support for Scholarly Success",
+    title: "Writing Assistance:Expert Support for Success",
     description:
-      "Don't let academic writing challenges hold you back. Our team of expert writers ensures your assignments are completed to the highest standards.",
+      "Don't let academic  challenges hold you back. Our team of  writers ensures  assignments are completed to  highest standards.",
     items: [
       "Receive expert support in academic writing, including research, writing, and formatting.",
       "Ensure high-quality results for essays, reports, dissertations, and other academic tasks.",
     ],
-    buttonText: "Request Academic Writing Assistance Now",
+    buttonText: "Request Academic Assistance",
   };
 
   const section2 = {
@@ -67,7 +67,7 @@ export default function Page() {
       "Work with professionals to improve your writing, research, and overall academic performance.",
       "Benefit from expert advice on structuring and referencing academic content.",
     ],
-    buttonText: "Get Expert Writing Assistance Now",
+    buttonText: "Get Expert Writing Assistance",
     isReversed: true,
   };
 
@@ -106,11 +106,12 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="Comprehensive Assistance for Writing Needs "
+        title="Comprehensive Assistance for Writing Needs, "
         buttons={[
           "Request Writing Assistance Now",
           "Submit Essay for Review",
           "Research Paper Help",
+          "Paper Help",
           "Dissertation Assistance",
           "Exam Writing Support",
           "Time Management for Academic Tasks", 

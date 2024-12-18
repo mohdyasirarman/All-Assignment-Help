@@ -10,15 +10,15 @@ import ThingAboutUs from "@/components/landing-page/thingaboutus";
 import HeroSectionNew from "@/components/landing-page/HeroSectionNew";
 
 export default function Page() {
-  const title = "Need Help with Your Research Paper? We've Got You Covered!";
+  const title = "Need Help with Research Paper ";
   const buttons = [
     "Write My Research Paper",
     "Edit My Research Paper",
+    "100% original",
     "Help with Formatting",
     "Proofread My Research Paper",
     "Assist with Research",
     "Provide Writing Guidance",
-    "Support for Other Academic Writing Needs",
   ];
 
   const sections = [
@@ -88,8 +88,8 @@ export default function Page() {
   return (
     <>
       <HeroSectionNew 
-        changeInH={"Craft Your Perfect Research Paper with Ease"} 
-        changeInP={"Expert assistance for professional, high-quality research papers."} 
+        changeInH={"Craft Perfect Research Paper with Ease"} 
+        changeInP={"Expert assistance for professional, high-quality research."} 
         isboy={false} 
       />
       <AcademicNeeds title={title} buttons={buttons} />
@@ -97,7 +97,7 @@ export default function Page() {
       <ThingAboutUs />
       <HowItWorks />
       <WhatStudentSayAboutUs 
-        changeInP={"See how our research paper writing service has helped others."} 
+        changeInP={"See how research paper writing service has helped others."} 
         changeTitle={"What Students Say About Us"} 
       />
       <AffordablePrice />

@@ -108,12 +108,12 @@ export default function HeroSectionNew({
             </h2>
           </div>
 
-          <h1 className="font-poppins max-w-2xl break-words hyphens-auto leading-[69px] text-[65px] font-bold text-black mb-2">
+          <h1 className="font-inter max-w-2xl break-words hyphens-auto leading-[69px] text-[65px] font-bold text-black mb-2">
             {changeInH ? (
               changeInH
                 .split(" ")
                 .reduce((acc: string[][], word, index) => {
-                  const chunkIndex = Math.floor(index / 3);
+                  const chunkIndex = Math.floor(index / 2);
                   if (!acc[chunkIndex]) acc[chunkIndex] = [];
                   acc[chunkIndex].push(word);
                   return acc;
@@ -121,7 +121,7 @@ export default function HeroSectionNew({
                 .map((chunk, index) => (
                   <>
                     <span
-                      className=" font-inter drop-shadow-[0_45px_55px_rgba(0,0,0,.1)] leading-[62px]"
+                      className="font-inter drop-shadow-[0_45px_55px_rgba(0,0,0,.1)] leading-[62px]"
                       key={index}
                     >
                       {chunk.join(" ")}
@@ -131,7 +131,7 @@ export default function HeroSectionNew({
                 ))
             ) : (
               <>
-                <div className=" font-inter drop-shadow-[0_45px_55px_rgba(0,0,0,.1)] leading-[62px]">
+                <div className="font-inter max-w-2xl break-words hyphens-auto leading-[69px] text-[65px] font-bold text-black mb-2">
                   Ace Your
                   <br />
                   Assignments with
@@ -211,10 +211,10 @@ export default function HeroSectionNew({
                   Get a Free Quote
                 </button>
 
-                <div className="font-poppins text-gray-600 mt-4  ">
+                <div className="font-poppins text-gray-600 mt-6  ">
                   100% Satisfied Students
                 </div>
-                <div className="mt-0 flex -space-x-3">
+                <div className="mt-1 flex -space-x-5">
                   {photoList.map((img, i) => (
                     <div
                       key={i}

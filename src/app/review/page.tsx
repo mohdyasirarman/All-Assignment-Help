@@ -11,7 +11,7 @@ import Footer from "@/components/common/footer";
 export default function ReviewPage() {
     return (
     <>
-          <HeroSectionNew changeInH={"Real Reviews from Real Student Who Trust Us"} changeInP={""} isboy={true} isReviewPage={true}/>
+          <HeroSectionNew changeInH={"Real Reviews from Student Who Trust"} changeInP={""} isboy={true} isReviewPage={true}/>
           <FeedbackFilter />
           <FeedbackGrid />
           <ShareExperience />

@@ -154,7 +154,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="We Cover All Your PowerPoint Presentation Needs"
+        title="We Cover All Your PowerPoint Presentation Needs, "
         buttons={[
           "Design My Slides",
           "Get Presentation Insights",

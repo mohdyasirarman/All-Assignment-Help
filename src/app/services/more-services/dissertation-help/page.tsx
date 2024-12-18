@@ -151,12 +151,12 @@ export default function Page() {
   return (
     <div className="w-full">
       <HeroSectionNew
-        changeInH={"Expert Solutions for Your Dissertation Challenges"}
+        changeInH={"Expert Solutions for Dissertation Challenges"}
         changeInP={"Get professional dissertation assistance to ensure academic success."}
         isboy={false}
       />
       <AcademicNeeds
-        title="We Cover All Your Dissertation Needs"
+        title="We Cover All Your Dissertation Needs, "
         buttons={[
           "Finish My Dissertation",
           "Get Dissertation Insights",
@@ -173,7 +173,7 @@ export default function Page() {
             title: "No AI",
             description:
               "All dissertations are written by expert researchers and writers, ensuring original, human-crafted content without bots.",
-            number: "100% Original",
+            number: "100%",
           },
           {
             title: "24/7 Support",
@@ -185,7 +185,7 @@ export default function Page() {
             title: "On Time",
             description:
               "We guarantee timely delivery of your dissertation, ensuring that you meet your deadlines with high-quality work.",
-            number: "98% On-Time Delivery",
+            number: "98% ",
           },
         ]}
       />

@@ -14,7 +14,7 @@ import Features from "@/components/landing-page/features";
 
 export default function Page() {
 
-  const title = "Need Help with Your MBA Essay? " ;
+  const title = "Need Help with Your MBA Essay ? " ;
   const buttons = [
     "Write My MBA Essay",
     "Edit My MBA Essay",
@@ -91,7 +91,7 @@ export default function Page() {
 
   return (
     <>
-          <HeroSectionNew changeInH={"Craft Your Perfect MBA Essay with Ease"} changeInP={"Expert guidance and professional writers to elevate your MBA application."} isboy={false}/> 
+          <HeroSectionNew changeInH={"Craft Your MBA Essay with Ease"} changeInP={"Expert  professional writers to elevate MBA application."} isboy={false}/> 
           <AcademicNeeds title={title} buttons={buttons} /> 
           <WhyStudentTrustUs sections={sections} />
           <Experts/>

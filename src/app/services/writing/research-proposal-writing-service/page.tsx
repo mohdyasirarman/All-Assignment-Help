@@ -13,12 +13,12 @@ import Features from "@/components/landing-page/features";
 
 export default function Page() {
 
-  const title = "Need Help with Your Research Proposal?";
+  const title = "Need Help with Your Research Proposal ? ";
   const buttons = [
     "Write My Research Proposal",
     "Edit My Research Proposal",
-    "Help with Proposal Formatting",
     "Proofread My Proposal",
+    "customized research",
     "Assist with Research",
     "Provide Writing Guidance",
     "Support for Other Proposal Needs",
@@ -91,8 +91,8 @@ export default function Page() {
   return (
     <>
       <HeroSectionNew 
-        changeInH={"Craft Your Perfect Research Proposal with Confidence"} 
-        changeInP={"Professional guidance and expert writers for a standout research proposal."} 
+        changeInH={"Craft Perfect Research Proposal with Confidence"} 
+        changeInP={"Professional guidance, expert writers for standout research proposal."} 
         isboy={false} 
       />
       <AcademicNeeds title={title} buttons={buttons} />
@@ -102,7 +102,7 @@ export default function Page() {
       <Features />
       <HowItWorks />
       <WhatStudentSayAboutUs 
-        changeInP={"Hear from students and researchers who achieved success with our proposals."} 
+        changeInP={"Hear from students and researchers who achieved success with proposals."} 
         changeTitle={"What Our Clients Say About Us"} 
       />
       <AffordablePrice />

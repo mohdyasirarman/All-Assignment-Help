@@ -149,12 +149,12 @@ export default function Page() {
   return (
     <div className="w-full">
       <HeroSectionNew
-        changeInH={"Expert Solutions for Your Homework Challenges"}
+        changeInH={"Expert Solutions for Homework Challenges"}
         changeInP={"Get professional help to ensure your homework is completed successfully."}
         isboy={false}
       />
       <AcademicNeeds
-        title="We Cover All Your Homework Needs"
+        title="We Cover All Your Homework Needs, "
         buttons={[
           "Finish My Homework",
           "Get Homework Insights",

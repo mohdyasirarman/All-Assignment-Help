@@ -18,9 +18,10 @@ export default function Page() {
     "Do My Assignment",
     "Complete My Assignment",
     "Help with Assignment Formatting",
-    "Proofread My Assignment",
+    "Tailored assignment",
+    "Proofread Assignment",
     "Provide Assignment Guidance",
-    "Assist with Research for My Assignment",
+    "Assist with Research for Assignment",
   ];
 
   const sections = [
@@ -90,8 +91,8 @@ export default function Page() {
   return (
     <>
       <HeroSectionNew 
-        changeInH={"Get Expert Help to Do Your Assignment"} 
-        changeInP={"Let our experienced team handle your assignments while you focus on other priorities."} 
+        changeInH={"Get Expert Help to Do Assignment"} 
+        changeInP={"Let experienced team handle assignments while focus on other priorities."} 
         isboy={false} 
       />
       <AcademicNeeds title={title} buttons={buttons} />

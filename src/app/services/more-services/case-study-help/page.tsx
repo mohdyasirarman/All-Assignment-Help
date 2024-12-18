@@ -149,12 +149,12 @@ export default function Page() {
   return (
     <div className="w-full ">
       <HeroSectionNew
-        changeInH={"Expert Solutions for Your Case Study Challenges"}
+        changeInH={"Expert Solutions for Case Study Challenges"}
         changeInP={"Expert guidance for case studies."}
         isboy={false}
       />
       <AcademicNeeds
-        title="We Cover All Your Case Study Needs"
+        title="We Cover All Your Case Study Needs, "
         buttons={[
           "Finish My Case Study",
           "Get Case Study Insights",

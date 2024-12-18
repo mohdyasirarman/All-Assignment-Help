@@ -115,9 +115,10 @@ export default function Page() {
       <AcademicNeeds
         title="Get Professional Help with Your Essay Editing "
         buttons={[
-          "Request Essay Editing Now",
-          "Submit Your Essay for Editing",
-          "Get Research Paper Editing Assistance",
+          "Request Essay Editing",
+          "Submit Essay for Editing",
+          "Get Research Editing Assistance",
+          "Expert Editing",
           "Report Editing Service",
           "Exam Essay Editing Help",
           "Review Your Essay Before Submission",

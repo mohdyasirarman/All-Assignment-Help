@@ -150,12 +150,12 @@ export default function Page() {
   return (
     <div className="w-full">
       <HeroSectionNew
-        changeInH={"Take Online Class: Expert Help for Success"}
+        changeInH={"Take Online Class With Expert Help"}
         changeInP={"Let experienced tutors handle online classes while you focus on other priorities."}
         isboy={false}
       />
       <AcademicNeeds
-        title="Complete Assistance for Your Online Classes"
+        title="Complete Assistance for Your Online Classes "
         buttons={[
           "Get Online Class Help Now",
           "Request Assignment Help",

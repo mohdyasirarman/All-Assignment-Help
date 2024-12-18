@@ -59,8 +59,8 @@ export default function Page() {
       <ExpertGrid />
       <VerificationProcess imageSrc="/static/images/sample_expert.jpg" />
       <StuckOnAssignment
-        changeTitle="Didn't find what you are Looking for?"
-        changeInP="Our vision is to become the one Stop destination for all the assignment needs."
+        changeTitle=""
+        changeInP="Our vision is to be the go-to destination for all assignment needs, offering reliable support and expert solutions to help students excel with confidence."
       />
       <FAQS questions={questions} />
       <UnlockExpertHelp />

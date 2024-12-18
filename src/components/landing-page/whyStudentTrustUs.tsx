@@ -53,7 +53,7 @@ const WhyStudentsTrustUs: React.FC<WhyStudentsTrustUsProps> = ({
         <div className="mt-14 grid grid-cols-1 gap-12 sm:grid-cols-3 font-poppins">
           {sections.map((section, index) => (
             <div key={index} className="text-center">
-              <h3 className="text-[#55C360] text-[45px] font-bold">
+              <h3 className="text-[#55C360] text-[45px] font-bold text-left">
                 {section.number}
               </h3>
               <p className="mt-1 text-left text-gray-500 ">{section.description}</p>

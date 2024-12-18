@@ -102,8 +102,9 @@ const ThingAboutUs: React.FC<ThingAboutUsProps> = ({
     title: "No AI Content: 100% Human Expertise",
     description: "Every piece of content is created by skilled professionals, ensuring originality, creativity, and precision without relying on AI tools.",
     items: [
-      "Every word is written by professionals, ensuring originality.",
-      "Great ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Every word is written by  skilled professionals, ensuring originality, creativity.", 
+      "Every expert goes through a strict verification process",
+      "Every piece of content is created by skilled professionals",
     ],
     buttonText: "Do My Assignment",
   },
@@ -114,7 +115,8 @@ const ThingAboutUs: React.FC<ThingAboutUsProps> = ({
     description: "Every expert goes through a strict verification process, ensuring you receive the highest standard of assignments.",
     items: [
       "You’ll be only qualified professionals, verified through our rigorous process",
-      "Guaranteed Top Quality",
+      "Every word is written by professionals, ensuring originality",
+      "Every piece of content is, verified through our rigorous process ",
     ],
     buttonText: "Talk to Expert",
     isReversed: true,

@@ -17,44 +17,54 @@ type FAQSProps = {
 const FAQS: React.FC<FAQSProps> = ({ questions }) => {
   const defaultFAQs: FAQ[] = [
     {
-      question: "What is Lorem Ipsum?",
+      question: "What services do you provide?",
       answer:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "I offer professional assignment help, including writing, editing, proofreading, formatting, and research assistance for a variety of subjects.",
     },
     {
-      question: "Why do we use it?",
+      question: "How do I get started?",
       answer:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "Getting started is simple. Share your assignment details, including requirements and deadlines, and I’ll provide a custom quote tailored to your needs.",
     },
     {
-      question: "Where does it come from?",
+      question: "Who will work on my assignment?",
       answer:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+        "Your assignment will be handled personally by me or by a trusted expert in the relevant field, ensuring top-quality results.",
     },
     {
-      question: "Where can I get some?",
+      question: "Can you handle urgent assignments?",
       answer:
-        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+        "Yes, I specialize in managing tight deadlines without compromising the quality of work. Reach out for urgent assignment help anytime.",
     },
     {
-      question: "Where can I get some?",
+      question: "Why should I use your service?",
       answer:
-        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+        "Our service ensures high-quality assignments delivered on time, helping you achieve better academic results with less stress.",
     },
     {
-      question: "Where can I get some?",
+      question: "Who will do my assignment?",
       answer:
-        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+        "Your assignment will be handled by our team of experts with advanced degrees and extensive experience in academic writing.",
     },
     {
-      question: "Where can I get some?",
+      question: "How do I request help with my assignment?",
       answer:
-        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+        "Getting started is simple. Share your assignment details and deadline with us, and we'll take care of the rest.",
     },
     {
-      question: "Where can I get some?",
+      question: "Can you handle urgent assignment requests?",
       answer:
-        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+        "Yes, we are equipped to handle urgent assignment requests while maintaining high standards of quality.",
+    },
+    {
+      question: "How do you ensure the originality of assignments?",
+      answer:
+        "Every assignment is crafted from scratch and thoroughly checked with advanced plagiarism detection tools to ensure 100% originality.",
+    },
+    {
+      question: "How do you protect my privacy?",
+      answer:
+        "Your privacy is my top priority. All personal details and assignment-related information are kept confidential and never shared with third parties.",
     },
   ];
 

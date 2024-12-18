@@ -154,15 +154,15 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="Comprehensive Help for All Your Programming Needs"
+        title="Comprehensive Help for programming Needs "
         buttons={[
-          "Get Programming Help Now",
-          "Request Algorithm Help",
+          "Get Programming Help",
+          "Request Algo Help",
           "Web Development Assistance",
-          "Mobile App Development Help",
+          "App Development Help",
           "Debugging & Code Optimization",
-          "Time Management for Coders",
-          "Other Programming Help",
+          "Time Management",
+          "Other Programming Helps",
         ]}
       />
       <WhyStudentTrustUs

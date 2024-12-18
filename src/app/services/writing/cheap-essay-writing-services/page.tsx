@@ -100,12 +100,12 @@ export default function Page() {
   return (
     <div className="w-full">
       <HeroSectionNew
-        changeInH={"Cheap Essay Writing: Fast & Affordable Help"}
-        changeInP={"Get your essays done fast and affordably, no matter the deadline."}
+        changeInH={"Cheap Essay Writing: Affordable Help"}
+        changeInP={"Get essays done fast and affordably, no matter the deadline."}
         isboy={false}
       />
       <AcademicNeeds
-        title="Affordable Help for All Your Essay Writing Needs"
+        title="Affordable Help for All Your Essay Writing Needs "
         buttons={[
           "Request Cheap Essay Help Now",
           "Submit Your Essay for Help",

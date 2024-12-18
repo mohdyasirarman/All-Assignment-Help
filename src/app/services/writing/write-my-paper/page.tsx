@@ -90,8 +90,8 @@ export default function Page() {
   return (
     <>
       <HeroSectionNew 
-        changeInH={"Get Your Paper Done Professionally and On Time"} 
-        changeInP={"Expert paper writing services tailored to your academic needs."} 
+        changeInH={"Get Paper Done Professionally, On Time"} 
+        changeInP={"Expert paper writing services tailored to  academic needs."} 
         isboy={false} 
       /> 
       <AcademicNeeds title={title} buttons={buttons} />
@@ -101,7 +101,7 @@ export default function Page() {
       <Features/>
       <HowItWorks />
       <WhatStudentSayAboutUs 
-        changeInP={"Hear from students who have trusted us with their academic success."} 
+        changeInP={"Hear from students who have trusted us with their  success."} 
         changeTitle={"What Students Say About Us"} 
       />
       <AffordablePrice />

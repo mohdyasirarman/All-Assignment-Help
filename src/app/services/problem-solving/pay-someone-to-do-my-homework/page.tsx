@@ -149,12 +149,12 @@ export default function Page() {
   return (
     <div className="w-full">
       <HeroSectionNew
-        changeInH={"Pay Someone to Do My Homework and Results"}
+        changeInH={"Pay Someone to Do Homework"}
         changeInP={"Hire experts to complete your homework on time and to the highest standards."}
         isboy={false}
       />
       <AcademicNeeds
-        title="All Your Homework Needs Covered"
+        title="All Your Homework Needs Covered "
         buttons={[
           "Pay for Homework Help Now",
           "Request Essay Help",

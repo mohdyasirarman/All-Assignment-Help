@@ -165,14 +165,14 @@ export default function LandingPageNavbar() {
               <span>Pricing</span>
             </div>
             <Link
-              href="/about"
+              href="/review"
               className={`flex items-center space-x-1 px-4 py-[22px] text-black font-semibold ${
-                pathname === "/about"
+                pathname === "/review"
                   ? "text-black font-semibold"
                   : "text-gray-500 font-semibold"
               }`}
             >
-              <span>About Us</span>
+              <span>Reviews</span>
             </Link>
           </div>
 
@@ -212,17 +212,12 @@ export default function LandingPageNavbar() {
             </button>
 
             <div>
+              
               <Link
                 href="/order"
-                className="text-black font-semibold transition-all hover:text-[#367396]"
+                className="text-white font-semibold uppercase ml-4 border-t-2 bg-[#2BAFFC] transition-all  hover:bg-[#4fa3d4] px-[20px] text-center rounded-3xl py-[10px]"
               >
-                Sign In
-              </Link>
-              <Link
-                href="/order"
-                className="text-white font-semibold uppercase ml-4 bg-[#2BAFFC] transition-all  hover:bg-[#4fa3d4] px-[20px] text-center rounded-3xl py-[10px]"
-              >
-                Sign Up
+                Order Now
               </Link>
             </div>
           </div>

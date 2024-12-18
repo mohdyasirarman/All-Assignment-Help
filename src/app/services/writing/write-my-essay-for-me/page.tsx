@@ -14,7 +14,7 @@ import Features from "@/components/landing-page/features";
 
 export default function Page() {
 
-  const title = "Need an Essay? We’ll Write It for You," ;
+  const title = "Need an Essay? We’ll Write It for You, " ;
   const buttons = [
   "Write My Essay for Me",
   "Finish My Course for Me",
@@ -91,7 +91,7 @@ const questions = [
 
   return (
     <>
-          <HeroSectionNew changeInH={"Get Your Perfect Essay, Fast and Easy"} changeInP={"Expert writers delivering high-quality essays tailored to your needs."} isboy={false}/> 
+          <HeroSectionNew changeInH={"Get Your Essay,Fast and Easy"} changeInP={"Expert writers delivering high-quality essays tailored to needs."} isboy={false}/> 
           <AcademicNeeds  title={title} buttons={buttons} /> 
           <WhyStudentTrustUs sections={sections} />
           <Experts/>

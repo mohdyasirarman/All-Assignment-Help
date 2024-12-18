@@ -105,12 +105,13 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="Affordable Help for Your Essay Writing Needs"
+        title="Affordable Help for Essay Writing Needs "
         buttons={[
-          "Request Affordable Essay Help Now",
-          "Submit Your Essay for Assistance",
-          "Get Research Paper Help",
+          "Request Affordable Essay",
+          "Submit Essay for Assistance",
           "Report Writing Help",
+          "Fast and Affordable",
+          "Get Research Paper Help",
           "Exam Essay Writing Support",
           "Manage Your Essay Deadlines",
         ]}
