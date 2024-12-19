@@ -17,46 +17,47 @@ import {
   const FAQS1: React.FC<FAQSProps> = ({ questions }) => {
     const defaultFAQs: FAQ[] = [
       {
-        question: "What is Webflow and why is it the best website builder?",
-        answer:
-          "Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere.",
+        "question": "What is Assignment Help and why is it the best service for students?",
+        "answer":
+          "Assignment Help is a platform that provides expert academic assistance in various subjects. It helps students achieve better grades with high-quality, plagiarism-free work delivered on time. Our service stands out due to its reliability, affordability, and expert team.",
       },
       {
-        question: "What is your favorite template from BRIX Templates?",
-        answer:
-          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "question": "What is your favorite feature of Assignment Help?",
+        "answer":
+          "Our favorite feature is the expert assistance from highly qualified professionals. Whether it's essays, research papers, or presentations, students receive guidance from industry experts, ensuring they get the best academic support.",
       },
       {
-        question: "How do you clone a template from the Showcase?",
-        answer:
-          "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+        "question": "How do you submit an assignment for help?",
+        "answer":
+          "Submitting an assignment for help is easy. You can simply upload your assignment details, along with any specific instructions, through our website. Our experts will review it and get in touch with you to ensure your needs are met.",
       },
       {
-        question: "Why is BRIX Templates the best Webflow agency?",
-        answer:
-          "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+        "question": "Why is Assignment Help the best service for assignments?",
+        "answer":
+          "We pride ourselves on providing custom-written, high-quality assignments tailored to each student's requirements. Our quick turnaround times, affordable pricing, and expert knowledge make us the go-to choice for students seeking assistance.",
       },
       {
-        question: "What is Webflow and why is it the best website builder?",
-        answer:
-          "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+        "question": "What is Assignment Help and why is it the best service for students?",
+        "answer":
+          "Assignment Help is a professional service that assists students with their assignments across various academic disciplines. With experienced experts, we offer personalized and timely assistance that guarantees students top-notch grades.",
       },
       {
-        question: "What is your favorite template from BRIX Templates?",
-        answer:
-          "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+        "question": "What is your favorite feature of Assignment Help?",
+        "answer":
+          "One of the standout features is our 24/7 customer support. Students can get help anytime, ensuring they're never alone in their academic journey. We’re always available to guide students through their assignments, revisions, or any concerns.",
       },
       {
-        question: "How do you clone a template from the Showcase?",
-        answer:
-          "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+        "question": "How do you submit an assignment for help?",
+        "answer":
+          "Submitting your assignment is simple. You can fill out a form with assignment details and any additional instructions you may have. You will then be matched with an expert who will provide assistance based on your requirements.",
       },
       {
-        question: "Why is BRIX Templates the best Webflow agency?",
-        answer:
-          "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
-      },
-    ];
+        "question": "Why is Assignment Help the best service for assignments?",
+        "answer":
+          "Our team of experts is dedicated to delivering high-quality, custom assignments that adhere to the highest academic standards. We ensure every assignment is thoroughly researched, well-written, and delivered on time, ensuring students’ success.",
+      }
+    ]
+    
   
     const faqsToRender =
       questions && questions.length > 0 ? questions : defaultFAQs;

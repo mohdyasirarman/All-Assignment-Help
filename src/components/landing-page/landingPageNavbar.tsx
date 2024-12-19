@@ -82,22 +82,19 @@ export default function LandingPageNavbar() {
     <>
       <nav className="sticky shadow-sm mx-12 rounded-lg top-5 z-50 backdrop-blur-3xl bg-white/30">
         <div className="flex justify-between items-center h-16 max-w-7xl mx-auto">
-          <Link href="/" className="logo flex items-center hover:scale-105 transition-all drop-shadow-sm">
+          <Link href="/" className="logo flex mb-3 items-center hover:scale-105 transition-all drop-shadow-sm">
             <Image
-              src="/static/images/logo1.png"
+              src="/static/images/logoNew.png"
               alt="AllAssignmentHelp"
-              width={42}
-              height={35}
+              width={190}
+              height={10}
               priority
              
             />
-            <span className="ml-1 text-[18px] font-bold text-gray-700">
-              <i>AllAssignmentHelp</i>
-            </span>
-          </Link>
+           </Link>
 
           <div
-            className={`lg:flex items-center space-x-8 ${
+            className={`lg:flex items-center space-x-8  ${
               isMobileMenuVisible ? "flex" : "hidden"
             } bg-white lg:bg-transparent transition-all duration-300`}
           >
@@ -112,7 +109,7 @@ export default function LandingPageNavbar() {
               <span className="hover:text-[#09b14f] drop-shadow-sm duration-400 transition-all hover:scale-105">Home</span>
             </Link>
 
-            <div className="relative" ref={dropdownRef}>
+            <div className="relative " ref={dropdownRef}>
               <button
                 onClick={handleDropdownToggle}
                 className={`flex items-center space-x-1 px-4 py-[22px] font-semibold ${
