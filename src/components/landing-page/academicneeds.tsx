@@ -24,8 +24,8 @@ const AcademicNeeds: React.FC<AcademicNeedsProps> = ({
       className="py-12 bg-cover bg-center -mt-16"
       style={{ backgroundImage: "url('/static/images/academicneeds.svg')" }}
     >
-      <div className="flex flex-col items-center">
-        <h1 className="text-[38px] text-center leading-[41px] font-[500] font-poppins text-[#010101] mb-2">
+      <div className="flex flex-col items-center justify-center mr-24">
+        <h1 className="text-[38px] text-center leading-[41px]  font-poppins text-[#010101] mb-2">
           {title}
           <div className="mr-[100px] inline-flex flex-col items-center">
             <span>Select</span>

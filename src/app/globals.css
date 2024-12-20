@@ -59,16 +59,41 @@
   }
 }
 
-html,
-body {
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+
+button:active{
+  transform: scale(0.88);
+  transform: translateY(4px);
+  transition: all;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+Link:active{
+  transform: scale(0.88);
+  transform: translateY(4px);
+  transition: all;
+}
+
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.hide-scrollbar {
+  scrollbar-width: none; 
+}
+
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+}
+
+
+
+.relative:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
 }

@@ -8,47 +8,49 @@ interface StudentProps {
 const WhatStudentSayAboutUs = ({ changeTitle, changeInP }: StudentProps) => {
   const studentTestimonials = [
     {
-      quote: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-      name: `John Doe`,
-      title: `Student`,
+      quote: "This platform has completely changed the way I study. The resources are top-notch and easy to access.",
+      name: "Alice Johnson",
+      title: "Computer Science",
     },
     {
-      quote: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-      name: `John Doe`,
-      title: `Student`,
+      quote: "The interactive tutorials helped me understand complex topics. I feel much more confident in my skills now.",
+      name: "Mark Rivera",
+      title: "Engineering Student",
     },
     {
-      quote: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-      name: `John Doe`,
-      title: `Student`,
+      quote: "I love the community here! Everyone is so supportive, and the study groups have been incredibly helpful.",
+      name: "Sophia Martinez",
+      title: "Business  Student",
     },
     {
-      quote: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-      name: `John Doe`,
-      title: `Student`,
+      quote: "The personalized recommendations for study material saved me so much time and effort.",
+      name: "David Kim",
+      title: "Medical Student",
     },
     {
-      quote: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-      name: `John Doe`,
-      title: `Student`,
+      quote: "Thanks to this platform, I aced my finals! The practice tests are very realistic and thorough.",
+      name: "Emily Carter",
+      title: "Law Student",
     },
     {
-      quote: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-      name: `John Doe`,
-      title: `Student`,
+      quote: "I appreciate how accessible the content is. It's perfect for someone balancing school and work.",
+      name: "Michael Brown",
+      title: "Student",
     },
     {
-      quote: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-      name: `John Doe`,
-      title: `Student`,
+      quote: "The variety of learning tools available here makes it easy to stay engaged and motivated.",
+      name: "Jessica Lee",
+      title: "Psychology Major",
     },
     {
-      quote: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-      name: `John Doe`,
-      title: `Student`,
+      quote: "This website has been a game-changer for me. The mentorship program is especially amazing.",
+      name: "Ethan Walker",
+      title: "Graduate Student",
     },
   ];
-  return (
+  
+
+    return (
     <div className="w-full mt-32 mb-32">
       <div className="container px-4 lg:w-[1400px] mx-auto flex flex-col lg:flex-col gap-5 lg:gap-0">
 

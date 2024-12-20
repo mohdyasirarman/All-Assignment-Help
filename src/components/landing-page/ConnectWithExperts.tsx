@@ -11,12 +11,12 @@ interface Expert {
 }
 
 const ExpertCard: React.FC<{ expert?: Expert }> = ({ expert }) => {
-  const defaultExpert: Expert = {
-    name: "Default Expert",
-    qualification: "No Qualification Provided",
-    description: "No description available.",
-    image: "/static/images/headphoneGirl.png",
-  };
+    const defaultExpert: Expert = {
+      name: "Default Expert",
+      qualification: "No Qualification Provided",
+      description: "No description available.",
+      image: "/static/images/headphoneGirl.png",
+    };
 
   const expertData = expert || defaultExpert;
 

@@ -29,7 +29,7 @@ const Section: React.FC<SectionProps> = ({
 }) => {
   return (
     <div
-      className={`flex flex-col lg:flex-row ${isReversed ? "lg:flex-row-reverse" : ""} items-center gap-10 lg:gap-20 mb-32`}
+      className={`flex flex-col lg:flex-row ${isReversed ? "lg:flex-row-reverse" : ""} items-center gap-10 lg:gap-20 mb-36`}
     >
       <div className="flex-shrink-0">
         <Image
@@ -42,16 +42,16 @@ const Section: React.FC<SectionProps> = ({
       </div>
 
       <div className="text-center lg:text-left max-w-[500px]">
-        <h3 className="text-[48px] leading-[57px] font-poppins font-bold text-[#010101] mt-10 mb-6 ">
+        <h3 className="  text-[48px] leading-[57px] font-poppins font-bold text-[#010101] mt-16 pt-2  mb-4 ">
           {title}
         </h3>
-        <p className="text-[16px] text-[#666666] font-poppins leading-[24px] mb-6 font-[400]">
+        <p className="text-[16px] text-[#666666] font-poppins leading-[24px] mb-4 font-[400]">
           {description}
         </p>
         {items.map((item, index) => (
           <div
             key={index}
-            className="text-[15px] flex flex-row font-poppins leading-[21px] text-[#666666] font-[400] mb-6"
+            className="text-[15px] flex flex-row font-poppins leading-[21px] text-[#666666] font-[400] mb-2"
           >
             <Image
               src="/static/images/elements.svg"
@@ -63,13 +63,16 @@ const Section: React.FC<SectionProps> = ({
             <p>{item}</p>
           </div>
         ))}
+       <div className="mt-8">
+       <Link
+         
+         href="/order"
+         className="bg-[#55C360] text-white text-[14px] font-semibold hover:bg-[#45a350] py-3 px-6 rounded-[40px] "
+       >
+         {buttonText}
+       </Link>
+       </div>
        
-        <Link
-          href="/order"
-          className="bg-[#55C360] text-white text-[14px] font-semibold hover:bg-[#45a350] py-3 px-6 rounded-[40px]"
-        >
-          {buttonText}
-        </Link>
       </div>
     </div>
   );
@@ -102,8 +105,9 @@ const ThingAboutUs: React.FC<ThingAboutUsProps> = ({
     title: "No AI Content: 100% Human Expertise",
     description: "Every piece of content is created by skilled professionals, ensuring originality, creativity, and precision without relying on AI tools.",
     items: [
-      "Every word is written by professionals, ensuring originality.",
-      "Great ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Every word is written by  skilled professionals, ensuring originality, creativity.", 
+      "Every expert goes through a strict verification process",
+    
     ],
     buttonText: "Do My Assignment",
   },
@@ -114,7 +118,8 @@ const ThingAboutUs: React.FC<ThingAboutUsProps> = ({
     description: "Every expert goes through a strict verification process, ensuring you receive the highest standard of assignments.",
     items: [
       "You’ll be only qualified professionals, verified through our rigorous process",
-      "Guaranteed Top Quality",
+      "Every word is written by professionals, ensuring originality",
+     
     ],
     buttonText: "Talk to Expert",
     isReversed: true,
@@ -127,7 +132,7 @@ const ThingAboutUs: React.FC<ThingAboutUsProps> = ({
         height="40"
         viewBox="0 0 56 56"
         fill="none"
-        className="absolute left-[52%] mb-24"
+        className="absolute left-[52%] mt-8"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

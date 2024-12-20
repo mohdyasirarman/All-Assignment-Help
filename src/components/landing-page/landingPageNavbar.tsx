@@ -80,23 +80,21 @@ export default function LandingPageNavbar() {
 
   return (
     <>
-      <nav className="sticky shadow-sm mx-12 rounded-lg top-5 z-50 backdrop-blur-3xl bg-white/30   ">
+      <nav className="sticky shadow-sm mx-12 rounded-lg top-5 z-50 backdrop-blur-3xl bg-white/30">
         <div className="flex justify-between items-center h-16 max-w-7xl mx-auto">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="logo flex hue-rotate-[40rad] mb-3 items-center hover:scale-105 transition-all drop-shadow-sm">
             <Image
-              src="/static/images/logo1.png"
+              src="/static/images/logoNew.png"
               alt="AllAssignmentHelp"
-              width={42}
-              height={35}
+              width={190}
+              height={10}
               priority
+             
             />
-            <span className="ml-1 text-[18px] font-bold text-gray-700">
-              <i>AllAssignmentHelp</i>
-            </span>
-          </Link>
+           </Link>
 
           <div
-            className={`lg:flex items-center space-x-8 ${
+            className={`lg:flex items-center space-x-8  ${
               isMobileMenuVisible ? "flex" : "hidden"
             } bg-white lg:bg-transparent transition-all duration-300`}
           >
@@ -108,10 +106,10 @@ export default function LandingPageNavbar() {
                   : "text-gray-500 font-semibold"
               }`}
             >
-              <span>Home</span>
+              <span className="hover:text-[#09b14f] drop-shadow-sm duration-400 transition-all hover:scale-105">Home</span>
             </Link>
 
-            <div className="relative" ref={dropdownRef}>
+            <div className="relative " ref={dropdownRef}>
               <button
                 onClick={handleDropdownToggle}
                 className={`flex items-center space-x-1 px-4 py-[22px] font-semibold ${
@@ -122,7 +120,7 @@ export default function LandingPageNavbar() {
                 aria-expanded={isDropdownVisible}
                 aria-controls="services-dropdown"
               >
-                <span>Services</span>
+                <span className="hover:text-[#09b14f] drop-shadow-sm duration-400 transition-all hover:scale-105">Services</span>
               </button>
               <div
                 id="services-dropdown"
@@ -162,23 +160,33 @@ export default function LandingPageNavbar() {
               onClick={handleScroll}
               className="flex items-center space-x-1 px-4 py-[22px] text-gray-500 font-semibold cursor-pointer"
             >
-              <span>Pricing</span>
+              <span className="hover:text-[#09b14f] drop-shadow-sm duration-400 transition-all hover:scale-105">Pricing</span>
             </div>
             <Link
-              href="/about"
+              href="/review"
               className={`flex items-center space-x-1 px-4 py-[22px] text-black font-semibold ${
-                pathname === "/about"
+                pathname === "/review"
                   ? "text-black font-semibold"
                   : "text-gray-500 font-semibold"
               }`}
             >
-              <span>About Us</span>
+              <span className="hover:text-[#09b14f] drop-shadow-sm duration-400 transition-all hover:scale-105">Reviews</span>
+            </Link>
+            <Link
+              href="/experts"
+              className={`flex items-center space-x-1 px-4 py-[22px] text-black font-semibold ${
+                pathname === "/experts"
+                  ? "text-black font-semibold"
+                  : "text-gray-500 font-semibold"
+              }`}
+            >
+              <span className="hover:text-[#09b14f] drop-shadow-sm duration-400 transition-all hover:scale-105">Expert</span>
             </Link>
           </div>
 
           <div className="flex items-center space-x-4">
             <button className="hidden  lg:block mr-8 px-[10px] py-[10px] font-bold rounded-3xl bg-[#F8AC3B] border-t-2 text-white uppercase shadow-[2px_2px_10px_rgba(111,142,179,0.7)] hover:bg-blue-500 transition-all">
-              <div className="flex gap-2">
+              <div className="flex gap-2 drop-shadow-sm">
                 Get Reward
                 <svg
                   width="23"
@@ -212,17 +220,12 @@ export default function LandingPageNavbar() {
             </button>
 
             <div>
+              
               <Link
                 href="/order"
-                className="text-black font-semibold transition-all hover:text-[#367396]"
+                className="text-white drop-shadow-sm font-semibold uppercase ml-4 border-t-2 bg-[#2BAFFC] transition-all  hover:bg-[#4fa3d4] px-[20px] text-center rounded-3xl py-[10px]"
               >
-                Sign In
-              </Link>
-              <Link
-                href="/order"
-                className="text-white font-semibold uppercase ml-4 bg-[#2BAFFC] transition-all  hover:bg-[#4fa3d4] px-[20px] text-center rounded-3xl py-[10px]"
-              >
-                Sign Up
+                Order Now
               </Link>
             </div>
           </div>

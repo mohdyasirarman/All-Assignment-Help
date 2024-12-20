@@ -15,7 +15,7 @@ interface AssignmentHelpProps {
   changeInH: string;
   changeInP: string;
   isboy: boolean;
-  isReviewPage?: boolean; 
+  isReviewPage?: boolean;
 }
 
 export default function HeroSectionNew({
@@ -43,7 +43,7 @@ export default function HeroSectionNew({
 
   return (
     <>
-      <div className="w-full h-full bg-hero-pattern_new bg-no-repeat overflow-hidden bg-cover absolute rotate-[40] -top-[550px] -right-[900px]"></div>
+      <div className="w-full h-screen bg-hero-pattern_new bg-no-repeat bg-cover rotate-180 bg-[-500px_100px] absolute top-0 left-0"></div>
       <div className="absolute left-[491px] -top-10 h-[466px] w-[466px] blur-3xl bg-gradient-to-t from-transparent to-[#2BAFFC] opacity-55" />
       <div className="w-full h-screen backdrop-blur-[100px] absolute top-0 left-0"></div>
       <div className="relative w-full h-screen flex justify-center items-center">
@@ -79,7 +79,7 @@ export default function HeroSectionNew({
             )}
           </div>
 
-          <div className="absolute top-[15%] left-[73%] font-poppins bg-white rounded-xl shadow-xl px-4 py-8">
+          <div className="absolute top-[15%] left-[73%] mr-5 font-poppins bg-white rounded-xl shadow-xl px-4 py-8">
             {statsData.map((stat, index) => (
               <div
                 key={index}
@@ -109,30 +109,28 @@ export default function HeroSectionNew({
             </h2>
           </div>
 
-          <h1 className="font-poppins max-w-2xl break-words hyphens-auto leading-[69px] text-[65px] font-bold text-black mb-2">
+          <h1 className="font-inter max-w-2xl break-words tracking-[-1px] hyphens-auto leading-[69px] text-[65px] font-bold text-black mb-2">
             {changeInH ? (
-              changeInH
-                .split(" ")
-                .reduce((acc: string[][], word, index) => {
-                  const chunkIndex = Math.floor(index / 3);
-                  if (!acc[chunkIndex]) acc[chunkIndex] = [];
-                  acc[chunkIndex].push(word);
-                  return acc;
-                }, [] as string[][])
-                .map((chunk, index) => (
-                  <>
-                    <span
-                      className=" font-inter drop-shadow-[0_45px_55px_rgba(0,0,0,.1)] leading-[62px]"
-                      key={index}
-                    >
+              <>
+                {changeInH
+                  .split(" ")
+                  .reduce((acc: string[][], word, index) => {
+                    const chunkIndex = Math.floor(index / 2);
+                    if (!acc[chunkIndex]) acc[chunkIndex] = [];
+                    acc[chunkIndex].push(word);
+                    return acc;
+                  }, [] as string[][])
+                  .map((chunk, index) => (
+                    <span key={index}>
                       {chunk.join(" ")}
                       <br />
                     </span>
-                  </>
-                ))
+                  ))}
+                
+              </>
             ) : (
               <>
-                <div className=" font-inter drop-shadow-[0_45px_55px_rgba(0,0,0,.1)] leading-[62px]">
+                <div className="font-inter max-w-2xl break-words hyphens-auto leading-[62px] text-[65px] font-bold text-black mb-2">
                   Ace Your
                   <br />
                   Assignments with
@@ -163,13 +161,13 @@ export default function HeroSectionNew({
                 <input
                   type="email"
                   placeholder="Email"
-                  className="rounded-3xl px-10 font-poppins flex-1 py-[14px] placeholder:text-[#333333] focus:outline-none border-black border-2 focus:ring focus:ring-blue-300"
+                  className="flex-1 h-[52px] rounded-full border-2 border-black pl-4 w-[242px] pr-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
                   required
                 />
                 <input
                   type="text"
                   placeholder="Assignment (Any Type)"
-                  className="border-black border-2 font-poppins rounded-3xl px-10 py-[14px] placeholder:text-[#333333] focus:outline-none flex-1 focus:ring focus:ring-blue-300"
+                  className="flex-1 h-[52px] rounded-full border-2 border-black pl-4 w-[242px] pr-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
                   required
                 />
               </div>
@@ -179,7 +177,7 @@ export default function HeroSectionNew({
                   <DropdownMenuTrigger asChild>
                     <Button
                       variant="outline"
-                      className="flex-1 rounded-3xl px-10 text-[#333333] border-black border-2 py-[25px]"
+                      className="flex-1 h-[52px] text-gray-400 rounded-full border-2 w-[242px] border-black pl-4 text-left"
                     >
                       Subject
                     </Button>
@@ -187,16 +185,16 @@ export default function HeroSectionNew({
                   <DropdownMenuContent>
                     <DropdownMenuLabel>Subject</DropdownMenuLabel>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem>Profile</DropdownMenuItem>
-                    <DropdownMenuItem>Billing</DropdownMenuItem>
-                    <DropdownMenuItem>Team</DropdownMenuItem>
-                    <DropdownMenuItem>Subscription</DropdownMenuItem>
+                    <DropdownMenuItem>Computer Science</DropdownMenuItem>
+                    <DropdownMenuItem>Acts</DropdownMenuItem>
+                    <DropdownMenuItem>Medical</DropdownMenuItem>
+                    <DropdownMenuItem>Core Engineering</DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
 
                 <input
                   placeholder="Deadline"
-                  className="border-black border-2 font-poppins placeholder:text-[#333333] flex-1 rounded-3xl px-10 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+                  className="flex-1 h-[52px] rounded-full border-2 border-black w-[242px] pl-4 pr-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
                   type={inputTypeCalen}
                   onFocus={handleFocusCalen}
                   onBlur={handleBlurCalen}
@@ -207,15 +205,15 @@ export default function HeroSectionNew({
               <div className="flex-col">
                 <button
                   type="submit"
-                  className=" bg-[#55C360] hover:bg-green-600 text-white font-bold py-3 px-8 rounded-[50px] focus:outline-none"
+                  className="h-[50px] w-[200px] bg-[#55C360] hover:bg-green-600 text-white font-bold  rounded-[50px] focus:outline-none"
                 >
                   Get a Free Quote
                 </button>
 
-                <div className="font-poppins text-gray-600 mt-4  ">
+                <div className="font-poppins text-gray-600 mt-6  ">
                   100% Satisfied Students
                 </div>
-                <div className="mt-0 flex -space-x-3">
+                <div className="mt-1 flex -space-x-5">
                   {photoList.map((img, i) => (
                     <div
                       key={i}
@@ -232,7 +230,7 @@ export default function HeroSectionNew({
                       </div>
                     </div>
                   ))}
-                  <div className="bg-blue-600 h-10 w-10 rounded-full overflow-hidden shadow-md z-50 flex justify-center items-center font-poppins font-semibold text-white">
+                  <div className="bg-blue-600 h-10 w-10 rounded-full overflow-hidden shadow-md z-40 flex justify-center items-center font-poppins font-semibold text-white">
                     4+
                   </div>
                 </div>
