@@ -48,7 +48,7 @@ const ComprehensiveHelp = () => {
   return (
     <div className="w-full">
       <div className="container px-0 py-10 lg:w-[1400px] mx-auto flex flex-col justify-between gap-5">
-        {/* Heading */}
+        
         <div className="w-full text-center font-poppins space-y-5 px-4 md:px-10 lg:px-20 mb-10">
           <div className="font-bold text-4xl md:text-5xl lg:text-6xl text-[#2C2C2C] leading-tight">
             Comprehensive Help for Every <br />
@@ -59,7 +59,7 @@ const ComprehensiveHelp = () => {
             and more
           </div>
         </div>
-        {/* Cards */}
+       
         <div className="flex justify-center items-center px-2">
           <div className="w-full flex flex-wrap justify-center items-stretch gap-10 gap-x-0">
             {comprehensiveHelpData.map((data) => (
