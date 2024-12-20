@@ -11,9 +11,6 @@ import ThingAboutUs from "@/components/landing-page/thingaboutus";
 import Experts from "./experts";
 import Features from "./features";
 import WritingTool from "./writingTool";
-import ComprehensiveHelp from "./comprehensiveHelp";
-
-
 
 export default function LandingPage() {
   const customExperts = [
