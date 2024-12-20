@@ -28,6 +28,7 @@ const config = {
       },
       backgroundImage: {
         "hero-pattern": "url(/static/images/gradient-bg.png)",
+        "expert-pattern": "url(/static/images/bg-expert-gradient.png)",
         "hero-pattern_new": "url(/static/images/gradient-bg_New.png)",
         "slider-wave": "url(/static/images/slider-wave.svg)",
       },
@@ -94,7 +95,7 @@ const config = {
       },
     },
   },
-  plugins: [tailwindcssAnimate,addVariablesForColors],
+  plugins: [tailwindcssAnimate, addVariablesForColors],
 };
 
 // Custom plugin to add each Tailwind color as a CSS variable

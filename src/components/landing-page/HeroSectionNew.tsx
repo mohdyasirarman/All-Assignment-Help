@@ -47,7 +47,7 @@ export default function HeroSectionNew({
       <div className="absolute left-[491px] -top-10 h-[466px] w-[466px] blur-3xl bg-gradient-to-t from-transparent to-[#2BAFFC] opacity-55" />
       <div className="w-full h-screen backdrop-blur-[100px] absolute top-0 left-0"></div>
       <div className="relative w-full h-screen flex justify-center items-center">
-        <div className="right absolute bottom-16 left-[50%]  drop-shadow-xl hover:drop-shadow-2xl transition-all">
+        <div className="right absolute bottom-16 left-[50%] drop-shadow-xl transition-all">
           <div>
             {isReviewPage ? (
               <Image
@@ -65,7 +65,8 @@ export default function HeroSectionNew({
                 width={600}
                 height={600}
                 quality={100}
-                priority
+                loading="lazy"
+                className="overflow-hidden"
               />
             ) : (
               <Image
@@ -126,7 +127,6 @@ export default function HeroSectionNew({
                       <br />
                     </span>
                   ))}
-                
               </>
             ) : (
               <>

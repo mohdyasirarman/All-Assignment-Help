@@ -90,7 +90,6 @@ export function AcademicSuccessCard({
             <p className="w-full font-bold text-xl leading-8">{title}</p>
             <p className="w-full font-normal text-base text-[#58595D] relative p-2">
               {description}
-              
             </p>
           </div>
         </div>
@@ -139,13 +138,13 @@ export function ComprehensiveHelpCard({
   );
 }
 
-type  PricingCardProps = {
+type PricingCardProps = {
   title: string;
   price: string;
 };
 
 export function PricingCard() {
-  const pricingData =  [
+  const pricingData = [
     {
       id: 1,
       title: "Referencing",
@@ -176,7 +175,7 @@ export function PricingCard() {
       title: "Unlimited Edits",
       price: "$06.99",
     },
-  ] ;
+  ];
 
   const pricingStrip = (pricingData: PricingCardProps) => {
     return (
@@ -201,11 +200,10 @@ export function PricingCard() {
   };
   return (
     <div className="border-2 border-[#2E2F35] h-[450px] w-[490px] rounded-xl font-poppins ">
-    
       <div className="font-bold text-xl leading-8 text-center my-5 ">
         FREE Features
       </div>
-   
+
       <div className="flex flex-col gap-2">
         {pricingData.map((data) => (
           <div key={data.id} className="flex justify-between px-5 py-1">
@@ -213,7 +211,7 @@ export function PricingCard() {
           </div>
         ))}
       </div>
-     
+
       <div className="mt-8 font-normal text-center w-full">
         <div className="text-[#5F5F5F] text-md hover:saturate-200">
           Get These Premium Features Today
@@ -233,33 +231,40 @@ type WritingToolCardProps = {
   description: string;
 };
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export function WritingToolCard({ title, description }: WritingToolCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const text = 75;
-  const truncatedDescription = description.length > text ? description.slice(0, text) + '...' : description;
+  const truncatedDescription =
+    description.length > text
+      ? description.slice(0, text) + "..."
+      : description;
 
   const handleClick = () => {
-    setIsExpanded(!isExpanded); 
+    setIsExpanded(!isExpanded);
   };
 
   return (
     <div className="w-full group/cards" onClick={handleClick}>
       <div
         className={cn(
-          "overflow-hidden relative drop-shadow-lg card  shadow-lg hover:shadow-2xl lg:w-[265px] rounded-[13px] backgroundImage flex flex-col p-5 bg-[#e2f4ff] transition-all duration-300 ease-in-out", 
-          isExpanded ? "lg:h-[300px]" : "lg:h-[230px]" 
+          "overflow-hidden relative drop-shadow-lg card  shadow-lg lg:w-[265px] rounded-[13px] backgroundImage flex flex-col p-5 bg-[#e2f4ff] transition-all duration-300 ease-in-out",
+          isExpanded ? "lg:h-[300px]" : "lg:h-[230px]"
         )}
       >
         <div className="flex flex-col font-poppins text-start pl-3 pt-2 flex-grow">
-          <p className="w-full font-bold text-[22px] font-poppins leading-6 text-[#2C2C2C]">{title}</p>
+          <p className="w-full font-bold text-[22px] font-poppins leading-6 text-[#2C2C2C]">
+            {title}
+          </p>
           <p className="w-full font-montserrat text-base text-[#8A8A8A] pt-3">
-            {isExpanded ? description : truncatedDescription} 
+            {isExpanded ? description : truncatedDescription}
           </p>
         </div>
-        <div className="text-center flex font-poppins mt-auto">
-          <div className="w-full font-semibold text-[#55C360] hover:text-[#45a350] ">Check Now</div>
+        <div className="text-center flex flex-grow font-poppins mt-auto">
+          <div className="w-full font-semibold text-[#55C360] hover:text-[#45a350] ">
+            Check Now
+          </div>
         </div>
       </div>
     </div>
