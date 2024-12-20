@@ -88,7 +88,7 @@ const FeedbackGrid: React.FC<FeedbackGridProps> = ({
                   alt="Rating Stars"
                   width={104}
                   height={15}
-                  className="ml-auto"
+                  className="ml-12 "
                 />
               </div>
             </div>

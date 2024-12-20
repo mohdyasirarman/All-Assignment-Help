@@ -65,7 +65,7 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
             </svg>
           </button>
         </div>
-        <div className="btm relative w-[81%] h-[85px] top-[590px] z-50 px-4 -bottom-1 bg-white shadow-lg left-[50%] rounded-2xl -translate-x-[50%] -translate-y-[50%]  ">
+        <div className="btm relative w-[81%] h-[85px] top-[590px] z-40 px-4 -bottom-1 bg-white shadow-lg left-[50%] rounded-2xl -translate-x-[50%] -translate-y-[50%]  ">
           <div className="flex items-center justify-between">
             <div className="flex justify-center items-center gap-7 py-4 z-50">
               <DropdownMenu>
