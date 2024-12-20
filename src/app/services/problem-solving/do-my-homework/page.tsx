@@ -278,7 +278,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="We Cover All Your Homework Needs "
+        title="We Cover Your Homework Needs "
         buttons={[
           "Get Homework Help Now",
           "Request Essay Help",

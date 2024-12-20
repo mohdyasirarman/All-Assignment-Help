@@ -13,7 +13,7 @@ import Features from "@/components/landing-page/features";
 
 export default function Page() {
 
-  const title = "Need Help with Your Research Proposal ? ";
+  const title = "Need Help with Research Proposal ? ";
   const buttons = [
     "Write My Research Proposal",
     "Edit My Research Proposal",

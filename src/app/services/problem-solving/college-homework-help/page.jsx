@@ -13,7 +13,7 @@ import Features from "@/components/landing-page/features";
 
 export default function Page() {
 
-  const title = "Need Help with Your College Homework? ";
+  const title = "Need Help with College Homework? ";
   const buttons = [
     "Complete Homework",
     "Edit Homework",

@@ -14,7 +14,7 @@ import Features from "@/components/landing-page/features";
 
 export default function Page() {
 
-  const title = "Need Help with Your MBA Essay ? " ;
+  const title = "Need Help with  MBA Essay ? " ;
   const buttons = [
     "Write My MBA Essay",
     "Edit My MBA Essay",

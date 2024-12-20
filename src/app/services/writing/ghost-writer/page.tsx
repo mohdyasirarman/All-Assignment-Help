@@ -227,7 +227,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="Ghostwriting Services for Your Content Needs "
+        title="Ghostwriting Services for Content Needs "
         buttons={[
           "Request Ghostwriting Help",
           "Submit Ghostwriting Project",

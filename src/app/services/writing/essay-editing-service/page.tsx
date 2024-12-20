@@ -236,7 +236,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="Get Professional Help with Your Essay Editing "
+        title="Get Help with Your Essay Editing "
         buttons={[
           "Request Essay Editing",
           "Submit Essay for Editing",

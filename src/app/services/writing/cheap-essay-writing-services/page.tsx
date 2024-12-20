@@ -228,7 +228,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="Affordable Help for All Your Essay Writing Needs "
+        title="Help for Your Essay Writing Needs ?"
         buttons={[
           "Request Cheap Essay Help Now",
           "Submit Your Essay for Help",

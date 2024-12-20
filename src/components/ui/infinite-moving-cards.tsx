@@ -40,15 +40,14 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
   }, [direction, speed]);
 
   const duplicateItems = useCallback(() => {
-    if (scrollerRef.current) {
-      const items = Array.from(scrollerRef.current.children);
-
-      items.forEach((item) => {
+    if (scrollerRef.current && scrollerRef.current.childElementCount === items.length) {
+      const itemsArray = Array.from(scrollerRef.current.children);
+      itemsArray.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         scrollerRef.current?.appendChild(duplicatedItem);
       });
     }
-  }, []);
+  }, [items.length]);
 
   useEffect(() => {
     setAnimationProperties();
@@ -75,35 +74,41 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
         {items.map((item, index) => (
           <li
             key={index}
-            className="w-[250px] h-[240px] max-w-full bg-white rounded-xl border-2 drop-shadow-lg hover:drop-shadow-2xl border-[#2E2F35] px-8 py-6 md:w-[350px] relative flex-shrink-0"
+            className="w-[250px] h-[240px] max-w-full bg-white rounded-xl border-2 drop-shadow-lg hover:drop-shadow-2xl border-[#2E2F35] p-8 md:w-[350px] relative flex-shrink-0 overflow-hidden"
           >
             <blockquote>
-              <div className="flex items-center relative z-20">
+              <div className="flex items-center relative z-20 mb-4">
                 <Avatar>
                   <AvatarImage
                     src="/static/images/Profile_avatar_placeholder_large.png"
                     alt="Avatar"
                     className="w-12 h-12"
                   />
-                  <AvatarFallback>CN</AvatarFallback>
+                  <AvatarFallback>
+                    <AvatarImage
+                      src="/static/images/Profile_avatar_placeholder_large.png"
+                      alt="Avatar"
+                      className="w-12 h-12"
+                    />
+                  </AvatarFallback>
                 </Avatar>
                 <span className="flex flex-col px-3">
-                  <span className="font-inter font-medium text-base leading-[18px] text-[#2E2F35]">
-                    {item.name}
+                  <span className="font-inter font-medium text-base leading-[18px] text-[#2E2F35] truncate">
+                    {item.name || "Anonymous"}
                   </span>
-                  <span className="font-poppins font-bold text-xs leading-[21px] text-[#2C2C2C]">
-                    {item.title}
+                  <span className="font-poppins font-bold text-xs leading-[21px] text-[#2C2C2C] truncate">
+                    {item.title || "No Title"}
                   </span>
                 </span>
-                <div className="flex pl-10">
+                <div className="flex  ml-4  overflow-hidden">
                   {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} color="#F16700" />
+                    <FaStar key={i} color="#F16700" className="shrink-0" />
                   ))}
                 </div>
               </div>
-              <div className="py-5">
-                <span className="relative z-20 text-sm leading-[170%] text-[#2C2C2C] font-normal font-poppins">
-                  {item.quote}
+              <div className="overflow-auto max-h-[100px]">
+                <span className="relative z-20 text-sm leading-[170%] text-[#2C2C2C] font-normal font-poppins block">
+                  {item.quote || "No quote available."}
                 </span>
               </div>
             </blockquote>

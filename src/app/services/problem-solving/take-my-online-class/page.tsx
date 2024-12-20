@@ -279,7 +279,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="Complete Assistance for Your Online Classes "
+        title="Complete Assistance for Online Classes "
         buttons={[
           "Get Online Class Help Now",
           "Request Assignment Help",

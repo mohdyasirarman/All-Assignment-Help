@@ -13,7 +13,7 @@ export default function ReviewPage() {
         {
           id: 1,
           name: "Michael Chang",
-          category: "Full-Stack Development",
+          category: "Stack Development",
           feedback: "The team delivered an outstanding full-stack solution. Our application's performance improved by 60% and user engagement has doubled since the update.",
           image: "/static/images/grid.svg",
           rating: "/static/images/stars1.svg",
@@ -37,7 +37,7 @@ export default function ReviewPage() {
         {
           id: 4,
           name: "Isabella Martinez",
-          category: "E-commerce Solutions",
+          category: "Commerce Solutions",
           feedback: "The new e-commerce platform is a game-changer. Cart abandonment dropped by 35% and mobile sales increased by 50%. Professional service from start to finish.",
           image: "/static/images/grid.svg",
           rating: "/static/images/stars1.svg",
@@ -53,7 +53,7 @@ export default function ReviewPage() {
         {
           id: 6,
           name: "Elena Popov",
-          category: "UI/UX Design",
+          category: "UI Design",
           feedback: "The redesign transformed our product. User satisfaction scores increased from 72% to 94%. Their attention to detail and user-centric approach made all the difference.",
           image: "/static/images/grid.svg",
           rating: "/static/images/stars1.svg",
@@ -77,7 +77,7 @@ export default function ReviewPage() {
         {
           id: 9,
           name: "Raj Patel",
-          category: "Blockchain Development",
+          category: "Developer",
           feedback: "The smart contract implementation was flawless. Transaction processing improved by 200% while maintaining robust security. Exceptional blockchain expertise.",
           image: "/static/images/grid.svg",
           rating: "/static/images/stars1.svg",

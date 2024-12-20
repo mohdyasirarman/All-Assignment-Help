@@ -32,6 +32,7 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
             height={800}
             quality={100}
             priority
+          
           />
         </div>
         <div className="search_img  absolute left-[65%] top-1/2 -translate-x-[50%] -translate-y-[50%] hover:saturate-150 transition-all">
@@ -64,9 +65,9 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
             </svg>
           </button>
         </div>
-        <div className="btm absolute w-[81%] h-[85px] px-4 -bottom-1 bg-white shadow-lg left-[50%] rounded-2xl -translate-x-[50%] -translate-y-[50%]  ">
+        <div className="btm relative w-[81%] h-[85px] top-[590px] z-50 px-4 -bottom-1 bg-white shadow-lg left-[50%] rounded-2xl -translate-x-[50%] -translate-y-[50%]  ">
           <div className="flex items-center justify-between">
-            <div className="flex justify-center items-center gap-7 py-4">
+            <div className="flex justify-center items-center gap-7 py-4 z-50">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
@@ -79,28 +80,27 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
                 <DropdownMenuContent>
                   <DropdownMenuLabel>Subject</DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem>Profile</DropdownMenuItem>
-                  <DropdownMenuItem>Billing</DropdownMenuItem>
-                  <DropdownMenuItem>Team</DropdownMenuItem>
-                  <DropdownMenuItem>Subscription</DropdownMenuItem>
+                  <DropdownMenuItem>Math</DropdownMenuItem>
+                  <DropdownMenuItem>Cs</DropdownMenuItem>
+                  <DropdownMenuItem>Electronics</DropdownMenuItem>
+                  <DropdownMenuItem>Civil</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="outline"
-                    className="flex-1 rounded-3xl px-28 text-[#00000089] border-[#55C360] border-2 py-[25px] "
+                    className="flex-1 rounded-3xl px-28 text-left text-[#00000089] border-[#55C360] border-2 py-[25px] "
                   >
                     Orders Completed
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DropdownMenuLabel>Subject</DropdownMenuLabel>
+                  <DropdownMenuLabel> Orders Completed</DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem>Profile</DropdownMenuItem>
-                  <DropdownMenuItem>Billing</DropdownMenuItem>
-                  <DropdownMenuItem>Team</DropdownMenuItem>
-                  <DropdownMenuItem>Subscription</DropdownMenuItem>
+                  <DropdownMenuItem>True</DropdownMenuItem>
+                  <DropdownMenuItem>False</DropdownMenuItem>
+                  
                 </DropdownMenuContent>
               </DropdownMenu>
               <DropdownMenu>
@@ -113,18 +113,19 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DropdownMenuLabel>Subject</DropdownMenuLabel>
+                  <DropdownMenuLabel>All Ratings</DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem>Profile</DropdownMenuItem>
-                  <DropdownMenuItem>Billing</DropdownMenuItem>
-                  <DropdownMenuItem>Team</DropdownMenuItem>
-                  <DropdownMenuItem>Subscription</DropdownMenuItem>
+                  <DropdownMenuItem>1+</DropdownMenuItem>
+                  <DropdownMenuItem>2+</DropdownMenuItem>
+                  <DropdownMenuItem>3+</DropdownMenuItem>
+                  <DropdownMenuItem>4+</DropdownMenuItem>
+                  <DropdownMenuItem>5+</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
             <button
               type="submit"
-              className=" bg-[#55C360] flex gap-1 hover:bg-green-600 text-white font-bold py-3 px-12 rounded-[50px] focus:outline-none"
+              className=" bg-[#55C360] flex gap-1 hover:bg-green-600 text-white font-bold py-3 px-12 rounded-[50px] focus:outline-none text-[16px]"
             >
               <svg
                 width="26"
@@ -140,7 +141,7 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
                   fill="white"
                 />
               </svg>
-              search
+              Search
             </button>
           </div>
         </div>
@@ -148,7 +149,7 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
           <div className="w-full flex items-center justify-between pt-4 pb-4 relative">
             <div className="flex flex-col gap-5 pt-5 pl-12 pr-4 w-2/4">
               <div className="flex flex-col gap-5 ">
-                <div className="font-poppins max-w-2xl break-words hyphens-auto leading-[65px] text-[65px] font-bold text-black mb-2">
+                <div className="font-poppins max-w-2xl break-words hyphens-auto leading-[65px] text-[65px] font-bold text-black mb-2 -mt-44">
                   {changeInH ? (
                     <div>{changeInH}</div>
                   ) : (

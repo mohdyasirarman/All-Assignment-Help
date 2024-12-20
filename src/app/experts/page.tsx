@@ -52,11 +52,190 @@ export default function Page() {
     },
   ];
 
+  const Expert = [
+    {
+      name: "Dr. Emily Carter",
+      qualification: "PhD in Astrophysics",
+      description: "A seasoned astrophysicist specializing in stellar evolution and black holes. Published numerous papers in leading journals.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Chef Antonio Rossi",
+      qualification: "Michelin Star Chef",
+      description: "An award-winning chef known for authentic Italian cuisine, with over 20 years of experience in culinary arts.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Ms. Sophia Li",
+      qualification: "Certified Financial Planner (CFP)",
+      description: "An expert in financial planning, investment strategies, and wealth management, helping clients achieve financial independence.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Professor John Smith",
+      qualification: "MSc in Computer Science",
+      description: "Experienced computer science professor focusing on AI, machine learning, and big data analytics.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Rajesh Kapoor",
+      qualification: "MD in Internal Medicine",
+      description: "A renowned physician with expertise in chronic disease management and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Laura Williams",
+      qualification: "PhD in Environmental Science",
+      description: "An expert in climate change, environmental conservation, and sustainability. Works on global environmental policy.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Mr. David Brown",
+      qualification: "MBA in Marketing",
+      description: "A marketing strategist specializing in brand development and digital advertising with over 15 years of experience.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Professor Lisa Yang",
+      qualification: "PhD in Linguistics",
+      description: "A linguistics professor with a focus on sociolinguistics and language acquisition. Author of multiple academic papers.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Mr. James Patel",
+      qualification: "Certified Cybersecurity Professional (CCSP)",
+      description: "A cybersecurity expert specializing in network security, threat mitigation, and ethical hacking.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+    {
+      name: "Dr. Helen Scott",
+      qualification: "MD in Pediatrics",
+      description: "A pediatrician with expertise in child health, specializing in immunization, growth development, and preventive care.",
+      image: "/static/images/headphoneGirl.png",
+    },
+  ];
+  
+  
+
   return (
     <>
       <ExpertHomePage changeInH="" changeInP="" />
       <TrendingTopics />
-      <ExpertGrid />
+      <ExpertGrid experts={Expert} />
       <VerificationProcess imageSrc="/static/images/sample_expert.jpg" />
       <StuckOnAssignment
         changeTitle=""

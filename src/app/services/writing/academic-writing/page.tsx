@@ -228,7 +228,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="Comprehensive Assistance for Writing Needs, "
+        title="Assistance for Writing Needs, ?"
         buttons={[
           "Request Writing Assistance Now",
           "Submit Essay for Review",

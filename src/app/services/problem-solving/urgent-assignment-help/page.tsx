@@ -278,7 +278,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="Complete Assistance for Your Urgent Assignments "
+        title="Complete Assistance for Assignments "
         buttons={[
           "Get Urgent Assignment Help", 
           "Request Essay Help",

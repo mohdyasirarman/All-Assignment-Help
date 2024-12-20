@@ -82,7 +82,7 @@ export default function LandingPageNavbar() {
     <>
       <nav className="sticky shadow-sm mx-12 rounded-lg top-5 z-50 backdrop-blur-3xl bg-white/30">
         <div className="flex justify-between items-center h-16 max-w-7xl mx-auto">
-          <Link href="/" className="logo flex mb-3 items-center hover:scale-105 transition-all drop-shadow-sm">
+          <Link href="/" className="logo flex hue-rotate-[40rad] mb-3 items-center hover:scale-105 transition-all drop-shadow-sm">
             <Image
               src="/static/images/logoNew.png"
               alt="AllAssignmentHelp"
@@ -171,6 +171,16 @@ export default function LandingPageNavbar() {
               }`}
             >
               <span className="hover:text-[#09b14f] drop-shadow-sm duration-400 transition-all hover:scale-105">Reviews</span>
+            </Link>
+            <Link
+              href="/experts"
+              className={`flex items-center space-x-1 px-4 py-[22px] text-black font-semibold ${
+                pathname === "/experts"
+                  ? "text-black font-semibold"
+                  : "text-gray-500 font-semibold"
+              }`}
+            >
+              <span className="hover:text-[#09b14f] drop-shadow-sm duration-400 transition-all hover:scale-105">Expert</span>
             </Link>
           </div>
 

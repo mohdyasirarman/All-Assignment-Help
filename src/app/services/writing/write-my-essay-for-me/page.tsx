@@ -14,7 +14,7 @@ import Features from "@/components/landing-page/features";
 
 export default function Page() {
 
-  const title = "Need an Essay? We’ll Write It for You, " ;
+  const title = "Need Essay? We’ll Write It for You, " ;
   const buttons = [
   "Write My Essay for Me",
   "Finish My Course for Me",

@@ -74,3 +74,26 @@ Link:active{
 
 
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.hide-scrollbar {
+  scrollbar-width: none; 
+}
+
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+}
+
+
+
+.relative:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+}

@@ -13,7 +13,7 @@ import Features from "@/components/landing-page/features";
 
 export default function Page() {
 
-  const title = "Need Someone to Do Your Assignment? ";
+  const title = "Need Someone to Do Assignment? ";
   const buttons = [
     "Do My Assignment",
     "Complete My Assignment",

@@ -279,7 +279,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="We Cover All Your Dissertation Needs, "
+        title="We Cover All  Dissertation Needs, "
         buttons={[
           "Finish My Dissertation",
           "Get Dissertation Insights",

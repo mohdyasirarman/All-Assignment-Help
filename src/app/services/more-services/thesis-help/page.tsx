@@ -278,7 +278,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="We Cover All Your Thesis Needs, "
+        title="We Cover Your Thesis Needs, "
         buttons={[
           "Get Thesis Help Now",
           "Request Thesis Editing",

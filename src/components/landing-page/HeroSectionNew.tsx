@@ -79,7 +79,7 @@ export default function HeroSectionNew({
             )}
           </div>
 
-          <div className="absolute top-[15%] left-[73%] font-poppins bg-white rounded-xl shadow-xl px-4 py-8">
+          <div className="absolute top-[15%] left-[73%] mr-5 font-poppins bg-white rounded-xl shadow-xl px-4 py-8">
             {statsData.map((stat, index) => (
               <div
                 key={index}

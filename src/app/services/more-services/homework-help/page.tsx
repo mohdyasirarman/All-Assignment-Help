@@ -278,7 +278,7 @@ export default function Page() {
         isboy={false}
       />
       <AcademicNeeds
-        title="We Cover All Your Homework Needs, "
+        title="We Cover All  Homework Needs, "
         buttons={[
           "Finish My Homework",
           "Get Homework Insights",

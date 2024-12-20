@@ -12,7 +12,7 @@ import Experts from "@/components/landing-page/experts";
 import Features from "@/components/landing-page/features";
 
 export default function Page() {
-  const title = "Need a Paper ? We've Got You Covered! ";
+  const title = "Need a Paper ? We've Got Covered! ";
   const buttons = [
     "Write My Paper for Me",
     "Edit My Paper",
