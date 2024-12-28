@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Expert {
   name: string;
@@ -13,7 +14,7 @@ const defaultExpert: Expert = {
   name: "Default Expert",
   qualification: "No Qualification Provided",
   description: "No description available.",
-  image: "/static/images/headphoneGirl.png",
+  image: "/static/images/Profile_avatar_placeholder_large.png",
 };
 
 export const ExpertCard: React.FC<{
@@ -47,15 +48,26 @@ export const ExpertCard: React.FC<{
             <Image
               src={`${expert.image || defaultExpert.image}`}
               alt={`${expert.name} Profile`}
-              width={248}
-              height={196}
-              className="rounded-md "
+              width={50}
+              height={50}
+              className="rounded-full"
             />
             <h2 className="text-[18px] font-poppins leading-[16px] font-bold text-[#2C2C2C]">
               {expert.name}
             </h2>
             <p className="text-[#8A8A8A] font-poppins font-[400] text-[16px] leading-[21px] ">
               {expert.qualification}
+            </p>
+            <p className="flex justify-center  text-[#8A8A8A] font-poppins font-[400] text-[16px] leading-[21px] ">
+              <Image
+                width={15}
+                height={15}
+                src="/static/images/elements.svg"
+                alt="tick"
+              />
+              <p>
+                <b>2010</b> Orders Finished
+              </p>
             </p>
             <div className="flex flex-row">
               {[...Array(5)].map((_, index) => (
@@ -74,7 +86,7 @@ export const ExpertCard: React.FC<{
               {expert.description}
             </p>
             <button className="bg-[#55C360] text-white px-3 py-2 rounded-[30px] hover:bg-[#45a350] w-[120px] mt-[10px]">
-              Hire Now
+              <Link href="/order">Hire Now</Link>
             </button>
           </div>
         </>
@@ -89,17 +101,48 @@ export const ExpertCard: React.FC<{
               <Image
                 src={`${expert.image || defaultExpert.image}`}
                 alt={expert.name}
-                width={248}
-                height={196}
-                className="rounded-md mt-[10px] mb-[20px]"
+                width={50}
+                height={50}
+                className="rounded-full mt-[10px] mb-[20px]"
               />
               <h2 className="text-lg font-semibold text-gray-800">
                 {expert.name}
               </h2>
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-sm text-gray-600 mb-1">
                 {expert.qualification}
               </p>
-              <div className="flex flex-row gap-[4px]">
+              <p className="flex space-x-2 text-sm text-gray-600 mb-1">
+                <Image
+                  width={15}
+                  height={15}
+                  src="/static/images/elements.svg"
+                  alt="tick"
+                />
+                <p>
+                  <b>2010</b> Orders Finished
+                </p>
+              </p>
+              <p className="flex space-x-2 text-sm text-gray-600 mb-1">
+                <Image
+                  width={15}
+                  height={15}
+                  src="/static/images/beaker.svg"
+                  alt="beaker"
+                />
+                <p>
+                  <b>4</b> Order in Progress
+                </p>
+              </p>
+              <p className="flex space-x-2 text-sm text-gray-600 mb-3">
+                <Image
+                  width={15}
+                  height={15}
+                  src="/static/images/location.svg"
+                  alt="beaker"
+                />
+                <p>Singapore</p>
+              </p>
+              <div className="flex items-center flex-row gap-[4px]">
                 {[...Array(5)].map((_, index) => (
                   <Image
                     key={index}
@@ -110,6 +153,7 @@ export const ExpertCard: React.FC<{
                     className="-mt-2"
                   />
                 ))}
+                <p className="flex text-base text-gray-600 -mt-2 ml-2">4.8/5</p>
               </div>
             </div>
 
@@ -119,7 +163,7 @@ export const ExpertCard: React.FC<{
                   {expert.description}
                 </p>
                 <button className="bg-[#55C360] text-white px-3 py-2 rounded-[30px] hover:bg-green-600 w-[120px] mt-[10px]">
-                  Hire Now
+                  <Link href="/order">Hire Now</Link>
                 </button>
               </div>
             )}
@@ -194,7 +238,7 @@ const Experts: React.FC<{ experts: Expert[] }> = ({ experts }) => {
 
         <div className="flex justify-center items-center mt-4">
           <button className="bg-white font-poppins font-semibold text-[18px] leading-[27px] text-[#55C360] px-6 py-2 rounded-[30px] border-[2px] border-green-500">
-            View More
+            <Link href="/experts">View More</Link>
           </button>
 
           <hr className="w-[900px] h-1 bg-gray-300 mx-4" />
