@@ -5,16 +5,26 @@ import Link from "next/link";
 
 interface Expert {
   name: string;
-  qualification: string;
+  expertise: string;
   description: string;
   image?: string;
+  orderFinished: number;
+  orderInProgress: number;
+  location: string;
+  rating: string;
+  about: string;
 }
 
 const defaultExpert: Expert = {
   name: "Default Expert",
-  qualification: "No Qualification Provided",
+  expertise: "No Expertise Provided",
   description: "No description available.",
   image: "/static/images/Profile_avatar_placeholder_large.png",
+  orderFinished: 0,
+  orderInProgress: 0,
+  location: "No Where",
+  rating: "5.0/5",
+  about: "Who cares",
 };
 
 export const ExpertCard: React.FC<{
@@ -35,10 +45,10 @@ export const ExpertCard: React.FC<{
       className={`transition-all duration-1000 ease-out overflow-hidden 
         ${
           isFeatured
-            ? "bg-white rounded-lg flex items-start w-[625px] h-[300px]"
+            ? "bg-white rounded-lg flex items-start w-[625px] h-[220px]"
             : `${
-                isExpanded ? "w-[625px] p-10" : "w-[250px] "
-              } h-[300px] bg-white rounded-2xl shadow-md p-4 
+                isExpanded ? "w-[520px] p-10" : "w-[250px] "
+              } h-[220px] bg-white rounded-2xl shadow-md p-5 
           flex flex-col flex-shrink-0 cursor-pointer hover:shadow-lg`
         }`}
     >
@@ -56,7 +66,7 @@ export const ExpertCard: React.FC<{
               {expert.name}
             </h2>
             <p className="text-[#8A8A8A] font-poppins font-[400] text-[16px] leading-[21px] ">
-              {expert.qualification}
+              {expert.expertise}
             </p>
             <p className="flex justify-center  text-[#8A8A8A] font-poppins font-[400] text-[16px] leading-[21px] ">
               <Image
@@ -98,19 +108,24 @@ export const ExpertCard: React.FC<{
             }`}
           >
             <div className={`${isExpanded ? "w-[300px]" : "w-full"}`}>
-              <Image
-                src={`${expert.image || defaultExpert.image}`}
-                alt={expert.name}
-                width={50}
-                height={50}
-                className="rounded-full mt-[10px] mb-[20px]"
-              />
-              <h2 className="text-lg font-semibold text-gray-800">
-                {expert.name}
-              </h2>
-              <p className="text-sm text-gray-600 mb-1">
-                {expert.qualification}
-              </p>
+              <div className="flex gap-3 items-center">
+                <Image
+                  src={`${expert.image || defaultExpert.image}`}
+                  alt={expert.name}
+                  width={50}
+                  height={50}
+                  className="rounded-full mt-[10px] mb-[10px]"
+                />
+                <div>
+                  <h2 className="text-lg font-semibold text-gray-800">
+                    {expert.name}
+                  </h2>
+
+                  <p className="text-sm text-gray-600 mb-1">
+                    {expert.expertise}
+                  </p>
+                </div>
+              </div>
               <p className="flex space-x-2 text-sm text-gray-600 mb-1">
                 <Image
                   width={15}
@@ -119,7 +134,7 @@ export const ExpertCard: React.FC<{
                   alt="tick"
                 />
                 <p>
-                  <b>2010</b> Orders Finished
+                  <b>{expert.orderFinished}</b> Orders Finished
                 </p>
               </p>
               <p className="flex space-x-2 text-sm text-gray-600 mb-1">
@@ -130,7 +145,7 @@ export const ExpertCard: React.FC<{
                   alt="beaker"
                 />
                 <p>
-                  <b>4</b> Order in Progress
+                  <b>{expert.orderInProgress}</b> Order in Progress
                 </p>
               </p>
               <p className="flex space-x-2 text-sm text-gray-600 mb-3">
@@ -140,7 +155,7 @@ export const ExpertCard: React.FC<{
                   src="/static/images/location.svg"
                   alt="beaker"
                 />
-                <p>Singapore</p>
+                <p>{expert.location}</p>
               </p>
               <div className="flex items-center flex-row gap-[4px]">
                 {[...Array(5)].map((_, index) => (
@@ -153,13 +168,15 @@ export const ExpertCard: React.FC<{
                     className="-mt-2"
                   />
                 ))}
-                <p className="flex text-base text-gray-600 -mt-2 ml-2">4.8/5</p>
+                <p className="flex text-base text-gray-600 -mt-2 ml-2">
+                  {expert.rating}
+                </p>
               </div>
             </div>
 
             {isExpanded && (
-              <div className="flex flex-col justify-center w-[280px] mt-[20px] ml-4">
-                <p className="text-[#343434] mb-4 font-poppins font-[500] text-[16px] leading-[24px]">
+              <div className="flex flex-col justify-center items-center w-[280px] mt-[20px] ml-4">
+                <p className="text-[#343434] mb-4 text-center font-poppins font-[500] text-[16px] leading-[24px]">
                   {expert.description}
                 </p>
                 <button className="bg-[#55C360] text-white px-3 py-2 rounded-[30px] hover:bg-green-600 w-[120px] mt-[10px]">
