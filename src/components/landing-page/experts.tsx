@@ -177,7 +177,7 @@ export const ExpertCard: React.FC<{
             {isExpanded && (
               <div className="flex flex-col justify-center items-center w-[280px] mt-[20px] ml-4">
                 <p className="text-[#343434] mb-4 text-center font-poppins font-[500] text-[16px] leading-[24px]">
-                  {expert.description}
+                  {expert.about}
                 </p>
                 <button className="bg-[#55C360] text-white px-3 py-2 rounded-[30px] hover:bg-green-600 w-[120px] mt-[10px]">
                   <Link href="/order">Hire Now</Link>
