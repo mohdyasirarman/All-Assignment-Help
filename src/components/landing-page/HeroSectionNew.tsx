@@ -1,14 +1,13 @@
 "use client";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 import { useState } from "react";
 
 interface AssignmentHelpProps {
@@ -161,40 +160,37 @@ export default function HeroSectionNew({
                 <input
                   type="email"
                   placeholder="Email"
-                  className="flex-1 h-[52px] rounded-full border-2 border-black pl-4 w-[242px] pr-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  className="flex-1 h-[52px] text-gray-400 rounded-full border-2 border-black pl-4 w-[242px] pr-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
                   required
                 />
-                <input
-                  type="text"
-                  placeholder="Assignment (Any Type)"
-                  className="flex-1 h-[52px] rounded-full border-2 border-black pl-4 w-[242px] pr-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
-                  required
-                />
+
+                <Select>
+                  <SelectTrigger className="flex-1 h-[52px] text-gray-400 rounded-full border-2 w-[242px] border-black pl-4 text-left">
+                    <SelectValue placeholder="Assignment" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="course">Course</SelectItem>
+                    <SelectItem value="homework">Homework</SelectItem>
+                    <SelectItem value="online-test">Online Test</SelectItem>
+                    <SelectItem value="essay">Essay</SelectItem>
+                    <SelectItem value="project">Project</SelectItem>
+                    <SelectItem value="exam">Exam</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               <div className="flex gap-4 relative">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="outline"
-                      className="flex-1 h-[52px] text-gray-400 rounded-full border-2 w-[242px] border-black pl-4 text-left"
-                    >
-                      Subject
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    <DropdownMenuLabel>Subject</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>Computer Science</DropdownMenuItem>
-                    <DropdownMenuItem>Acts</DropdownMenuItem>
-                    <DropdownMenuItem>Medical</DropdownMenuItem>
-                    <DropdownMenuItem>Core Engineering</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  className="flex-1 h-[52px] text-gray-400 rounded-full border-2 border-black pl-4 w-[242px] pr-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  required
+                />
 
                 <input
                   placeholder="Deadline"
-                  className="flex-1 h-[52px] rounded-full border-2 border-black w-[242px] pl-4 pr-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  className="flex-1 h-[52px] text-gray-400 rounded-full border-2 border-black w-[242px] pl-4 pr-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
                   type={inputTypeCalen}
                   onFocus={handleFocusCalen}
                   onBlur={handleBlurCalen}
