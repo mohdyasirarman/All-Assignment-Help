@@ -36,7 +36,7 @@ export default function HeroSectionNew({
   const photoList = [
     "img_front_page_review_1.jpeg",
     "img_front_page_review_2.jpeg",
-    "img_front_page_review_3.jpeg",
+    "grid.svg",
     "img_front_page_review_4.jpeg",
   ];
 
@@ -227,7 +227,7 @@ export default function HeroSectionNew({
                     </div>
                   ))}
                   <div className="bg-blue-600 h-10 w-10 rounded-full overflow-hidden shadow-md z-40 flex justify-center items-center font-poppins font-semibold text-white">
-                    4+
+                    93+
                   </div>
                 </div>
               </div>
