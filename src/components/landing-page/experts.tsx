@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -27,30 +27,29 @@ const defaultExpert: Expert = {
   about: "Who cares",
 };
 
-export const ExpertCard: React.FC<{
+const ExpertCard: React.FC<{
   expert?: Expert;
   isFeatured?: boolean;
-}> = ({ expert = defaultExpert, isFeatured = false }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const handleClick = () => {
-    if (!isFeatured) {
-      setIsExpanded(!isExpanded);
-    }
-  };
+  isExpanded?: boolean;
+  onExpand?: () => void;
+}> = ({
+  expert = defaultExpert,
+  isFeatured = false,
+  isExpanded = false,
+  onExpand,
+}) => {
+  const rating = Math.round(Number(expert.rating?.split('/')[0]) || 4);
 
   return (
     <div
-      onClick={handleClick}
-      className={`transition-all duration-1000 ease-out overflow-hidden 
-        ${
-          isFeatured
-            ? "bg-white rounded-lg flex items-start w-[625px] h-[220px]"
-            : `${
-                isExpanded ? "w-[520px] p-10" : "w-[250px] "
-              } h-[220px] bg-white rounded-2xl shadow-md p-5 
-          flex flex-col flex-shrink-0 cursor-pointer hover:shadow-lg`
-        }`}
+      onClick={onExpand}
+      className={`transition-all duration-1000 ease-out overflow-hidden ${
+        isFeatured
+          ? "bg-white rounded-lg flex items-start w-[625px] h-[220px]"
+          : `${
+              isExpanded ? "w-[520px] p-10" : "w-[250px]"
+            } h-[220px] bg-white rounded-2xl shadow-md p-5 flex flex-col flex-shrink-0 ${onExpand ? 'cursor-pointer' : ''} hover:shadow-lg`
+      }`}
     >
       {isFeatured ? (
         <>
@@ -65,20 +64,20 @@ export const ExpertCard: React.FC<{
             <h2 className="text-[18px] font-poppins leading-[16px] font-bold text-[#2C2C2C]">
               {expert.name}
             </h2>
-            <p className="text-[#8A8A8A] font-poppins font-[400] text-[16px] leading-[21px] ">
+            <div className="text-[#8A8A8A] font-poppins font-[400] text-[16px] leading-[21px]">
               {expert.expertise}
-            </p>
-            <p className="flex justify-center  text-[#8A8A8A] font-poppins font-[400] text-[16px] leading-[21px] ">
+            </div>
+            <div className="flex justify-center text-[#8A8A8A] font-poppins font-[400] text-[16px] leading-[21px]">
               <Image
                 width={15}
                 height={15}
                 src="/static/images/elements.svg"
                 alt="tick"
               />
-              <p>
+              <div>
                 <b>2010</b> Orders Finished
-              </p>
-            </p>
+              </div>
+            </div>
             <div className="flex flex-row">
               {[...Array(5)].map((_, index) => (
                 <Image
@@ -92,9 +91,9 @@ export const ExpertCard: React.FC<{
             </div>
           </div>
           <div className="flex flex-col justify-center w-[280px] mt-[100px]">
-            <p className="text-[#343434] mb-4 font-poppins font-[500] text-[16px] leading-[24px]">
+            <div className="text-[#343434] mb-4 font-poppins font-[500] text-[16px] leading-[24px]">
               {expert.description}
-            </p>
+            </div>
             <button className="bg-[#55C360] text-white px-3 py-2 rounded-[30px] hover:bg-[#45a350] w-[120px] mt-[10px]">
               <Link href="/order">Hire Now</Link>
             </button>
@@ -121,44 +120,44 @@ export const ExpertCard: React.FC<{
                     {expert.name}
                   </h2>
 
-                  <p className="text-sm text-gray-600 mb-1">
+                  <div className="text-sm text-gray-600 mb-1">
                     {expert.expertise}
-                  </p>
+                  </div>
                 </div>
               </div>
-              <p className="flex space-x-2 text-sm text-gray-600 mb-1">
+              <div className="flex space-x-2 text-sm text-gray-600 mb-1">
                 <Image
                   width={15}
                   height={15}
                   src="/static/images/elements.svg"
                   alt="tick"
                 />
-                <p>
+                <div>
                   <b>{expert.orderFinished}</b> Orders Finished
-                </p>
-              </p>
-              <p className="flex space-x-2 text-sm text-gray-600 mb-1">
+                </div>
+              </div>
+              <div className="flex space-x-2 text-sm text-gray-600 mb-1">
                 <Image
                   width={15}
                   height={15}
                   src="/static/images/beaker.svg"
                   alt="beaker"
                 />
-                <p>
+                <div>
                   <b>{expert.orderInProgress}</b> Order in Progress
-                </p>
-              </p>
-              <p className="flex space-x-2 text-sm text-gray-600 mb-3">
+                </div>
+              </div>
+              <div className="flex space-x-2 text-sm text-gray-600 mb-3">
                 <Image
                   width={15}
                   height={15}
                   src="/static/images/location.svg"
                   alt="beaker"
                 />
-                <p>{expert.location}</p>
-              </p>
+                <div>{expert.location}</div>
+              </div>
               <div className="flex items-center flex-row gap-[4px]">
-                {[...Array(5)].map((_, index) => (
+                {[...Array(rating)].map((_, index) => (
                   <Image
                     key={index}
                     src="/static/images/star.svg"
@@ -168,9 +167,9 @@ export const ExpertCard: React.FC<{
                     className="-mt-2"
                   />
                 ))}
-                <p className="flex text-base text-gray-600 -mt-2 ml-2">
+                <div className="flex text-base text-gray-600 -mt-2 ml-2">
                   {expert.rating}
-                </p>
+                </div>
               </div>
             </div>
 
@@ -194,7 +193,8 @@ export const ExpertCard: React.FC<{
 const Experts: React.FC<{ experts: Expert[] }> = ({ experts }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -206,10 +206,7 @@ const Experts: React.FC<{ experts: Expert[] }> = ({ experts }) => {
       });
 
       setTimeout(() => {
-        setCanScrollLeft(container.scrollLeft > 0);
-        setCanScrollRight(
-          container.scrollLeft + container.clientWidth < container.scrollWidth
-        );
+        updateScrollAvailability();
       }, 300);
     }
   };
@@ -224,13 +221,41 @@ const Experts: React.FC<{ experts: Expert[] }> = ({ experts }) => {
       });
 
       setTimeout(() => {
-        setCanScrollLeft(container.scrollLeft > 0);
-        setCanScrollRight(
-          container.scrollLeft + container.clientWidth < container.scrollWidth
-        );
+        updateScrollAvailability();
       }, 300);
     }
   };
+
+  const updateScrollAvailability = () => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      setCanScrollLeft(container.scrollLeft > 0);
+      setCanScrollRight(
+        container.scrollLeft + container.clientWidth < container.scrollWidth
+      );
+    }
+  };
+
+  const handleExpand = (index: number) => {
+    if (experts && experts.length > 0) {
+      setExpandedIndex(index === expandedIndex ? null : index);
+    }
+  };
+
+  useEffect(() => {
+    updateScrollAvailability();
+    window.addEventListener("resize", updateScrollAvailability);
+    return () => window.removeEventListener("resize", updateScrollAvailability);
+  }, []);
+
+  useEffect(() => {
+    if (experts && experts.length > 0) {
+      updateScrollAvailability();
+    } else {
+      setCanScrollLeft(false);
+      setCanScrollRight(false);
+    }
+  }, [experts]);
 
   return (
     <div className="bg-[#F5F6FB] py-12">
@@ -249,7 +274,12 @@ const Experts: React.FC<{ experts: Expert[] }> = ({ experts }) => {
           className="flex overflow-x-auto space-x-4 pb-4 [&::-webkit-scrollbar]:hidden gap-2 [-ms-overflow-style:none] [scrollbar-width:none]"
         >
           {experts?.map((expert, index) => (
-            <ExpertCard key={index} expert={expert} />
+            <ExpertCard
+              key={index}
+              expert={expert}
+              isExpanded={expandedIndex === index}
+              onExpand={() => handleExpand(index)}
+            />
           ))}
         </div>
 
@@ -266,20 +296,16 @@ const Experts: React.FC<{ experts: Expert[] }> = ({ experts }) => {
               alt="scroll left"
               width={56}
               height={56}
-              onClick={scrollLeft}
-              className={`cursor-pointer hover:grayscale ${
-                !canScrollLeft ? "" : ""
-              }`}
+              onClick={canScrollLeft ? scrollLeft : undefined}
+              className={`${canScrollLeft ? "cursor-pointer hover:grayscale" : "filter grayscale cursor-not-allowed"}`}
             />
             <Image
               src="/static/images/arrow2.svg"
               alt="scroll right"
               width={56}
               height={56}
-              onClick={scrollRight}
-              className={`cursor-pointer hover:grayscale ${
-                !canScrollRight ? "" : ""
-              }`}
+              onClick={canScrollRight ? scrollRight : undefined}
+              className={`${canScrollRight ? "cursor-pointer hover:grayscale" : "filter grayscale cursor-not-allowed"}`}
             />
           </div>
         </div>

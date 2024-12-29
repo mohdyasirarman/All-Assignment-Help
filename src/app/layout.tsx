@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import LandingPageNavbar from "@/components/landing-page/landingPageNavbar";
+import LandingPageNavbar from "@/components/landing-page/landingPageNavbar"; 
+import { OrderProvider } from "./context/orderIdContext"; 
 
 export const metadata: Metadata = {
   title: "Assignment Help Online| Get Assignment Help @30% Discount",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     distribution: "Global",
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,9 +35,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased overflow-x-hidden`}>
+      <body className="antialiased overflow-x-hidden">  
         <LandingPageNavbar />
-        {children}
+        <OrderProvider>
+          {children}
+        </OrderProvider>
       </body>
     </html>
   );

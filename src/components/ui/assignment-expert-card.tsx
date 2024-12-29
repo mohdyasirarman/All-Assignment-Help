@@ -231,26 +231,21 @@ type WritingToolCardProps = {
   description: string;
 };
 
-import { useState } from "react";
+
 
 export function WritingToolCard({ title, description }: WritingToolCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const text = 75;
+
+  const text = 90;
   const truncatedDescription =
     description.length > text
       ? description.slice(0, text) + "..."
       : description;
 
-  const handleClick = () => {
-    setIsExpanded(!isExpanded);
-  };
-
   return (
-    <div className="w-full group/cards" onClick={handleClick}>
+    <div className="w-full group/cards" >
       <div
         className={cn(
-          "overflow-hidden relative drop-shadow-lg card  shadow-lg lg:w-[265px] rounded-[13px] backgroundImage flex flex-col p-5 bg-[#e2f4ff] transition-all duration-300 ease-in-out",
-          isExpanded ? "lg:h-[300px]" : "lg:h-[230px]"
+          "overflow-hidden relative drop-shadow-lg card  shadow-lg lg:w-[265px] rounded-[13px] backgroundImage flex flex-col p-5 bg-[#e2f4ff] transition-all duration-300 ease-in-out lg:h-[230px]"
         )}
       >
         <div className="flex flex-col font-poppins text-start pl-3 pt-2 flex-grow">
@@ -258,7 +253,7 @@ export function WritingToolCard({ title, description }: WritingToolCardProps) {
             {title}
           </p>
           <p className="w-full font-montserrat text-base text-[#8A8A8A] pt-3">
-            {isExpanded ? description : truncatedDescription}
+            {truncatedDescription}
           </p>
         </div>
         <div className="text-center flex flex-grow font-poppins mt-auto">
