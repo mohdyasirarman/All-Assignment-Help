@@ -1,10 +1,17 @@
 "use client"
-import { createContext, useState, useContext } from "react";
+import React, { createContext, useContext, useState, Dispatch, SetStateAction } from "react";
 
-const OrderContext = createContext<{ orderId: string; setOrderId: React.Dispatch<React.SetStateAction<string>> } | undefined>(undefined);
+
+interface OrderContextType {
+  orderId: string;
+  setOrderId: Dispatch<SetStateAction<string>>;
+}
+
+const OrderContext = createContext<OrderContextType | undefined>(undefined);
+
 
 export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [orderId, setOrderId] = useState<string>("123456_this_is_test"); 
+  const [orderId, setOrderId] = useState<string>("test_order_id : 2323523");
 
   return (
     <OrderContext.Provider value={{ orderId, setOrderId }}>
@@ -13,7 +20,11 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   );
 };
 
-export const useOrder = () => {
+
+export const useOrder = (): OrderContextType => {
   const context = useContext(OrderContext);
+  if (!context) {
+    throw new Error("useOrder must be used within an OrderProvider");
+  }
   return context;
 };
