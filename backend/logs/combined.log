@@ -2882,3 +2882,5 @@ Metadata: {
 }
 2024-12-31 19:32:42 [info] : Connected to SQLite database
 2024-12-31 19:32:42 [info] : Database schema initialized successfully
+2024-12-31 22:09:10 [info] : User model initialized
+2024-12-31 22:09:10 [info] : Server running on port 3000
