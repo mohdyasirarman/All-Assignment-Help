@@ -11,7 +11,6 @@ interface WritingToolProps {
 }
 
 const WritingTool: React.FC<WritingToolProps> = ({ writingToolData = [] }) => {
-  
   const defaultWritingToolData: WritingToolData[] = [
     {
       id: 1,
@@ -79,8 +78,8 @@ const WritingTool: React.FC<WritingToolProps> = ({ writingToolData = [] }) => {
     },
   ];
 
-  
-  const toolsToDisplay = writingToolData.length > 0 ? writingToolData : defaultWritingToolData;
+  const toolsToDisplay =
+    writingToolData.length > 0 ? writingToolData : defaultWritingToolData;
 
   return (
     <div className="w-full my-20">
@@ -93,8 +92,8 @@ const WritingTool: React.FC<WritingToolProps> = ({ writingToolData = [] }) => {
             Assignment Help & Writing Tools
           </div>
         </div>
-        <div className="my-10 "> 
-          <div className="grid grid-cols-4 gap-y-8 gap-x-[0px] basis-[54.2857143%] " >
+        <div className="my-10 ">
+          <div className="grid grid-cols-4 gap-y-8">
             {toolsToDisplay.map((data) => (
               <div key={data.id}>
                 <WritingToolCard

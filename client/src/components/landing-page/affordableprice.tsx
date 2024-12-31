@@ -60,7 +60,7 @@ const AffordablePricing: React.FC<AffordablePricingProps> = ({ pricingFeatures =
                 <p className="text-[20px] font-poppins font-[400] leading-[24px] line-through text-[#5F5F5F]">
                   {feature.originalPrice}
                 </p>
-                <p className="text-[white] bg-[#55C360] ml-[20px] w-[80px] flex justify-center p-2 text-[15px] font-[400] font-poppins leading-[24px] hover:bg-[#45a350] rounded-[40px]">
+                <p className="text-[white] bg-[#55C360] ml-[20px] w-[80px] flex justify-center p-2 text-[15px] font-[400] font-poppins leading-[24px] rounded-[40px]">
                   {feature.discountedPrice}
                 </p>
               </div>

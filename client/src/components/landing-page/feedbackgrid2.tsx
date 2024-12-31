@@ -9,8 +9,8 @@ const testimonials1 = [
     category: "Programming",
     feedback:
       "Amazing experience! The project was delivered with high standards and met my expectations perfectly.",
-    image: "/static/images/grid.svg",
-    rating: "/static/images/stars1.svg",
+    image: "/static/images/Profile_avatar_placeholder_large.png",
+    rating: "5",
   },
   {
     id: 2,
@@ -18,8 +18,8 @@ const testimonials1 = [
     category: "Design",
     feedback:
       "I couldn't be more satisfied. The design was modern and clean, just what I needed for my project.",
-    image: "/static/images/grid.svg",
-    rating: "/static/images/stars1.svg",
+    image: "/static/images/Profile_avatar_placeholder_large.png",
+    rating: "3",
   },
   {
     id: 3,
@@ -27,8 +27,8 @@ const testimonials1 = [
     category: "Writing",
     feedback:
       "The content delivered was of exceptional quality and really helped me in boosting my website's performance.",
-    image: "/static/images/grid.svg",
-    rating: "/static/images/stars1.svg",
+    image: "/static/images/Profile_avatar_placeholder_large.png",
+    rating: "3",
   },
   {
     id: 4,
@@ -36,8 +36,8 @@ const testimonials1 = [
     category: "SEO",
     feedback:
       "Highly recommended! The SEO services improved my search ranking significantly and brought in more traffic.",
-    image: "/static/images/grid.svg",
-    rating: "/static/images/stars1.svg",
+    image: "/static/images/Profile_avatar_placeholder_large.png",
+    rating: "5",
   },
   {
     id: 5,
@@ -45,8 +45,8 @@ const testimonials1 = [
     category: "Marketing",
     feedback:
       "Great results! Their marketing strategy helped increase my online visibility and customer engagement.",
-    image: "/static/images/grid.svg",
-    rating: "/static/images/stars1.svg",
+    image: "/static/images/Profile_avatar_placeholder_large.png",
+    rating: "5",
   },
 ];
 
@@ -57,8 +57,8 @@ const testimonials2 = [
     category: "Development",
     feedback:
       "Fantastic work! The application is now running smoothly, and I can see the results of the effort put in.",
-    image: "/static/images/grid.svg",
-    rating: "/static/images/stars1.svg",
+    image: "/static/images/Profile_avatar_placeholder_large.png",
+    rating: "4",
   },
   {
     id: 2,
@@ -66,8 +66,8 @@ const testimonials2 = [
     category: "Consulting",
     feedback:
       "Very insightful! Their consulting services helped me streamline my business processes and improve efficiency.",
-    image: "/static/images/grid.svg",
-    rating: "/static/images/stars1.svg",
+    image: "/static/images/Profile_avatar_placeholder_large.png",
+    rating: "3",
   },
   {
     id: 3,
@@ -75,8 +75,8 @@ const testimonials2 = [
     category: "Development",
     feedback:
       "The software developed was top-notch and exceeded my expectations. Truly a professional team.",
-    image: "/static/images/grid.svg",
-    rating: "/static/images/stars1.svg",
+    image: "/static/images/Profile_avatar_placeholder_large.png",
+    rating: "4",
   },
   {
     id: 4,
@@ -84,8 +84,8 @@ const testimonials2 = [
     category: "Design",
     feedback:
       "The user interface design is clean and intuitive. I love how everything looks and feels.",
-    image: "/static/images/grid.svg",
-    rating: "/static/images/stars1.svg",
+    image: "/static/images/Profile_avatar_placeholder_large.png",
+    rating: "5",
   },
   {
     id: 5,
@@ -93,8 +93,8 @@ const testimonials2 = [
     category: "Programming",
     feedback:
       "They delivered the solution on time, and the code quality was impeccable. Highly recommend their services.",
-    image: "/static/images/grid.svg",
-    rating: "/static/images/stars1.svg",
+    image: "/static/images/Profile_avatar_placeholder_large.png",
+    rating: "4",
   },
 ];
 
@@ -103,10 +103,7 @@ const FeedbackGrid: React.FC<{
   gridRef: React.RefObject<HTMLDivElement>;
 }> = ({ testimonials, gridRef }) => {
   return (
-    <div
-      ref={gridRef}
-      className="flex gap-6 pb-6 overflow-hidden"
-    >
+    <div ref={gridRef} className="flex gap-6 pb-6 overflow-hidden">
       {testimonials.map((testimonial) => (
         <div
           key={testimonial.id}
@@ -129,13 +126,19 @@ const FeedbackGrid: React.FC<{
                   {testimonial.category}
                 </p>
               </div>
-              <Image
-                src={testimonial.rating}
-                alt="Rating Stars"
-                width={104}
-                height={15}
-                className="ml-[80px]"
-              />
+              <div className="flex gap-1 ml-8 justify-between items-center">
+                  {[...Array(Number(testimonial.rating))].map((_, index) => (
+                <Image
+                  key={index}
+                  src="/static/images/star.svg"
+                  alt="Rating"
+                  width={15}
+                  height={16}
+                />
+              ))}
+              <span className="ml-2">{`${testimonial.rating}/5`}</span>
+              </div>
+            
             </div>
           </div>
           <p className="w-[342px] h-[90px] font-poppins font-[400] text-[14px] leading-[23px] text-[#2C2C2C] ml-[10px]">

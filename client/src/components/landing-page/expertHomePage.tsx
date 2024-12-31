@@ -20,8 +20,8 @@ interface heroHelpProps {
 export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
   return (
     <>
-      <div className="w-full h-screen bg-hero-pattern_new bg-no-repeat bg-cover rotate-180 bg-[-500px_100px] absolute top-0 left-0"></div>
-      <div className="w-full h-[590px]  ">
+      <div className="w-full h-[590px] border-black bg-expert-pattern absolute top-0 right-0"></div>
+      <div className="w-full h-[590px]">
         <div className="w-full h-screen backdrop-blur-[100px] absolute top-0 left-0 "></div>
 
         <div className="right absolute bottom-[80px] left-[60%] ">
@@ -32,7 +32,6 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
             height={800}
             quality={100}
             priority
-          
           />
         </div>
         <div className="search_img  absolute left-[65%] top-1/2 -translate-x-[50%] -translate-y-[50%] hover:saturate-150 transition-all">
@@ -72,7 +71,7 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="outline"
-                    className="flex-1 rounded-3xl  px-28 text-[#0000008a] border-[#55C360] border-2 py-[25px] "
+                    className="flex-1 rounded-3xl w-[250px] text-[#0000008a] border-[#55C360] border-2  "
                   >
                     All Subjects
                   </Button>
@@ -90,7 +89,7 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="outline"
-                    className="flex-1 rounded-3xl px-28 text-left text-[#00000089] border-[#55C360] border-2 py-[25px] "
+                    className="flex-1 rounded-3xl w-[250px] text-left text-[#00000089] border-[#55C360] border-2"
                   >
                     Orders Completed
                   </Button>
@@ -100,14 +99,13 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>True</DropdownMenuItem>
                   <DropdownMenuItem>False</DropdownMenuItem>
-                  
                 </DropdownMenuContent>
               </DropdownMenu>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="outline"
-                    className="flex-1 rounded-3xl px-28 text-[#0000008a] border-[#55C360] border-2 py-[25px]"
+                    className="flex-1 rounded-3xl w-[250px] text-[#0000008a] border-[#55C360] border-2"
                   >
                     All Ratings
                   </Button>
@@ -125,23 +123,25 @@ export default function HeroSection({ changeInH, changeInP }: heroHelpProps) {
             </div>
             <button
               type="submit"
-              className=" bg-[#55C360] flex gap-1 hover:bg-green-600 text-white font-bold py-3 px-12 rounded-[50px] focus:outline-none text-[16px]"
+              className=" bg-[#55C360] flex justify-center items-center gap-1 w-[250px] hover:bg-green-600 text-white font-bold py-2 px-12 rounded-[50px] focus:outline-none text-center text-[20px]"
             >
-              <svg
-                width="26"
-                height="24"
-                viewBox="0 0 26 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M11.9647 2C10.513 2.00012 9.0823 2.32436 7.79207 2.94569C6.50184 3.56702 5.38947 4.46742 4.54776 5.57175C3.70604 6.67609 3.1594 7.95235 2.95343 9.29404C2.74746 10.6357 2.88813 12.004 3.36372 13.2846C3.83931 14.5652 4.63602 15.7211 5.68738 16.6557C6.73874 17.5904 8.01427 18.2768 9.40754 18.6576C10.8008 19.0384 12.2714 19.1026 13.6967 18.8449C15.1219 18.5872 16.4605 18.015 17.6007 17.176L21.5123 20.828C21.7143 21.0102 21.9849 21.111 22.2657 21.1087C22.5465 21.1064 22.8152 21.0012 23.0138 20.8158C23.2124 20.6304 23.325 20.3796 23.3274 20.1174C23.3299 19.8552 23.2219 19.6026 23.0268 19.414L19.1152 15.762C20.1735 14.5086 20.8324 13.0024 21.0165 11.4157C21.2007 9.82905 20.9027 8.22602 20.1566 6.79009C19.4105 5.35417 18.2465 4.14336 16.7977 3.29623C15.349 2.44911 13.6741 1.99989 11.9647 2ZM5.00271 10.5C5.00271 8.77609 5.73621 7.12279 7.04184 5.90381C8.34747 4.68482 10.1183 4 11.9647 4C13.8112 4 15.582 4.68482 16.8876 5.90381C18.1932 7.12279 18.9267 8.77609 18.9267 10.5C18.9267 12.2239 18.1932 13.8772 16.8876 15.0962C15.582 16.3152 13.8112 17 11.9647 17C10.1183 17 8.34747 16.3152 7.04184 15.0962C5.73621 13.8772 5.00271 12.2239 5.00271 10.5Z"
-                  fill="white"
-                />
-              </svg>
-              Search
+              <div className="flex justify-center items-center space-x-3">
+                <svg
+                  width="26"
+                  height="24"
+                  viewBox="0 0 26 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.9647 2C10.513 2.00012 9.0823 2.32436 7.79207 2.94569C6.50184 3.56702 5.38947 4.46742 4.54776 5.57175C3.70604 6.67609 3.1594 7.95235 2.95343 9.29404C2.74746 10.6357 2.88813 12.004 3.36372 13.2846C3.83931 14.5652 4.63602 15.7211 5.68738 16.6557C6.73874 17.5904 8.01427 18.2768 9.40754 18.6576C10.8008 19.0384 12.2714 19.1026 13.6967 18.8449C15.1219 18.5872 16.4605 18.015 17.6007 17.176L21.5123 20.828C21.7143 21.0102 21.9849 21.111 22.2657 21.1087C22.5465 21.1064 22.8152 21.0012 23.0138 20.8158C23.2124 20.6304 23.325 20.3796 23.3274 20.1174C23.3299 19.8552 23.2219 19.6026 23.0268 19.414L19.1152 15.762C20.1735 14.5086 20.8324 13.0024 21.0165 11.4157C21.2007 9.82905 20.9027 8.22602 20.1566 6.79009C19.4105 5.35417 18.2465 4.14336 16.7977 3.29623C15.349 2.44911 13.6741 1.99989 11.9647 2ZM5.00271 10.5C5.00271 8.77609 5.73621 7.12279 7.04184 5.90381C8.34747 4.68482 10.1183 4 11.9647 4C13.8112 4 15.582 4.68482 16.8876 5.90381C18.1932 7.12279 18.9267 8.77609 18.9267 10.5C18.9267 12.2239 18.1932 13.8772 16.8876 15.0962C15.582 16.3152 13.8112 17 11.9647 17C10.1183 17 8.34747 16.3152 7.04184 15.0962C5.73621 13.8772 5.00271 12.2239 5.00271 10.5Z"
+                    fill="white"
+                  />
+                </svg>
+                <p>Search</p>
+              </div>
             </button>
           </div>
         </div>
