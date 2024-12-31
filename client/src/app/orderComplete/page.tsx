@@ -1,25 +1,25 @@
 "use client";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { useOrder } from "../../../context/orderIdContext";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const OrderComplete = () => {
-  const { orderId } = useOrder();
+  const searchParams = useSearchParams();
+  const orderId = searchParams.get('orderId');
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
     if (orderId) {
-      setLoading(false); 
+      setLoading(false);
     } else {
-     
+      toast.error("Order ID not found");
       setTimeout(() => {
-        router.push("/orderError"); 
+        router.push("/orderError");
       }, 5000);
     }
   }, [orderId, router]);
-                console.log(orderId)
+
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-white p-6">
@@ -32,33 +32,38 @@ const OrderComplete = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white p-6">
-      <div className="text-center space-y-6 max-w-sm w-full">
-        <h1 className="text-xl font-semibold text-[#000000]">
-          Submission Successful
+      <div className="text-center mb-8">
+        <div className="mx-auto w-24">
+          <img
+            src="/success.gif"
+            alt="Success"
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <h1 className="text-2xl font-semibold text-green-600 mt-8 mb-4">
+          Order Created Successfully!
         </h1>
+        <p className="text-gray-600 mb-2">
+          Your order ID is: <span className="font-semibold">{orderId}</span>
+        </p>
+        <p className="text-gray-600">
+          We will review your order and get back to you shortly.
+        </p>
+      </div>
 
-        <div className="flex justify-center">
-          <div className="w-16 h-16 rounded-full flex items-center justify-center">
-            <Image
-              src={"/static/images/circle.png"}
-              alt="complete"
-              height={50}
-              width={50}
-            />
-          </div>
-        </div>
-
-        <div className="text-[#0A0D13] text-lg">
-          Assignment {orderId} Confirmed
-        </div>
-
+      <div className="flex gap-4">
         <button
-          className="w-full py-2 px-4 bg-[#55C360] text-white rounded-md hover:bg-green-600 transition-colors duration-200"
+          onClick={() => router.push("/orders")}
+          className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
         >
-          Go to Order
+          View Orders
         </button>
-
-        <p className="text-sm text-[#9DA3A1]">Ask for Customer Support</p>
+        <button
+          onClick={() => router.push("/")}
+          className="px-6 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50"
+        >
+          Go Home
+        </button>
       </div>
     </div>
   );

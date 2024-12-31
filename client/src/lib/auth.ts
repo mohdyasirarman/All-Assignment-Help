@@ -1,5 +1,11 @@
 import jwt from 'jsonwebtoken';
-import { User } from './types';
+
+export interface User {
+  id: string | number;
+  email: string;
+  name: string;
+  role: string;
+}
 
 if (!process.env.JWT_SECRET) {
   throw new Error('JWT_SECRET environment variable is not set');
@@ -39,9 +45,9 @@ export function validateToken(token: string): JWTPayload | null {
   }
 }
 
-export async function generateToken(user: User & { role: string }): Promise<string> {
+export async function generateToken(user: User): Promise<string> {
   const payload: JWTPayload = {
-    id: user.id,
+    id: user.id.toString(),
     email: user.email,
     role: user.role,
   };
@@ -49,14 +55,9 @@ export async function generateToken(user: User & { role: string }): Promise<stri
   return jwt.sign(payload, JWT_SECRET, { expiresIn: '1d' });
 }
 
-export async function refreshToken(token: string): Promise<string> {
-  const payload = await verifyToken(token);
-  return jwt.sign(payload, JWT_SECRET, { expiresIn: '1d' });
-}
-
 export function parseAuthHeader(header: string | null): string | null {
   if (!header || !header.startsWith('Bearer ')) {
     return null;
   }
-  return header.substring(7);
+  return header.split(' ')[1];
 }

@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter } from "next/navigation";
 
 export default function LandingPageNavbar() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -10,6 +12,8 @@ export default function LandingPageNavbar() {
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const pathname = usePathname();
+  const auth = useAuth();
+  const router = useRouter();
 
   const handleDropdownToggle = () => {
     setDropdownVisible((prev) => !prev);
@@ -39,6 +43,15 @@ export default function LandingPageNavbar() {
     const targetElement = document.getElementById("AffordablePricing");
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      await auth.logout();
+      router.push('/login');
+    } catch (error) {
+      console.error('Error during logout:', error);
     }
   };
 
@@ -197,18 +210,23 @@ export default function LandingPageNavbar() {
           </div>
 
           <div className="flex items-center space-x-4 mr-10">
-            <button className="hidden lg:block mr-8 px-4 py-[10px] font-bold rounded-3xl bg-[#F8AC3B] border-t-2 text-white uppercase shadow-[2px_2px_10px_rgba(111,142,179,0.7)] hover:bg-blue-500 transition-all">
-              <div className="flex gap-2 drop-shadow-sm">
-                Get Reward
-                <Image
-                  height={25}
-                  width={25}
-                  src="/static/images/gift.svg"
-                  alt="gift"
-                />
-              </div>
-            </button>
-
+            {auth.isAuthenticated ? (
+              <button
+                onClick={handleLogout}
+                className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition duration-300"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                href="/login"
+                className={`text-gray-700 hover:text-blue-600 ${
+                  pathname === "/login" ? "text-blue-600" : ""
+                }`}
+              >
+                Login
+              </Link>
+            )}
             <div>
               <button className="text-white shadow-[2px_2px_10px_rgba(111,142,179,0.7)] font-bold uppercase ml-2 mr-2 border-t-2 bg-[#2BAFFC] transition-all  hover:bg-[#4fa3d4] px-4 text-center rounded-3xl py-[10px]">
                 <Link href="/order" className="flex gap-2">
@@ -225,6 +243,28 @@ export default function LandingPageNavbar() {
           </div>
         </div>
       </nav>
+      {isMobileMenuVisible && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4">
+          <div className="flex flex-col space-y-4">
+            {auth.isAuthenticated ? (
+              <button
+                onClick={handleLogout}
+                className="block w-full text-left px-4 py-2 text-red-500 hover:bg-gray-100"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                href="/login"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                onClick={() => setMobileMenuVisible(false)}
+              >
+                Login
+              </Link>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 }

@@ -113,6 +113,7 @@ export class ApiClient {
         method,
         headers: requestHeaders,
         body: isFormData ? body : body ? JSON.stringify(body) : undefined,
+        credentials: 'include', // Include cookies in requests
       });
 
       if (!response.ok) {
@@ -167,6 +168,9 @@ export class ApiClient {
         method: 'POST',
         body: credentials,
       });
+      if (response.token) {
+        this.setToken(response.token);
+      }
       return response;
     } catch (error) {
       console.error('Login request failed:', error);
@@ -175,7 +179,7 @@ export class ApiClient {
   }
 
   async logout(): Promise<void> {
-    await this.request<void>('/auth/logout', {
+    await this.request<void>('/user/logout', {
       method: 'POST',
     });
     this.clearToken();
@@ -194,10 +198,16 @@ export class ApiClient {
 
   // Order endpoints
   async createOrder(orderData: Omit<Order, 'orderId'>): Promise<{ orderId: number }> {
-    return this.request<{ orderId: number }>('/order', {
+    const response = await this.request<{ message: string; orderId: number }>('/order', {
       method: 'POST',
       body: orderData,
     });
+
+    if (!response.orderId) {
+      throw new Error('No order ID received from server');
+    }
+
+    return { orderId: response.orderId };
   }
 
   async uploadOrderFiles(orderId: number, files: File[]): Promise<{ files: OrderFile[] }> {
@@ -205,7 +215,7 @@ export class ApiClient {
     formData.append('orderId', orderId.toString());
     files.forEach(file => formData.append('files', file));
 
-    return this.request<{ files: OrderFile[] }>('/order/upload', {
+    return this.request<{ files: OrderFile[] }>(`/order/${orderId}/files`, {
       method: 'POST',
       body: formData,
       isFormData: true,

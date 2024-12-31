@@ -132,4 +132,16 @@ router.post("/update-password", async (req, res) => {
     }
 });
 
+// Logout user
+router.post('/logout', async (req, res) => {
+    try {
+        // Clear the auth token from client
+        res.clearCookie('token');
+        res.status(200).json({ message: 'Logged out successfully' });
+    } catch (error) {
+        logger.error('Error during logout:', error);
+        res.status(500).json({ error: 'Failed to logout' });
+    }
+});
+
 module.exports = router;

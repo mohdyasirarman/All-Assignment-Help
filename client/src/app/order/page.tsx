@@ -1,101 +1,127 @@
 "use client";
 import { useState } from "react";
-import axios from "axios";
+import { apiClient } from "@/lib/api-client";
 import Image from "next/image";
-import { useOrder } from "../context/orderIdContext";
-import { useRouter } from "next/navigation"; 
-
+import { useRouter } from "next/navigation";
+import { toast } from "react-hot-toast";
+import { Button } from "@/components/ui/button";
 
 interface User {
   title: string;
   desc: string;
   subject: string;
   type: string;
-  refrence: string;
-  wordCount: number;
   deadline: string;
-  vCode: string;
   file: File | null;
+  couponCode: string;
 }
 
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+const ALLOWED_FILE_TYPES = [
+  'application/pdf',
+  'application/msword',
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  'text/plain',
+  'application/vnd.ms-excel',
+  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+];
+
 const AssignmentForm = () => {
-  const [wordCount, setWordCount] = useState<number>(1500);
-  const { orderId, setOrderId } = useOrder();
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+
   const [user, setUser] = useState<User>({
     title: "",
     desc: "",
     subject: "",
     type: "",
-    refrence: "",
-    wordCount: wordCount,
     deadline: "",
-    vCode: "",
     file: null,
+    couponCode: ""
   });
 
-
-  const increaseWordCount = () => {
-    setWordCount((prev) => prev + 100);
-    setUser((prevUser) => ({
-      ...prevUser,
-      wordCount: prevUser.wordCount + 100,
-    }));
+  const validateFile = (file: File | null) => {
+    if (!file) return "Please attach a file";
+    if (file.size > MAX_FILE_SIZE) return "File size must be less than 10MB";
+    if (!ALLOWED_FILE_TYPES.includes(file.type)) {
+      return "Only PDF, Word, Excel, and text files are allowed";
+    }
+    return null;
   };
 
-  const decreaseWordCount = () => {
-    setWordCount((prev) => Math.max(prev - 100, 0));
-    setUser((prevUser) => ({
-      ...prevUser,
-      wordCount: Math.max(prevUser.wordCount - 100, 0),
-    }));
-  };
-  const router = useRouter();
+  const validateForm = () => {
+    if (!user.title.trim()) return "Title is required";
+    if (!user.desc.trim()) return "Description is required";
+    if (user.desc.length < 15) return "Description must be at least 15 characters";
+    if (!user.subject.trim()) return "Subject is required";
+    if (!user.type.trim()) return "Type is required";
+    if (!user.deadline) return "Deadline is required";
 
-  const handleForm = async (e: React.FormEvent<HTMLFormElement>) => {
+    const fileError = validateFile(user.file);
+    if (fileError) return fileError;
+
+    return null;
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
+
     try {
-      const formData = {
+      const validationError = validateForm();
+      if (validationError) {
+        toast.error(validationError);
+        setIsLoading(false);
+        return;
+      }
+
+      const orderData = {
         title: user.title,
         desc: user.desc,
         subject: user.subject,
         type: user.type,
         deadline: user.deadline,
+        couponCode: user.couponCode
       };
-      const response = await axios.post("", formData); // add api /order 
-      //console.log(formData);
-      if (response.status === 200) {
-        const neworderId = response.data.orderid;
-        setOrderId(neworderId); //for orderComplete component
-        //console.log("Order created with ID:", neworderId);
-        router.push("/orderComplete");  
-  
+
+      console.log('Creating order with data:', orderData);
+      const response = await apiClient.createOrder(orderData);
+      console.log('Order creation response:', response);
+      
+      if (response.orderId) {
+        let fileUploadError = false;
+        
         if (user.file) {
-          const fileData = new FormData();
-          fileData.append("orderId", orderId);
-          fileData.append("file", user.file);
-          const fileResponse = await axios.post("", fileData); //add api /order/files
-          if (fileResponse.status === 200) { 
-            console.log("File uploaded successfully:", fileResponse.data);
+          try {
+            console.log('Uploading file for order:', response.orderId);
+            await apiClient.uploadOrderFiles(response.orderId, [user.file]);
+            console.log('File upload successful');
+          } catch (uploadError) {
+            console.error('File upload failed:', uploadError);
+            fileUploadError = true;
+            // Continue with redirect even if file upload fails
+            toast.error("Order created but file upload failed. Please try uploading the file later.");
           }
         }
-  
-        setUser({   //clear form 
-          title: "",
-          desc: "",
-          subject: "",
-          type: "",
-          refrence: "",
-          wordCount: 1500,
-          deadline: "",
-          vCode: "",
-          file: null,
-        });
+
+        if (!fileUploadError) {
+          toast.success("Order created successfully!");
+        }
+        
+        console.log('Redirecting to:', `/orderComplete?orderId=${response.orderId}`);
+        router.push(`/orderComplete?orderId=${response.orderId}`);
+      } else {
+        throw new Error('No order ID received from server');
       }
     } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "Failed to create order";
+      toast.error(errorMessage);
       console.error("Error submitting form:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
-  
+
   return (
     <div className="max-w-4xl mx-auto p-2 py-10 ">
       <div className="flex items-center justify-between mb-6">
@@ -161,7 +187,7 @@ const AssignmentForm = () => {
           </div>
         </div>
       </div>
-      <form onSubmit={handleForm}>
+      <form onSubmit={handleSubmit}>
         <h1 className="text-2xl  text-[#2c2c2c] font-poppins font-semibold  ">
           Tell us About your Assignment
         </h1>
@@ -203,9 +229,7 @@ const AssignmentForm = () => {
                 </label>
                 <input
                   value={user.subject}
-                  onChange={(e) =>
-                    setUser({ ...user, subject: e.target.value })
-                  }
+                  onChange={(e) => setUser({ ...user, subject: e.target.value })}
                   required
                   type="text"
                   placeholder="eg.. Computer science "
@@ -214,23 +238,34 @@ const AssignmentForm = () => {
               </div>
               <div>
                 <label className="block font-poppins font-semibold tracking-[1px] text-[#0A0D13] mb-2">
-                  Attach File
+                  Attach File (Required)
                 </label>
                 <input
                   type="file"
+                  accept=".pdf,.doc,.docx,.txt,.xls,.xlsx"
                   onChange={(e) => {
-                    const file = e.target.files;
+                    const file = e.target.files?.[0];
                     if (file) {
-                      console.log("Selected file:", file);
+                      const fileError = validateFile(file);
+                      if (fileError) {
+                        toast.error(fileError);
+                        e.target.value = '';
+                        return;
+                      }
+                      setUser({ ...user, file });
                     }
                   }}
+                  required
                   className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#55C360] file:text-white hover:file:bg-[#45a350]"
                 />
+                <p className="text-xs text-[#605E5E] mt-1">
+                  Max size: 10MB. Allowed types: PDF, Word, Excel, Text
+                </p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
-                <label className="block font-poppins font-semibold mb-2 tracking-[1px] text-[#0A0D13] ">
+                <label className="block font-poppins font-semibold mb-2 tracking-[1px] text-[#0A0D13]">
                   Type
                 </label>
                 <input
@@ -238,57 +273,9 @@ const AssignmentForm = () => {
                   onChange={(e) => setUser({ ...user, type: e.target.value })}
                   required
                   type="text"
+                  placeholder="eg.. Essay, Research Paper"
                   className="w-full border-2 border-[#010101] rounded-xl p-2"
                 />
-              </div>
-              <div>
-                <label className="block  font-poppins mb-2 font-semibold tracking-[1px] text-[#0A0D13]">
-                  Refrence Style
-                </label>
-                <input
-                  value={user.refrence}
-                  onChange={(e) =>
-                    setUser({ ...user, refrence: e.target.value })
-                  }
-                  required
-                  type="text"
-                  className="w-full border-2 border-[#010101] rounded-xl p-2"
-                />
-              </div>
-            </div>
-
-            <p className="font-poppins font-semibold mb-2 ml-1 tracking-[1px] text-[#0A0D13]">
-              No of words
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 -my-8 ">
-              <div className="flex items-center">
-                <div onClick={decreaseWordCount} className="rounded-l p-2">
-                  <Image
-                    src="static/images/orderMinusBtn.svg"
-                    height={50}
-                    width={50}
-                    alt="line"
-                  />
-                </div>
-
-                <input
-                  type="text"
-                  value={user.wordCount}
-                  onChange={(e) =>
-                    setUser({ ...user, wordCount: Number(e.target.value) })
-                  }
-                  className="w-full  border-gray-300 p-2 text-center"
-                  readOnly
-                />
-
-                <div onClick={increaseWordCount} className="rounded-r p-2">
-                  <Image
-                    src="static/images/orderPlusBtn.svg"
-                    alt="tick"
-                    height={50}
-                    width={50}
-                  />
-                </div>
               </div>
               <div>
                 <label className="block font-poppins font-semibold mb-2 tracking-[1px] text-[#0A0D13]">
@@ -298,23 +285,35 @@ const AssignmentForm = () => {
                   <input
                     type="date"
                     value={user.deadline}
-                    onChange={(e) =>
-                      setUser({ ...user, deadline: e.target.value })
-                    }
-                    defaultValue="2025-02-22"
-                    className="w-full border border-gray-300 rounded p-2 mb-6"
+                    onChange={(e) => setUser({ ...user, deadline: e.target.value })}
+                    min={new Date().toISOString().split('T')[0]}
+                    required
+                    className="w-full border-2 border-[#010101] rounded-xl p-2"
                   />
-                  <i className="fas fa-calendar-alt absolute right-2 top-3 text-gray-400"></i>
                 </div>
               </div>
             </div>
 
-            <button
+            <div className="mb-6">
+              <label className="block font-poppins font-semibold mb-2 tracking-[1px] text-[#0A0D13]">
+                Coupon Code
+              </label>
+              <input
+                type="text"
+                value={user.couponCode}
+                onChange={(e) => setUser({ ...user, couponCode: e.target.value })}
+                placeholder="Enter coupon code if you have one"
+                className="w-full border-2 border-[#010101] rounded-xl p-2"
+              />
+            </div>
+
+            <Button
               type="submit"
-              className="w-[100%] rounded-xl bg-[#55C360]  font-bold font-poppins text-[#F3F3F3]  p-2 hover:bg-[#45a350]"
+              disabled={isLoading || !user.file}
+              className="bg-[#2baffc] text-white px-8 py-3 rounded-lg hover:bg-[#1a9ee6] transition-colors w-full md:w-auto disabled:bg-gray-400"
             >
-              Submit
-            </button>
+              {isLoading ? "Creating Order..." : "Submit Order"}
+            </Button>
             <p className="text-xs font-poppins  text-[#ACACAC] mt-2">
               Your personal data will be used to process your order, support
               your experience throughout this website, and for other purposes
@@ -329,16 +328,6 @@ const AssignmentForm = () => {
               <p className="mt-6 text-[#00000094] font-poppins">
                 More Assignment and More <br /> Discounts!!
               </p>
-              <div className="mt-8">
-                <input
-                  required
-                  type="text"
-                  value={user.vCode}
-                  onChange={(e) => setUser({ ...user, vCode: e.target.value })}
-                  placeholder="Enter your voucher code"
-                  className="bg-white text-black font-poppins text-lg px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-[#55C360] transition-all ease-in duration-200 ring-2 placeholder:text-[17px]"
-                />
-              </div>
             </div>
           </div>
         </div>
