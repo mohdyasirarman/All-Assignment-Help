@@ -1,0 +1,912 @@
+2024-12-31 14:42:58 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:42:58 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:42:58 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 14:42:58 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 14:42:58 [info] : Connected to SQLite database
+2024-12-31 14:42:58 [info] : Database schema initialized successfully
+2024-12-31 14:42:58 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:42:58 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:42:58 [info] : Database connection closed
+2024-12-31 14:43:56 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:43:56 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:43:56 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 14:43:56 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 14:43:56 [info] : Connected to SQLite database
+2024-12-31 14:43:56 [info] : Database schema initialized successfully
+2024-12-31 14:43:56 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:43:56 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:43:56 [info] : Database connection closed
+2024-12-31 14:55:38 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:55:38 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:55:38 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 14:55:38 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 14:55:38 [info] : Connected to SQLite database
+2024-12-31 14:55:38 [info] : Database schema initialized successfully
+2024-12-31 14:55:38 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:55:38 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:55:38 [info] : Database connection closed
+2024-12-31 14:56:56 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:56:56 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:56:56 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 14:56:56 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 14:56:56 [info] : Connected to SQLite database
+2024-12-31 14:56:56 [info] : Database schema initialized successfully
+2024-12-31 14:56:56 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:56:56 [info] : Database connection closed
+2024-12-31 14:56:56 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:57:02 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:57:02 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:57:02 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 14:57:02 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 14:57:02 [info] : Connected to SQLite database
+2024-12-31 14:57:02 [info] : Database schema initialized successfully
+2024-12-31 14:57:02 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:57:02 [info] : Database connection closed
+2024-12-31 14:57:02 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:57:16 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:57:16 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:57:16 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 14:57:16 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 14:57:16 [info] : Connected to SQLite database
+2024-12-31 14:57:16 [info] : Database schema initialized successfully
+2024-12-31 14:57:16 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:57:16 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:57:16 [info] : Database connection closed
+2024-12-31 14:58:22 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:58:22 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:58:22 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 14:58:22 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 14:58:22 [info] : Connected to SQLite database
+2024-12-31 14:58:22 [info] : Database schema initialized successfully
+2024-12-31 14:58:22 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:58:22 [info] : Database connection closed
+2024-12-31 14:58:22 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:58:25 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:58:25 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:58:25 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 14:58:25 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 14:58:25 [info] : Connected to SQLite database
+2024-12-31 14:58:25 [info] : Database schema initialized successfully
+2024-12-31 14:58:25 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:58:25 [info] : Database connection closed
+2024-12-31 14:58:25 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:58:46 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:58:46 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:58:46 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 14:58:46 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 14:58:46 [info] : Connected to SQLite database
+2024-12-31 14:58:46 [info] : Database schema initialized successfully
+2024-12-31 14:58:46 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:58:47 [info] : Database connection closed
+2024-12-31 14:58:47 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:59:23 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:59:23 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:59:23 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 14:59:23 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 14:59:23 [info] : Connected to SQLite database
+2024-12-31 14:59:23 [info] : Database schema initialized successfully
+2024-12-31 14:59:23 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 14:59:24 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 14:59:24 [info] : Database connection closed
+2024-12-31 15:00:20 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:00:20 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:00:20 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:00:20 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:00:20 [info] : Connected to SQLite database
+2024-12-31 15:00:20 [info] : Database schema initialized successfully
+2024-12-31 15:00:20 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:00:20 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:00:20 [info] : Database connection closed
+2024-12-31 15:00:56 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:00:56 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:00:56 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:00:56 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:00:56 [info] : Connected to SQLite database
+2024-12-31 15:00:56 [info] : Database schema initialized successfully
+2024-12-31 15:00:56 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:00:56 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:00:56 [info] : Database connection closed
+2024-12-31 15:01:28 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:01:28 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:01:28 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:01:28 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:01:28 [info] : Connected to SQLite database
+2024-12-31 15:01:28 [info] : Database schema initialized successfully
+2024-12-31 15:01:28 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:01:28 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:01:28 [info] : Database connection closed
+2024-12-31 15:02:53 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:02:53 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:02:53 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:02:53 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:02:53 [info] : Connected to SQLite database
+2024-12-31 15:02:53 [info] : Database schema initialized successfully
+2024-12-31 15:02:53 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:02:53 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:02:53 [info] : Database connection closed
+2024-12-31 15:04:11 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:04:11 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:04:11 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:04:11 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:04:11 [info] : Connected to SQLite database
+2024-12-31 15:04:11 [info] : Database schema initialized successfully
+2024-12-31 15:04:11 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:04:11 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:04:11 [info] : Database connection closed
+2024-12-31 15:05:20 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:05:20 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:05:20 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:05:20 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:05:20 [info] : Connected to SQLite database
+2024-12-31 15:05:20 [info] : Database schema initialized successfully
+2024-12-31 15:05:20 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:05:20 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:05:20 [info] : Database connection closed
+2024-12-31 15:05:23 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:05:23 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:05:23 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:05:23 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:05:23 [info] : Connected to SQLite database
+2024-12-31 15:05:23 [info] : Database schema initialized successfully
+2024-12-31 15:05:23 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:05:23 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:05:23 [info] : Database connection closed
+2024-12-31 15:06:59 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:06:59 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:06:59 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:06:59 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:06:59 [info] : Connected to SQLite database
+2024-12-31 15:06:59 [info] : Database schema initialized successfully
+2024-12-31 15:06:59 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:06:59 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:06:59 [info] : Database connection closed
+2024-12-31 15:07:01 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:07:01 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:07:01 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:07:01 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:07:01 [info] : Connected to SQLite database
+2024-12-31 15:07:01 [info] : Database schema initialized successfully
+2024-12-31 15:07:01 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:07:02 [info] : Database connection closed
+2024-12-31 15:07:02 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:07:04 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:07:04 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:07:04 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:07:04 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:07:04 [info] : Connected to SQLite database
+2024-12-31 15:07:04 [info] : Database schema initialized successfully
+2024-12-31 15:07:04 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:07:05 [info] : Database connection closed
+2024-12-31 15:07:05 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:09:51 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:09:51 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:09:51 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:09:51 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:09:51 [info] : Connected to SQLite database
+2024-12-31 15:09:51 [info] : Database schema initialized successfully
+2024-12-31 15:09:51 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:09:51 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:09:51 [info] : Database connection closed
+2024-12-31 15:09:53 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:09:53 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:09:53 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:09:53 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:09:53 [info] : Connected to SQLite database
+2024-12-31 15:09:53 [info] : Database schema initialized successfully
+2024-12-31 15:09:53 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:09:53 [info] : Database connection closed
+2024-12-31 15:09:53 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:09:54 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:09:54 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:09:54 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:09:54 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:09:54 [info] : Connected to SQLite database
+2024-12-31 15:09:54 [info] : Database schema initialized successfully
+2024-12-31 15:09:54 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:09:54 [info] : Database connection closed
+2024-12-31 15:09:54 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:09:54 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:09:54 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:09:54 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:09:54 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:09:54 [info] : Connected to SQLite database
+2024-12-31 15:09:54 [info] : Database schema initialized successfully
+2024-12-31 15:09:54 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:09:54 [info] : Database connection closed
+2024-12-31 15:09:54 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}

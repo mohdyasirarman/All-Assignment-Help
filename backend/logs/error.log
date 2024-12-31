@@ -1,0 +1,50 @@
+{"level":"error","message":"Authentication error: Authentication required","stack":"Error: Authentication required\n    at auth (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\middleware\\auth.js:9:19)\n    at Layer.handle [as handle_request] (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:47:12)","timestamp":"2024-12-31T06:12:25.756Z"}
+{"level":"error","message":"Authentication error: Authentication required","stack":"Error: Authentication required\n    at auth (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\middleware\\auth.js:9:19)\n    at Layer.handle [as handle_request] (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:47:12)","timestamp":"2024-12-31T06:29:04.978Z"}
+{"level":"error","message":"Authentication error: Authentication required","stack":"Error: Authentication required\n    at auth (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\middleware\\auth.js:9:19)\n    at Layer.handle [as handle_request] (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (C:\\Users\\nc157\\Projects\\assignment-help-backend-main\\node_modules\\express\\lib\\router\\index.js:47:12)","timestamp":"2024-12-31T06:29:10.005Z"}
+{"level":"error","message":"Error: User.newUser is not a function","stack":"TypeError: User.newUser is not a function\n    at c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\routes\\UserRoute.js:9:23\n    at Layer.handle [as handle_request] (c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)","timestamp":"2024-12-31T08:06:21.634Z"}
+2024-12-31 13:41:19 [error] : Error creating user
+Metadata: {
+  "error": "SQLITE_CONSTRAINT: UNIQUE constraint failed: users.email",
+  "email": "test@example.com"
+}
+2024-12-31 13:41:19 [error] : [POST] /user/add - Error: SQLITE_CONSTRAINT: UNIQUE constraint failed: users.email
+Metadata: {
+  "error": "Error: SQLITE_CONSTRAINT: UNIQUE constraint failed: users.email\n--> in Statement#run([\n  'Test User',\n  'test@example.com',\n  '$2a$10$1arEFSR4hk/WMBDGsKLBFO9ODGh00StocoOrH4ReMnYWa05cLegce',\n  'user',\n  '2024-12-31T08:11:19.851Z',\n  '2024-12-31T08:11:19.851Z'\n], [Function: replacement])\n    at Database.<anonymous> (c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\sqlite3\\lib\\sqlite3.js:76:19)\n    at Database.<anonymous> (c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\sqlite3\\lib\\sqlite3.js:20:19)\n    at logger.error.error (c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\models\\User.js:34:23)\n    at new Promise (<anonymous>)\n    at User.newUser (c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\models\\User.js:33:20)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at process.processImmediate (node:internal/timers:459:9)\n    at async c:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\routes\\UserRoute.js:21:24",
+  "body": {
+    "name": "Test User",
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 13:49:20 [error] : [POST] /user/login - Error: userModel.getUserByEmail is not a function
+Metadata: {
+  "error": "TypeError: userModel.getUserByEmail is not a function\n    at C:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\routes\\UserRoute.js:55:38\n    at Layer.handle [as handle_request] (C:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (C:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (C:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)",
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 13:50:47 [error] : [POST] /user/login - Error: bcrypt is not defined
+Metadata: {
+  "error": "ReferenceError: bcrypt is not defined\n    at C:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\routes\\UserRoute.js:61:31\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 13:51:23 [error] : [POST] /user/login - Error: bcrypt is not defined
+Metadata: {
+  "error": "ReferenceError: bcrypt is not defined\n    at C:\\Users\\nc157\\Projects\\All-Assignment-Help\\backend\\routes\\UserRoute.js:61:31\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
