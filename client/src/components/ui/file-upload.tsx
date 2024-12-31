@@ -1,36 +1,93 @@
 import { cn } from "@/lib/utils";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { IconUpload } from "@tabler/icons-react";
 import { useDropzone } from "react-dropzone";
+import { toast } from "react-toastify";
 
-const mainVariant = {
-  initial: {
-    x: 0,
-    y: 0,
-  },
-  animate: {
-    x: 20,
-    y: -20,
-    opacity: 0.9,
-  },
-};
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+const ALLOWED_FILE_TYPES = [
+  "application/pdf",
+  "application/msword",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "text/plain",
+];
 
-const secondaryVariant = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-  },
-};
+interface FileUploadProps {
+  onChange?: (files: File[]) => void;
+  maxFiles?: number;
+}
 
 export const FileUpload = ({
   onChange,
-}: {
-  onChange?: (files: File[]) => void;
-}) => {
+  maxFiles = 5,
+}: FileUploadProps) => {
   const [files, setFiles] = useState<File[]>([]);
+  const [uploading, setUploading] = useState(false);
+
+  const validateFile = (file: File) => {
+    if (file.size > MAX_FILE_SIZE) {
+      throw new Error(`File ${file.name} is too large. Maximum size is 5MB`);
+    }
+    if (!ALLOWED_FILE_TYPES.includes(file.type)) {
+      throw new Error(
+        `File ${file.name} has unsupported format. Allowed formats are PDF, DOC, DOCX, and TXT`
+      );
+    }
+  };
+
+  const onDrop = useCallback(
+    async (acceptedFiles: File[]) => {
+      try {
+        if (files.length + acceptedFiles.length > maxFiles) {
+          toast.error(`Maximum ${maxFiles} files allowed`);
+          return;
+        }
+
+        // Validate each file
+        acceptedFiles.forEach(validateFile);
+
+        // Scan files for malware (implement your scanning logic here)
+        setUploading(true);
+        await scanFiles(acceptedFiles);
+
+        const newFiles = [...files, ...acceptedFiles];
+        setFiles(newFiles);
+        onChange?.(newFiles);
+        toast.success("Files added successfully");
+      } catch (error) {
+        if (error instanceof Error) {
+          toast.error(error.message);
+        } else {
+          toast.error("An error occurred while processing files");
+        }
+      } finally {
+        setUploading(false);
+      }
+    },
+    [files, maxFiles, onChange]
+  );
+
+  const removeFile = (index: number) => {
+    const newFiles = files.filter((_, i) => i !== index);
+    setFiles(newFiles);
+    onChange?.(newFiles);
+  };
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop,
+    accept: {
+      "application/pdf": [".pdf"],
+      "application/msword": [".doc"],
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document": [
+        ".docx",
+      ],
+      "text/plain": [".txt"],
+    },
+    maxSize: MAX_FILE_SIZE,
+    multiple: true,
+  });
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = (newFiles: File[]) => {
@@ -41,15 +98,6 @@ export const FileUpload = ({
   const handleClick = () => {
     fileInputRef.current?.click();
   };
-
-  const { getRootProps, isDragActive } = useDropzone({
-    multiple: false,
-    noClick: true,
-    onDrop: handleFileChange,
-    onDropRejected: (error) => {
-      console.log(error);
-    },
-  });
 
   return (
     <div className="w-full" {...getRootProps()}>
@@ -154,13 +202,6 @@ export const FileUpload = ({
                 )}
               </motion.div>
             )}
-
-            {!files.length && (
-              <motion.div
-                variants={secondaryVariant}
-                className="absolute opacity-0 border border-dashed border-sky-400 inset-0 z-30 bg-transparent flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md"
-              ></motion.div>
-            )}
           </div>
         </div>
       </motion.div>
@@ -190,4 +231,11 @@ export function GridPattern() {
       )}
     </div>
   );
+}
+
+// Placeholder function for malware scanning
+async function scanFiles(files: File[]): Promise<void> {
+  // Implement your file scanning logic here
+  // This could be an API call to a security service
+  return new Promise((resolve) => setTimeout(resolve, 1000));
 }

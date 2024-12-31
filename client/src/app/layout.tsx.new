@@ -1,0 +1,55 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import ClientLayout from "@/components/layouts/ClientLayout";
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Assignment Help Online| Get Assignment Help @30% Discount",
+  description: "AllAssignmentHelp.com is top assignment help website assisting students with online assignment writing. Hire professional assignment helper for cheap and get...",
+  keywords: "Assignment Help, assignment help online, online assignment help, assignment writing service, assignment helper",
+  authors: [{ name: "AllAssignmentHelp" }],
+  metadataBase: new URL(process.env.NEXT_PUBLIC_FRONTEND_URL || 'http://localhost:3002'),
+  openGraph: {
+    title: "Assignment Help Online| Get Assignment Help @30% Discount",
+    description: "AllAssignmentHelp.com is top assignment help website assisting students with online assignment writing. Hire professional assignment helper for cheap and get...",
+    siteName: "AllAssignmentHelp.com",
+    images: [{ url: "/static/images/logo1.png" }],
+    type: "website",
+    locale: 'en_US',
+  },
+  icons: {
+    icon: "/static/images/favicon.png",
+    shortcut: "/static/images/favicon.ico",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
+  verification: {
+    google: 'google-site-verification-code', // Add your Google verification code
+  },
+  category: 'education',
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <head />
+      <body className={inter.className}>
+        <ClientLayout>
+          {children}
+        </ClientLayout>
+      </body>
+    </html>
+  );
+}
