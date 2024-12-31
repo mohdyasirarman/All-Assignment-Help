@@ -910,3 +910,49 @@ Metadata: {
   "params": {},
   "query": {}
 }
+2024-12-31 15:41:30 [info] : [POST] /user/login - Login request received
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:41:30 [info] : Getting user by email
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:41:30 [info] : Database Operation: Get user by email
+Metadata: {
+  "email": "test@example.com",
+  "sql": "SELECT * FROM users WHERE email = ?"
+}
+2024-12-31 15:41:31 [info] : Database Operation: Close database connection
+Metadata: {
+  "operation": "getUserByEmail"
+}
+2024-12-31 15:41:31 [info] : Connected to SQLite database
+2024-12-31 15:41:31 [info] : Database schema initialized successfully
+2024-12-31 15:41:31 [info] : User found
+Metadata: {
+  "email": "test@example.com"
+}
+2024-12-31 15:41:31 [info] : [POST] /user/login - Login successful
+Metadata: {
+  "body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "params": {},
+  "query": {}
+}
+2024-12-31 15:41:31 [info] : Database connection closed
+2024-12-31 15:53:20 [info] : User model initialized
+2024-12-31 15:53:20 [info] : Server running on port 3000
+2024-12-31 15:55:39 [info] : User model initialized
+2024-12-31 15:55:39 [info] : Server running on port 3000
+2024-12-31 15:57:58 [info] : User model initialized
+2024-12-31 15:57:58 [info] : Server running on port 3000
+2024-12-31 15:58:44 [info] : User model initialized
+2024-12-31 15:58:44 [info] : Server running on port 3000

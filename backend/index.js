@@ -19,7 +19,19 @@ const port = process.env.PORT || 3000;
 
 // Security middleware
 app.use(helmet());
-app.use(cors());
+
+// CORS configuration
+app.use(cors({
+  origin: [
+    process.env.FRONTEND_URL,
+    'http://localhost:3000',
+    'https://all-assignment-help.vercel.app'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-CSRF-Token']
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

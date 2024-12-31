@@ -2,9 +2,14 @@
   "name": "assignment-help-backend",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.x"
+  },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "npm install",
+    "vercel-build": "echo 'Building...'"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -16,9 +21,11 @@
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.1",
-    "nodemon": "^3.1.9",
     "socket.io": "^4.8.1",
     "sqlite3": "^5.1.7",
     "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }

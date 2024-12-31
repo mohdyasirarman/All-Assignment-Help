@@ -1,3 +1,7 @@
 node_modules
 database.db
-.env
+.env.production
+
+# logs 
+combined.log
+error.log
