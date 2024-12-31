@@ -31,39 +31,26 @@ export default function SignupForm() {
     confirmPassword: ""
   });
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     setIsLoading(true);
 
     try {
-      // Validate form data
       const validatedData = signupSchema.parse(formData);
-
-      // Register user
-      const { token, user } = await apiClient.register(validatedData);
+      const response = await apiClient.register({
+        name: validatedData.name,
+        email: validatedData.email,
+        password: validatedData.password,
+        confirmPassword: validatedData.confirmPassword,
+      });
       
-      // Store token
-      localStorage.setItem('auth_token', token);
-      
-      toast.success("Account created successfully!");
-      
-      // Redirect based on user role
-      if (user.role === 'admin') {
-        router.push('/admin/dashboard');
-      } else {
-        router.push('/dashboard');
+      if (response.token && response.user) {
+        toast.success("Registration successful!");
+        router.push("/");
       }
     } catch (error) {
-      if (error instanceof z.ZodError) {
-        error.errors.forEach((err) => {
-          toast.error(err.message);
-        });
-      } else if (error instanceof Error) {
-        toast.error(error.message);
-      } else {
-        toast.error("An unexpected error occurred");
-        console.error(error);
-      }
+      console.error("Registration error:", error);
+      toast.error("Registration failed. Please try again.");
     } finally {
       setIsLoading(false);
     }

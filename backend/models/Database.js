@@ -50,6 +50,19 @@ class Database {
         });
     }
 
+    get(sql, params = []) {
+        return new Promise((resolve, reject) => {
+            this.db.get(sql, params, (err, row) => {
+                if (err) {
+                    logger.error('Database get error:', err);
+                    reject(err);
+                    return;
+                }
+                resolve(row);
+            });
+        });
+    }
+
     run(sql, params = []) {
         return new Promise((resolve, reject) => {
             this.db.run(sql, params, function(err) {

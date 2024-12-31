@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req, file, cb) => {
-    const allowedTypes = (process.env.ALLOWED_FILE_TYPES || '.pdf,.jpeg,.png,.docx,.doc,.zip').split(',');
+    const allowedTypes = (process.env.ALLOWED_FILE_TYPES || '.pdf,.docx,.doc,.xlsx,.xls,.txt').split(',');
     const extname = path.extname(file.originalname).toLowerCase();
     
     if (allowedTypes.includes(extname)) {
@@ -37,14 +37,15 @@ const upload = multer({
 // Validation middleware
 const validateOrder = [
     body('title').trim().notEmpty().withMessage('Title is required'),
-    body('desc').trim().notEmpty().withMessage('Description is required'),
+    body('desc').trim().notEmpty().withMessage('Description is required')
+        .isLength({ min: 15 }).withMessage('Description must be at least 15 characters'),
     body('subject').trim().notEmpty().withMessage('Subject is required'),
     body('type').trim().notEmpty().withMessage('Type is required'),
     body('deadline').isISO8601().toDate().withMessage('Invalid deadline date')
 ];
 
 // Create new order
-router.post('/order', auth, validateOrder, async (req, res) => {
+router.post('/order', auth, express.json(), validateOrder, async (req, res) => {
     try {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -52,58 +53,165 @@ router.post('/order', auth, validateOrder, async (req, res) => {
         }
 
         const { title, desc, subject, type, deadline } = req.body;
-        const orders = new Orders();
-        const id = await orders.newOrder(title, desc, subject, type, deadline);
+        const ordersModel = new Orders();
         
-        res.status(201).json({ orderId: id });
+        try {
+            const orderId = await ordersModel.newOrder(title, desc, subject, type, deadline);
+            res.status(201).json({ 
+                message: 'Order created successfully',
+                orderId 
+            });
+        } catch (error) {
+            logger.error('Error in order creation:', error);
+            res.status(500).json({ error: 'Database error while creating order' });
+        }
     } catch (error) {
-        logger.error('Error creating order:', error);
-        res.status(500).json({ error: 'Failed to create order' });
+        logger.error('Error in route handler:', error);
+        res.status(500).json({ error: error.message || 'Failed to create order' });
     }
 });
 
 // Upload files for an order
-router.post('/order/upload', auth, upload.array('files', 5), async (req, res) => {
+router.post('/order/:orderId/files', auth, upload.array('files', 5), async (req, res) => {
     try {
-        if (!req.files || req.files.length === 0) {
+        const { orderId } = req.params;
+        const files = req.files;
+        
+        if (!files || files.length === 0) {
             return res.status(400).json({ error: 'No files uploaded' });
         }
 
-        const orderId = req.body.orderId;
-        if (!orderId) {
-            return res.status(400).json({ error: 'Order ID is required' });
-        }
+        const ordersModel = new Orders();
+        const filePromises = files.map(file => 
+            ordersModel.newOrderFile(orderId, file.filename, file.originalname)
+        );
 
-        const orders = new Orders();
-        const results = [];
+        await Promise.all(filePromises);
 
-        for (const file of req.files) {
-            const id = await orders.newOrderFile(
-                orderId,
-                file.filename,
-                file.originalname
-            );
-            results.push({ fileId: id, filename: file.originalname });
-        }
-
-        res.status(201).json({ files: results });
+        res.status(200).json({ 
+            message: 'Files uploaded successfully',
+            files: files.map(f => ({ 
+                originalName: f.originalname,
+                storedName: f.filename 
+            }))
+        });
     } catch (error) {
         logger.error('Error uploading files:', error);
-        res.status(500).json({ error: 'Failed to upload files' });
+        res.status(500).json({ error: error.message || 'Failed to upload files' });
     }
 });
 
-// Error handling for multer
-router.use((error, req, res, next) => {
-    if (error instanceof multer.MulterError) {
-        if (error.code === 'LIMIT_FILE_SIZE') {
-            return res.status(400).json({
-                error: `File too large. Maximum size is ${process.env.MAX_FILE_SIZE / 1000000}MB`
-            });
-        }
-        return res.status(400).json({ error: error.message });
+// Get all orders for a user
+router.get('/orders', auth, async (req, res) => {
+    try {
+        const ordersModel = new Orders();
+        const orders = await ordersModel.getAllOrders();
+        res.status(200).json(orders);
+    } catch (error) {
+        logger.error('Error getting orders:', error);
+        res.status(500).json({ error: error.message || 'Failed to get orders' });
     }
-    next(error);
+});
+
+// Get specific order details
+router.get('/order/:orderId', auth, async (req, res) => {
+    try {
+        const { orderId } = req.params;
+        const ordersModel = new Orders();
+        
+        const [order, details, value, files] = await Promise.all([
+            ordersModel.getOrderByID(orderId),
+            ordersModel.getOrderDetailsByID(orderId),
+            ordersModel.getOrderValueByID(orderId),
+            ordersModel.getOrderFileByID(orderId)
+        ]);
+
+        if (!order) {
+            return res.status(404).json({ error: 'Order not found' });
+        }
+
+        res.status(200).json({
+            ...order,
+            details,
+            value,
+            files
+        });
+    } catch (error) {
+        logger.error('Error getting order details:', error);
+        res.status(500).json({ error: error.message || 'Failed to get order details' });
+    }
+});
+
+// Update order status
+router.patch('/order/:orderId/status', auth, express.json(), async (req, res) => {
+    try {
+        const { orderId } = req.params;
+        const { status } = req.body;
+
+        if (status === undefined) {
+            return res.status(400).json({ error: 'Status is required' });
+        }
+
+        const ordersModel = new Orders();
+        await ordersModel.updateStatusByOrderID(orderId, status);
+
+        res.status(200).json({ 
+            message: 'Order status updated successfully',
+            orderId,
+            status 
+        });
+    } catch (error) {
+        logger.error('Error updating order status:', error);
+        res.status(500).json({ error: error.message || 'Failed to update order status' });
+    }
+});
+
+// Update order value
+router.patch('/order/:orderId/value', auth, express.json(), async (req, res) => {
+    try {
+        const { orderId } = req.params;
+        const { value } = req.body;
+
+        if (value === undefined) {
+            return res.status(400).json({ error: 'Value is required' });
+        }
+
+        const ordersModel = new Orders();
+        await ordersModel.updateValueByOrderID(orderId, value);
+
+        res.status(200).json({ 
+            message: 'Order value updated successfully',
+            orderId,
+            value 
+        });
+    } catch (error) {
+        logger.error('Error updating order value:', error);
+        res.status(500).json({ error: error.message || 'Failed to update order value' });
+    }
+});
+
+// Assign teacher to order
+router.patch('/order/:orderId/assign', auth, express.json(), async (req, res) => {
+    try {
+        const { orderId } = req.params;
+        const { teacherId } = req.body;
+
+        if (!teacherId) {
+            return res.status(400).json({ error: 'Teacher ID is required' });
+        }
+
+        const ordersModel = new Orders();
+        await ordersModel.updateTeacherByOrderID(orderId, teacherId);
+
+        res.status(200).json({ 
+            message: 'Teacher assigned successfully',
+            orderId,
+            teacherId 
+        });
+    } catch (error) {
+        logger.error('Error assigning teacher:', error);
+        res.status(500).json({ error: error.message || 'Failed to assign teacher' });
+    }
 });
 
 module.exports = router;

@@ -4,9 +4,18 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:3000/api/:path*',
-      },
-    ];
+        destination: process.env.NEXT_PUBLIC_API_URL + '/:path*'
+      }
+    ]
+  },
+  images: {
+    domains: ['localhost'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**'
+      }
+    ]
   },
   env: {
     NEXT_PUBLIC_API_URL: 'http://localhost:3000',

@@ -5,3 +5,4 @@ database.db
 # logs 
 combined.log
 error.log
+.vercel

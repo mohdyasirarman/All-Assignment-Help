@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS orders (
 
 CREATE TABLE IF NOT EXISTS orders_file (
     orderid INTEGER UNIQUE NOT NULL,
-    file_name VARCHAR(256) UNIQUE NOT NULL,
-    original_file_name VARCHAR(256) UNIQUE NOT NULL
+    file_name VARCHAR(256) NOT NULL,
+    original_file_name VARCHAR(256) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS auth (

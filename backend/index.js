@@ -25,6 +25,7 @@ app.use(cors({
   origin: [
     process.env.FRONTEND_URL,
     'http://localhost:3000',
+    'http://localhost:3002',
     'https://all-assignment-help.vercel.app'
   ],
   credentials: true,

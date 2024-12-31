@@ -2,10 +2,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { apiClient } from "@/lib/api-client";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const { isAuthenticated } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      await apiClient.logout();
+    } catch (error) {
+      console.error('Error logging out:', error);
+    }
+  };
 
   const services = [
     "Assignment Help",
@@ -85,6 +96,14 @@ export default function Navbar() {
             <Link href="/contact" className="text-gray-700 hover:text-blue-600">
               Contact
             </Link>
+            {isAuthenticated && (
+              <button
+                onClick={handleLogout}
+                className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition duration-300"
+              >
+                Logout
+              </button>
+            )}
           </div>
 
           {/* Action Buttons */}
@@ -146,6 +165,14 @@ export default function Navbar() {
               >
                 Order Now
               </Link>
+              {isAuthenticated && (
+                <button
+                  onClick={handleLogout}
+                  className="block w-full text-left px-4 py-2 text-red-500 hover:bg-gray-100"
+                >
+                  Logout
+                </button>
+              )}
             </div>
           </div>
         )}

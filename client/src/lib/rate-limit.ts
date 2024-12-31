@@ -1,36 +1,40 @@
 import { LRUCache } from "lru-cache";
+import { validateEnv } from "./env";
 
-export function rateLimit({
-  interval,
-  uniqueTokenPerInterval,
-}: {
-  interval: number;
-  uniqueTokenPerInterval: number;
-}) {
-  const tokenCache = new LRUCache({
-    max: uniqueTokenPerInterval,
-    ttl: interval,
-  });
-
-  return {
-    check: async (request: Request, limit: number, token: string) => {
-      const tokenCount = (tokenCache.get(token) as number[]) || [0];
-      if (tokenCount[0] === 0) {
-        tokenCache.set(token, tokenCount);
-      }
-      tokenCount[0] += 1;
-
-      const currentUsage = tokenCount[0];
-      const isRateLimited = currentUsage >= limit;
-
-      if (isRateLimited) {
-        throw new Error("Rate limit exceeded");
-      }
-
-      return {
-        isRateLimited: false,
-        currentUsage,
-      };
-    },
-  };
+interface RateLimitResult {
+  success: boolean;
+  limit: number;
+  remaining: number;
+  reset: number;
 }
+
+class RateLimiter {
+  private cache: LRUCache<string, number>;
+  private readonly maxRequests: number;
+  private readonly windowMs: number;
+
+  constructor() {
+    const env = validateEnv();
+    this.maxRequests = env.RATE_LIMIT_MAX;
+    this.windowMs = env.RATE_LIMIT_WINDOW_MS;
+    this.cache = new LRUCache<string, number>({
+      max: 10000, // Maximum number of items to store
+      ttl: this.windowMs, // Time to live in milliseconds
+    });
+  }
+
+  async limit(key: string): Promise<RateLimitResult> {
+    const now = Date.now();
+    const count = (this.cache.get(key) || 0) + 1;
+    this.cache.set(key, count);
+
+    return {
+      success: count <= this.maxRequests,
+      limit: this.maxRequests,
+      remaining: Math.max(0, this.maxRequests - count),
+      reset: now + this.windowMs,
+    };
+  }
+}
+
+export const rateLimiter = new RateLimiter();
